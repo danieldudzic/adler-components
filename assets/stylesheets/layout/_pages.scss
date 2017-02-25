@@ -1,0 +1,70 @@
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.page {
+	.has-thumbnail {
+		.hero__content {
+			margin-bottom: 40px;
+		}
+	}
+
+	.site-content {
+		@media screen and (min-width: #{$breakpoint_tablet}) {
+			padding: 0 5px;
+		}
+	}
+}
+
+#page {
+	@media screen and (min-width: #{$breakpoint_tablet}) {
+		overflow: hidden;
+	}
+}
+
+.content-area {
+	.site-main {
+		.posts-navigation {
+			@extend .entry-wrapper;
+			margin-top: 40px;
+		}
+
+		nav {
+			.nav-links {
+				display: block;
+				max-width: 600px;
+				margin: 0 auto;
+			
+				.nav-previous {
+					float: left;
+					margin-bottom: 40px;
+					padding-right: 200px;
+					
+					@media screen and (min-width: #{$breakpoint_tablet}) {
+						padding-right: 50px;
+					}
+				}
+				
+				.nav-next {
+					float: right;
+					margin-bottom: 40px;
+				}
+			}
+		}
+	}
+}
+
+.page {
+	&.no-thumbnail {
+		.site-branding {
+			.site-title {
+				color: $color__text-screen;
+			}
+		}
+	}
+}
+
+.blog .site-main {
+	text-align: center;
+}
