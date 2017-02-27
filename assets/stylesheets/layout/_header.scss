@@ -7,6 +7,10 @@
 	z-index: 50;
 	top: 0;
 	left: 0;
+	
+	.has-hero-thumbnail.admin-bar & {
+		margin-top: 30px;
+	}
 }
 
 @media screen and (max-width: #{$breakpoint_tablet}) {
@@ -15,7 +19,7 @@
 	}
 }
 
-.no-post-thumbnail {
+.no-hero-thumbnail {
 
 	.site-header {
 		background-color: transparent;
@@ -120,19 +124,21 @@ button {
 	.site-title {
 		font-size: 14px;
 		line-height: 1;
-		margin-bottom: 0;
+		margin: 0;
+		font-family: $font__main;
 		text-align: left;
+		
+		a {
+			color: $color__link-contrast;
+			border-bottom: 0;
+			text-decoration: none;
+			font-family: $font__main;
+			text-align: left;
+		}
 	}
 
 	.no-site-title {
 		display: none;
-	}
-
-	.site-title {
-		text-decoration: none;
-		border-bottom: 0;
-		color: $color__link-contrast;
-		font-family: $font__code-tertiary;
 	}
 }
 

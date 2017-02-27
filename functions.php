@@ -45,11 +45,11 @@ function adler_setup() {
 	add_image_size( 'adler-featured-image', 800, 9999 );
 	add_image_size( 'adler-large', 2000, 1500, true );
 
-	// This theme uses wp_nav_menu() in one location.
+	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Top', 'adler' ),
+		'primary' => __( 'Primary Menu', 'adler' ),
+		'footer'  => __( 'Footer Menu', 'adler' )
 	) );
-
 	/**
 	 * Add support for core custom logo.
 	 */
@@ -173,6 +173,8 @@ function adler_scripts() {
 	wp_enqueue_style( 'adler-style', get_stylesheet_uri() );
 	
 	wp_enqueue_style( 'adler-fonts', adler_fonts_url(), array(), null );
+	
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/assets/fonts/genericons/genericons.css', array(), '3.4.1' );
 
 	wp_enqueue_script( 'adler-main', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '20120206', true );
 	wp_localize_script( 'adler-main', 'menuToggleText', array(

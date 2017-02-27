@@ -1,10 +1,14 @@
-.hero-content {
+.hero-wrapper {
 	width: 100%;
 	height: 100vh;
 	position: relative;
 	text-align: center;
 	vertical-align: middle;
-	padding-top: 0;
+	
+	/* Admin Bar Fix */
+	.admin-bar & {
+		margin-top: -32px;
+	}
 
 	.hero-bg {
 		height: 100%;
@@ -24,19 +28,7 @@
 		}
 	}
 
-	%white-hero {
-		font-size: 103px;
-		line-height: 1.2;
-		color: $color__link-contrast;
-		position: relative;
-	}
-
-	%hero-gradient {
-		background-image: linear-gradient(transparent 0%, transparent 55%, rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.5) 100%, transparent 100%, transparent 100%);
-		background-size: 100% 100%;
-	}
-
-	.hero-content-wrap {
+	.hero-content {
 		max-width: 600px;
 		overflow: visible;
 		margin: auto;
@@ -45,51 +37,80 @@
 		left: 50%;
 		transform: translateX(-50%) translateY(-50%);
 	
-		@media screen and (min-width: #{$breakpoint_tablet}) {
+		@media screen and (max-width: #{$breakpoint_tablet}) {
 			width: 100%;
 		}
+		
+		.entry-title {
+			margin: 0px 0px 30px;
+			font-size: 103px;
+			line-height: 1.2;
+			position: relative;
+			background-size: 100% 100%;
+			color: $color__link-contrast;
+			
+			@media screen and (max-width: #{$breakpoint_laptop}) {
+				font-size: 100%;
+				width: 80%;
+				margin: 0 auto;
+			}
+			
+			@media screen and (max-width: #{$breakpoint_tablet}) {
+				font-size: 100%;
+				display: block;
+				padding: 0 5px;
+			}
+			
+			@media screen and (max-width: #{$breakpoint_mobile}) {
+				font-size: 80%;
+			}
+			
+			a {
+				border-bottom: none;
+				text-decoration: none;
+				background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+				background-size: 100% 100%;
+				width: 100%;
+				position: relative;
+				color: $color__link-contrast;
+			}
+		}
 
-		.entry-content {
+		.entry-content {			
 			p {
-
-				@media screen and (min-width: #{$breakpoint_tablet}) {
+				@media screen and (max-width: #{$breakpoint_tablet}) {
 					padding: 0 5px;
 				}
 		
 				color: $color__link-contrast;
 				text-align: center;
 			}
+			
+			.more-link {
+				color: $color__link-contrast;
+				text-transform: uppercase;
+			}	
 		}
 
-		.hero-meta {
+		.entry-meta {
 			width: 100%;
 			
-			.no-thumbnail .header-content & {
+			a, span {
+				border: none;
+				color: $color__link-contrast;
+			}
+			
+			.no-hero-thumbnail .header-content & {
 				display: none;
 			}
-		
-			.hero-categories {
-				display: inline-block;
-		
-				&::after {
-					content: " - ";
-					color: $color__link-contrast;
-				}
-				
-				@media screen and (min-width: #{$breakpoint_mobile}) {
-					display: block;
-				}
-
-				a {
-					text-decoration: none;
-					border-bottom: none;
-					color: $color__link-contrast;
-				}
-			}
-		
+			
 			.hero_date {
 				display: inline-block;
 				color: $color__link-contrast;
+			}
+			
+			.post-meta-categories, a {
+				display: inline;
 			}
 		}
 
@@ -97,9 +118,9 @@
 	
 }
 
-.hero_read_more a {
-	color: $color__link-contrast;
-	text-transform: uppercase;
+.has-hero-thumbnail article.post:first-of-type {
+	padding-top: 0;
+	overflow: hidden;
 }
 
 /* Down Arrow */

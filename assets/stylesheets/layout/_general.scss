@@ -148,10 +148,8 @@ blockquote {
 }
 
 .sticky {
-	.hero__content .hero__content-wrap .hero__title {
-		.title, .sub-title {
-			color: $color__link-contrast;
-		}
+	.hero-wrapper .hero-content .entry-title {
+		color: $color__link-contrast;
 	}
 }
 

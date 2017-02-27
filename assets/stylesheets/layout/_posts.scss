@@ -16,12 +16,6 @@
 	display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-
 .single-post {
 	.post-navigation {
 		display: none;
@@ -29,7 +23,7 @@
 }
 
 .single {
-	.has-thumbnail, .no-thumbnail {
+	.has-hero-thumbnail, .no-hero-thumbnail {
 		.post {
 			background-color: transparent;
 		}
@@ -91,16 +85,18 @@ article.post:last-of-type {
 		}
 
 		.entry-header {
-			
 			.entry-title {
-				@extend %white-hero;
-				@extend %hero-gradient;
 				font-size: 60px;
 				margin-bottom: 50px;
 				position: relative;
+				line-height: 1;
 				
 				.header-content & {
 					position: relative;
+				}
+								
+				a {
+					border: none;	
 				}
 					
 				@media screen and (max-width: #{$breakpoint_laptop}) {
@@ -124,6 +120,9 @@ article.post:last-of-type {
 			margin-right: -100px;
 			margin-top: -60px;
 			text-align: center;
+			a {
+				border: none;
+			}
 		}
 		
 		// Main post wrapper	
@@ -174,9 +173,30 @@ article.post:last-of-type {
 			.entry-footer {
 				display: flex;
 				justify-content: space-between;
+				width: 100%;
 		
 				.entry-meta {
+					.has-hero-thumbnail .header-content & {
+						display: none;
+					}
 				
+					.post-meta-categories {
+						display: inline-block;
+				
+						&::after {
+							content: " - ";
+							color: $color__link-contrast;
+						}
+						
+						@media screen and (max-width: #{$breakpoint_mobile}) {
+							display: block;
+						}
+		
+						a {
+							text-decoration: none;
+							color: $color__text-main;
+						}
+					}
 				}
 				
 				> * {

@@ -4,8 +4,8 @@
 }
 
 .page {
-	.has-thumbnail {
-		.hero__content {
+	.has-hero-thumbnail {
+		.hero-content {
 			margin-bottom: 40px;
 		}
 	}
@@ -56,7 +56,7 @@
 }
 
 .page {
-	&.no-thumbnail {
+	&.no-hero-thumbnail {
 		.site-branding {
 			.site-title {
 				color: $color__text-screen;

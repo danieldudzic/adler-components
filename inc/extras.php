@@ -31,9 +31,9 @@ function adler_body_classes( $classes ) {
 	
 	// Adds a class of has-post-thumbnail if the featured image is set ( or the first post in the loop has the featured image set ) and a class of no-post-thumbnail if the featured image is missing.
 	if ( has_post_thumbnail() ) {
-		$classes[] = 'has-post-thumbnail';
+		$classes[] = 'has-hero-thumbnail';
 	} else {
-		$classes[] = 'no-post-thumbnail';
+		$classes[] = 'no-hero-thumbnail';
 	}
 	
 	//If we have no active social links menu and the header text is hidden, narrow the top bar

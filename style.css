@@ -327,8 +327,8 @@ a {
   border-bottom: 3px solid #68f3c8;
   transition: all 0.2s; }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #21759b;
+h1, h1 a, h2, h2 a {
+  color: #0e364f;
   font-weight: bold;
   text-align: center;
   font-family: "Droid Serif", serif; }
@@ -629,9 +629,9 @@ table {
 a {
   color: #0e364f; }
   a:visited {
-    color: purple; }
+    color: #0e364f; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #0e364f; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -643,9 +643,9 @@ a {
 a {
   color: #0e364f; }
   a:visited {
-    color: purple; }
+    color: #0e364f; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #0e364f; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -749,7 +749,7 @@ blockquote, .search-no-results .site-content .content-area .page-header .page-ti
 .search-no-results .site-content .content-area .page-content .widget {
   display: none; }
 
-.hero-content .hero-bg.hero-has-image {
+.hero-wrapper .hero-bg.hero-has-image {
   box-shadow: inset 0px 0px 250px 0px rgba(0, 0, 0, 0.75); }
 
 .site-branding a img {
@@ -775,7 +775,7 @@ blockquote, .search-no-results .site-content .content-area .page-header .page-ti
     float: right;
     margin-bottom: 40px; }
 
-.sticky .hero__content .hero__content-wrap .hero__title .title, .sticky .hero__content .hero__content-wrap .hero__title .sub-title {
+.sticky .hero-wrapper .hero-content .entry-title {
   color: #f7f7f7; }
 
 .separator {
@@ -813,15 +813,10 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 .group-blog .byline {
   display: inline; }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0; }
-
 .single-post .post-navigation {
   display: none; }
 
-.single .has-thumbnail .post, .single .no-thumbnail .post {
+.single .has-hero-thumbnail .post, .single .no-hero-thumbnail .post {
   background-color: transparent; }
 .single .post .entry-wrapper, .single .post .content-area .site-main .posts-navigation, .content-area .site-main .single .post .posts-navigation {
   margin-bottom: 40px; }
@@ -857,9 +852,12 @@ article.post:last-of-type .entry-main:after {
     .post .entry-wrapper .entry-header .entry-title, .post .content-area .site-main .posts-navigation .entry-header .entry-title, .content-area .site-main .post .posts-navigation .entry-header .entry-title {
       font-size: 60px;
       margin-bottom: 50px;
-      position: relative; }
+      position: relative;
+      line-height: 1; }
       .header-content .post .entry-wrapper .entry-header .entry-title, .header-content .post .content-area .site-main .posts-navigation .entry-header .entry-title, .content-area .site-main .header-content .post .posts-navigation .entry-header .entry-title {
         position: relative; }
+      .post .entry-wrapper .entry-header .entry-title a, .post .content-area .site-main .posts-navigation .entry-header .entry-title a, .content-area .site-main .post .posts-navigation .entry-header .entry-title a {
+        border: none; }
       @media screen and (max-width: 900px) {
         .post .entry-wrapper .entry-header .entry-title, .post .content-area .site-main .posts-navigation .entry-header .entry-title, .content-area .site-main .post .posts-navigation .entry-header .entry-title {
           width: 80%;
@@ -876,6 +874,8 @@ article.post:last-of-type .entry-main:after {
       margin-right: -100px;
       margin-top: -60px;
       text-align: center; }
+      .post .entry-wrapper .post-thumbnail a, .post .content-area .site-main .posts-navigation .post-thumbnail a, .content-area .site-main .post .posts-navigation .post-thumbnail a {
+        border: none; }
     .post .entry-wrapper .entry-main, .post .content-area .site-main .posts-navigation .entry-main, .content-area .site-main .post .posts-navigation .entry-main {
       position: relative;
       background-color: #f7f7f7;
@@ -913,7 +913,21 @@ article.post:last-of-type .entry-main:after {
             margin-bottom: 15px; } }
       .post .entry-wrapper .entry-main .entry-footer, .post .content-area .site-main .posts-navigation .entry-main .entry-footer, .content-area .site-main .post .posts-navigation .entry-main .entry-footer {
         display: flex;
-        justify-content: space-between; }
+        justify-content: space-between;
+        width: 100%; }
+        .has-hero-thumbnail .header-content .post .entry-wrapper .entry-main .entry-footer .entry-meta, .has-hero-thumbnail .header-content .post .content-area .site-main .posts-navigation .entry-main .entry-footer .entry-meta, .content-area .site-main .has-hero-thumbnail .header-content .post .posts-navigation .entry-main .entry-footer .entry-meta {
+          display: none; }
+        .post .entry-wrapper .entry-main .entry-footer .entry-meta .post-meta-categories, .post .content-area .site-main .posts-navigation .entry-main .entry-footer .entry-meta .post-meta-categories, .content-area .site-main .post .posts-navigation .entry-main .entry-footer .entry-meta .post-meta-categories {
+          display: inline-block; }
+          .post .entry-wrapper .entry-main .entry-footer .entry-meta .post-meta-categories::after, .post .content-area .site-main .posts-navigation .entry-main .entry-footer .entry-meta .post-meta-categories::after, .content-area .site-main .post .posts-navigation .entry-main .entry-footer .entry-meta .post-meta-categories::after {
+            content: " - ";
+            color: #f7f7f7; }
+          @media screen and (max-width: 500px) {
+            .post .entry-wrapper .entry-main .entry-footer .entry-meta .post-meta-categories, .post .content-area .site-main .posts-navigation .entry-main .entry-footer .entry-meta .post-meta-categories, .content-area .site-main .post .posts-navigation .entry-main .entry-footer .entry-meta .post-meta-categories {
+              display: block; } }
+          .post .entry-wrapper .entry-main .entry-footer .entry-meta .post-meta-categories a, .post .content-area .site-main .posts-navigation .entry-main .entry-footer .entry-meta .post-meta-categories a, .content-area .site-main .post .posts-navigation .entry-main .entry-footer .entry-meta .post-meta-categories a {
+            text-decoration: none;
+            color: #45525a; }
         .post .entry-wrapper .entry-main .entry-footer > *, .post .content-area .site-main .posts-navigation .entry-main .entry-footer > *, .content-area .site-main .post .posts-navigation .entry-main .entry-footer > * {
           display: inline-block; }
         .post .entry-wrapper .entry-main .entry-footer .posted-on a, .post .content-area .site-main .posts-navigation .entry-main .entry-footer .posted-on a, .content-area .site-main .post .posts-navigation .entry-main .entry-footer .posted-on a {
@@ -943,7 +957,7 @@ article.post:last-of-type .entry-main:after {
   clear: both;
   margin: 0 0 1.5em; }
 
-.page .has-thumbnail .hero__content {
+.page .has-hero-thumbnail .hero-content {
   margin-bottom: 40px; }
 @media screen and (max-width: 740px) {
   .page .site-content {
@@ -970,7 +984,7 @@ article.post:last-of-type .entry-main:after {
     float: right;
     margin-bottom: 40px; }
 
-.page.no-thumbnail .site-branding .site-title {
+.page.no-hero-thumbnail .site-branding .site-title {
   color: #21759b; }
 
 .blog .site-main {
@@ -988,20 +1002,22 @@ article.post:last-of-type .entry-main:after {
   z-index: 50;
   top: 0;
   left: 0; }
+  .has-hero-thumbnail.admin-bar .site-header {
+    margin-top: 30px; }
 
 @media screen and (max-width: 740px) {
   .site-header {
     width: 100%; } }
-.no-post-thumbnail .site-header {
+.no-hero-thumbnail .site-header {
   background-color: transparent;
   border-bottom: none;
   position: relative; }
-  .no-post-thumbnail .site-header a {
+  .no-hero-thumbnail .site-header a {
     border-bottom: none;
     font-family: "Droid Sans Mono", serif; }
-.no-post-thumbnail .site-branding .site-title {
+.no-hero-thumbnail .site-branding .site-title {
   color: #0e364f; }
-.no-post-thumbnail .main-navigation .menu li a {
+.no-hero-thumbnail .main-navigation .menu li a {
   color: #0e364f; }
 
 button:focus {
@@ -1059,15 +1075,17 @@ button:focus {
   .site-branding .site-title {
     font-size: 14px;
     line-height: 1;
-    margin-bottom: 0;
+    margin: 0;
+    font-family: "Droid Sans Mono", serif;
     text-align: left; }
+    .site-branding .site-title a {
+      color: #f7f7f7;
+      border-bottom: 0;
+      text-decoration: none;
+      font-family: "Droid Sans Mono", serif;
+      text-align: left; }
   .site-branding .no-site-title {
     display: none; }
-  .site-branding .site-title {
-    text-decoration: none;
-    border-bottom: 0;
-    color: #f7f7f7;
-    font-family: "Droid Sans Mono", serif; }
 
 .header-content {
   position: relative;
@@ -1081,8 +1099,7 @@ button:focus {
 .site-footer {
   width: 100%;
   padding: 80px 40px 40px 40px;
-  display: inline-block;
-  text-align: center; }
+  display: inline-block; }
   @media screen and (max-width: 740px) {
     .site-footer {
       width: 100%; } }
@@ -1445,31 +1462,25 @@ body.admin-bar button.menu-toggle {
 /*--------------------------------------------------------------
 # Hero
 --------------------------------------------------------------*/
-.hero-content {
+.hero-wrapper {
   width: 100%;
   height: 100vh;
   position: relative;
   text-align: center;
   vertical-align: middle;
-  padding-top: 0; }
-  .hero-content .hero-bg {
+  /* Admin Bar Fix */ }
+  .admin-bar .hero-wrapper {
+    margin-top: -32px; }
+  .hero-wrapper .hero-bg {
     height: 100%;
     width: 100%; }
-    .hero-content .hero-bg.hero-has-image {
+    .hero-wrapper .hero-bg.hero-has-image {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
       background-attachment: inherit;
       background-color: #464646; }
-  .hero-content .post .entry-wrapper .entry-header .entry-title, .post .entry-wrapper .entry-header .hero-content .entry-title, .hero-content .post .content-area .site-main .posts-navigation .entry-header .entry-title, .post .content-area .site-main .posts-navigation .entry-header .hero-content .entry-title, .hero-content .content-area .site-main .post .posts-navigation .entry-header .entry-title, .content-area .site-main .post .posts-navigation .entry-header .hero-content .entry-title {
-    font-size: 103px;
-    line-height: 1.2;
-    color: #f7f7f7;
-    position: relative; }
-  .hero-content .post .entry-wrapper .entry-header .entry-title, .post .entry-wrapper .entry-header .hero-content .entry-title, .hero-content .post .content-area .site-main .posts-navigation .entry-header .entry-title, .post .content-area .site-main .posts-navigation .entry-header .hero-content .entry-title, .hero-content .content-area .site-main .post .posts-navigation .entry-header .entry-title, .content-area .site-main .post .posts-navigation .entry-header .hero-content .entry-title {
-    background-image: linear-gradient(transparent 0%, transparent 55%, rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.5) 100%, transparent 100%, transparent 100%);
-    background-size: 100% 100%; }
-  .hero-content .hero-content-wrap {
+  .hero-wrapper .hero-content {
     max-width: 600px;
     overflow: visible;
     margin: auto;
@@ -1477,38 +1488,62 @@ body.admin-bar button.menu-toggle {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%); }
-    @media screen and (min-width: 740px) {
-      .hero-content .hero-content-wrap {
+    @media screen and (max-width: 740px) {
+      .hero-wrapper .hero-content {
         width: 100%; } }
-    .hero-content .hero-content-wrap .entry-content p {
+    .hero-wrapper .hero-content .entry-title {
+      margin: 0px 0px 30px;
+      font-size: 103px;
+      line-height: 1.2;
+      position: relative;
+      background-size: 100% 100%;
+      color: #f7f7f7; }
+      @media screen and (max-width: 900px) {
+        .hero-wrapper .hero-content .entry-title {
+          font-size: 100%;
+          width: 80%;
+          margin: 0 auto; } }
+      @media screen and (max-width: 740px) {
+        .hero-wrapper .hero-content .entry-title {
+          font-size: 100%;
+          display: block;
+          padding: 0 5px; } }
+      @media screen and (max-width: 500px) {
+        .hero-wrapper .hero-content .entry-title {
+          font-size: 80%; } }
+      .hero-wrapper .hero-content .entry-title a {
+        border-bottom: none;
+        text-decoration: none;
+        background-image: linear-gradient(transparent 0%, transparent 55%, rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.5) 100%, transparent 100%, transparent 100%);
+        background-size: 100% 100%;
+        width: 100%;
+        position: relative;
+        color: #f7f7f7; }
+    .hero-wrapper .hero-content .entry-content p {
       color: #f7f7f7;
       text-align: center; }
-      @media screen and (min-width: 740px) {
-        .hero-content .hero-content-wrap .entry-content p {
+      @media screen and (max-width: 740px) {
+        .hero-wrapper .hero-content .entry-content p {
           padding: 0 5px; } }
-    .hero-content .hero-content-wrap .hero-meta {
+    .hero-wrapper .hero-content .entry-content .more-link {
+      color: #f7f7f7;
+      text-transform: uppercase; }
+    .hero-wrapper .hero-content .entry-meta {
       width: 100%; }
-      .no-thumbnail .header-content .hero-content .hero-content-wrap .hero-meta {
+      .hero-wrapper .hero-content .entry-meta a, .hero-wrapper .hero-content .entry-meta span {
+        border: none;
+        color: #f7f7f7; }
+      .no-hero-thumbnail .header-content .hero-wrapper .hero-content .entry-meta {
         display: none; }
-      .hero-content .hero-content-wrap .hero-meta .hero-categories {
-        display: inline-block; }
-        .hero-content .hero-content-wrap .hero-meta .hero-categories::after {
-          content: " - ";
-          color: #f7f7f7; }
-        @media screen and (min-width: 500px) {
-          .hero-content .hero-content-wrap .hero-meta .hero-categories {
-            display: block; } }
-        .hero-content .hero-content-wrap .hero-meta .hero-categories a {
-          text-decoration: none;
-          border-bottom: none;
-          color: #f7f7f7; }
-      .hero-content .hero-content-wrap .hero-meta .hero_date {
+      .hero-wrapper .hero-content .entry-meta .hero_date {
         display: inline-block;
         color: #f7f7f7; }
+      .hero-wrapper .hero-content .entry-meta .post-meta-categories, .hero-wrapper .hero-content .entry-meta a {
+        display: inline; }
 
-.hero_read_more a {
-  color: #f7f7f7;
-  text-transform: uppercase; }
+.has-hero-thumbnail article.post:first-of-type {
+  padding-top: 0;
+  overflow: hidden; }
 
 /* Down Arrow */
 .arrow-wrap {

@@ -21,11 +21,13 @@ a {
 	transition: all 0.2s;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	color: $color__text-screen;
-	font-weight: bold;
-	text-align: center;
-	font-family: $font__code;
+h1, h2 {
+	&, a {
+		color: $color__link;
+		font-weight: bold;
+		text-align: center;
+		font-family: $font__code;
+	}
 }
 
 h1 {
