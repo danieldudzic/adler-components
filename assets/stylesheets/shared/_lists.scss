@@ -1,13 +1,25 @@
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 40px 0;
 }
 
 ul {
-	list-style: disc;
+	list-style: none;
+	padding-left: 40px;
+	
+	li:before {
+		font-size: 60%;
+		padding-right: 10px;
+	}
+}
+
+li {
+	font-size: $font__size-main;
+	line-height: $font__line-height-main;
 }
 
 ol {
 	list-style: decimal;
+	padding-left: 30px;
 }
 
 li > ul,

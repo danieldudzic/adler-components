@@ -1,3 +1,8 @@
+html {
+	font-size: percentage($font__size-main / 16px);
+	line-height: $font__line-height-main / $font__size-main;
+}
+
 body,
 button,
 input,
@@ -9,12 +14,50 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
+a {
+	text-decoration: none;
+	color: currentColor;
+	border-bottom: 3px solid $color__text-accent;
+	transition: all 0.2s;
+}
+
 h1, h2, h3, h4, h5, h6 {
-	clear: both;
+	color: $color__text-screen;
+	font-weight: bold;
+	text-align: center;
+	font-family: $font__code;
+}
+
+h1 {
+	text-align: center;
+	color: $color__text-screen;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+h3 {
+	font-size: 16px;
+	margin-bottom: 30px;
+}
+
+h4 {
+	font-size: 13px;
+}
+
+h2, h4 {
+	margin-bottom: 20px;
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin-top: 0;
+	margin-bottom: 40px;
+}
+
+b, strong {
+	font-weight: 800;
+	color: $color__text-input-focus;
 }
 
 dfn, cite, em, i {
@@ -66,4 +109,13 @@ blockquote, q {
 	&:after {
 		content: "";
 	}
+}
+
+%hyphening {
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
 }

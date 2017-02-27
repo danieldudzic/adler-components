@@ -42,7 +42,7 @@ function adler_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	add_image_size( 'adler-featured-image', 640, 9999 );
+	add_image_size( 'adler-featured-image', 800, 9999 );
 	add_image_size( 'adler-large', 2000, 1500, true );
 
 	// This theme uses wp_nav_menu() in one location.
@@ -101,7 +101,7 @@ add_action( 'after_setup_theme', 'adler_setup' );
  * @global int $content_width
  */
 function adler_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'adler_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'adler_content_width', 600 );
 }
 add_action( 'after_setup_theme', 'adler_content_width', 0 );
 
@@ -133,6 +133,36 @@ function adler_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 1', 'adler' ),
+		'id'            => 'sidebar-2',
+		'description'   => '',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 2', 'adler' ),
+		'id'            => 'sidebar-3',
+		'description'   => '',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 3', 'adler' ),
+		'id'            => 'sidebar-4',
+		'description'   => '',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'adler_widgets_init' );
 
@@ -141,6 +171,8 @@ add_action( 'widgets_init', 'adler_widgets_init' );
  */
 function adler_scripts() {
 	wp_enqueue_style( 'adler-style', get_stylesheet_uri() );
+	
+	wp_enqueue_style( 'adler-fonts', adler_fonts_url(), array(), null );
 
 	wp_enqueue_script( 'adler-main', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '20120206', true );
 	wp_localize_script( 'adler-main', 'menuToggleText', array(
@@ -157,6 +189,51 @@ function adler_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'adler_scripts' );
+
+/**
+ * Returns the Google font stylesheet URL, if available.
+ */
+function adler_fonts_url() {
+	$fonts_url = '';
+
+	/* translators: If there are characters in your language that are not supported
+	 * by Droid Serif, translate this to 'off'. Do not translate into your own language.
+	 */
+	$droid_serif = esc_html_x( 'on', 'Droid Serif font: on or off',	'adler' );
+
+	/* translators: If there are characters in your language that are not supported
+	 * by Permanent Marker, translate this to 'off'. Do not translate into your own language.
+	 */
+	$permanent_marker = esc_html_x( 'on', 'Permanent Marker font: on or off', 'adler' );
+	
+	/* translators: If there are characters in your language that are not supported
+	 * by Droid Sans Mono, translate this to 'off'. Do not translate into your own language.
+	 */
+	$droid_sans_mono = esc_html_x( 'on', 'Droid Sans Mono font: on or off', 'adler' );
+
+	if ( 'off' !== $droid_serif || 'off' !== $permanent_marker || 'off' !== $droid_sans_mono ) {
+		$font_families = array();
+
+		if ( 'off' !== $droid_serif ) {
+			$font_families[] = 'Droid Serif:400,700,400italic,700italic';
+		}
+		if ( 'off' !== $permanent_marker ) {
+			$font_families[] = 'Permanent Marker:400';
+		}
+
+		if ( 'off' !== $droid_sans_mono ) {
+			$font_families[] = 'Droid Sans Mono:400';
+		}
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+		$fonts_url = add_query_arg( $query_args, "https://fonts.googleapis.com/css" );
+	}
+
+	return esc_url_raw( $fonts_url );
+}
 
 /**
  * Implement the Custom Header feature.

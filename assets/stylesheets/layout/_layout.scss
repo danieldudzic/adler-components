@@ -12,10 +12,6 @@ body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
 
-.site-content {
-	padding: 1.6em 5%;
-}
-
 @import "content-sidebar";
 // @import "sidebar-content";
 
@@ -23,11 +19,6 @@ body {
 ## Extends
 --------------------------------------------------------------*/
 @import "general";
-
-/*--------------------------------------------------------------
-## Typography
---------------------------------------------------------------*/
-@import "typography";
 
 /*--------------------------------------------------------------
 ## Single Column / No Active Sidebar

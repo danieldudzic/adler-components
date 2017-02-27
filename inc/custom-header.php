@@ -22,7 +22,7 @@
 function adler_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'adler_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
+		'default-text-color'     => '45525a',
 		'width'                  => 2000,
 		'height'                 => 250,
 		'flex-height'            => true,

@@ -9,7 +9,7 @@
 	left: 0;
 }
 
-@media screen and (min-width: #{$breakpoint_tablet}) {
+@media screen and (max-width: #{$breakpoint_tablet}) {
 	.site-header {
 		width: 100%;
 	}
@@ -58,7 +58,7 @@ button {
 		font-family: 'FontAwesome';
 		color: #0E3650;
 
-		@media screen and (min-width: #{$breakpoint_tablet}) {
+		@media screen and (max-width: #{$breakpoint_tablet}) {
 			position: absolute;
 			right: 35px;
 			display: block;
@@ -88,7 +88,7 @@ button {
 		}
 
 		a {
-			@media screen and (min-width: #{$breakpoint_laptop}) {
+			@media screen and (max-width: #{$breakpoint_laptop}) {
 				color: $color__link;
 				display: inline-block;
 			}
@@ -141,8 +141,4 @@ button {
 	width: 100%;
 	height: auto;
 	margin: auto;
-
-	.hero-title {
-		position: relative;
-	}
 }

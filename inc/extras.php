@@ -28,7 +28,29 @@ function adler_body_classes( $classes ) {
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		$classes[] = 'no-sidebar';
 	}
+	
+	// Adds a class of has-post-thumbnail if the featured image is set ( or the first post in the loop has the featured image set ) and a class of no-post-thumbnail if the featured image is missing.
+	if ( has_post_thumbnail() ) {
+		$classes[] = 'has-post-thumbnail';
+	} else {
+		$classes[] = 'no-post-thumbnail';
+	}
+	
+	//If we have no active social links menu and the header text is hidden, narrow the top bar
+	if ( ! has_nav_menu( 'jetpack-social-menu' ) && 'blank' == get_header_textcolor() ) {
+		$classes[] = 'no-top-bar';
+	}
 
 	return $classes;
 }
 add_filter( 'body_class', 'adler_body_classes' );
+
+/**
+ * Add a pingback url auto-discovery header for singularly identifiable articles.
+ */
+function adler_pingback_header() {
+	if ( is_singular() && pings_open() ) {
+		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
+	}
+}
+add_action( 'wp_head', 'adler_pingback_header' );

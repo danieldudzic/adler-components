@@ -11,14 +11,14 @@
 	}
 
 	.site-content {
-		@media screen and (min-width: #{$breakpoint_tablet}) {
+		@media screen and (max-width: #{$breakpoint_tablet}) {
 			padding: 0 5px;
 		}
 	}
 }
 
 #page {
-	@media screen and (min-width: #{$breakpoint_tablet}) {
+	@media screen and (max-width: #{$breakpoint_tablet}) {
 		overflow: hidden;
 	}
 }
@@ -41,7 +41,7 @@
 					margin-bottom: 40px;
 					padding-right: 200px;
 					
-					@media screen and (min-width: #{$breakpoint_tablet}) {
+					@media screen and (max-width: #{$breakpoint_tablet}) {
 						padding-right: 50px;
 					}
 				}

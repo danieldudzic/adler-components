@@ -4,6 +4,7 @@
 	position: relative;
 	text-align: center;
 	vertical-align: middle;
+	padding-top: 0;
 
 	.hero-bg {
 		height: 100%;
@@ -60,56 +61,12 @@
 			}
 		}
 
-		.hero-title {
-			margin-bottom: 30px;
-
-			.title {
-				@extend %white-hero;
-				@extend %hero-gradient;
-				white-space: nowrap;
-				
-				@media screen and (min-width: #{$breakpoint_laptop}) {
-					font-size: 100%;
-					width: 80%;
-					margin: 0 auto;
-				}
-		
-				@media screen and (min-width: #{$breakpoint_tablet}) {
-					font-size: 100%;
-					display: block;
-					padding: 0 5px;
-				}
-	
-				@media screen and (min-width: #{$breakpoint_mobile}) {
-					font-size: 80%;
-				}
-			}
-
-			.sub-title {
-				@extend %white-hero;
-				@extend %hero-gradient;
-				white-space: nowrap;
-				
-				@media screen and (min-width: #{$breakpoint_laptop}) {
-					font-size: 100%;
-					width: 80%;
-					margin: 0 auto;
-				}
-		
-				@media screen and (min-width: #{$breakpoint_tablet}) {
-					font-size: 100%;
-					display: block;
-					padding: 0 5px;
-				}
-				
-				@media screen and (min-width: #{$breakpoint_mobile}) {
-					font-size: 80%;
-				}
-			}
-		}
-
 		.hero-meta {
 			width: 100%;
+			
+			.no-thumbnail .header-content & {
+				display: none;
+			}
 		
 			.hero-categories {
 				display: inline-block;
@@ -117,6 +74,10 @@
 				&::after {
 					content: " - ";
 					color: $color__link-contrast;
+				}
+				
+				@media screen and (min-width: #{$breakpoint_mobile}) {
+					display: block;
 				}
 
 				a {

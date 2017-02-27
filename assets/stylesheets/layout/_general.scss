@@ -1,7 +1,7 @@
 /* Extends */
 
 %entry-wrapper {
-	max-width: 600px;
+	max-width: $size_site-entry;
 	margin: 0 auto;
 }
 
@@ -17,7 +17,7 @@ blockquote {
 	position: relative;
 	@extend %hyphening;
 
-	@media screen and (min-width: #{$breakpoint_laptop}) {
+	@media screen and (max-width: #{$breakpoint_laptop}) {
 		max-width: 100%;
 		margin:10px 20px;
 		font-size: 30px;
@@ -28,7 +28,7 @@ blockquote {
 			}
 	}
 	
-	@media screen and (min-width: #{$breakpoint_tablet}) {
+	@media screen and (max-width: #{$breakpoint_tablet}) {
 		max-width: 100%;
 		margin:20px 40px;
 		font-size: 25px;
@@ -119,7 +119,7 @@ blockquote {
 
 %logo-settings-mobile {
 	a img {
-		@media screen and (min-width: #{$breakpoint_laptop}) {
+		@media screen and (max-width: #{$breakpoint_laptop}) {
 			max-width: 90px;
 			max-height: 90px;
 		}
@@ -127,11 +127,6 @@ blockquote {
 }
 
 /* Layouts */
-
-.entry-wrapper {
-	@extend %entry-wrapper;
-}
-
 .site-main {
 	@extend %no-thumbnail-title;
 

@@ -27,8 +27,10 @@ object {
 		@include center-block;
 	}
 
-	.wp-caption-text {
-		margin: 0.8075em 0;
+	.wp-caption-text, .gallery-caption {
+		padding-top: 10px;
+		color: $color__text-caption;
+		text-align: center;
 	}
 }
 

@@ -4,11 +4,11 @@
 	display: inline-block;
 	text-align: center;
 
-	@media screen and (min-width: #{$breakpoint_tablet}) {
+	@media screen and (max-width: #{$breakpoint_tablet}) {
 		width: 100%;
 	}
 
-	@media screen and (min-width: #{$breakpoint_laptop}) {
+	@media screen and (max-width: #{$breakpoint_laptop}) {
 		text-align: center;
 		float: none;
 		padding: 20px 20px 20px 20px;
@@ -19,7 +19,7 @@
 	}
 
 	ul.menu {
-		@media screen and (min-width: #{$breakpoint_tablet}) {
+		@media screen and (max-width: #{$breakpoint_tablet}) {
 			padding-left: 0;
 		}
 	}
@@ -34,12 +34,12 @@
 	float: right;
 	text-align: right;
 	
-	@media screen and (min-width: #{$breakpoint_tablet}) {
+	@media screen and (max-width: #{$breakpoint_tablet}) {
 		text-align: center;
 		float: none;
 	}
 
-	@media screen and (min-width: #{$breakpoint_laptop}) {
+	@media screen and (max-width: #{$breakpoint_laptop}) {
 		text-align: center;
 		float: none;
 	}

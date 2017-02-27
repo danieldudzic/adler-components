@@ -43,3 +43,11 @@ label[for=comment] {
 	left: 0;
 	top: -30px;
 }
+
+.comment-author.vcard a {
+	border-bottom: 3px solid $color__text-accent;
+}
+
+.comment-metadata a {
+	border-bottom: none;
+}
