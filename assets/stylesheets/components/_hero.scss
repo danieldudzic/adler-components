@@ -20,7 +20,7 @@
 			background-position: center center;
 			background-attachment: inherit;
 			background-color: #464646;
-			@extend %shadow;
+			box-shadow: inset 0px 0px 250px 0px rgba(0 , 0 , 0 , 0.75);
 		}
 
 		&.hero-no-image {
@@ -50,19 +50,19 @@
 			color: $color__link-contrast;
 			
 			@media screen and (max-width: #{$breakpoint_laptop}) {
-				font-size: 100%;
+				font-size: 103px;
 				width: 80%;
 				margin: 0 auto;
 			}
 			
 			@media screen and (max-width: #{$breakpoint_tablet}) {
-				font-size: 100%;
+				font-size: 103px;
 				display: block;
 				padding: 0 5px;
 			}
 			
 			@media screen and (max-width: #{$breakpoint_mobile}) {
-				font-size: 80%;
+				font-size: 82px;
 			}
 			
 			a {

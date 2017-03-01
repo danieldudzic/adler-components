@@ -4,6 +4,9 @@
 
 .sticky {
 	display: block;
+	.hero-wrapper .hero-content .entry-title {
+		color: $color__link-contrast;
+	}
 }
 
 .byline,
@@ -32,6 +35,7 @@
 	.post {
 		.entry-wrapper {
 			margin-bottom: 40px;
+			padding-top: 80px;
 			
 			.entry-footer {
 				span {
@@ -78,7 +82,8 @@ article.post:last-of-type {
 
 	.entry-wrapper {
 		position: relative;
-		@extend %entry-wrapper;
+		max-width: $size_site-entry;
+		margin: 0 auto;
 
 		@media screen and (max-width: #{$breakpoint_tablet}) {
 			padding: 0;
@@ -210,11 +215,13 @@ article.post:last-of-type {
 				}
 		
 				.separator {
+					padding-left: 5px;
+					padding-right: 5px;
 					@media screen and (max-width: #{$breakpoint_mobile}) {
 						display: none;
-					}	
+					}
 				}
-		
+
 				.comments-link {
 					i {
 						padding-right: 5px;
@@ -227,6 +234,11 @@ article.post:last-of-type {
 		
 					a {
 						border-bottom: none;
+					}
+					
+					&:before {
+						@extend %icon-before;
+						content: '\f300';
 					}
 				}
 		

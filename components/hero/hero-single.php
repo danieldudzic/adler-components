@@ -23,33 +23,38 @@
 		<div class="hero-bg <?php echo $hero_class; ?>" <?php echo $hero_style; ?>></div>
 		
 		<div class="hero-content">
-			<?php  get_template_part( 'components/post/content', 'meta' ); ?>
-					
 			<header class="entry-header">
 				<?php
 					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 				?>
 			</header>
-	
-				<div class="entry-content">
-					<?php
-						the_content( sprintf(
-							wp_kses( esc_html__( 'Read More', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
-							the_title( '<span class="screen-reader-text">"', '"</span>', false )
-						) );
 			
-						wp_link_pages( array(
-							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'adler' ),
-							'after'  => '</div>',
-						) );
-					?>
-				</div><!-- .entry-content -->
-
-			</div><!-- .hero-content -->
-			<!-- Down arrow -->
-			<a class="arrow-wrap" href="#arrow-anchor">
-				<span class="arrow"></span>
-			</a>
-			
+			<?php  get_template_part( 'components/post/content', 'meta' ); ?>
+		</div><!-- .hero-content -->
+		
+		<!-- Down arrow -->
+		<a class="arrow-wrap" href="#arrow-anchor">
+			<span class="arrow"></span>
+		</a>
+		
 	</div><!-- .hero-wrapper -->
+	
+	<div class="entry-wrapper">	
+		<div class="entry-content">
+			<?php
+				the_content( sprintf(
+					wp_kses( esc_html__( 'Read More', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
+					the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				) );
+	
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'adler' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div><!-- .entry-content -->
+
+		<?php get_template_part( 'components/post/content', 'footer' ); ?>
+	</div><!-- .entry-wrapper -->
+		
 </article><!-- #post-## -->

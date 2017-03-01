@@ -1,7 +1,23 @@
 .search-no-results {
 	.site-content {
 		.content-area {
-			@extend %no-content;
+			max-width: $size_site-entry;
+			margin: 0 auto;
+			
+			.page-header {
+				.page-title {
+					h1 {
+						@extend blockquote;
+					}
+				}
+			}
+			
+			.page-content {
+				.widget {
+					display: none;
+				}
+			}
+			
 			.no-results {
 				.page-header {
 					.page-title {

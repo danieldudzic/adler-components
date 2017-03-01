@@ -1,3 +1,10 @@
+%li-style {
+	border-bottom: none;
+	&:hover {
+		color: $color__text-accent;
+	}
+}
+
 .widget {
 	margin: 0 0 1.5em;
 
@@ -10,8 +17,6 @@
 .widgets-area {
 	text-align: center;
 	list-style: none;
-
-	@extend %no-bullets;
 
 	.widget-area {
 		width: 100%;
@@ -31,13 +36,22 @@
 			padding: 10px 60px;
 			ul {
 				padding-left: 0px;
+				
+				li {
+					&:before {
+						content: none;
+					}
+				}
 			}
 		}
 	}
 
 	#footer-sidebar {
 
-		@extend %header;
+		h2 {
+			margin-bottom: 0px;
+		}
+
 		.widget_nav_menu {
 			.menu-main-menu-container {
 				ul.menu {
@@ -114,8 +128,11 @@
 		.widget_meta {
 			ul {
 				margin: 0 auto;
-				@extend %no-bullets;
 				li {
+					&:before {
+						content: none;
+					}
+					
 					a {
 						@extend %li-style;
 						abbr[title] {
@@ -129,8 +146,12 @@
 		.widget_recent_entries {
 			ul {
 				margin: 0 auto;
-				@extend %no-bullets;
+				
 				li {
+					&:before {
+						content: none;
+					}
+
 					a {
 						@extend %li-style;
 					}

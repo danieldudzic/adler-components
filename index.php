@@ -32,7 +32,7 @@ get_header(); ?>
 
 				if ( 0 === $wp_query->current_post && has_post_thumbnail() ) :
 
-					get_template_part( 'components/post/content', 'hero' );
+					get_template_part( 'components/hero/hero', 'archive' );
 
 				else :
 
