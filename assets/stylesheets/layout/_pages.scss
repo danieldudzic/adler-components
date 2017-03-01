@@ -25,6 +25,13 @@
 
 .content-area {
 	.site-main {
+		
+		.page-title {
+			position: relative;
+			max-width: $size_site-entry;
+			margin: 0 auto;
+		}
+
 		.entry-wrapper {
 			
 			position: relative;
@@ -189,11 +196,11 @@
 	}
 }
 
-.page {
-	&.no-hero-thumbnail {
-		.site-branding {
-			.site-title {
-				color: $color__text-screen;
+.no-hero-thumbnail {
+	.site-branding {
+		.site-title {
+			a {
+				color: $color__title;
 			}
 		}
 	}

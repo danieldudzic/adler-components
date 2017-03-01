@@ -422,7 +422,7 @@ h1, h1 a, h2, h2 a {
 
 h1 {
   text-align: center;
-  color: #21759b; }
+  color: #0e364f; }
 
 h2 {
   font-size: 20px; }
@@ -453,7 +453,7 @@ blockquote, .search-no-results .site-content .content-area .page-header .page-ti
   font-size: 45px;
   text-align: center;
   line-height: 1.44;
-  color: #21759b;
+  color: #0e364f;
   margin-left: -225px;
   margin-right: -225px;
   margin-bottom: 50px;
@@ -1013,6 +1013,10 @@ article.post:last-of-type .entry-main:after {
   #page {
     overflow: hidden; } }
 
+.content-area .site-main .page-title {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto; }
 .content-area .site-main .entry-wrapper {
   position: relative;
   max-width: 600px;
@@ -1109,8 +1113,8 @@ article.post:last-of-type .entry-main:after {
     float: right;
     margin-bottom: 40px; }
 
-.page.no-hero-thumbnail .site-branding .site-title {
-  color: #21759b; }
+.no-hero-thumbnail .site-branding .site-title a {
+  color: #0e364f; }
 
 .blog .site-main {
   text-align: center; }
@@ -1431,9 +1435,6 @@ label[for=comment] {
         color: #111; }
   .widgets-area #footer-sidebar .widget_tag_cloud .tagcloud a {
     background-color: #f7f7f7; }
-
-.posts-navigation {
-  display: inline-block; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

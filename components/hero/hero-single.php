@@ -32,12 +32,12 @@
 			<?php  get_template_part( 'components/post/content', 'meta' ); ?>
 		</div><!-- .hero-content -->
 		
-		<!-- Down arrow -->
 		<a class="arrow-wrap" href="#arrow-anchor">
 			<span class="arrow"></span>
 		</a>
 		
 	</div><!-- .hero-wrapper -->
+	<div id="arrow-anchor"></div>
 	
 	<div class="entry-wrapper">	
 		<div class="entry-content">

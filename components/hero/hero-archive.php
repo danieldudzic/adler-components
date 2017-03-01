@@ -37,10 +37,11 @@
 			</div><!-- .entry-content -->
 
 		</div><!-- .hero-content -->
-			<!-- Down arrow -->
+
 			<a class="arrow-wrap" href="#arrow-anchor">
 				<span class="arrow"></span>
 			</a>
 			
 	</div><!-- .hero-wrapper -->
 </article><!-- #post-## -->
+<div id="arrow-anchor"></div>

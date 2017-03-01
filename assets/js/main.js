@@ -9,8 +9,12 @@
 		toolbarHeight,
 		slideMenu = $( '.slide-panel' ),
 		body = $( 'body' ),
+		htmlBody = $( 'html, body' ),
 		actionText = $('.action-text'),
 		menuToggle = $( '.menu-toggle' );
+		arrowWrap = $( '.arrow-wrap' );
+		arrowAnchor = $( '#arrow-anchor' );
+		
 
 	/**
 	* Full width feature images
@@ -89,6 +93,20 @@
 	}
 
 	/**
+	* Hero Scroll
+	*
+	* Scroll below the hero component.
+	*/
+	function heroScroll() {
+		arrowWrap.click( function() {
+	        htmlBody.animate({
+	            scrollTop: arrowAnchor.offset().top
+	        }, 500 );
+	        return false;
+	    });
+	}
+
+	/**
 	* Navigation sub menu show and hide
 	*
 	* Show sub menus with an arrow click to work across all devices
@@ -138,18 +156,13 @@
 		fullscreenFeaturedImage();
 		bigImageClass();
 		slideControl();
+		heroScroll();
 	} );
 	
 	
 	/**
 	* Adler js
 	*/
-	$(".arrow-wrap").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#arrow-anchor").offset().top
-        }, 500);
-        return false;
-    });
 
     /* Search */
     $(".nav__item--search").click(function(){
@@ -165,10 +178,6 @@
         $(".main-menu-container").toggleClass("padding--fix");
     });
 
-    $(document).keyup(function(e) {
-        if (e.keyCode == 27)
-            $('.overlay--search').fadeOut("fast");
-    });
-	
+
 
 } )( jQuery );
