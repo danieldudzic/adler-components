@@ -10,3 +10,6 @@ Thumbs.db
 
 # exclude everything
 assets/stylesheets/.sass-cache/*
+
+# Codekit
+config.codekit
