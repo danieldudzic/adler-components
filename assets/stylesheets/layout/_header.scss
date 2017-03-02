@@ -1,19 +1,14 @@
-.has-hero-thumbnail.admin-bar .site-header {
-	margin-top: 30px;
-}
-
 .site-branding {
-	width: 99%;
+	width: 30%;
 	height: 80px;
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 	padding: 20px 40px;
 	position: absolute;
 	z-index: 50;
 	top: 0;
 	left: 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+
+
 	
 	
 	a img {
@@ -57,11 +52,10 @@ button {
 .site-title {
 	position: relative;
 	float: left;
-	width: 20%;
 	text-align: left;
 	margin-top: 10px;
-
 	font-size: 14px;
+
 	line-height: 1;
 	margin: 0;
 	font-family: $font__main;
@@ -74,6 +68,16 @@ button {
 		font-family: $font__main;
 		text-align: left;
 	}
+}
+
+.site-title, .site-description {
+	width: 100%;
+	display: inline-block;
+}
+
+.site-description {
+	font-size: 12px;
+	margin-top: 1em;
 }
 
 .no-site-title {

@@ -25,13 +25,11 @@ h1, h2 {
 	&, a {
 		color: $color__link;
 		font-weight: bold;
-		text-align: center;
 		font-family: $font__code;
 	}
 }
 
 h1 {
-	text-align: center;
 	color: $color__title;
 }
 
@@ -73,69 +71,6 @@ blockquote {
 	@extend %hyphening;
 	font-size: 18px;
 	margin: 0 1.6em;
-}
-
-.entry-content blockquote {
-	font-family: $font__code-secondary;
-	font-size: 45px;
-	text-align: center;
-	line-height: 62px;
-	color: $color__title;
-	margin-left: -225px;
-	margin-right: -225px;
-	margin-bottom: 50px;
-	position: relative;
-	box-sizing: content-box;
-	display: inline-block;
-	@extend %hyphening;
-	float: left;
-	
-	background-size: 50px 62px;
-	background-color: $color__text-accent;
-	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
-	background-image: -moz-linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
-	background-image: linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
-	
-	-webkit-box-decoration-break: clone;
-	-ms-box-decoration-break: clone;
-	-o-box-decoration-break: clone;
-	box-decoration-break: clone;
-	
-	* {
-		width: auto;
-	}
-	
-	p {
-		margin: 0;
-	}
-	
-	blockquote {
-		margin: 62px 2em 0;
-	}
-	
-	@media screen and (max-width: #{$breakpoint_laptop}) {
-		max-width: 100%;
-		margin: 10px 20px;
-		font-size: 30px;
-			p {
-				background-size: 15px 32px;
-				background-color: #68f3c8;
-				background-image: linear-gradient(white 70%, transparent 70%, transparent);
-			}
-	}
-	
-	@media screen and (max-width: #{$breakpoint_tablet}) {
-		max-width: 100%;
-		margin: 20px 40px;
-		font-size: 25px;
-		
-		p {
-			background-size: 15px 32px;
-			background-color: #68f3c8;
-			background-image: linear-gradient(white 70%, transparent 70%, transparent);
-		}
-	}
-
 }
 
 address {

@@ -40,27 +40,6 @@
 	}
 
 	/**
-	* Full screen size images: props to Resonar for solution
-	*/
-	function fullscreenFeaturedImage() {
-		var entryHeaderBackground, entryHeaderHeight, windowWidth;
-		entryHeaderBackground = $( '.feature-header' );
-
-		if ( ! entryHeaderBackground ) {
-			return;
-		}
-
-		toolbarHeight     = body.is( '.admin-bar' ) ? $( '#wpadminbar' ).height() : 0;
-		entryHeaderHeight = $window.height();
-		windowWidth       = $window.width();
-
-		entryHeaderBackground.css( {
-			'height': entryHeaderHeight + 'px',
-			'margin-top': '-' + toolbarHeight + 'px',
-		} );
-	}
-
-	/**
 	* Sliding panel
 	*
 	* Swaps classes for sliding panel so it uses CSS transformations.
@@ -126,17 +105,9 @@
 	} );
 
 	/**
-	* Loader for all the theme functions: props to Resonar for resizing
+	* Loader for all the theme functions
 	*/
-	$window.on( 'resize', function() {
-		clearTimeout( resizeTimer );
-		resizeTimer = setTimeout( function() {
-			fullscreenFeaturedImage();
-		}, 100 );
-	} );
-
 	$document.ready( function() {
-		fullscreenFeaturedImage();
 		bigImageClass();
 		slideControl();
 		heroScroll();

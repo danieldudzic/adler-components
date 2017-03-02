@@ -1,5 +1,5 @@
-		<?php if ( is_active_sidebar( 'sidebar-1' ) || has_nav_menu( 'top-menu' ) || has_nav_menu( 'social' ) ) : ?>
-			<button class="menu-toggle animated" aria-expanded="false" ><span class="screen-reader-text"><?php esc_html_e( 'Show', 'adler' ); ?></span><span class="action-text"><?php esc_html_e( 'Show', 'adler' ); ?></span></button>
+		<?php if ( is_active_sidebar( 'sidebar-1' ) || has_nav_menu( 'top' ) || has_nav_menu( 'social' ) ) : ?>
+			<button class="menu-toggle animated" aria-expanded="false" ><span class="screen-reader-text"><?php esc_html_e( 'Show', 'adler' ); ?></span></button>
 			<div class="slide-panel animated closed">
 				<?php adler_social_menu(); ?>
 
