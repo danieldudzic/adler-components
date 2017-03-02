@@ -30,7 +30,7 @@ function adler_body_classes( $classes ) {
 	}
 	
 	// Adds a class of has-post-thumbnail if the featured image is set ( or the first post in the loop has the featured image set ) and a class of no-post-thumbnail if the featured image is missing.
-	if ( has_post_thumbnail() ) {
+	if ( has_post_thumbnail() && is_single() || is_home() ) {
 		$classes[] = 'has-hero-thumbnail';
 	} else {
 		$classes[] = 'no-hero-thumbnail';

@@ -107,23 +107,6 @@
 	}
 
 	/**
-	* Navigation sub menu show and hide
-	*
-	* Show sub menus with an arrow click to work across all devices
-	* This switches classes and changes the genericon.
-	*/
-	$( '.main-navigation .page_item_has_children > a, .main-navigation .menu-item-has-children > a' ).append( '<button class="showsub-toggle" aria-expanded="false">' + menuToggleText.open + '</button>' );
-
-	$( '.showsub-toggle' ).click( function( e ) {
-			e.preventDefault();
-			var $this = $( this );
-			$this.toggleClass( 'sub-on' );
-			$this.text( $this.text() == menuToggleText.open ? menuToggleText.close : menuToggleText.open );
-			$this.parent().next( '.children, .sub-menu' ).toggleClass( 'sub-on' );
-			$this.attr( 'aria-expanded', $this.attr( 'aria-expanded' ) == 'false' ? 'true' : 'false');
-	} );
-
-	/**
 	* Close slide menu with escape key
 	*
 	* Adds in this functionality

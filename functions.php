@@ -47,7 +47,7 @@ function adler_setup() {
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'adler' ),
+		'top-menu' => __( 'Top Menu', 'adler' ),
 		'footer'  => __( 'Footer Menu', 'adler' )
 	) );
 	/**
@@ -70,18 +70,6 @@ function adler_setup() {
 		'comment-list',
 		'gallery',
 		'caption',
-	) );
-
-	/*
-	 * Enable support for Post Formats.
-	 * See https://developer.wordpress.org/themes/functionality/post-formats/
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
 	) );
 
 	// Set up the WordPress core custom background feature.
@@ -157,6 +145,16 @@ function adler_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer 3', 'adler' ),
 		'id'            => 'sidebar-4',
+		'description'   => '',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	
+	register_sidebar( array(
+		'name'          => esc_html__( 'Full-Width Footer', 'adler' ),
+		'id'            => 'sidebar-5',
 		'description'   => '',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',

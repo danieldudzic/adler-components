@@ -30,6 +30,6 @@
 		<?php get_template_part( 'components/header/header', 'fullscreen-image' ); ?>
 
 		<?php adler_the_custom_logo(); ?>
-
+		
 	</header>
 	<div id="content" class="site-content">

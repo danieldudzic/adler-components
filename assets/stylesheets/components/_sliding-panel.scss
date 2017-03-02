@@ -20,6 +20,7 @@ body.admin-bar button.menu-toggle {
 	position: relative;
 	width: 100%;
 	z-index: 2;
+	box-sizing: border-box;
 }
 
 .slide-panel.expanded {
@@ -45,4 +46,325 @@ body.admin-bar button.menu-toggle {
 .slide-panel.expanded,
 .single .slide-panel.expanded {
 	display: block;
+}
+
+/* Slide Menu */
+.slide-panel {
+	background: #222;
+	height: 100%;
+	outline-color: #333;
+	outline-style: solid;
+	outline-width: 0;
+	overflow: hidden;
+	overflow-x: hidden;
+	padding: 54px 0 24px;
+	position: absolute;
+	right: -100%;
+	top: 0;
+	visibility: hidden;
+	width: 100%;
+	z-index: 2;
+}
+.sidebar-open .slide-panel {
+	height: auto;
+	visibility: visible;
+}
+.site {
+	background: #fff;
+	height: 100%;
+	left: 0;
+	position: relative;
+}
+.sidebar-open .site {
+	left: -30%;
+}
+.sidebar-open .site {
+	overflow: hidden;
+}
+.sidebar-open {
+	background: #222;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+	background: #222;
+	border: 0;
+	border-radius: 0;
+	color: #fff;
+	height: 54px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 54px;
+	z-index: 3;
+	outline: 1px solid transparent;
+}
+.menu-toggle:active,
+.menu-toggle:focus,
+.menu-toggle:hover {
+	background: #444;
+	color: #fff;
+	outline: 1px solid transparent;
+}
+.menu-toggle:hover {
+	color: #ef7d0b;
+}
+.menu-toggle:before {
+	content: "\e601";
+	height: 54px;
+	line-height: 54px;
+	width: 54px;
+}
+.menu-toggle.toggled {
+	background: #222;
+	color: #fff;
+	outline: 1px solid #333;
+	right: -100%;
+}
+.menu-toggle.toggled:active,
+.menu-toggle.toggled:focus,
+.menu-toggle.toggled:hover {
+	background: #111;
+	border-color: #fff;
+}
+.menu-toggle.toggled:hover {
+	color: #ef7d0b;
+}
+.menu-toggle.toggled:before {
+	content: "\e600";
+}
+
+/* Dropdown Toggle */
+.menu-toggle {
+	background: #222;
+	border: 0;
+	color: #fff;
+	height: 54px;
+	outline: 1px solid #333;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 54px;
+	z-index: 1;
+}
+.menu-toggle:active,
+.menu-toggle:focus,
+.menu-toggle:hover {
+	background: #111;
+	outline: 1px solid #333;
+}
+.menu-toggle:hover {
+	color: #ef7d0b;
+}
+.menu-toggle:before {
+	content: "\f431";
+	font-size: 24px;
+	height: 54px;
+	line-height: 54px;
+	width: 54px;
+}
+.menu-toggle.toggled:before {
+	content: "\f432";
+}
+
+
+/* Slide Menu */
+.slide-panel {
+	background: #222;
+	height: 100%;
+	outline-color: #333;
+	outline-style: solid;
+	outline-width: 0;
+	overflow: hidden;
+	overflow-x: hidden;
+	padding: 54px 0 24px;
+	position: absolute;
+	right: -100%;
+	top: 0;
+	visibility: hidden;
+	width: 100%;
+	z-index: 2;
+}
+.menu-open .slide-panel {
+	height: auto;
+	visibility: visible;
+}
+.site {
+	background: #fff;
+	height: 100%;
+	left: 0;
+	position: relative;
+}
+.menu-open .site {
+	left: -100%;
+}
+.menu-open body {
+	overflow: hidden;
+}
+.menu-open {
+	background: #222;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+	background: #222;
+	border: 0;
+	border-radius: 0;
+	color: #fff;
+	height: 54px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 54px;
+	z-index: 3;
+	outline: 1px solid transparent;
+}
+.menu-toggle:active,
+.menu-toggle:focus,
+.menu-toggle:hover {
+	background: #444;
+	color: #fff;
+	outline: 1px solid transparent;
+}
+.menu-toggle:hover {
+	color: #ef7d0b;
+}
+.menu-toggle:before {
+	content: "\e601";
+	height: 54px;
+	line-height: 54px;
+	width: 54px;
+}
+.menu-toggle.toggled {
+	background: #222;
+	color: #fff;
+	outline: 1px solid #333;
+	right: -100%;
+}
+.menu-toggle.toggled:active,
+.menu-toggle.toggled:focus,
+.menu-toggle.toggled:hover {
+	background: #111;
+	border-color: #fff;
+}
+.menu-toggle.toggled:hover {
+	color: #ef7d0b;
+}
+.menu-toggle.toggled:before {
+	content: "\e600";
+}
+
+/* Dropdown Toggle */
+.menu-toggle {
+	background: #222;
+	border: 0;
+	color: #fff;
+	height: 54px;
+	outline: 1px solid #333;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 54px;
+	z-index: 1;
+}
+.menu-toggle:active,
+.menu-toggle:focus,
+.menu-toggle:hover {
+	background: #111;
+	outline: 1px solid #333;
+}
+.menu-toggle:hover {
+	color: #ef7d0b;
+}
+.menu-toggle:before {
+	content: "\f431";
+	font-size: 24px;
+	height: 54px;
+	line-height: 54px;
+	width: 54px;
+}
+.menu-toggle.toggled:before {
+	content: "\f432";
+}
+
+/* Main Navigation */
+.main-navigation {
+	clear: both;
+	display: block;
+	width: 100%;
+}
+.main-navigation > div > ul > li:last-child {
+	border-bottom: 1px solid #333;
+}
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+}
+.main-navigation li {
+	border-top: 1px solid #333;
+	position: relative;
+}
+.main-navigation ul ul li:first-child {
+	border-top: 0;
+}
+.main-navigation ul ul {
+	display: none;
+}
+.main-navigation ul ul.toggled {
+	border-bottom: 0;
+	border-left: 1px solid #333;
+	border-top: 1px solid #333;
+	display: block;
+	margin-left: 24px;
+	margin-top: -1px;
+	position: relative;
+}
+.main-navigation ul ul.toggled:before {
+	background: #222;
+	content: "";
+	display: block;
+	height: 1px;
+	left: -25px;
+	position: absolute;
+	top: -1px;
+	width: 24px;
+}
+.main-navigation a {
+	color: #fff;
+	display: block;
+	padding: 15px 24px;
+}
+.main-navigation a:active,
+.main-navigation a:focus,
+.main-navigation a:hover {
+	background: #111;
+}
+.main-navigation a:hover {
+	color: #ef7d0b;
+}
+.main-navigation a.toggled {
+	padding-bottom: 16px;
+}
+.main-navigation .page_item_has_children > a,
+.main-navigation .menu-item-has-children > a {
+	padding-right: 78px;
+}
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a {
+	color: #ef7d0b;
+}
+.main-navigation ul ul a {
+	position: relative;
+}
+
+.slide-panel {
+	transition: visibility 350ms ease-in-out;
+	
 }

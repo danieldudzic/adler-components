@@ -4,11 +4,15 @@ ul, ol {
 
 ul {
 	list-style: none;
-	padding-left: 40px;
+	padding-left: 20px;
 	
 	li:before {
-		font-size: 60%;
-		padding-right: 10px;
+		content: '\002022';
+		color: $color__text-accent;
+		 font-size: 17px;
+	    font-weight: 900;
+	    padding-right: 10px;
+	    vertical-align: bottom;
 	}
 }
 
@@ -18,8 +22,21 @@ li {
 }
 
 ol {
-	list-style: decimal;
-	padding-left: 30px;
+	list-style: none;
+	counter-reset: li;
+	padding-left: 20px;
+	
+	li {
+		counter-increment: li;
+		
+		&:before {
+			content: counter(li);
+			color: $color__text-accent;
+		    padding-right: 10px;
+		    vertical-align: bottom;
+		}
+	
+	}
 }
 
 li > ul,
