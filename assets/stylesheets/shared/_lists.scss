@@ -12,19 +12,13 @@ ul {
 		font-size: 1.2em;
 	    font-weight: 900;
 	    padding-right: .6em;
-	    vertical-align: bottom;
 	}
-}
-
-li {
-	font-size: $font__size-main;
-	line-height: $font__line-height-main;
 }
 
 ol {
 	list-style: none;
 	counter-reset: li;
-	padding-left: 20px;
+	padding-left: 1.6em;
 	
 	li {
 		counter-increment: li;
@@ -32,7 +26,7 @@ ol {
 		&:before {
 			content: counter(li);
 			color: $color__accent;
-		    padding-right: 10px;
+		    padding-right: .6em;
 		    vertical-align: bottom;
 		}
 	
@@ -42,7 +36,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: .8em;
 }
 
 dt {
@@ -50,5 +44,5 @@ dt {
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
+	margin: 0 1.6em 1.6em;
 }

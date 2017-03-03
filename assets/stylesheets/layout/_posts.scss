@@ -14,6 +14,13 @@
 	display: none;
 }
 
+.intro {
+	font-size: 16px;
+	line-height: 1.75;
+	margin-bottom: 25px;
+	color: $color__link;
+}
+
 .single .byline,
 .group-blog .byline {
 	display: inline;

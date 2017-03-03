@@ -283,12 +283,12 @@ th {
 .alignleft {
   display: inline;
   float: left;
-  margin-right: 1.5em; }
+  margin-right: 1.6em; }
 
 .alignright {
   display: inline;
   float: right;
-  margin-left: 1.5em; }
+  margin-left: 1.6em; }
 
 .aligncenter {
   clear: both;
@@ -296,88 +296,6 @@ th {
   margin-left: auto;
   margin-right: auto; }
 
-.aligncenter,
-.alignnone,
-.alignleft,
-.alignright {
-  display: block;
-  margin: 0;
-  margin-bottom: rhythm(0.8); }
-  @media screen and (max-width: 740px) {
-    .aligncenter,
-    .alignnone,
-    .alignleft,
-    .alignright {
-      margin-bottom: rhythm(0.6); } }
-  .archive-grid .aligncenter, .archive-grid
-  .alignnone, .archive-grid
-  .alignleft, .archive-grid
-  .alignright {
-    margin-bottom: 0; }
-  .widget .aligncenter, .blog .aligncenter, .archive .aligncenter, .search .aligncenter, .widget
-  .alignnone, .blog
-  .alignnone, .archive
-  .alignnone, .search
-  .alignnone, .widget
-  .alignleft, .blog
-  .alignleft, .archive
-  .alignleft, .search
-  .alignleft, .widget
-  .alignright, .blog
-  .alignright, .archive
-  .alignright, .search
-  .alignright {
-    margin: 0; }
-
-.aligncenter, .alignnone {
-  text-align: center;
-  display: inline-block; }
-  @media screen and (min-width: 900px) {
-    .aligncenter, .alignnone {
-      margin-left: -210px;
-      margin-right: -210px;
-      max-width: calc(420px + 100%); } }
-  .aligncenter img, .alignnone img {
-    margin: 0 auto; }
-
-.alignleft, .alignright {
-  margin-top: rhythm(1); }
-  @media screen and (min-width: 900px) {
-    .alignleft, .alignright {
-      max-width: calc(50% + 210px - 20px); } }
-  p + .alignleft, p + .alignright {
-    margin-top: 0; }
-  p > .alignleft:first-child, p > :first-child > .alignleft:first-child, p > .alignright:first-child, p > :first-child > .alignright:first-child {
-    margin-top: 0; }
-
-.alignleft {
-  float: left;
-  margin-right: rhythm(1.5); }
-  @media screen and (max-width: 500px) {
-    .alignleft {
-      float: none;
-      margin: 0 auto !important; } }
-  @media screen and (min-width: 900px) {
-    .alignleft {
-      margin-left: -210px; } }
-
-.alignright {
-  float: right;
-  margin-left: rhythm(1.5); }
-  @media screen and (max-width: 500px) {
-    .alignright {
-      float: none;
-      margin: 0 auto !important; } }
-  @media screen and (min-width: 900px) {
-    .alignright {
-      margin-right: -210px; } }
-
-@media screen and (max-width: 740px) {
-  .alignleft {
-    margin-right: rhythm(0.7); }
-
-  .alignright {
-    margin-left: rhythm(0.7); } }
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
@@ -621,23 +539,6 @@ input[type="submit"],
     box-shadow: none;
     color: #45525a; }
 
-input.search-submit {
-  width: 105px;
-  text-align: center;
-  margin-bottom: 35px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 44px;
-  border-bottom: none;
-  color: #45525a;
-  background: url(assets/images/more-bg.png);
-  background-size: cover;
-  padding: 0;
-  text-transform: none; }
-  @media screen and (max-width: 740px) {
-    input.search-submit {
-      margin-bottom: 15px; } }
-
 /*--------------------------------------------------------------
 # Formattings
 --------------------------------------------------------------*/
@@ -646,12 +547,6 @@ hr {
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
-
-.intro {
-  font-size: 16px;
-  line-height: 1.75;
-  margin-bottom: 25px;
-  color: #45525a; }
 
 /*--------------------------------------------------------------
 # Lists
@@ -667,35 +562,30 @@ ul {
     color: #68f3c8;
     font-size: 1.2em;
     font-weight: 900;
-    padding-right: .6em;
-    vertical-align: bottom; }
-
-li {
-  font-size: 13px;
-  line-height: 24px; }
+    padding-right: .6em; }
 
 ol {
   list-style: none;
   counter-reset: li;
-  padding-left: 20px; }
+  padding-left: 1.6em; }
   ol li {
     counter-increment: li; }
     ol li:before {
       content: counter(li);
       color: #68f3c8;
-      padding-right: 10px;
+      padding-right: .6em;
       vertical-align: bottom; }
 
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em; }
+  margin-left: .8em; }
 
 dt {
   font-weight: bold; }
 
 dd {
-  margin: 0 1.5em 1.5em; }
+  margin: 0 1.6em 1.6em; }
 
 /*--------------------------------------------------------------
 # Tables
@@ -939,6 +829,12 @@ body {
 .byline,
 .updated:not(.published) {
   display: none; }
+
+.intro {
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 25px;
+  color: #45525a; }
 
 .single .byline,
 .group-blog .byline {
@@ -1623,6 +1519,89 @@ label[for=comment] {
 .infinity-end.neverending .site-footer {
   display: block; }
 
+.infinite-wrap .hentry:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+
+/* Spinner */
+.infinite-loader {
+  clear: both;
+  height: 24px;
+  margin: 7.6923% 0; }
+
+.infinite-loader .spinner {
+  top: 50% !important;
+  left: 50% !important; }
+
+/* Click-to-load */
+#infinite-handle {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  clear: both;
+  margin: 0 7.6923%;
+  padding: 7.6923% 0;
+  text-align: center; }
+
+#infinite-handle span {
+  background-color: #232323;
+  border-radius: 2px;
+  font-family: Lato, sans-serif;
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 11px 16px 9px;
+  text-transform: uppercase; }
+
+#infinite-handle span:hover,
+#infinite-handle span:focus {
+  background-color: #0074b8;
+  color: #fff; }
+
+/* Footer */
+#infinite-footer {
+  display: none;
+  z-index: 999; }
+
+#infinite-footer .container {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 0, 0, 0.1);
+  padding: 0 32px;
+  width: 100% !important; }
+
+#infinite-footer .blog-info,
+#infinite-footer .blog-credits {
+  height: 48px;
+  line-height: 48px; }
+
+#infinite-footer .blog-info a:hover,
+#infinite-footer .blog-info a:focus,
+#infinite-footer .blog-credits a:hover,
+#infinite-footer .blog-credits a:focus {
+  text-decoration: none; }
+
+#infinite-footer .blog-info {
+  font-family: Lato, sans-serif; }
+
+#infinite-footer .blog-info a {
+  color: #232323;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  font-weight: 900; }
+
+#infinite-footer .blog-info a:hover,
+#infinite-footer .blog-info a:focus {
+  opacity: 0.7; }
+
+#infinite-footer .blog-credits {
+  font-size: 13px;
+  font-size: 0.8125rem; }
+
+#infinite-footer .blog-credits a {
+  color: #5b5b5b; }
+
+#infinite-footer .blog-credits a:hover,
+#infinite-footer .blog-credits a:focus {
+  color: #0074b8; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -1687,7 +1666,7 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 ## Galleries
 --------------------------------------------------------------*/
 .gallery {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.6em; }
 
 .gallery-item {
   display: inline-block;
@@ -1886,7 +1865,7 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
   .hero-wrapper .hero-bg {
     height: 100%;
     width: 100%; }
-    .hero-wrapper .hero-bg.hero-has-image {
+    .has-hero-thumbnail .hero-wrapper .hero-bg {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
@@ -2035,6 +2014,26 @@ textarea,
 
 a {
   transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out; }
+
+/*--------------------------------------------------------------
+# Search
+--------------------------------------------------------------*/
+input.search-submit {
+  width: 105px;
+  text-align: center;
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 44px;
+  border-bottom: none;
+  color: #45525a;
+  background: url(assets/images/more-bg.png);
+  background-size: cover;
+  padding: 0;
+  text-transform: none; }
+  @media screen and (max-width: 740px) {
+    input.search-submit {
+      margin-bottom: 15px; } }
 
 /*--------------------------------------------------------------
 # Media Queries

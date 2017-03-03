@@ -14,7 +14,7 @@
 		height: 100%;
 		width: 100%;
 
-		&.hero-has-image {
+		.has-hero-thumbnail & {
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center center;
@@ -182,7 +182,6 @@
 	&:focus {
 		outline: dotted thin #fff;
 	}
-	
 }
 
 @media screen and (min-width: 57.8125em) {

@@ -34,8 +34,28 @@
 				if ( imgWidth >= 1080 ) {
 					$( img ).addClass( 'size-big' );
 				}
-
 			} );
+		} );
+	}
+	
+	/**
+	* Full screen size images: props to Resonar for solution
+	*/
+	function fullscreenFeaturedImage() {
+		var entryHeaderBackground, entryHeaderHeight, windowWidth;
+		entryHeaderBackground = $( '.feature-header' );
+
+		if ( ! entryHeaderBackground ) {
+			return;
+		}
+
+		toolbarHeight     = body.is( '.admin-bar' ) ? $( '#wpadminbar' ).height() : 0;
+		entryHeaderHeight = $window.height();
+		windowWidth       = $window.width();
+
+		entryHeaderBackground.css( {
+			'height': entryHeaderHeight + 'px',
+			'margin-top': '-' + toolbarHeight + 'px',
 		} );
 	}
 
@@ -139,10 +159,10 @@
 			slideMenu.removeClass( 'expanded' ).resize();
 
 			if( slideMenu.hasClass( 'expanded' ) ) {
-							actionText.text( 'hide' );
-					} else {
-						actionText.text( 'show' );
-					}
+				actionText.text( 'hide' );
+			} else {
+				actionText.text( 'show' );
+			}
 		}
 	} );
 
@@ -150,11 +170,17 @@
 	* Loader for all the theme functions
 	*/
 	$document.ready( function() {
+		$window.on( 'resize.adler', function() {
+			clearTimeout( resizeTimer );
+			resizeTimer = setTimeout( function() {
+				fullscreenFeaturedImage();
+			}, 100 );
+		} );
+
 		bigImageClass();
 		slideControl();
 		scroll();
 	} );
-	
 	
 	/**
 	* Adler js
