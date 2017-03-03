@@ -32,7 +32,7 @@
 	}
 	
 	.site-description {
-		background: rgba( 14, 54, 79, 1 );
+		background: $color__title;
 		clear: both;
 	}
 	
@@ -74,7 +74,7 @@ button {
 	font-family: $font__code-tertiary;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	background: rgba( 0, 0, 0, 0.3 );
+	background: $color__title;
 	color: $color__contrast;
 	padding: 5px;
 	font-weight: normal;

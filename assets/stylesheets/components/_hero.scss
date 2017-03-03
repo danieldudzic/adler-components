@@ -19,12 +19,8 @@
 			background-size: cover;
 			background-position: center center;
 			background-attachment: inherit;
-			background-color: #464646;
+			background-color: $color__background-hero;
 			box-shadow: inset 0px 0px 250px 0px rgba(0 , 0 , 0 , 0.75);
-		}
-
-		&.hero-no-image {
-			//to-do
 		}
 	}
 
@@ -36,35 +32,19 @@
 		top: 50%;
 		left: 50%;
 		transform: translateX(-50%) translateY(-50%);
-	
-		@media screen and (max-width: #{$breakpoint_tablet}) {
-			width: 100%;
-		}
 		
+		.entry-header {
+			margin: 0 0 2.308em;
+		}
+
 		.entry-title {
-			margin: 0px 0px 30px;
-			font-size: 103px;
+			@include font-size(6.438);
 			line-height: 1.2;
 			position: relative;
 			background-size: 100% 100%;
 			color: $color__contrast;
-			
-			@media screen and (max-width: #{$breakpoint_laptop}) {
-				font-size: 103px;
-				width: 80%;
-				margin: 0 auto;
-			}
-			
-			@media screen and (max-width: #{$breakpoint_tablet}) {
-				font-size: 103px;
-				display: block;
-				padding: 0 5px;
-			}
-			
-			@media screen and (max-width: #{$breakpoint_mobile}) {
-				font-size: 82px;
-			}
-			
+			margin: 0;
+
 			a {
 				border-bottom: none;
 				text-decoration: none;
@@ -78,10 +58,6 @@
 
 		.entry-content {			
 			p {
-				@media screen and (max-width: #{$breakpoint_tablet}) {
-					padding: 0 5px;
-				}
-		
 				color: $color__contrast;
 				text-align: center;
 			}
@@ -181,11 +157,5 @@
 	
 	&:focus {
 		outline: dotted thin #fff;
-	}
-}
-
-@media screen and (min-width: 57.8125em) {
-	.scroll-indicator-wrapper {
-		margin-bottom: 2.9412%;
 	}
 }

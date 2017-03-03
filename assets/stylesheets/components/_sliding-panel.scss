@@ -5,18 +5,13 @@
 	z-index: 3;
 	display: none;
 	width: 100%;
-	padding: 54px 0 40px;
+	padding: 0;
 	background: $color__background-sliding-panel;
 	outline-color: lighten( $color__background-sliding-panel, 5% );
 	outline-style: solid;
 	outline-width: 0;
 	overflow: hidden;
 	overflow-x: hidden;
-	
-	/* Admin Bar Fix */
-	.admin-bar & {
-		padding-top: 80px;
-	}
 
 	a {
 		color: $color__background-sliding-panel-link;
@@ -74,6 +69,11 @@
 		-webkit-transition: 350ms all ease-in-out;
 		-moz-transition: 350ms all ease-in-out;
 		transition: 350ms all ease-in-out;
+		
+		/* Admin Bar Fix */
+		.admin-bar & {
+			padding-top: 80px;
+		}
 	
 		&.expanded, .single &.expanded {
 			right: 0;

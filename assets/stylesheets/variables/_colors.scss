@@ -17,7 +17,7 @@ $color__link: #45525a;
 $color__link-visited: $color__link;
 $color__link-hover: $color__link;
 
-$color__title: $color__link;
+$color__title: #0e364f;
 $color__text-main: #45525a;
 $color__text-button: $color__background-post;
 
@@ -27,5 +27,7 @@ $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
 
-$color__background-sliding-panel: $color__link;
+$color__background-sliding-panel: $color__title;
 $color__background-sliding-panel-link: #fff;
+
+$color__background-hero: $color__title;
