@@ -47,7 +47,7 @@
 			line-height: 1.2;
 			position: relative;
 			background-size: 100% 100%;
-			color: $color__link-contrast;
+			color: $color__contrast;
 			
 			@media screen and (max-width: #{$breakpoint_laptop}) {
 				font-size: 103px;
@@ -72,7 +72,7 @@
 				background-size: 100% 100%;
 				width: 100%;
 				position: relative;
-				color: $color__link-contrast;
+				color: $color__contrast;
 			}
 		}
 
@@ -82,12 +82,12 @@
 					padding: 0 5px;
 				}
 		
-				color: $color__link-contrast;
+				color: $color__contrast;
 				text-align: center;
 			}
 			
 			.more-link {
-				color: $color__link-contrast;
+				color: $color__contrast;
 				text-transform: uppercase;
 			}	
 		}
@@ -97,7 +97,7 @@
 			
 			a, span {
 				border: none;
-				color: $color__link-contrast;
+				color: $color__contrast;
 			}
 			
 			.no-hero-thumbnail .header-content & {
@@ -106,7 +106,7 @@
 			
 			.hero_date {
 				display: inline-block;
-				color: $color__link-contrast;
+				color: $color__contrast;
 			}
 			
 			.post-meta-categories, a {
@@ -123,28 +123,70 @@
 	overflow: hidden;
 }
 
-/* Down Arrow */
-.arrow-wrap {
-	position: absolute;
-	z-index: 1;
-	left: 50%;
-	bottom: 5em;
-	display: block;
-	border-radius: 50%;
-	font-size: 0.5em;
-	transform: translateX(-50%);
-}
-
-a.arrow-wrap {
-	border-bottom-color: transparent;
-}
-
-.arrow {
-	float: left;
-	position: relative;
-	width: 24px;
+.scroll-indicator-wrapper {
 	height: 24px;
-	padding: 12px;
-	box-shadow: 1px 1px white;
-	transform: rotate(45deg);
+	margin-bottom: 3.84615%;
+	position: relative;
+	z-index: 1;
+	display: block;
+	bottom: 5em;
+}
+
+.scroll-indicator {
+	-webkit-animation: opacityUp .5s ease both;
+	animation: opacityUp .5s ease both;
+	bottom: 0;
+	display: block;
+	height: 24px;
+	left: 50%;
+	position: absolute;
+	width: 48px;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+	opacity: 1;
+	
+	&.scrolled {
+		-webkit-animation: opacityDown .5s ease both;
+		animation: opacityDown .5s ease both;
+	}
+	
+	&:before, &:after {
+		content: '';
+		width: 34px;
+		height: 2px;
+		background-color: #fff;
+		position: absolute;
+	}
+	
+	&:before {
+		left: -5px;
+		top: 11px;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	
+	&:after {
+		left: 19px;
+		top: 11px;
+		-webkit-transform: rotate(135deg);
+		-moz-transform: rotate(135deg);
+		transform: rotate(135deg);
+	}
+	
+	&:hover:before, &:hover:after {
+		opacity: 0.75;
+	}
+	
+	&:focus {
+		outline: dotted thin #fff;
+	}
+	
+}
+
+@media screen and (min-width: 57.8125em) {
+	.scroll-indicator-wrapper {
+		margin-bottom: 2.9412%;
+	}
 }

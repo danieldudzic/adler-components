@@ -30,3 +30,23 @@ input[type="submit"],
 		color: $color__link-hover;
 	}
 }
+
+input.search-submit {
+	width: 105px;
+	text-align: center;
+	margin-bottom: 35px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 44px;
+	border-bottom: none;
+	color: $color__link;
+	background: url(assets/images/more-bg.png);
+	background-size: cover;
+	padding: 0;
+	text-transform: none;
+
+	@media screen and (max-width: #{$breakpoint_tablet}) {
+		margin-bottom: 15px;
+	}
+
+}

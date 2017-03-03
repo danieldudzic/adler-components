@@ -6,6 +6,7 @@
 	ul {
 		list-style: none;
 		margin: 0;
+		padding: 0;
 
 		ul {
 			display: none;
@@ -32,17 +33,17 @@
 			a.focus {
 			}
 			
-			&.toggle-on {
+			&.sub-on {
 				border-bottom: 0;
-				border-left: 1px solid $color__text-accent;
-				border-top: 1px solid $color__text-accent;
+				border-left: 1px solid lighten( $color__background-sliding-panel, 5% );
+				border-top: 1px solid lighten( $color__background-sliding-panel, 5% );
 				display: block;
 				margin-left: 24px;
 				margin-top: -1px;
 				position: relative;
 				
 				&:before {
-					background: $color__text-button;
+					background: $color__background-sliding-panel;
 					content: "";
 					display: block;
 					height: 1px;
@@ -58,7 +59,7 @@
 	li {
 		float: left;
 		position: relative;
-		border-top: 1px solid $color__text-accent;
+		border-top: 1px solid lighten( $color__background-sliding-panel, 5% );
 
 		&:hover > a,
 		&.focus > a {
@@ -74,15 +75,16 @@
 		color: $color__text-button;
 		display: block;
 		padding: 15px 24px;
+		border-bottom: none;
 		
 		&:active,
 		&:focus,
 		&:hover {
-			background: $color__background-post;
+			background: darken( $color__background-sliding-panel, 5% );
 		}
 		
 		&:hover {
-			color: $color__link;
+			color: $color__accent;
 		}
 		
 		&.toggle-on {
@@ -95,11 +97,11 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		color: $color__text-accent;
+		color: $color__accent;
 	}
 	
 	& > div > ul > li:last-child {
-		border-bottom: 1px solid $color__text-accent;
+		border-bottom: 1px solid lighten( $color__background-sliding-panel, 5% );
 	}
 }
 
@@ -122,10 +124,10 @@
 
 /* Menu Toggle */
 .menu-toggle {
-	background: $color__background-body;
+	background: $color__background-sliding-panel;
 	border: 0;
 	border-radius: 0;
-	color: $color__link;
+	color: $color__contrast;
 	height: 54px;
 	width: 54px;
 	margin: 0;
@@ -138,14 +140,14 @@
 	display: block;
 	font-size: 20px;
 	
-	&:active, &:focus, :hover {
-		background: $color__background-post;
-		color: $color__link;
-		outline: 1px solid transparent;
+	&:focus, &:active {
+		color: $color__contrast;
 	}
 	
 	&:hover {
-		color: $color__text-accent;
+		background: lighten( $color__background-sliding-panel, 5% );
+		color: $color__accent;
+		outline: 1px solid transparent;
 	}
 	
 	&:before {
@@ -167,11 +169,48 @@
 		}
 		
 		&:before {
-			content: '\f405';
+			content: '\f406';
 			font-family: "Genericons";
-			font-size: 35px;
-			line-height: 55px;
+			font-size: 13px;
+			line-height: 50px;
 			height: 50px;
 		}
+	}
+}
+
+/* Dropdown Toggle */
+.showsub-toggle {
+	background: $color__background-sliding-panel;
+	border: 0;
+	color: $color__contrast;
+	height: 54px;
+	outline: 1px solid lighten( $color__background-sliding-panel, 5% );
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 54px;
+	z-index: 1;
+	
+	&:active, &:focus, &:hover {
+		background: darken( $color__background-sliding-panel, 5% );
+		outline: 1px solid lighten( $color__background-sliding-panel, 5% );
+	}
+	
+	&:hover {
+		color: $color__accent;
+	}
+	
+	&:before {
+		content: "\f431";
+		font-family: "Genericons";
+		font-size: 24px;
+		height: 54px;
+		line-height: 54px;
+		width: 54px;
+	}
+	
+	&.sub-on:before {
+		content: '\f432';
 	}
 }

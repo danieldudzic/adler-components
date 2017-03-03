@@ -1,8 +1,3 @@
-html {
-	font-size: percentage($font__size-main / 16px);
-	line-height: $font__line-height-main / $font__size-main;
-}
-
 body,
 button,
 input,
@@ -14,63 +9,46 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
-a {
-	text-decoration: none;
-	color: currentColor;
-	border-bottom: 3px solid $color__text-accent;
-	transition: all 0.2s;
-}
-
-h1, h2 {
-	&, a {
-		color: $color__link;
-		font-weight: bold;
-		font-family: $font__code;
-	}
+h1, h2, h3, h4, h5, h6 {
+	color: $color__title;
+	font-weight: bold;
+	font-family: $font__code;
 }
 
 h1 {
-	color: $color__title;
+	@include font-size(2);
 }
 
 h2 {
-	font-size: 20px;
+	@include font-size(1.875);
 }
 
 h3 {
-	font-size: 16px;
-	margin-bottom: 30px;
+	@include font-size(1.625);
 }
 
 h4 {
-	font-size: 13px;
+	@include font-size(1.125);
 }
 
-h2, h4 {
-	margin-bottom: 20px;
+h5 {
+	@include font-size(1);
+}
+
+h6 {
+	@include font-size(.875);
 }
 
 p {
-	margin-top: 0;
-	margin-bottom: 40px;
+	margin: 0.8em 0 1.6em;
 }
 
 b, strong {
 	font-weight: 800;
-	color: $color__text-input-focus;
 }
 
 dfn, cite, em, i {
 	font-style: italic;
-}
-
-blockquote {
-	font-family: $font__code-secondary;
-	text-align: center;
-	color: $color__title;
-	@extend %hyphening;
-	font-size: 18px;
-	margin: 0 1.6em;
 }
 
 address {
@@ -94,7 +72,7 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted $color__border-abbr;
+	border-bottom: 3px dotted $color__accent;
 	cursor: help;
 }
 
@@ -105,6 +83,15 @@ mark, ins {
 
 big {
 	font-size: 125%;
+}
+
+blockquote {
+	font-family: $font__code-secondary;
+	text-align: center;
+	color: $color__title;
+	@extend %hyphening;
+	font-size: 1.625rem;
+	margin: 0 1.6em;
 }
 
 blockquote, q {

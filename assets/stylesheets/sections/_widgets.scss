@@ -1,7 +1,7 @@
 %li-style {
 	border-bottom: none;
 	&:hover {
-		color: $color__text-accent;
+		color: $color__accent;
 	}
 }
 
@@ -88,7 +88,7 @@
 		.widget_calendar {
 			#calendar_wrap {
 				#wp-calendar {
-					background-color: $color__link-contrast;
+					background-color: $color__contrast;
 					min-width: 250px;
 					margin: 0 auto;
 					
@@ -106,7 +106,7 @@
 							td {
 								padding-left: 5px;
 								a {
-									color: $color__text-accent;
+									color: $color__accent;
 									@extend %li-style;
 								}
 							}
@@ -157,7 +157,7 @@
 					}
 					
 					span.post-date {
-						background-color: $color__link-contrast;
+						background-color: $color__contrast;
 					}
 				}
 			}
@@ -172,7 +172,7 @@
 				margin: 0 auto;
 				li {
 					margin-bottom: 5px;
-					background-color: $color__link-contrast;
+					background-color: $color__contrast;
 					a {
 						color: $color__text-input-focus;
 						@extend %li-style;
@@ -183,7 +183,7 @@
 		.widget_tag_cloud {
 			.tagcloud {
 				a {
-					background-color: $color__link-contrast;
+					background-color: $color__contrast;
 					@extend %li-style;
 				}
 			}

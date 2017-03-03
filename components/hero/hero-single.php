@@ -32,12 +32,12 @@
 			<?php  get_template_part( 'components/post/content', 'meta' ); ?>
 		</div><!-- .hero-content -->
 		
-		<a class="arrow-wrap" href="#arrow-anchor">
-			<span class="arrow"></span>
-		</a>
+		<div class="scroll-indicator-wrapper">
+			<a href="#" id="scroll-indicator" class="scroll-indicator"><span class="screen-reader-text">Scroll down to see more content</span></a>
+		</div>
 		
 	</div><!-- .hero-wrapper -->
-	<div id="arrow-anchor"></div>
+	<div id="scroll-indicator-anchor"></div>
 	
 	<div class="entry-wrapper">	
 		<div class="entry-content">

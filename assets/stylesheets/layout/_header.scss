@@ -1,15 +1,10 @@
 .site-branding {
-	width: 30%;
-	height: 80px;
 	margin-bottom: 0px;
 	padding: 20px 40px;
 	position: absolute;
 	z-index: 50;
 	top: 0;
 	left: 0;
-
-
-	
 	
 	a img {
 		position: absolute;
@@ -30,17 +25,20 @@
 		background-color: transparent;
 		border-bottom: none;
 		position: relative;
-
-		a {
-			border-bottom: none;
-			font-family: $font__code-tertiary;
-		}
 	}
 
 	.site-title {
 	    color: $color__link;
 	}
-
+	
+	.site-description {
+		background: rgba( 14, 54, 79, 1 );
+		clear: both;
+	}
+	
+	.site-title, .site-description {
+		float: left;
+	}
 }
 
 button {
@@ -50,11 +48,7 @@ button {
 }
 
 .site-title {
-	position: relative;
-	float: left;
-	text-align: left;
-	margin-top: 10px;
-	font-size: 14px;
+	font-size: 16px;
 
 	line-height: 1;
 	margin: 0;
@@ -62,7 +56,7 @@ button {
 	text-align: left;
 	
 	a {
-		color: $color__link-contrast;
+		color: $color__contrast;
 		border-bottom: 0;
 		text-decoration: none;
 		font-family: $font__main;
@@ -71,13 +65,19 @@ button {
 }
 
 .site-title, .site-description {
-	width: 100%;
-	display: inline-block;
+	margin-top: 10px;
 }
 
 .site-description {
-	font-size: 12px;
+	font-size: 9px;
 	margin-top: 1em;
+	font-family: $font__code-tertiary;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	background: rgba( 0, 0, 0, 0.3 );
+	color: $color__contrast;
+	padding: 5px;
+	font-weight: normal;
 }
 
 .no-site-title {

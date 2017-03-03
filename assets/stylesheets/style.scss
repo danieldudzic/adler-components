@@ -139,6 +139,50 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "shared/media";
 
 /*--------------------------------------------------------------
+# Genericons
+--------------------------------------------------------------*/
+@import "shared/genericons";
+
+/*--------------------------------------------------------------
+# Keyframes
+--------------------------------------------------------------*/
+@import "shared/keyframes";
+
+/*--------------------------------------------------------------
 # Adler
 --------------------------------------------------------------*/
 @import "components";
+
+/*--------------------------------------------------------------
+# Transitions
+--------------------------------------------------------------*/
+button,
+input,
+textarea,
+#infinite-handle button,
+#infinite-handle span,
+.jp-relatedposts-post-a img,
+.main-navigation ul ul a:before,
+.meta-nav,
+.post-link .genericon,
+.post-navigation .post-title,
+.post-thumbnail img,
+.search-form:before,
+.site,
+.site:after,
+.site:before,
+.site-logo-link,
+.sticky-post {
+	transition: all 350ms ease-in-out;
+}
+.slide-menu {
+	transition: visibility 350ms ease-in-out;
+}
+a {
+	transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out;
+}
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+// @import "layout/_media-queries";

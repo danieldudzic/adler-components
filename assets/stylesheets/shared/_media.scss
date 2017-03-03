@@ -19,31 +19,45 @@ object {
 	max-width: 100%;
 }
 
+figure {
+	max-width: 100%;
+	img {
+		display: block;
+	}
+}
+
 .wp-caption {
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	
 	img[class*="wp-image-"] {
 		@include center-block;
 	}
 
 	.wp-caption-text, .gallery-caption {
-		padding-top: 10px;
+		@include font-size(1.125);
+		font-family: $font__code-secondary;
 		color: $color__text-caption;
 		text-align: center;
+		font-style: italic;
+		margin: 0.8075em 0;
 	}
-}
-
-/* Ensure center-aligned captions center-align properly. */
-.wp-caption.aligncenter {
+	
+	&.aligncenter {
 		margin-left: auto;
 		margin-right: auto;
-}
+	}
 
-/* Give some padding to floated elements, to prevent them butting up against text. */
-.wp-caption.alignleft {
-		margin-right: 20px;
-}
-
-.wp-caption.alignright {
-		margin-left: 20px;
+	/* Give some margin to floated elements, to prevent them butting up against text. */
+	&.alignleft {
+		margin-right: 32px;
+		margin-top: 8px;
+	}
+	
+	.alignright {
+		margin-left: 32px;
+	    margin-top: 8px;
+	}
 }
 
 .wp-caption-text {

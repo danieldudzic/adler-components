@@ -20,7 +20,7 @@
 		position: relative;
 		
 		&.bypostauthor {
-			background: $color__link-contrast;
+			background: $color__contrast;
 			padding: 10px;
 			margin-bottom: 10px;
 				.reply {
@@ -43,7 +43,7 @@ label[for=comment] {
 }
 
 .comment-author.vcard a {
-	border-bottom: 3px solid $color__text-accent;
+	border-bottom: 3px solid $color__accent;
 }
 
 .comment-content a {

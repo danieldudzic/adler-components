@@ -1,26 +1,31 @@
+$color__accent: #68f3c8;
+$color__contrast: #f7f7f7;
+
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
 $color__background-button: #68f3c8;
-$color__background-pre: #eee;
-$color__background-ins: #fff9c0;
+$color__background-pre: #f7f7f7;
+$color__background-ins: $color__accent;
 $color__background-post: #f7f7f7;
 
 $color__text-screen: #21759b;
-$color__text-accent: #68f3c8;
 $color__text-input: #666;
 $color__text-input-focus: #111;
 $color__text-caption: #7c868b;
-$color__link: #0e364f;
-$color__title: $color__link;
+$color__link: #45525a;
 $color__link-visited: $color__link;
 $color__link-hover: $color__link;
+
+$color__title: $color__link;
 $color__text-main: #45525a;
-$color__link-contrast: #f7f7f7;
-$color__text-button: #fff;
+$color__text-button: $color__background-post;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+
+$color__background-sliding-panel: $color__link;
+$color__background-sliding-panel-link: #fff;
