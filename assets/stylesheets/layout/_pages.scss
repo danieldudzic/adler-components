@@ -6,20 +6,8 @@
 .page {
 	.has-hero-thumbnail {
 		.hero-content {
-			margin-bottom: 40px;
+			margin-bottom: 3.077em;
 		}
-	}
-
-	.site-content {
-		@media screen and (max-width: #{$breakpoint_tablet}) {
-			padding: 0 5px;
-		}
-	}
-}
-
-#page {
-	@media screen and (max-width: #{$breakpoint_tablet}) {
-		overflow: hidden;
 	}
 }
 
@@ -27,22 +15,7 @@
 	.site-main {
 		.page-title {
 			position: relative;
-			max-width: $size_site-entry;
-			margin: 0 auto;
+			text-align: center;
 		}
 	}
-}
-
-.no-hero-thumbnail {
-	.site-branding {
-		.site-title {
-			a {
-				color: $color__title;
-			}
-		}
-	}
-}
-
-.blog .site-main {
-	text-align: center;
 }

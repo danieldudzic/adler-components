@@ -1,6 +1,6 @@
 .site-branding {
 	margin-bottom: 0px;
-	padding: 20px 40px;
+	margin: 2.308em 0 0 3.077em;
 	position: absolute;
 	z-index: 50;
 	top: 0;
@@ -8,85 +8,58 @@
 	
 	a img {
 		position: absolute;
-		max-width: 180px;
-		max-height: 100px;
+		max-width: 23.077em;
+		max-height: 7.692em;
 		overflow: hidden;
-		
-		@media screen and (max-width: #{$breakpoint_laptop}) {
-			max-width: 90px;
-			max-height: 90px;
-		}
-	}
-}
-
-.no-hero-thumbnail {
-
-	.site-branding {
-		background-color: transparent;
-		border-bottom: none;
-		position: relative;
-	}
-
-	.site-title {
-	    color: $color__link;
-	}
-	
-	.site-description {
-		background: $color__title;
-		clear: both;
-	}
-	
-	.site-title, .site-description {
-		float: left;
-	}
-}
-
-button {
-	&:focus {
-		outline: none !important;
 	}
 }
 
 .site-title {
-	font-size: 16px;
-
+	@include font-size(1);
 	line-height: 1;
 	margin: 0;
 	font-family: $font__main;
-	text-align: left;
 	
 	a {
 		color: $color__contrast;
 		border-bottom: 0;
 		text-decoration: none;
 		font-family: $font__main;
-		text-align: left;
 	}
 }
 
-.site-title, .site-description {
-	margin-top: 10px;
-}
-
 .site-description {
-	font-size: 9px;
+	@include font-size(.563);
 	margin-top: 1em;
 	font-family: $font__code-tertiary;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	background: $color__title;
 	color: $color__contrast;
-	padding: 5px;
+	padding: .556em;
 	font-weight: normal;
+}
+
+body:not(.has-hero-thumbnail) {
+	
+	.site-branding {
+		position: relative;
+		
+		.site-title a {
+		    color: $color__link;
+		}
+		
+		.site-description {
+			background: $color__title;
+			clear: both;
+		}
+		
+		.site-title, .site-description {
+			float: left;
+		}
+	}
 }
 
 .no-site-title {
 	display: none;
-}
-
-.header-content {
-	position: relative;
-	width: 100%;
-	height: auto;
-	margin: auto;
 }

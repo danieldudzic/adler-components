@@ -1,21 +1,18 @@
-#comments {
-	max-width: 600px;
-	margin: 0 auto;
-	
+#comments {	
 	textarea {
 		width: 100%;
 	}
-}
-
-.reply {
-	position: absolute;
-	right: 0;
-	top: 10px;
+	
+	.reply {
+		position: absolute;
+		right: 0;
+		top: 47px;
+	}
 }
 
 
 .comment-list {
-	
+
 	li {
 		position: relative;
 		
@@ -64,6 +61,14 @@ label[for=comment] {
 	line-height: 1.2;
 	margin: 0 0 1em;
 	@include font-size(1.25);
+	
+	#cancel-comment-reply-link {
+		font-family: $font__main;
+		font-weight: normal;
+		@include font-size(.8125);
+		float: right;
+		margin-top: 43px;
+	}
 }
 
 .comment-content a {
@@ -196,12 +201,10 @@ label[for=comment] {
 
 	label {
 		@include font-size(.875);
-		font-weight: bold;
 		padding: .65em .8em;
 		position: absolute;
 		left: 0;
 		top: 2px;
-		text-transform: uppercase;
 	}
 	input,
 	textarea {
@@ -211,6 +214,6 @@ label[for=comment] {
 	}
 
 	textarea {
-		padding: 2em .8em .375em;
+		padding: .8em .8em .375em;
 	}
 }

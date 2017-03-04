@@ -44,7 +44,7 @@
 			}
 	
 			&:before {
-				font-size: 25px;
+				@include font-size(1.923);
 				vertical-align: middle;
 			}
 		}
@@ -58,11 +58,11 @@
 	.slide-panel {
 		position: fixed;
 		top: 0;
-		right: -320px;
+		right: -26.923em;
 		display: block;
 		visibility: hidden;
 		overflow: scroll;
-		width: 320px;
+		width: 26.923em;
 		height: 100%;
 		padding: 3.75em 0;
 	
@@ -72,7 +72,7 @@
 		
 		/* Admin Bar Fix */
 		.admin-bar & {
-			padding-top: 80px;
+			padding-top: 6.154em;
 		}
 	
 		&.expanded, .single &.expanded {

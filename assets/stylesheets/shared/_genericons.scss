@@ -8,15 +8,17 @@
 .dropdown-toggle:after,
 .bypostauthor > article .fn:after,
 .comment-reply-title small a:before,
-.cat-links:before,
-.tags-links:before,
-.comments-link:before,
-.edit-link:before,
 .full-size-link:before,
 .pagination .prev:before,
 .pagination .next:before,
 .author-link:after,
-.scroll-indicator:before {
+.menu-toggle:before,
+.showsub-toggle:before,
+.comments-link:before,
+.edit-link:before,
+.tags-links:before,
+.post-meta-categories:before,
+.cat-links:before {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;

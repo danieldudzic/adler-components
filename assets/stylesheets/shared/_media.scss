@@ -35,11 +35,9 @@ figure {
 	}
 
 	.wp-caption-text, .gallery-caption {
-		@include font-size(1.125);
-		font-family: $font__code-secondary;
+		@include font-size(.875);
 		color: $color__text-caption;
 		text-align: center;
-		font-style: italic;
 		margin: 0.8075em 0;
 	}
 	
