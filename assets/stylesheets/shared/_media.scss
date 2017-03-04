@@ -39,6 +39,9 @@ figure {
 		color: $color__text-caption;
 		text-align: center;
 		margin: 0.8075em 0;
+		a {
+			color: $color__text-caption;
+		}
 	}
 	
 	&.aligncenter {

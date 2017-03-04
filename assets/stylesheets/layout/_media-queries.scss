@@ -90,17 +90,22 @@
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation,
-#comments {
+#comments,
+.content-area .site-main .page-header,
+.page-content {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 46.154em;
+	
 }
 
-.footer-widgets-wrapper,
-.full-width-widget-area,
-.site-footer,
-.content-area .site-main .page-header {
+.full-width-widget-area {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 83.077em;
+	max-width: 53.846em;
+}
+
+.site-footer {
+	padding: 0 40px 30px;
+	
 }

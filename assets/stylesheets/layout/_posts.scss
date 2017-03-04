@@ -90,8 +90,17 @@ article.post:last-of-type {
 .entry-wrapper {
 	position: relative;
 	
+	body:not(.has-hero-thumbnail) & {
+		margin-top: 3.5em;
+	}
+	
 	.single &, .page & {
 		margin-bottom: 6.154em;
+		.entry-header {
+			margin-left: -7.692em;
+			margin-right: -7.692em;
+			margin-bottom: 5em;
+		}
 	}
 
 	h1, h2 {
@@ -117,11 +126,6 @@ article.post:last-of-type {
 			
 			.header-content & {
 				position: relative;
-			}
-			
-			.has-post-thumbnail & {
-				margin-left: -7.692em;
-				margin-right: -7.692em;
 			}
 							
 			a {
@@ -181,11 +185,67 @@ article.post:last-of-type {
 		display: inline-block;
 		clear: right;
 	}
+	
+	.entry-footer {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin-top: 1.538em;
+
+		.entry-meta {
+			.has-hero-thumbnail .header-content & {
+				display: none;
+			}
+		
+			.post-meta-categories {
+				display: inline-block;
+		
+				&::after {
+					content: " - ";
+					color: $color__contrast;
+				}
+				
+				@media screen and (max-width: #{$breakpoint_mobile}) {
+					display: block;
+				}
+
+				a {
+					text-decoration: none;
+					color: $color__text-main;
+				}
+			}
+		}
+		
+		> * {
+			display: inline-block;
+		}
+
+		.posted-on {
+			a {
+				border-bottom: none;
+			}
+		}
+
+		.separator {
+			padding-left: 5px;
+			padding-right: 5px;
+			@media screen and (max-width: #{$breakpoint_mobile}) {
+				display: none;
+			}
+		}
+
+		.comments-link {
+			flex-basis: fit-content;
+			a {
+				border-bottom: none;
+			}
+		}
+	}
 
 	// Main post wrapper	
 	.entry-main {
 		position: relative;
-		background-color: #f7f7f7;
+		background-color: $color__background-post;
 		padding: 3.846em 3.846em 5.385em 3.846em;
 		margin: -3.846em -3.846em 0 -3.846em;
 		
@@ -218,64 +278,15 @@ article.post:last-of-type {
 			background: url(assets/images/more-bg.png);
 			background-size: cover;
 		}
-
-		.entry-footer {
-			display: flex;
-			justify-content: space-between;
-			width: 100%;
-	
-			.entry-meta {
-				.has-hero-thumbnail .header-content & {
-					display: none;
-				}
-			
-				.post-meta-categories {
-					display: inline-block;
-			
-					&::after {
-						content: " - ";
-						color: $color__contrast;
-					}
-					
-					@media screen and (max-width: #{$breakpoint_mobile}) {
-						display: block;
-					}
-	
-					a {
-						text-decoration: none;
-						color: $color__text-main;
-					}
-				}
-			}
-			
-			> * {
-				display: inline-block;
-			}
-	
-			.posted-on {
-				a {
-					border-bottom: none;
-				}
-			}
-	
-			.separator {
-				padding-left: 5px;
-				padding-right: 5px;
-				@media screen and (max-width: #{$breakpoint_mobile}) {
-					display: none;
-				}
-			}
-
-			.comments-link {
-
-				a {
-					border-bottom: none;
-				}
-			}
-
-			.cat-links {
-				display: none;
-			}
-		}
 	}
+}
+
+.home, .archive {
+	.entry-footer .cat-links {
+		display: none;
+	}
+}
+
+.content-area, .full-width-widget-area {
+	margin-bottom: 6.154em;
 }

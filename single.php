@@ -19,7 +19,7 @@ while ( have_posts() ) : the_post(); ?>
 			if ( has_post_thumbnail() ) {
 				get_template_part( 'components/hero/hero', 'single' );
 			} else {
-				get_template_part( 'components/post/content', get_post_format() );
+				get_template_part( 'components/post/content', 'single' );
 			}
 
 			the_post_navigation();
