@@ -36,16 +36,12 @@
 			    padding-right: 0;
 			}
 		}
-	
+
 		a {
+			@include font-size(2);
 			&:hover,
 			&:focus {
 				opacity: 0.5;
-			}
-	
-			&:before {
-				@include font-size(1.923);
-				vertical-align: middle;
 			}
 		}
 	}

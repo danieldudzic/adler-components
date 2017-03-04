@@ -5,6 +5,11 @@
 	z-index: 50;
 	top: 0;
 	left: 0;
+	font-family: $font__code;
+	
+	h1, h2 {
+		font-weight: normal;
+	}
 	
 	a img {
 		position: absolute;
@@ -15,30 +20,39 @@
 }
 
 .site-title {
-	@include font-size(1);
+	@include font-size(1.625);
 	line-height: 1;
 	margin: 0;
-	font-family: $font__main;
 	
 	a {
-		color: $color__contrast;
+		color: $color__light;
 		border-bottom: 0;
 		text-decoration: none;
-		font-family: $font__main;
+		
+		&:active, &:focus, &:hover {
+			color: rgba(255, 255, 255, 0.85);
+		}
 	}
 }
 
 .site-description {
-	@include font-size(.563);
+	@include font-size(0.75);
 	margin-top: 1em;
-	font-family: $font__code-tertiary;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	background: $color__title;
-	color: $color__contrast;
-	padding: .556em;
-	font-weight: normal;
+	color: $color__light;
+	margin: .556em 0 0;
+	
 }
+
+.has-hero-thumbnail {
+	.site-branding {
+		h1, h2 {
+			&, a {
+				text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.20) ;
+			}
+		}
+	}
+}
+
 
 body:not(.has-hero-thumbnail) {
 	
@@ -46,12 +60,16 @@ body:not(.has-hero-thumbnail) {
 		position: relative;
 		
 		.site-title a {
-		    color: $color__link;
+		    color: $color__title;
+		    
+		    &:active, &:focus, &:hover {
+				color: rgba(14, 54, 79, 0.8);
+			}
 		}
 		
 		.site-description {
-			background: $color__title;
 			clear: both;
+			color: $color__title;
 		}
 		
 		.site-title, .site-description {

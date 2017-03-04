@@ -175,42 +175,11 @@ article.post:last-of-type {
 			border: none;
 		}
 	}
-
+	
 	.edit-link {
 		float: right;
 		display: inline-block;
 		clear: right;
-		&:before {
-			content:'\f411';
-			margin-right: 5px;
-			vertical-align: sub;
-		}
-	}
-
-	.tags-links:before {
-		content: '\f302';
-		margin-right: 3px;
-		vertical-align: sub;
-	}
-
-	.comments-link:before {
-		content: '\f300';
-		margin-right: 5px;
-		vertical-align: sub;
-	}
-	
-	.post-meta-categories:before {
-		content: '\f301';
-		vertical-align: text-bottom;
-		@include font-size(1.1);
-		margin-right: -4px;
-	}
-
-	.cat-links:before {
-		content: '\f301';
-		@include font-size(1.2);
-		margin-right: 4px;
-		vertical-align: top;
 	}
 
 	// Main post wrapper	
@@ -241,7 +210,7 @@ article.post:last-of-type {
 		.more-link {
 			width: 105px;
 			text-align: center;
-			margin: 0 auto 2.692em;
+			margin: 1em auto 2.692em;
 			display: block;
 			line-height: 44px;
 			border-bottom: none;

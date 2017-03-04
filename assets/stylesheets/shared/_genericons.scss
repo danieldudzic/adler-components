@@ -1,36 +1,90 @@
 /**
  * Genericons
  */
+.post-meta-categories,
+.tags-links,
+.edit-link,
+.tags-links,
+.comments-link,
+.cat-links,
+.menu-toggle,
+.showsub-toggle {
+	svg {
+		width: 16px;
+		font-size: 16px;
+		height: auto;
+		vertical-align: middle;
+		width: 16px;
+		path {
+			fill: currentcolor;
+			height: 32px;
+			width: 32px;
+		}
+	}
+}
 
-.site-header .menu-item-has-children > a:after,
-.social-navigation a:before,
-.sidebar-toggle:before,
-.dropdown-toggle:after,
-.bypostauthor > article .fn:after,
-.comment-reply-title small a:before,
-.full-size-link:before,
-.pagination .prev:before,
-.pagination .next:before,
-.author-link:after,
-.menu-toggle:before,
-.showsub-toggle:before,
-.comments-link:before,
-.edit-link:before,
-.tags-links:before,
-.post-meta-categories:before,
-.cat-links:before {
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	display: inline-block;
-	font-family: "Genericons";
-	font-size: 16px;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	line-height: 1;
-	speak: none;
-	text-align: center;
-	text-decoration: inherit;
-	text-transform: none;
-	vertical-align: top;
+.post-meta-categories svg {
+	margin-top: -2px;	
+	margin-right: -1px;
+}
+
+.comments-link svg {
+	margin-top: -3px;
+	margin-right: 5px;
+}
+
+.edit-link svg {
+	margin-top: -2px;
+	margin-right: 5px;
+}
+
+.tags-links svg {
+	margin-top: -2px;
+	margin-right: 4px;
+}
+
+.hero-wrapper .post-meta-categories svg {
+	display: none;
+}
+
+.cat-links svg {
+	margin-top: -3px;
+	margin-right: 4px;
+}
+
+.menu-toggle svg {
+	display: block;
+	margin: 0 auto;
+	path {
+		height: 54px;
+		width: 54px;
+	}
+}
+
+.menu-toggle.toggle-on .menu-toggle-icon svg {
+	display: none;
+}
+
+.menu-toggle.toggle-on .menu-toggle-icon-close svg {
+	display: block;
+}
+
+.menu-toggle .menu-toggle-icon-close svg {
+	display: none;
+}
+
+.showsub-toggle.sub-on svg  {
+	transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+}
+
+.showsub-toggle svg  {
+	@include transition(all 0 ease-in-out);
+	transform:rotate(0deg);
+	transform-origin:50% 50%;
+	-ms-transform:rotate(0deg);
+	-ms-transform-origin:50% 50%;
+	-webkit-transform:rotate(0deg);
+	-webkit-transform-origin:50% 50%;
 }

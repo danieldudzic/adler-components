@@ -169,10 +169,8 @@ add_action( 'widgets_init', 'adler_widgets_init' );
  */
 function adler_scripts() {
 	wp_enqueue_style( 'adler-style', get_stylesheet_uri() );
-	
+
 	wp_enqueue_style( 'adler-fonts', adler_fonts_url(), array(), null );
-	
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/assets/fonts/genericons/genericons/genericons.css', array(), '3.4.1' );
 
 	wp_enqueue_script( 'adler-main', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '20120206', true );
 	wp_localize_script( 'adler-main', 'menuToggleText', array(
