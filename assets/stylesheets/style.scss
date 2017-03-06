@@ -188,7 +188,7 @@ a {
 input.search-submit {
 	width: 105px;
 	text-align: center;
-	margin-bottom: 35px;
+	margin-bottom: 15px;
 	margin-left: auto;
 	margin-right: auto;
 	line-height: 44px;
@@ -198,11 +198,6 @@ input.search-submit {
 	background-size: cover;
 	padding: 0;
 	text-transform: none;
-
-	@media screen and (max-width: #{$breakpoint_tablet}) {
-		margin-bottom: 15px;
-	}
-
 }
 
 /*--------------------------------------------------------------

@@ -1,7 +1,3 @@
-.entry-title {
-	font-family: $font__code;
-}
-
 .sticky {
 	display: block;
 	.hero-wrapper .hero-content .entry-title {
@@ -33,22 +29,12 @@
 }
 
 .single {
-	&.has-hero-thumbnail, &:not(.has-hero-thumbnail) {
-		.post {
-			background-color: transparent;
-		}
-	}
-	
-	&.has-hero-thumbnail {
-		.post {
-			.entry-wrapper {
-				padding-top: 6.154em;
-			}
-		}
+	.hentry {
+		background-color: transparent;
 	}
 	
 	&:not(.has-hero-thumbnail) {
-		.post {
+		.hentry {
 			padding-top: 0;
 		}
 	}
@@ -64,43 +50,50 @@
 	}
 }
 
-article.post:nth-of-type(odd) {
-	background-color: $color__background-body;
-
-	.entry-main {
-		background-color: $color__background-body;
+.hfeed {
+	.hentry {
+		background-color: $color__background-post;
+		padding-top: 6.154em;
 		
-		&:after {
-			background-color: $color__background-post;
+		&:nth-of-type(odd) {
+			background-color: $color__background-body;
+	
+			.entry-main {
+				background-color: $color__background-body;
+				
+				&:after {
+					background-color: $color__background-post;
+				}
+			}
+		}
+		
+		&:last-of-type {
+			.entry-main:after {
+				display: none;
+			}
 		}
 	}
-}
-
-article.post:last-of-type {
-	.entry-main:after {
+	
+	.entry-footer .cat-links {
 		display: none;
 	}
 }
 
-.post {
-	padding-top: 6.154em;
-	background-color: $color__background-post;
+.hentry {
+	&:not(.has-post-thumbnail) .entry-wrapper .entry-header .entry-title {
+		margin-bottom: 0.676em;
+	}
+	
+	&.has-post-thumbnail .entry-wrapper .entry-main {
+		margin-top: 2.500em;
+	}
 }
 
 .entry-wrapper {
 	position: relative;
 	
-	body:not(.has-hero-thumbnail) & {
+	body:not(.hfeed) & {
 		margin-top: 3.5em;
-	}
-	
-	.single &, .page & {
-		margin-bottom: 6.154em;
-		.entry-header {
-			margin-left: -7.692em;
-			margin-right: -7.692em;
-			margin-bottom: 5em;
-		}
 	}
 
 	h1, h2 {
@@ -116,13 +109,14 @@ article.post:last-of-type {
 
 	.entry-header {
 		.entry-title {
-			@include font-size(4.615);
+			font-family: $font__code;
 			padding-bottom: 0;
 			position: relative;
-			line-height: 1.2;
+			line-height: 1;
 			margin-bottom: 0;
 			overflow: visible;
 			margin-top: 0;
+			@include font-size(2.97);
 			
 			.header-content & {
 				position: relative;
@@ -131,52 +125,16 @@ article.post:last-of-type {
 			a {
 				border: none;
 				color: $color__title;	
-			}	
+			}
 		}
 	}
 	
-	blockquote {
-		font-family: $font__code-secondary;
-		@include font-size(2.813);
-		text-align: center;
-		line-height: 1.378em;
-		color: $color__title;
-		margin-left: -5em;
-		margin-right: -5em;
-		margin-bottom: 1.111em;
-		position: relative;
-		box-sizing: content-box;
-		display: inline-block;
-		@extend %hyphening;
-		float: left;
-		
-		background-size: 50px 62px;
-		background-color: $color__accent;
-		background-image: -webkit-linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
-		background-image: -moz-linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
-		background-image: linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
-		
-		-webkit-box-decoration-break: clone;
-		-ms-box-decoration-break: clone;
-		-o-box-decoration-break: clone;
-		box-decoration-break: clone;
-		
-		* {
-			width: auto;
-		}
-		
-		p {
-			margin: 0;
-		}
-	}
-
 	.post-thumbnail {
-		margin-left: -7.692em;
-		margin-right: -7.692em;
 		margin-top: 0px;
 		text-align: center;
 		a {
 			border: none;
+			display: block;
 		}
 	}
 	
@@ -185,59 +143,34 @@ article.post:last-of-type {
 		display: inline-block;
 		clear: right;
 	}
-	
-	.entry-footer {
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		margin-top: 1.538em;
 
+	.entry-footer {
+		width: 100%;
+		@include clearfix();
+		span {
+			display: block;
+			width: 100%;
+			margin-bottom: 5px;
+		}
+		
+		.byline {
+			display: inline-block;
+			.author {
+				width: auto;
+				display: inline-block;
+			}
+		}
+		
 		.entry-meta {
+			.post-meta-categories {
+			}
+			
 			.has-hero-thumbnail .header-content & {
 				display: none;
 			}
-		
-			.post-meta-categories {
-				display: inline-block;
-		
-				&::after {
-					content: " - ";
-					color: $color__contrast;
-				}
-				
-				@media screen and (max-width: #{$breakpoint_mobile}) {
-					display: block;
-				}
-
-				a {
-					text-decoration: none;
-					color: $color__text-main;
-				}
-			}
-		}
-		
-		> * {
-			display: inline-block;
-		}
-
-		.posted-on {
-			a {
-				border-bottom: none;
-			}
-		}
-
-		.separator {
-			padding-left: 5px;
-			padding-right: 5px;
-			@media screen and (max-width: #{$breakpoint_mobile}) {
+			
+			.separator {
 				display: none;
-			}
-		}
-
-		.comments-link {
-			flex-basis: fit-content;
-			a {
-				border-bottom: none;
 			}
 		}
 	}
@@ -246,14 +179,18 @@ article.post:last-of-type {
 	.entry-main {
 		position: relative;
 		background-color: $color__background-post;
-		padding: 3.846em 3.846em 5.385em 3.846em;
-		margin: -3.846em -3.846em 0 -3.846em;
+		padding: 0 0 5.385em 0;
+		margin: 0;
 		
-		.post:not(.has-post-thumbnail) & {
+		hentry:not(.has-post-thumbnail) & {
 			margin-top: 0;
 			background-color: transparent;
 		}
-
+		
+		.search-results & {
+			margin-top: 0;
+		}
+		
 		&:after {
 			content: ' ';
 			position: absolute;
@@ -266,7 +203,7 @@ article.post:last-of-type {
 			background: url(assets/images/leaf.png) center center no-repeat;
 			background-color: $color__background-body;
 		}
-
+	
 		.more-link {
 			width: 105px;
 			text-align: center;
@@ -279,11 +216,44 @@ article.post:last-of-type {
 			background-size: cover;
 		}
 	}
-}
+	
+	blockquote {
+		font-family: $font__code-secondary;
+		@include font-size(2);
+		text-align: center;
+		line-height: 1.378em;
+		color: $color__title;
+		margin-left: 1em;
+		margin-right: 1em;
+		margin-bottom: 1.333em;
+		position: relative;
+		box-sizing: content-box;
+		display: inline-block;
+		@extend %hyphening;
+		float: left;
+		background-size: 50px 43px;
+		background-color: $color__accent;
+		background-image: -webkit-linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
+		background-image: -moz-linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
+		background-image: linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
+		
+		-webkit-box-decoration-break: clone;
+		-ms-box-decoration-break: clone;
+		-o-box-decoration-break: clone;
+		box-decoration-break: clone;
+	
+		blockquote {
+			margin-left: 0;
+			margin-right: 0;
+		}
 
-.home, .archive {
-	.entry-footer .cat-links {
-		display: none;
+		* {
+			width: auto;
+		}
+		
+		p {
+			margin: 0;
+		}
 	}
 }
 
