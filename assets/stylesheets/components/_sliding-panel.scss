@@ -1,31 +1,36 @@
 @import "navigation-vertical";
 
 .slide-panel {
-	position: relative;
 	z-index: 3;
-	display: none;
-	width: 100%;
-	padding: 0;
 	background: $color__background-sliding-panel;
 	outline-color: lighten( $color__background-sliding-panel, 5% );
 	outline-style: solid;
-	outline-width: 0;
-	overflow: hidden;
-	overflow-x: hidden;
+	outline-width: 0;	
+	position: absolute;
+	right: -100%;
+	width: 100%;
+	display: block;
+	overflow: scroll;
+	height: 100%;
+	visibility: hidden;
+
+	-webkit-transition: 350ms all ease-in-out;
+	-moz-transition: 350ms all ease-in-out;
+	transition: 350ms all ease-in-out;
 
 	a {
 		color: $color__background-sliding-panel-link;
 	}
 
-	&.expanded {
-		display: block;
-	}
+	&.expanded, .single &.expanded {
+		visibility: visible;
+	}	
 	
 	.jetpack-social-navigation {
 		margin-bottom: 0em;
 		border-top: 1px solid lighten( $color__background-sliding-panel, 5% );
 		ul {
-			margin-bottom: 0.3em;
+			margin-bottom: 2px;
 			text-align: center;
 		}
 	
@@ -47,52 +52,40 @@
 			}
 		}
 	}
-
 }
 
+body {
+	width: 100%;
+}
 
-	
-.slide-panel {
-	position: fixed;
-	top: 0;
-	right: -24.625em;
-	display: block;
-	visibility: hidden;
-	overflow: scroll;
-	width: 24.625em;
+.site {
+	left: 0;
 	height: 100%;
-	padding: 30px 0 2em;
-
+    position: relative;
 	-webkit-transition: 350ms all ease-in-out;
 	-moz-transition: 350ms all ease-in-out;
 	transition: 350ms all ease-in-out;
-	
-	/* Admin Bar Fix */
-	.admin-bar & {
-		padding-top: 61px;
-	}
-
-	&.expanded, .single &.expanded {
-		right: 0;
-		display: block;
-		visibility: visible;
-		-webkit-transition: 350ms all ease-in-out;
-		-moz-transition: 350ms all ease-in-out;
-		transition: 350ms all ease-in-out;
-		}
-	}
-
-.site {
-	position: relative;
-	left: 0;
-	-webkit-transition: 350ms left ease-in-out;
-	-moz-transition: 350ms left ease-in-out;
-	transition: 350ms left ease-in-out;
 }
 
-.sidebar-open .site {
-	left: -320px;
-	-webkit-transition: 350ms left ease-in-out;
-	-moz-transition: 350ms left ease-in-out;
-	transition: 350ms left ease-in-out;
+.slide-panel-open .site {
+	left: -100%;
+}
+
+.slide-panel-open .menu-toggle {
+	margin-right: -100%;
+	outline: 1px solid lighten( $color__background-sliding-panel, 5% );
+}
+
+.slide-panel-open .body-wrapper {
+	overflow: hidden;
+}
+
+.slide-panel-open {
+	background-color: $color__background-sliding-panel;
+	-webkit-transition: background-color 350ms ease-in-out;
+	-moz-transition: background-color 350ms ease-in-out;
+	transition: background-color 350ms ease-in-out;
+	-webkit-transition-delay: 350ms;
+	-moz-transition-delay: 350ms;
+	ttransition-delay: 350ms;
 }

@@ -2,17 +2,44 @@ body:not(.has-hero-thumbnail) .site-header {
 	margin-bottom: 2em;
 }
 
+.site-header {
+	display: block;
+}
+
 .site-branding {
 	margin-bottom: 0px;
-	margin: 2.308em 0 0 3.077em;
+	margin: 2.308em 9em 0 3.077em;
 	position: absolute;
 	z-index: 50;
-	top: 0;
 	left: 0;
 	font-family: $font__code;
 	
-	h1, h2 {
+	.site-title {
+		font-weight: bold;
+		@include font-size(1);
+		line-height: 1;
+		margin: 0;
+		font-family: $font__main;
+		letter-spacing: -1px;
+		
+		a {
+			color: $color__light;
+			border-bottom: 0;
+			text-decoration: none;
+			
+			&:active, &:focus, &:hover {
+				color: rgba(255, 255, 255, 0.85);
+			}
+		}
+	}
+	
+	.site-description {
 		font-weight: normal;
+		@include font-size(0.75);
+		margin-top: 1em;
+		color: $color__light;
+		margin: .556em 0 0;
+		letter-spacing: 1px;
 	}
 	
 	a img {
@@ -21,32 +48,6 @@ body:not(.has-hero-thumbnail) .site-header {
 		max-height: 7.692em;
 		overflow: hidden;
 	}
-}
-
-.site-title {
-	@include font-size(1);
-	line-height: 1;
-	margin: 0;
-	font-family: $font__main;
-	letter-spacing: -1px;
-	
-	a {
-		color: $color__light;
-		border-bottom: 0;
-		text-decoration: none;
-		
-		&:active, &:focus, &:hover {
-			color: rgba(255, 255, 255, 0.85);
-		}
-	}
-}
-
-.site-description {
-	@include font-size(0.75);
-	margin-top: 1em;
-	color: $color__light;
-	margin: .556em 0 0;
-	
 }
 
 .has-hero-thumbnail {

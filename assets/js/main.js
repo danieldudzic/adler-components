@@ -11,8 +11,9 @@
 		body = $( 'body' ),
 		htmlBody = $( 'html, body' ),
 		actionText = $('.action-text'),
-		menuToggle = $( '.menu-toggle' );
-		scrollIndicatorWrapper = $( '.scroll-indicator-wrapper' );
+		menuToggle = $( '.menu-toggle' ),
+		bodyWrapper  = $( '.body-wrapper' ),
+		scrollIndicatorWrapper = $( '.scroll-indicator-wrapper' ),
 		scrollIndicatorAnchor = $( '#scroll-indicator-anchor' );
 		
 
@@ -68,31 +69,38 @@
 		menuToggle.on( 'click', function( e ) {
 			e.preventDefault();
 			var $this = $( this );
+			
+			var bodyWrapperHeight = function() {
+				
+				bodyWrapper.css( {
+					'height': slideMenu.outerHeight() + 'px',
+				} );
+			};
 
 			slideMenu.toggleClass( 'expanded' ).resize();
-			body.toggleClass( 'sidebar-open' );
+			body.toggleClass( 'slide-panel-open' );
 
 			$this.toggleClass( 'toggle-on' );
 			$this.attr( 'aria-expanded', $( this ).attr( 'aria-expanded' ) == 'false' ? 'true' : 'false');
 
 			if( slideMenu.hasClass( 'expanded' ) ) {
-							actionText.text( 'hide' );
-					} else {
-						actionText.text( 'show' );
-					}
+				actionText.text( 'hide' );
+			} else {
+				bodyWrapper.removeAttr('style');
+				actionText.text( 'show' );
+			}
 
 			//Close slide menu with double click
 			body.dblclick( function( e ) {
 				e.preventDefault();
 				slideMenu.removeClass( 'expanded' ).resize();
-				$( this ).removeClass( 'sidebar-open' );
+				$( this ).removeClass( 'slide-panel-open' );
 				menuToggle.removeClass( 'toggle-on' );
 			} );
 		} );
 	}
 	
-	
-		/**
+	/**
 	* Navigation sub menu show and hide
 	*
 	* Show sub menus with an arrow click to work across all devices
@@ -109,7 +117,7 @@
 
 	$( '.showsub-toggle' ).click( function( e ) {
 			e.preventDefault();
-			var $this = $( this );
+			var $this = $( this );			
 			$this.toggleClass( 'sub-on' );
 			$this.next( 'ul' ).toggleClass( 'sub-on' );
 			$( 'span', $this ).text( $( 'span', $this ).text() == menuToggleText.open ? menuToggleText.close : menuToggleText.open );
@@ -177,7 +185,7 @@
 				fullscreenFeaturedImage();
 			}, 100 );
 		} );
-
+		
 		bigImageClass();
 		slideControl();
 		scroll();
