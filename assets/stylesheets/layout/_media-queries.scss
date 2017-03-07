@@ -43,6 +43,13 @@
  */
 
  @media screen and ( min-width: 43.75em ) {
+	.comment-navigation,
+	.posts-navigation,
+	.post-navigation {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	 .entry-wrapper {
 		blockquote {
 			@include font-size(2.125);
@@ -75,11 +82,7 @@
  */
 
 @media screen and ( min-width: 51.755em ) {
-
-	.hentry,
-	.comment-navigation,
-	.posts-navigation,
-	.post-navigation {
+	.hentry {
 		padding-left: 0;
 		padding-right: 0;
 	}

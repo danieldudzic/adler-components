@@ -1827,6 +1827,12 @@ a {
  * >= 700px
  */
 @media screen and (min-width: 43.75em) {
+  .comment-navigation,
+  .posts-navigation,
+  .post-navigation {
+    padding-left: 0;
+    padding-right: 0; }
+
   .entry-wrapper blockquote {
     font-size: 34px;
     font-size: 2.125rem;
@@ -1846,10 +1852,7 @@ a {
  * >= 828px
  */
 @media screen and (min-width: 51.755em) {
-  .hentry,
-  .comment-navigation,
-  .posts-navigation,
-  .post-navigation {
+  .hentry {
     padding-left: 0;
     padding-right: 0; }
 
