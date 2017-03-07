@@ -184,7 +184,7 @@
 		padding: 0 0 5.385em 0;
 		margin: 0;
 
-		hentry:not(.has-post-thumbnail) & {
+		.hentry:not(.has-post-thumbnail) & {
 			margin-top: 0;
 			background-color: transparent;
 		}
