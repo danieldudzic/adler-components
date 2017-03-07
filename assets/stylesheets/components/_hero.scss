@@ -7,7 +7,7 @@
 	background: transparent;
 	box-shadow: none;
 	text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5);
-	
+
 	/* Admin Bar Fix */
 	.admin-bar & {
 		margin-top: -32px;
@@ -35,7 +35,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translateX(-50%) translateY(-50%);
-		
+
 		.entry-header {
 			margin: 0 0 2.308em;
 		}
@@ -61,18 +61,18 @@
 			}
 		}
 
-		.entry-content {			
+		.entry-content {
 			p {
 				color: $color__contrast;
 				text-align: center;
 				@include font-size(0.688);
 				display: none;
 			}
-			
+
 			.more-link {
 				color: $color__contrast;
 				text-transform: uppercase;
-			}	
+			}
 		}
 
 		.entry-meta {
@@ -83,23 +83,23 @@
 				border: none;
 				color: $color__contrast;
 			}
-			
+
 			body:not(.has-hero-thumbnail) .header-content & {
 				display: none;
 			}
-			
+
 			.hero_date {
 				display: inline-block;
 				color: $color__contrast;
 			}
-			
+
 			.post-meta-categories, a {
 				display: inline;
 			}
 		}
 
 	}
-	
+
 }
 
 .has-hero-thumbnail .hentry:first-of-type {
@@ -137,7 +137,7 @@
 		-webkit-animation: opacityDown .5s ease both;
 		animation: opacityDown .5s ease both;
 	}
-	
+
 	&:before, &:after {
 		content: '';
 		width: 34px;
@@ -145,7 +145,7 @@
 		background-color: #fff;
 		position: absolute;
 	}
-	
+
 	&:before {
 		left: -5px;
 		top: 11px;
@@ -153,7 +153,7 @@
 		-moz-transform: rotate(45deg);
 		transform: rotate(45deg);
 	}
-	
+
 	&:after {
 		left: 19px;
 		top: 11px;
@@ -161,11 +161,11 @@
 		-moz-transform: rotate(135deg);
 		transform: rotate(135deg);
 	}
-	
+
 	&:hover:before, &:hover:after {
 		opacity: 0.75;
 	}
-	
+
 	&:focus {
 		outline: dotted thin #fff;
 	}

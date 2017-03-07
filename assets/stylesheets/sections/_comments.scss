@@ -1,14 +1,14 @@
-#comments {	
+#comments {
 	textarea {
 		width: 100%;
 	}
-	
+
 	.reply {
 		position: absolute;
 		right: 0;
 		top: 47px;
 	}
-	
+
 	.comment-notes {
 		margin-bottom: 1em;
 	}
@@ -18,7 +18,7 @@
 
 	li {
 		position: relative;
-		
+
 		&.bypostauthor {
 			background: $color__contrast;
 			padding: 10px;
@@ -26,9 +26,9 @@
 				.reply {
 					right: 10px;
 				}
-	
+
 		}
-		
+
 		&:before {
 			content: '';
 			padding: 0;
@@ -58,7 +58,7 @@
 	line-height: 1.2;
 	margin: 0 0 1em;
 	@include font-size(1.25);
-	
+
 	#cancel-comment-reply-link {
 		font-family: $font__main;
 		font-weight: normal;
@@ -100,7 +100,6 @@
 }
 
 .comment-author {
-
 	.fn {
 		display: inline-block;
 		margin-bottom: .4em;
@@ -196,7 +195,6 @@
 	margin: 0 0 1.6em;
 	position: relative;
 
-	
 	input,
 	textarea {
 		clear: both;

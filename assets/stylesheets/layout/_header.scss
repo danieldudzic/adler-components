@@ -13,7 +13,7 @@ body:not(.has-hero-thumbnail) .site-header {
 	z-index: 50;
 	left: 0;
 	font-family: $font__code;
-	
+
 	.site-title {
 		font-weight: bold;
 		@include font-size(1);
@@ -21,18 +21,18 @@ body:not(.has-hero-thumbnail) .site-header {
 		margin: 0;
 		font-family: $font__main;
 		letter-spacing: -1px;
-		
+
 		a {
 			color: $color__light;
 			border-bottom: 0;
 			text-decoration: none;
-			
+
 			&:active, &:focus, &:hover {
 				color: rgba(255, 255, 255, 0.85);
 			}
 		}
 	}
-	
+
 	.site-description {
 		font-weight: normal;
 		@include font-size(0.75);
@@ -41,7 +41,7 @@ body:not(.has-hero-thumbnail) .site-header {
 		margin: .556em 0 0;
 		letter-spacing: 1px;
 	}
-	
+
 	a img {
 		position: absolute;
 		max-width: 23.077em;
@@ -60,25 +60,23 @@ body:not(.has-hero-thumbnail) .site-header {
 	}
 }
 
-
 body:not(.has-hero-thumbnail), .page {
-	
 	.site-branding {
 		position: relative;
-		
+
 		.site-title a {
 		    color: $color__title;
-		    
+
 		    &:active, &:focus, &:hover {
 				color: rgba(14, 54, 79, 0.8);
 			}
 		}
-		
+
 		.site-description {
 			clear: both;
 			color: $color__title;
 		}
-		
+
 		.site-title, .site-description {
 			float: left;
 		}

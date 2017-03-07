@@ -8,7 +8,7 @@ Version: 1.0.0-wpcom
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: adler
-Tags: black, blue, green, white, light, one-column, fluid-layout, responsive-layout, custom-background, custom-colors, custom-menu, editor-style, featured-image-header, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: one-column, custom-background, custom-colors, custom-menu, featured-image-header, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -37,12 +37,21 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Layout
 	## Posts
 	## Pages
+	## Header
+	## Footer
+	## No Content
+	## Search Results
+	## Containers
 # Comments
 # Widgets
 # Infinite scroll
 # Media
 	## Galleries
+# Genericons
+# Keyframes
+# Transitions
 # Adler
+# Media Queries
 --------------------------------------------------------------*/
 @-webkit-keyframes opacityDown {
   from {
@@ -770,27 +779,6 @@ a {
   word-break: break-word; }
 
 /*--------------------------------------------------------------
-# Links
---------------------------------------------------------------*/
-a {
-  color: #45525a;
-  text-decoration: none;
-  border-bottom: 3px solid #68f3c8; }
-  a:visited {
-    color: #45525a; }
-  a:hover, a:focus, a:active {
-    color: #45525a; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
-
-.entry-content a,
-.entry-summary a {
-  word-wrap: break-word;
-  word-break: break-word; }
-
-/*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
 html {
@@ -1366,89 +1354,6 @@ body:not(.has-hero-thumbnail) .site-branding, .page .site-branding {
 .infinity-end.neverending .site-footer {
   display: block; }
 
-.infinite-wrap .hentry:first-child {
-  border-top: 1px solid rgba(0, 0, 0, 0.1); }
-
-/* Spinner */
-.infinite-loader {
-  clear: both;
-  height: 24px;
-  margin: 7.6923% 0; }
-
-.infinite-loader .spinner {
-  top: 50% !important;
-  left: 50% !important; }
-
-/* Click-to-load */
-#infinite-handle {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  clear: both;
-  margin: 0 7.6923%;
-  padding: 7.6923% 0;
-  text-align: center; }
-
-#infinite-handle span {
-  background-color: #232323;
-  border-radius: 2px;
-  font-family: Lato, sans-serif;
-  font-size: 12px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  line-height: 1;
-  padding: 11px 16px 9px;
-  text-transform: uppercase; }
-
-#infinite-handle span:hover,
-#infinite-handle span:focus {
-  background-color: #0074b8;
-  color: #fff; }
-
-/* Footer */
-#infinite-footer {
-  display: none;
-  z-index: 999; }
-
-#infinite-footer .container {
-  background-color: rgba(255, 255, 255, 0.95);
-  border-color: rgba(0, 0, 0, 0.1);
-  padding: 0 32px;
-  width: 100% !important; }
-
-#infinite-footer .blog-info,
-#infinite-footer .blog-credits {
-  height: 48px;
-  line-height: 48px; }
-
-#infinite-footer .blog-info a:hover,
-#infinite-footer .blog-info a:focus,
-#infinite-footer .blog-credits a:hover,
-#infinite-footer .blog-credits a:focus {
-  text-decoration: none; }
-
-#infinite-footer .blog-info {
-  font-family: Lato, sans-serif; }
-
-#infinite-footer .blog-info a {
-  color: #232323;
-  font-size: 15px;
-  font-size: 0.9375rem;
-  font-weight: 900; }
-
-#infinite-footer .blog-info a:hover,
-#infinite-footer .blog-info a:focus {
-  opacity: 0.7; }
-
-#infinite-footer .blog-credits {
-  font-size: 13px;
-  font-size: 0.8125rem; }
-
-#infinite-footer .blog-credits a {
-  color: #5b5b5b; }
-
-#infinite-footer .blog-credits a:hover,
-#infinite-footer .blog-credits a:focus {
-  color: #0074b8; }
-
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -1490,7 +1395,8 @@ figure {
     font-size: 0.875rem;
     color: #7c868b;
     text-align: center;
-    margin: 0.8075em 0; }
+    margin: 1em 0;
+    display: inline-block; }
     .wp-caption .wp-caption-text a, .wp-caption .gallery-caption a {
       color: #7c868b; }
   .wp-caption.aligncenter {
@@ -1517,10 +1423,6 @@ figure {
       margin-top: 0; }
     p > .wp-caption.alignleft:first-child, p > :first-child > .wp-caption.alignleft:first-child, p > .wp-caption .alignright:first-child, p > :first-child > .wp-caption .alignright:first-child {
       margin-top: 0; }
-
-.wp-caption-text {
-  text-align: center;
-  margin-top: 1em; }
 
 p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
   border: none; }
@@ -1669,6 +1571,38 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
     opacity: 0; }
   to {
     opacity: 1; } }
+/*--------------------------------------------------------------
+# Transitions
+--------------------------------------------------------------*/
+.site,
+.slide-panel,
+button,
+input,
+textarea,
+#infinite-handle button,
+#infinite-handle span,
+.jp-relatedposts-post-a img,
+.main-navigation ul ul a:before,
+.meta-nav,
+.post-navigation .post-title,
+.post-thumbnail img,
+.search-form:before,
+.site-logo-link,
+.sticky-post {
+  -webkit-transition: 350ms all ease-in-out;
+  -moz-transition: 350ms all ease-in-out;
+  transition: 350ms all ease-in-out; }
+
+.slide-menu {
+  -webkit-transition: visibility 350ms ease-in-out;
+  -moz-transition: visibility 350ms ease-in-out;
+  transition: visibility 350ms ease-in-out; }
+
+a {
+  -webkit-transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out;
+  -moz-transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out;
+  transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out; }
+
 /*--------------------------------------------------------------
 # Adler
 --------------------------------------------------------------*/
@@ -1868,38 +1802,6 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
     outline: dotted thin #fff; }
 
 /*--------------------------------------------------------------
-# Transitions
---------------------------------------------------------------*/
-.site,
-.slide-panel,
-button,
-input,
-textarea,
-#infinite-handle button,
-#infinite-handle span,
-.jp-relatedposts-post-a img,
-.main-navigation ul ul a:before,
-.meta-nav,
-.post-navigation .post-title,
-.post-thumbnail img,
-.search-form:before,
-.site-logo-link,
-.sticky-post {
-  -webkit-transition: 350ms all ease-in-out;
-  -moz-transition: 350ms all ease-in-out;
-  transition: 350ms all ease-in-out; }
-
-.slide-menu {
-  -webkit-transition: visibility 350ms ease-in-out;
-  -moz-transition: visibility 350ms ease-in-out;
-  transition: visibility 350ms ease-in-out; }
-
-a {
-  -webkit-transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out;
-  -moz-transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out;
-  transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out; }
-
-/*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
 /**
@@ -1971,7 +1873,8 @@ a {
         width: 100%;
         content: "";
         display: table;
-        table-layout: fixed; }
+        table-layout: fixed;
+        display: inline-block; }
     .entry-wrapper .wp-caption.alignright {
       float: right;
       margin-left: 2em;
@@ -1982,7 +1885,8 @@ a {
         width: 100%;
         content: "";
         display: table;
-        table-layout: fixed; }
+        table-layout: fixed;
+        display: inline-block; }
     .entry-wrapper .wp-caption.aligncenter, .entry-wrapper .wp-caption.alignnone {
       margin-left: -6.154em;
       margin-right: -6.154em;

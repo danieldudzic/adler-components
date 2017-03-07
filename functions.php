@@ -163,7 +163,7 @@ function adler_fonts_url() {
 	 * by Permanent Marker, translate this to 'off'. Do not translate into your own language.
 	 */
 	$permanent_marker = esc_html_x( 'on', 'Permanent Marker font: on or off', 'adler' );
-	
+
 	/* translators: If there are characters in your language that are not supported
 	 * by Droid Sans Mono, translate this to 'off'. Do not translate into your own language.
 	 */

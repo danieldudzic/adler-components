@@ -32,15 +32,15 @@
 	.hentry {
 		background-color: transparent;
 	}
-	
+
 	&:not(.has-hero-thumbnail) {
 		.hentry {
 			padding-top: 0;
 		}
 	}
-	
+
 	.post {
-		.entry-wrapper {			
+		.entry-wrapper {
 			.entry-footer {
 				.tags-links {
 					float: right;
@@ -54,26 +54,26 @@
 	.hentry {
 		background-color: $color__background-post;
 		padding-top: 6.154em;
-		
+
 		&:nth-of-type(odd) {
 			background-color: $color__background-body;
-	
+
 			.entry-main {
 				background-color: $color__background-body;
-				
+
 				&:after {
 					background-color: $color__background-post;
 				}
 			}
 		}
-		
+
 		&:last-of-type {
 			.entry-main:after {
 				display: none;
 			}
 		}
 	}
-	
+
 	.entry-footer .cat-links {
 		display: none;
 	}
@@ -85,7 +85,7 @@
 	&:not(.has-post-thumbnail) .entry-wrapper .entry-header .entry-title {
 		margin-bottom: 0.676em;
 	}
-	
+
 	&.has-post-thumbnail .entry-wrapper .entry-main {
 		margin-top: 2.500em;
 	}
@@ -93,7 +93,7 @@
 
 .entry-wrapper {
 	position: relative;
-	
+
 	body:not(.hfeed) & {
 		margin-top: 3.5em;
 	}
@@ -103,7 +103,7 @@
 			text-align: center;
 		}
 	}
-	
+
 	p {
 		margin-top: 0;
 		margin-bottom: 3.077em;
@@ -119,18 +119,18 @@
 			overflow: visible;
 			margin-top: 0;
 			@include font-size(2.97);
-			
+
 			.header-content & {
 				position: relative;
 			}
-							
+
 			a {
 				border: none;
-				color: $color__title;	
+				color: $color__title;
 			}
 		}
 	}
-	
+
 	.post-thumbnail {
 		margin-top: 0px;
 		text-align: center;
@@ -139,7 +139,7 @@
 			display: block;
 		}
 	}
-	
+
 	.edit-link {
 		float: right;
 		display: inline-block;
@@ -154,7 +154,7 @@
 			width: 100%;
 			margin-bottom: 5px;
 		}
-		
+
 		.byline {
 			display: inline-block;
 			.author {
@@ -162,37 +162,37 @@
 				display: inline-block;
 			}
 		}
-		
+
 		.entry-meta {
 			.post-meta-categories {
 			}
-			
+
 			.has-hero-thumbnail .header-content & {
 				display: none;
 			}
-			
+
 			.separator {
 				display: none;
 			}
 		}
 	}
 
-	// Main post wrapper	
+	// Main post wrapper
 	.entry-main {
 		position: relative;
 		background-color: $color__background-post;
 		padding: 0 0 5.385em 0;
 		margin: 0;
-		
+
 		hentry:not(.has-post-thumbnail) & {
 			margin-top: 0;
 			background-color: transparent;
 		}
-		
+
 		.search-results & {
 			margin-top: 0;
 		}
-		
+
 		&:after {
 			content: ' ';
 			position: absolute;
@@ -205,7 +205,7 @@
 			background: url(assets/images/leaf.png) center center no-repeat;
 			background-color: $color__background-body;
 		}
-	
+
 		.more-link {
 			width: 105px;
 			text-align: center;
@@ -218,7 +218,7 @@
 			background-size: cover;
 		}
 	}
-	
+
 	blockquote {
 		font-family: $font__code-secondary;
 		@include font-size(2);
@@ -238,12 +238,12 @@
 		background-image: -webkit-linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
 		background-image: -moz-linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
 		background-image: linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
-		
+
 		-webkit-box-decoration-break: clone;
 		-ms-box-decoration-break: clone;
 		-o-box-decoration-break: clone;
 		box-decoration-break: clone;
-	
+
 		blockquote {
 			margin-left: 0;
 			margin-right: 0;
@@ -252,7 +252,7 @@
 		* {
 			width: auto;
 		}
-		
+
 		p {
 			margin: 0;
 		}

@@ -8,8 +8,8 @@
 			.entry-title {
 				@include font-size(2.85);
 			}
-			
-			.entry-content {			
+
+			.entry-content {
 				p {
 					display: block;
 				}
@@ -29,7 +29,7 @@
 				@include font-size(3.36);
 			}
 
-			.entry-content {			
+			.entry-content {
 				p {
 					@include font-size(0.813);
 				}
@@ -41,7 +41,7 @@
 /**
  * >= 700px
  */
- 
+
  @media screen and ( min-width: 43.75em ) {
 	 .entry-wrapper {
 		blockquote {
@@ -51,7 +51,7 @@
 			margin-right: -1em;
 		}
 	}
-	
+
 	.content-area {
 		.site-main {
 			.page-title {
@@ -60,7 +60,7 @@
 			}
 		}
 	}
-	
+
 	.hero-wrapper {
 		.hero-content {
 			.entry-title {
@@ -75,7 +75,7 @@
  */
 
 @media screen and ( min-width: 51.755em ) {
-	
+
 	.hentry,
 	.comment-navigation,
 	.posts-navigation,
@@ -91,9 +91,10 @@
 			@include font-size(2.5);
 			background-size: 50px 54px;
 		}
-		
+
 		.wp-caption {
 			width: auto;
+
 			&.alignleft, &.alignright {
 				max-width: 15.0768em;
 			}
@@ -102,11 +103,12 @@
 				margin-right: 2em;
 				margin-left: -6.154em;
 				img {
-					float: right; 
+					float: right;
 				}
 				.wp-caption-text {
 					width: 100%;
 					@include clearfix();
+					display: inline-block;
 				}
 			}
 			&.alignright {
@@ -114,14 +116,15 @@
 				margin-left: 2em;
 				margin-right: -11.615em;
 				img {
-					float: left; 
+					float: left;
 				}
 				.wp-caption-text {
 					width: 100%;
-					@include clearfix();		
+					@include clearfix();
+					display: inline-block;
 				}
 			}
-			
+
 			&.aligncenter, &.alignnone {
 				margin-left: -6.154em;
 				margin-right: -6.154em;
@@ -146,55 +149,55 @@
 				@include font-size(3.51);
 			}
 		}
-		
+
 		.entry-footer {
 			display: flex;
 			justify-content: space-between;
 			margin-top: 1.538em;
-			
+
 			span {
 				width: auto;
 				display: inline;
 				text-align: left;
 			}
-	
+
 			.entry-meta {
 				.post-meta-categories {
 					display: inline-block;
 					text-align: left;
-			
+
 					&::after {
 						content: " - ";
 						color: $color__contrast;
 					}
-	
+
 					a {
 						text-decoration: none;
 						color: $color__text-main;
 					}
 				}
-				
+
 				.separator {
 					display: inline-block;
 					padding-left: 5px;
 					padding-right: 5px;
 				}
-				
+
 				.byline {
 					display: inline;
 				}
 			}
-			
+
 			> * {
 				display: inline-block;
 			}
-	
+
 			.posted-on {
 				a {
 					border-bottom: none;
 				}
 			}
-	
+
 			.comments-link {
 				a {
 					border-bottom: none;
@@ -202,7 +205,7 @@
 			}
 		}
 	}
-	
+
 	.content-area {
 		.site-main {
 			.page-title {
@@ -211,14 +214,14 @@
 			}
 		}
 	}
-	
-	.error404 .content-area .site-main { 
+
+	.error404 .content-area .site-main {
 		.page-title {
 			@include font-size(2.167);
 			background-size: 50px 47px;
 		}
 	}
-	
+
 	.site-footer {
 		.site-info {
 			width: auto;
@@ -233,7 +236,7 @@
 			width: auto;
 			float: right;
 			text-align: right;
-			
+
 			.menu ul li {
 				margin-bottom: 0;
 			}
@@ -241,7 +244,7 @@
 	}
 
 }
-	
+
 /**
  * >= 925px
  */
@@ -251,19 +254,19 @@
 	.scroll-indicator-wrapper {
 		margin-bottom: 2.9412%;
 	}
-	
+
 	.post {
-		.entry-wrapper {				
+		.entry-wrapper {
 			.post-meta-categories {
 				display: block;
 			}
 		}
 	}
-	
+
 	input.search-submit {
 		margin-bottom: 35px;
 	}
-	
+
 	.entry-wrapper {
 		.entry-header {
 			.entry-title {
@@ -273,7 +276,7 @@
 
 		.single &, body.page & {
 			margin-bottom: 6.154em;
-			
+
 			.entry-header {
 				margin-left: -7.692em;
 				margin-right: -7.692em;
@@ -283,12 +286,12 @@
 				margin-top: 5em;
 			}
 		}
-		
+
 		blockquote {
 			margin-left: -3em;
 			margin-right: -3em;
 		}
-		
+
 		.wp-caption {
 			&.alignleft, &.alignright {
 				max-width: 22.6152em;
@@ -311,23 +314,23 @@
 			}
 		}
 
-		
+
 		.post-thumbnail {
 			margin-left: -7.692em;
 			margin-right: -7.692em;
 		}
 	}
-	
+
 	.site-main .hentry .entry-wrapper .entry-main {
 		position: relative;
 		padding: 3.846em 3.846em 5.385em 3.846em;
 		margin: -3.846em -3.846em 0 -3.846em;
-		
+
 		.search-results & {
 			margin-top: 0;
 		}
 	}
-	
+
 	.hentry:not(.has-post-thumbnail) .entry-wrapper .entry-main {
 		margin-top: 0;
 		padding-top: 0;
@@ -345,13 +348,13 @@
 		}
 	}
 
-	.error404 .content-area .site-main { 
+	.error404 .content-area .site-main {
 		.page-title {
 			@include font-size(2.55);
 			background-size: 50px 55px;
 		}
 	}
-	
+
 	.hero-wrapper {
 		.hero-content {
 			.entry-title {
@@ -359,19 +362,19 @@
 			}
 		}
 	}
-	
+
 	.menu-toggle {
 		right: 40px;
 		top: 30px;
 	}
-	
+
 	.slide-panel {
 		right: -24.625em;
 		width: 24.625em;
 		overflow: scroll;
 		position: absolute;
 		padding: 30px 0 2em;
-		
+
 		&.expanded, .single &.expanded {
 			height: 100%;
 			-webkit-transition: 350ms all ease-in-out;
@@ -379,7 +382,7 @@
 			transition: 350ms all ease-in-out;
 		}
 	}
-	
+
 	.site {
 		position: relative;
 		left: 0;
@@ -393,7 +396,7 @@
 		-webkit-transition-delay: none;
 		-moz-transition-delay: none;
 		transition-delay: none;
-		
+
 		.menu-toggle {
 			margin-right: 0;
 			outline: none;
@@ -403,16 +406,16 @@
 			left: -320px;
 		}
 	}
-	
+
 	.slide-panel-open .body-wrapper {
 		overflow: visible;
 	}
 }
-	
+
 /**
  * >= 1088px
  */
- 
+
 @media screen and ( min-width: 68em ) {
 	.entry-wrapper {
 		.entry-header {
@@ -425,7 +428,7 @@
 			margin-left: -4em;
 			margin-right: -4em;
 		}
-		
+
 		.wp-caption {
 			&.alignleft, &.alignright {
 				max-width: 30.1536em;
@@ -459,8 +462,8 @@
 			}
 		}
 	}
-	
-	.error404 .content-area .site-main { 
+
+	.error404 .content-area .site-main {
 		.page-title {
 			@include font-size(3);
 			background-size: 50px 65px;
@@ -470,7 +473,7 @@
 			margin-top: 5em;
 		}
 	}
-	
+
 	.hero-wrapper {
 		.hero-content {
 			.entry-title {

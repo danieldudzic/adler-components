@@ -27,13 +27,13 @@
 	}
 }
 
-.error404 .content-area .site-main { 
+.error404 .content-area .site-main {
 	.page-title {
 		@include font-size(2.167);
 		background-size: 50px 47px;
 		line-height: 1.378em;
 	}
-	
+
 	.page-content {
 		margin-top: 5em;
 	}

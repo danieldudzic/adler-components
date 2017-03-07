@@ -8,7 +8,7 @@ Version: 1.0.0-wpcom
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: adler
-Tags: black, blue, green, white, light, one-column, fluid-layout, responsive-layout, custom-background, custom-colors, custom-menu, editor-style, featured-image-header, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: one-column, custom-background, custom-colors, custom-menu, featured-image-header, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -38,12 +38,21 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Layout
 	## Posts
 	## Pages
+	## Header
+	## Footer
+	## No Content
+	## Search Results
+	## Containers
 # Comments
 # Widgets
 # Infinite scroll
 # Media
 	## Galleries
+# Genericons
+# Keyframes
+# Transitions
 # Adler
+# Media Queries
 --------------------------------------------------------------*/
 @import "variables/variables-base";
 @import "mixins/mixins-base";
@@ -109,11 +118,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "shared/links";
 
 /*--------------------------------------------------------------
-# Links
---------------------------------------------------------------*/
-@import "shared/links";
-
-/*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
 @import "layout/layout";
@@ -149,14 +153,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "shared/keyframes";
 
 /*--------------------------------------------------------------
-# Adler
---------------------------------------------------------------*/
-@import "components";
-
-/*--------------------------------------------------------------
 # Transitions
 --------------------------------------------------------------*/
 @import "shared/transitions";
+
+/*--------------------------------------------------------------
+# Adler
+--------------------------------------------------------------*/
+@import "components";
 
 /*--------------------------------------------------------------
 # Media Queries

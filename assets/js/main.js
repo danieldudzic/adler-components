@@ -15,7 +15,6 @@
 		bodyWrapper  = $( '.body-wrapper' ),
 		scrollIndicatorWrapper = $( '.scroll-indicator-wrapper' ),
 		scrollIndicatorAnchor = $( '#scroll-indicator-anchor' );
-		
 
 	/**
 	* Full width feature images
@@ -38,7 +37,7 @@
 			} );
 		} );
 	}
-	
+
 	/**
 	* Full screen size images: props to Resonar for solution
 	*/
@@ -69,9 +68,9 @@
 		menuToggle.on( 'click', function( e ) {
 			e.preventDefault();
 			var $this = $( this );
-			
+
 			var bodyWrapperHeight = function() {
-				
+
 				bodyWrapper.css( {
 					'height': slideMenu.outerHeight() + 'px',
 				} );
@@ -99,7 +98,7 @@
 			} );
 		} );
 	}
-	
+
 	/**
 	* Navigation sub menu show and hide
 	*
@@ -107,24 +106,23 @@
 	* This switches classes and changes the genericon.
 	*/
 	$( '.main-navigation .menu-item-has-children > a' ).after( '<button class="showsub-toggle" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path d="M8 12.7L1.3 6l1.4-1.4L8 9.9l5.3-5.3L14.7 6"/></g></svg><span class="screen-reader-text">' + menuToggleText.open + '</span></button>' );
-	
+
 	$( '.main-navigation .page_item_has_children > li' ).append( '<button class="showsub-toggle" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path d="M8 12.7L1.3 6l1.4-1.4L8 9.9l5.3-5.3L14.7 6"/></g></svg><span class="screen-reader-text">' + menuToggleText.open + '</span></button>' );
-	
-	
+
 	$( '.main-navigation .current-menu-ancestor > a' ).addClass( 'sub-on' );
 	$( '.main-navigation .current-menu-ancestor > button' ).addClass( 'sub-on' );
 	$( '.main-navigation .current-menu-ancestor > .sub-menu' ).addClass( 'sub-on' );
 
 	$( '.showsub-toggle' ).click( function( e ) {
 			e.preventDefault();
-			var $this = $( this );			
+			var $this = $( this );
 			$this.toggleClass( 'sub-on' );
 			$this.next( 'ul' ).toggleClass( 'sub-on' );
 			$( 'span', $this ).text( $( 'span', $this ).text() == menuToggleText.open ? menuToggleText.close : menuToggleText.open );
 			$this.parent().next( '.children, .sub-menu' ).toggleClass( 'sub-on' );
 			$this.attr( 'aria-expanded', $this.attr( 'aria-expanded' ) == 'false' ? 'true' : 'false');
 	} );
-	
+
 	// Scroll down when the arrow is clicked.
 	function scroll() {
 		if ( ! $( '#scroll-indicator' ) ) {
@@ -138,7 +136,7 @@
 		        }, 500 );
 		        return false;
 			} );
-		} );	
+		} );
 	}
 
 	// Add a class to change opacity of the arrow and to move the entry header.
@@ -185,30 +183,10 @@
 				fullscreenFeaturedImage();
 			}, 100 );
 		} );
-		
+
 		bigImageClass();
 		slideControl();
 		scroll();
 	} );
-	
-	/**
-	* Adler js
-	*/
-
-    /* Search */
-    $(".nav__item--search").click(function(){
-        $(".overlay--search").fadeIn("fast");
-
-    });
-    $(".overlay__close").click(function() {
-        $(".overlay--search").fadeOut("fast");
-    });
-
-    $(".menu-toggle").click(function() {
-        $(".toolbar, .logo").toggle().css("z-index","1");
-        $(".main-menu-container").toggleClass("padding--fix");
-    });
-
-
 
 } )( jQuery );

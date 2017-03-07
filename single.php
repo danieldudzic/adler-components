@@ -11,7 +11,7 @@ get_header();
 
 //Starting The Loop earlier to take advantage of functions like has_post_thumbnail()
 while ( have_posts() ) : the_post(); ?>
-	
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -33,6 +33,6 @@ while ( have_posts() ) : the_post(); ?>
 		</main>
 	</div>
 <?php
-endwhile; // End of the loop.	
+endwhile; // End of the loop.
 
 get_footer();

@@ -29,7 +29,7 @@ figure {
 .wp-caption {
 	margin-bottom: 1.6em;
 	max-width: 100%;
-	
+
 	img[class*="wp-image-"] {
 		@include center-block;
 	}
@@ -38,19 +38,20 @@ figure {
 		@include font-size(.875);
 		color: $color__text-caption;
 		text-align: center;
-		margin: 0.8075em 0;
+		margin: 1em 0;
+		display: inline-block;
 		a {
 			color: $color__text-caption;
 		}
 	}
-	
+
 	&.aligncenter {
 		margin-left: auto;
 		margin-right: auto;
 	}
 
 	/* Give some margin to floated elements, to prevent them butting up against text. */
-	
+
 	&.aligncenter,
 	&.alignnone,
 	&.alignleft,
@@ -58,11 +59,11 @@ figure {
 		display: block;
 		margin: 0;
 		margin-bottom: 1.2em;
-		
+
 		.archive__grid & {
 			margin-bottom: 0;
 		}
-		
+
 		.widget &, .blog &, .archive &, .search &{
 			margin: 0;
 		}
@@ -71,32 +72,27 @@ figure {
 	&.aligncenter, &.alignnone {
 		text-align: center;
 		display: inline-block;
-		
+
 		img {
 			margin: 0 auto;
 		}
 	}
-	
+
 	&.alignleft, .alignright {
 		margin-top: 2em;
 		float:none;
 		margin: 0 auto;
-		
+
 		p + & {
 			margin-top: 0;
 		}
-		
+
 		p > &:first-child,
 		p > :first-child > &:first-child {
-			margin-top: 0; 
+			margin-top: 0;
 		}
 	}
 
-}
-
-.wp-caption-text {
-	text-align: center;
-	margin-top: 1em;
 }
 
 p {
