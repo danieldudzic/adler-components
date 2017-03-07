@@ -1054,19 +1054,20 @@ body:not(.has-hero-thumbnail) .site-header {
     max-height: 7.692em;
     overflow: hidden; }
 
-.has-hero-thumbnail .site-branding h1, .has-hero-thumbnail .site-branding h1 a, .has-hero-thumbnail .site-branding h2, .has-hero-thumbnail .site-branding h2 a {
+.has-hero-thumbnail .site-branding {
   text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.2); }
 
-body:not(.has-hero-thumbnail) .site-branding, .page .site-branding {
-  position: relative; }
-  body:not(.has-hero-thumbnail) .site-branding .site-title a, .page .site-branding .site-title a {
+body:not(.has-hero-thumbnail) .site-branding, .search-results .site-branding, .page .site-branding {
+  position: relative;
+  text-shadow: none; }
+  body:not(.has-hero-thumbnail) .site-branding .site-title a, .search-results .site-branding .site-title a, .page .site-branding .site-title a {
     color: #0e364f; }
-    body:not(.has-hero-thumbnail) .site-branding .site-title a:active, body:not(.has-hero-thumbnail) .site-branding .site-title a:focus, body:not(.has-hero-thumbnail) .site-branding .site-title a:hover, .page .site-branding .site-title a:active, .page .site-branding .site-title a:focus, .page .site-branding .site-title a:hover {
+    body:not(.has-hero-thumbnail) .site-branding .site-title a:active, body:not(.has-hero-thumbnail) .site-branding .site-title a:focus, body:not(.has-hero-thumbnail) .site-branding .site-title a:hover, .search-results .site-branding .site-title a:active, .search-results .site-branding .site-title a:focus, .search-results .site-branding .site-title a:hover, .page .site-branding .site-title a:active, .page .site-branding .site-title a:focus, .page .site-branding .site-title a:hover {
       color: rgba(14, 54, 79, 0.8); }
-  body:not(.has-hero-thumbnail) .site-branding .site-description, .page .site-branding .site-description {
+  body:not(.has-hero-thumbnail) .site-branding .site-description, .search-results .site-branding .site-description, .page .site-branding .site-description {
     clear: both;
     color: #0e364f; }
-  body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thumbnail) .site-branding .site-description, .page .site-branding .site-title, .page .site-branding .site-description {
+  body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thumbnail) .site-branding .site-description, .search-results .site-branding .site-title, .search-results .site-branding .site-description, .page .site-branding .site-title, .page .site-branding .site-description {
     float: left; }
 
 .no-site-title {
@@ -1747,7 +1748,7 @@ a {
       .hero-wrapper .hero-content .entry-meta .post-meta-categories, .hero-wrapper .hero-content .entry-meta a {
         display: inline; }
 
-.has-hero-thumbnail .hentry:first-of-type {
+.has-hero-thumbnail:not(.search-results) .hentry:first-of-type {
   padding-top: 0;
   padding-left: 0;
   padding-right: 0;
@@ -2086,7 +2087,7 @@ a {
   .content-area .site-main .page-title {
     font-size: 60px;
     font-size: 3.75rem;
-    background-size: 50px 90px;
+    background-size: 50px 81px;
     margin-left: -1.667em;
     margin-right: -1.667em; }
 

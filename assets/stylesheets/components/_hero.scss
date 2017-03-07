@@ -102,7 +102,7 @@
 
 }
 
-.has-hero-thumbnail .hentry:first-of-type {
+.has-hero-thumbnail:not(.search-results) .hentry:first-of-type {
 	padding-top: 0;
 	padding-left: 0;
 	padding-right: 0;

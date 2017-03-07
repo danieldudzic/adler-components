@@ -52,17 +52,15 @@ body:not(.has-hero-thumbnail) .site-header {
 
 .has-hero-thumbnail {
 	.site-branding {
-		h1, h2 {
-			&, a {
-				text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.20) ;
-			}
-		}
+		text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.20) ;
 	}
 }
 
-body:not(.has-hero-thumbnail), .page {
+
+body:not(.has-hero-thumbnail), .search-results, .page {
 	.site-branding {
 		position: relative;
+		text-shadow: none;
 
 		.site-title a {
 		    color: $color__title;
