@@ -82,6 +82,55 @@
 			@include font-size(2.5);
 			background-size: 50px 54px;
 		}
+		
+		.wp-caption {
+			width: auto;
+			&.alignleft, &.alignright {
+				max-width: 15.0768em;
+			}
+			&.alignleft {
+				float: left;
+				margin-right: 2em;
+				margin-left: -6.154em;
+				img {
+					float: right; 
+				}
+				.wp-caption-text {
+					width: 100%;
+					@include clearfix();
+				}
+			}
+			&.alignright {
+				float: right;
+				margin-left: 2em;
+				margin-right: -11.615em;
+				img {
+					float: left; 
+				}
+				.wp-caption-text {
+					width: 100%;
+					@include clearfix();		
+				}
+			}
+			
+			&.aligncenter, &.alignnone {
+				margin-left: -6.154em;
+				margin-right: -6.154em;
+				max-width: calc(6.154em * 2 + 100%);
+			}
+		}
+
+		.alignright {
+			img {
+				margin-right: -6.92em;
+			}
+		}
+
+		.alignleft {
+			img {
+				margin-left: -6.92em;
+			}
+		}
 
 		.entry-header {
 			.entry-title {
@@ -209,6 +258,29 @@
 			margin-right: -3em;
 		}
 		
+		.wp-caption {
+			&.alignleft, &.alignright {
+				max-width: 22.6152em;
+			}
+
+			&.alignleft {
+				margin-right: 3em;
+				margin-left: -9.231em;
+			}
+
+			&.alignright {
+				margin-left: 3em;
+				margin-right: -17.385em;
+			}
+
+			&.aligncenter, &.alignnone {
+				margin-left: -9.231em;
+				margin-right: -9.231em;
+				max-width: calc(9.231em * 2 + 100%);
+			}
+		}
+
+		
 		.post-thumbnail {
 			margin-left: -7.692em;
 			margin-right: -7.692em;
@@ -230,8 +302,7 @@
 		padding-top: 0;
 		background-color: transparent;
 	}
-	
-	
+
 	.content-area {
 		.site-main {
 			.page-title {
@@ -323,6 +394,28 @@
 			margin-left: -4em;
 			margin-right: -4em;
 		}
+		
+		.wp-caption {
+			&.alignleft, &.alignright {
+				max-width: 30.1536em;
+			}
+
+			&.alignleft {
+				margin-right: 3em;
+				margin-left: -12.308em;
+			}
+
+			&.alignright {
+				margin-left: 3em;
+				margin-right: -19.231em;
+			}
+
+			&.aligncenter, &.alignnone {
+				margin-left: -12.308em;
+				margin-right: -12.308em;
+				max-width: calc(12.308em * 2 + 100%);
+			}
+		}
 	}
 
 	.content-area {
@@ -354,7 +447,6 @@
 			}
 		}
 	}
-
 }
 
 
@@ -367,6 +459,26 @@
 		blockquote {
 			margin-left: -5em;
 			margin-right: -5em;
+		}
+		
+		.wp-caption {
+			&.alignleft, &.alignright {
+				max-width: 37.692em;
+			}
+			&.alignleft {
+				margin-right: 3em;
+				margin-left: -15.385em;
+			}
+			&.alignright {
+				margin-left: 3em;
+				margin-right: -20.769em;
+			}
+			
+			&.aligncenter, &.alignnone {
+				margin-left: -15.385em;
+				margin-right: -15.385em;
+				max-width: calc(15.385em * 2 + 100%);
+			}
 		}
 	}
 }

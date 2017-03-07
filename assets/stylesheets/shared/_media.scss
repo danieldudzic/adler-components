@@ -50,19 +50,53 @@ figure {
 	}
 
 	/* Give some margin to floated elements, to prevent them butting up against text. */
-	&.alignleft {
-		margin-right: 32px;
-		margin-top: 8px;
+	
+	&.aligncenter,
+	&.alignnone,
+	&.alignleft,
+	&.alignright {
+		display: block;
+		margin: 0;
+		margin-bottom: 1.2em;
+		
+		.archive__grid & {
+			margin-bottom: 0;
+		}
+		
+		.widget &, .blog &, .archive &, .search &{
+			margin: 0;
+		}
+	}
+
+	&.aligncenter, &.alignnone {
+		text-align: center;
+		display: inline-block;
+		
+		img {
+			margin: 0 auto;
+		}
 	}
 	
-	.alignright {
-		margin-left: 32px;
-	    margin-top: 8px;
+	&.alignleft, .alignright {
+		margin-top: 2em;
+		float:none;
+		margin: 0 auto;
+		
+		p + & {
+			margin-top: 0;
+		}
+		
+		p > &:first-child,
+		p > :first-child > &:first-child {
+			margin-top: 0; 
+		}
 	}
+
 }
 
 .wp-caption-text {
 	text-align: center;
+	margin-top: 1em;
 }
 
 p {
