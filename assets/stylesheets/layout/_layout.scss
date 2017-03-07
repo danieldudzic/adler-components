@@ -10,10 +10,17 @@ html {
 
 body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	width: 100%;
 }
 
 .body-wrapper {
 	overflow-x: hidden;
+}
+
+.site {
+	left: 0;
+	height: 100%;
+    position: relative;
 }
 
 /*--------------------------------------------------------------

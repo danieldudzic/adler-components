@@ -2,7 +2,7 @@
  * >= 470px
  */
 
-@media screen and (min-width: 29.375em) {
+@media screen and ( min-width: 29.375em ) {
 	.hero-wrapper {
 		.hero-content {
 			.entry-title {
@@ -22,7 +22,7 @@
  * >= 601px
  */
 
-@media screen and (min-width: 37.5625em) {
+@media screen and ( min-width: 37.5625em ) {
 	.hero-wrapper {
 		.hero-content {
 			.entry-title {
@@ -42,7 +42,7 @@
  * >= 700px
  */
  
- @media screen and (min-width: 43.75em) {
+ @media screen and ( min-width: 43.75em ) {
 	 .entry-wrapper {
 		blockquote {
 			@include font-size(2.125);
@@ -74,7 +74,16 @@
  * >= 828px
  */
 
-@media screen and (min-width: 51.755em) {
+@media screen and ( min-width: 51.755em ) {
+	
+	.hentry,
+	.comment-navigation,
+	.posts-navigation,
+	.post-navigation {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	.entry-wrapper {
 		blockquote {
 			margin-left: -2em;
@@ -116,7 +125,7 @@
 			&.aligncenter, &.alignnone {
 				margin-left: -6.154em;
 				margin-right: -6.154em;
-				max-width: calc(6.154em * 2 + 100%);
+				max-width: calc( 6.154em * 2 + 100% );
 			}
 		}
 
@@ -209,13 +218,35 @@
 			background-size: 50px 47px;
 		}
 	}
+	
+	.site-footer {
+		.site-info {
+			width: auto;
+			margin-right: auto;
+			display: inline-block;
+			line-height: 1.6;
+			margin-bottom: 0;
+			text-align: left;
+		}
+
+		.footer-navigation {
+			width: auto;
+			float: right;
+			text-align: right;
+			
+			.menu ul li {
+				margin-bottom: 0;
+			}
+		}
+	}
+
 }
 	
 /**
  * >= 925px
  */
 
-@media screen and (min-width: 57.8125em) {
+@media screen and ( min-width: 57.8125em ) {
 
 	.scroll-indicator-wrapper {
 		margin-bottom: 2.9412%;
@@ -276,7 +307,7 @@
 			&.aligncenter, &.alignnone {
 				margin-left: -9.231em;
 				margin-right: -9.231em;
-				max-width: calc(9.231em * 2 + 100%);
+				max-width: calc( 9.231em * 2 + 100%);
 			}
 		}
 
@@ -382,7 +413,7 @@
  * >= 1088px
  */
  
-@media screen and (min-width: 68em) {
+@media screen and ( min-width: 68em ) {
 	.entry-wrapper {
 		.entry-header {
 			.entry-title {
@@ -413,7 +444,7 @@
 			&.aligncenter, &.alignnone {
 				margin-left: -12.308em;
 				margin-right: -12.308em;
-				max-width: calc(12.308em * 2 + 100%);
+				max-width: calc( 12.308em * 2 + 100% );
 			}
 		}
 	}
@@ -460,24 +491,26 @@
 			margin-left: -5em;
 			margin-right: -5em;
 		}
-		
+
 		.wp-caption {
 			&.alignleft, &.alignright {
 				max-width: 37.692em;
 			}
+
 			&.alignleft {
 				margin-right: 3em;
 				margin-left: -15.385em;
 			}
+
 			&.alignright {
 				margin-left: 3em;
 				margin-right: -20.769em;
 			}
-			
+
 			&.aligncenter, &.alignnone {
 				margin-left: -15.385em;
 				margin-right: -15.385em;
-				max-width: calc(15.385em * 2 + 100%);
+				max-width: calc( 15.385em * 2 + 100% );
 			}
 		}
 	}

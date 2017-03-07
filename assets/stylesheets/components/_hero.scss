@@ -102,8 +102,10 @@
 	
 }
 
-.has-hero-thumbnail article.post:first-of-type {
+.has-hero-thumbnail .hentry:first-of-type {
 	padding-top: 0;
+	padding-left: 0;
+	padding-right: 0;
 	overflow: hidden;
 }
 

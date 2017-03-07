@@ -156,48 +156,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Transitions
 --------------------------------------------------------------*/
-button,
-input,
-textarea,
-#infinite-handle button,
-#infinite-handle span,
-.jp-relatedposts-post-a img,
-.main-navigation ul ul a:before,
-.meta-nav,
-.post-link .genericon,
-.post-navigation .post-title,
-.post-thumbnail img,
-.search-form:before,
-.site-logo-link,
-.sticky-post {
-	transition: all 350ms ease-in-out;
-}
-.slide-menu {
-	transition: visibility 350ms ease-in-out;
-}
-a {
-	transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out;
-}
-
-/*--------------------------------------------------------------
-# Search
---------------------------------------------------------------*/
-input.search-submit {
-	width: 105px;
-	text-align: center;
-	margin-bottom: 15px;
-	margin-left: auto;
-	margin-right: auto;
-	line-height: 44px;
-	border-bottom: none;
-	color: $color__link;
-	background: url(assets/images/more-bg.png);
-	background-size: cover;
-	padding: 0;
-	text-transform: none;
-}
+@import "shared/transitions";
 
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
-@import "layout/_media-queries";
+@import "layout/media-queries";

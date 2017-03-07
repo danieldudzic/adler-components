@@ -1,0 +1,32 @@
+.site,
+.slide-panel,
+button,
+input,
+textarea,
+#infinite-handle button,
+#infinite-handle span,
+.jp-relatedposts-post-a img,
+.main-navigation ul ul a:before,
+.meta-nav,
+.post-navigation .post-title,
+.post-thumbnail img,
+.search-form:before,
+.site-logo-link,
+.sticky-post {
+	-webkit-transition: 350ms all ease-in-out;
+	-moz-transition: 350ms all ease-in-out;
+	transition: 350ms all ease-in-out;
+}
+
+.slide-menu {
+	-webkit-transition: visibility 350ms ease-in-out;
+	-moz-transition: visibility 350ms ease-in-out;
+	transition: visibility 350ms ease-in-out;
+	
+}
+
+a {
+	-webkit-transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out;
+	-moz-transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out;
+	transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out;
+}

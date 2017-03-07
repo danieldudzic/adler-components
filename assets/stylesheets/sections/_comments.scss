@@ -8,8 +8,11 @@
 		right: 0;
 		top: 47px;
 	}
+	
+	.comment-notes {
+		margin-bottom: 1em;
+	}
 }
-
 
 .comment-list {
 
@@ -31,12 +34,6 @@
 			padding: 0;
 		}
 	}
-}
-
-label[for=comment] {
-	position: absolute;
-	left: 0;
-	top: -30px;
 }
 
 .comment-author.vcard a {
@@ -199,21 +196,14 @@ label[for=comment] {
 	margin: 0 0 1.6em;
 	position: relative;
 
-	label {
-		@include font-size(.875);
-		padding: .65em .8em;
-		position: absolute;
-		left: 0;
-		top: 2px;
-	}
+	
 	input,
 	textarea {
 		clear: both;
-		padding-left: 6.4em;
 		width: 100%;
 	}
 
 	textarea {
-		padding: .8em .8em .375em;
+		padding: .6em .8em .375em;
 	}
 }
