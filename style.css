@@ -1373,6 +1373,43 @@ body:not(.has-hero-thumbnail) .site-branding, .search-results .site-branding, .p
 .infinity-end.neverending .site-footer {
   display: block; }
 
+/* Click-to-load */
+#infinite-handle {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  clear: both;
+  margin: 0 7.6923%;
+  padding: 6.154em 0 3.077em;
+  text-align: center; }
+  #infinite-handle span {
+    text-transform: uppercase;
+    background: #0e364f;
+    color: #f7f7f7; }
+    #infinite-handle span:hover, #infinite-handle span:focus {
+      background: #124565;
+      color: #68f3c8;
+      outline: 1px solid transparent; }
+
+/* Spinner */
+.infinite-loader {
+  clear: both;
+  padding: 6.154em 0 3.077em;
+  margin: 0 7.6923%; }
+  .infinite-loader .spinner {
+    top: 50% !important;
+    left: 50% !important; }
+
+#infinite-footer a {
+  color: #45525a; }
+  #infinite-footer a:hover, #infinite-footer a:active {
+    outline: 0; }
+#infinite-footer .blog-info a {
+  font-weight: bold;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: "Droid Sans Mono", serif; }
+  #infinite-footer .blog-info a:hover, #infinite-footer .blog-info a:active {
+    outline: 0; }
+
 .infinity-success .hentry:last-of-type .entry-main:after {
   display: block; }
 
