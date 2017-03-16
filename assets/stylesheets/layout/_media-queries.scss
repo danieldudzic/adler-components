@@ -6,7 +6,7 @@
 	.hero-wrapper {
 		.hero-content {
 			.entry-title {
-				@include font-size(2.85);
+				@include font-size(3.36);
 			}
 
 			.entry-content {
@@ -26,7 +26,6 @@
 	.hero-wrapper {
 		.hero-content {
 			.entry-title {
-				@include font-size(3.36);
 			}
 
 			.entry-content {
@@ -43,6 +42,20 @@
  */
 
  @media screen and ( min-width: 43.75em ) {
+
+	.hero-content,
+	.search-no-results .site-content .content-area,
+	.site-main .comment-navigation,
+	.site-main .posts-navigation,
+	.site-main .post-navigation,
+	#comments,
+	.content-area .site-main .page-header,
+	.page-content,
+	.entry-wrapper {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	.comment-navigation,
 	.posts-navigation,
 	.post-navigation {
@@ -52,10 +65,7 @@
 
 	 .entry-wrapper {
 		blockquote {
-			@include font-size(2.125);
-			background-size: 50px 46px;
-			margin-left: -1em;
-			margin-right: -1em;
+			@include font-size(2);
 		}
 	}
 
@@ -89,74 +99,18 @@
 
 	.entry-wrapper {
 		blockquote {
-			margin-left: -2em;
-			margin-right: -2em;
 			@include font-size(2.5);
-			background-size: 50px 54px;
-		}
-
-		.wp-caption {
-			width: auto;
-
-			&.alignleft, &.alignright {
-				max-width: 15.0768em;
-			}
-			&.alignleft {
-				float: left;
-				margin-right: 2em;
-				margin-left: -6.154em;
-				img {
-					float: right;
-				}
-				.wp-caption-text {
-					width: 100%;
-					@include clearfix();
-					display: inline-block;
-				}
-			}
-			&.alignright {
-				float: right;
-				margin-left: 2em;
-				margin-right: -11.615em;
-				img {
-					float: left;
-				}
-				.wp-caption-text {
-					width: 100%;
-					@include clearfix();
-					display: inline-block;
-				}
-			}
-
-			&.aligncenter, &.alignnone {
-				margin-left: -6.154em;
-				margin-right: -6.154em;
-				max-width: calc( 6.154em * 2 + 100% );
-			}
-		}
-
-		.alignright {
-			img {
-				margin-right: -6.92em;
-			}
-		}
-
-		.alignleft {
-			img {
-				margin-left: -6.92em;
-			}
 		}
 
 		.entry-header {
 			.entry-title {
-				@include font-size(3.51);
+				@include font-size(3.187);
 			}
 		}
 
 		.entry-footer {
 			display: flex;
 			justify-content: space-between;
-			margin-top: 1.538em;
 
 			span {
 				width: auto;
@@ -271,14 +225,7 @@
 	}
 
 	.entry-wrapper {
-		.entry-header {
-			.entry-title {
-				@include font-size(3.92);
-			}
-		}
-
 		.single &, body.page & {
-			margin-bottom: 6.154em;
 
 			.entry-header {
 				margin-left: -7.692em;
@@ -286,37 +233,9 @@
 			}
 
 			.entry-content {
-				margin-top: 5em;
+				margin-top: 3.846em;
 			}
 		}
-
-		blockquote {
-			margin-left: -3em;
-			margin-right: -3em;
-		}
-
-		.wp-caption {
-			&.alignleft, &.alignright {
-				max-width: 22.6152em;
-			}
-
-			&.alignleft {
-				margin-right: 3em;
-				margin-left: -9.231em;
-			}
-
-			&.alignright {
-				margin-left: 3em;
-				margin-right: -17.385em;
-			}
-
-			&.aligncenter, &.alignnone {
-				margin-left: -9.231em;
-				margin-right: -9.231em;
-				max-width: calc( 9.231em * 2 + 100%);
-			}
-		}
-
 
 		.post-thumbnail {
 			margin-left: -7.692em;
@@ -328,10 +247,6 @@
 		position: relative;
 		padding: 3.846em 3.846em 5.385em 3.846em;
 		margin: -3.846em -3.846em 0 -3.846em;
-
-		.search-results & {
-			margin-top: 0;
-		}
 	}
 
 	.hentry:not(.has-post-thumbnail) .entry-wrapper .entry-main {
@@ -423,13 +338,13 @@
 	.entry-wrapper {
 		.entry-header {
 			.entry-title {
-				@include font-size(4.615);
+				@include font-size(3.750);
 			}
 		}
 
 		blockquote {
-			margin-left: -4em;
-			margin-right: -4em;
+			margin-left: -4.675em;
+			margin-right: -4.675em;
 		}
 
 		.wp-caption {
@@ -439,18 +354,18 @@
 
 			&.alignleft {
 				margin-right: 3em;
-				margin-left: -12.308em;
+				margin-left: -14.453em;
 			}
 
 			&.alignright {
 				margin-left: 3em;
-				margin-right: -19.231em;
+				margin-right: -14.453em;
 			}
 
 			&.aligncenter, &.alignnone {
-				margin-left: -12.308em;
-				margin-right: -12.308em;
-				max-width: calc( 12.308em * 2 + 100% );
+				margin-left: -14.453em;
+				margin-right: -14.453em;
+				max-width: calc( 14.453em * 2 + 100% );
 			}
 		}
 	}
@@ -473,7 +388,7 @@
 		}
 
 		.page-content {
-			margin-top: 5em;
+			margin-top: 3.846em;
 		}
 	}
 
@@ -494,8 +409,8 @@
 @media screen and (min-width: 76em) {
 	.entry-wrapper {
 		blockquote {
-			margin-left: -5em;
-			margin-right: -5em;
+			margin-left: -5.250em;
+			margin-right: -5.250em;
 		}
 
 		.wp-caption {
@@ -505,18 +420,18 @@
 
 			&.alignleft {
 				margin-right: 3em;
-				margin-left: -15.385em;
+				margin-left: -16.154em;
 			}
 
 			&.alignright {
 				margin-left: 3em;
-				margin-right: -20.769em;
+				margin-right: -16.154em;
 			}
 
 			&.aligncenter, &.alignnone {
-				margin-left: -15.385em;
-				margin-right: -15.385em;
-				max-width: calc( 15.385em * 2 + 100% );
+				margin-left: -16.154em;
+				margin-right: -16.154em;
+				max-width: calc( 16.154em * 2 + 100% );
 			}
 		}
 	}

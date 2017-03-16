@@ -37,11 +37,11 @@
 		transform: translateX(-50%) translateY(-50%);
 
 		.entry-header {
-			margin: 0 0 2.308em;
+			margin: 0 0 1.65em;
 		}
 
 		.entry-title {
-			@include font-size(2.42);
+			@include font-size(2.85);
 			line-height: 1.2;
 			position: relative;
 			background-size: 100% 100%;
@@ -72,6 +72,9 @@
 			.more-link {
 				color: $color__contrast;
 				text-transform: uppercase;
+				margin-top: 1.692em;
+				display: inline-block;
+				line-height: 1.308;
 			}
 		}
 

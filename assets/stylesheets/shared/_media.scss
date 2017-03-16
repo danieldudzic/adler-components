@@ -35,7 +35,6 @@ figure {
 	}
 
 	.wp-caption-text, .gallery-caption {
-		@include font-size(.875);
 		color: $color__text-caption;
 		text-align: center;
 		margin: 1em 0;

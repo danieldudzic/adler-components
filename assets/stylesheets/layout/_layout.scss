@@ -57,16 +57,16 @@ body {
 ## Containers
 --------------------------------------------------------------*/
 .hero-content,
-.entry-wrapper,
 .search-no-results .site-content .content-area,
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation,
 #comments,
 .content-area .site-main .page-header,
-.page-content {
-	margin-left: auto;
-	margin-right: auto;
+.page-content,
+.entry-wrapper {
+	margin-left: 2.500em;
+	margin-right: 2.500em;
 	max-width: 46.154em;
 
 }

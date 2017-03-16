@@ -12,6 +12,10 @@
 	.comment-notes {
 		margin-bottom: 1em;
 	}
+
+	p {
+		margin: 0 0 1em;
+	}
 }
 
 .comment-list {
@@ -68,6 +72,10 @@
 	}
 }
 
+.comment-reply-title {
+	margin: 1em 0 1em;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
@@ -102,7 +110,6 @@
 .comment-author {
 	.fn {
 		display: inline-block;
-		margin-bottom: .4em;
 		font-weight: bold;
 		text-transform: none;
 		letter-spacing: 0;
@@ -121,14 +128,17 @@
 	}
 }
 
-.comment-meta a {
-	text-decoration: none;
+.comment-meta {
+	margin-bottom: 1em;
+
+	a {
+		text-decoration: none;
+	}
 }
 
 .comment-metadata {
 	color: $color__text-input;
 	@include font-size(.825);
-	margin-bottom: 1.6em;
 	text-transform: lowercase;
 
 	a,

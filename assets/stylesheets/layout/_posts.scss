@@ -72,6 +72,10 @@
 				display: none;
 			}
 		}
+
+		.entry-content {
+			text-align: center;
+		}
 	}
 
 	.entry-footer .cat-links {
@@ -95,7 +99,8 @@
 	position: relative;
 
 	body:not(.hfeed) & {
-		margin-top: 3.5em;
+		margin-top: 3.077em;
+		margin-bottom: 3.846em;
 	}
 
 	h1, h2 {
@@ -118,7 +123,7 @@
 			margin-bottom: 0;
 			overflow: visible;
 			margin-top: 0;
-			@include font-size(2.97);
+			@include font-size(2.5);
 
 			.header-content & {
 				position: relative;
@@ -189,8 +194,12 @@
 			background-color: transparent;
 		}
 
-		.search-results & {
+		.search-results .hentry:not(.has-post-thumbnail) & {
 			margin-top: 0;
+		}
+
+		.search-results .site-main .hentry & {
+			padding-bottom: 3.846em;
 		}
 
 		&:after {
@@ -209,13 +218,14 @@
 		.more-link {
 			width: 105px;
 			text-align: center;
-			margin: 1em auto 2.692em;
+			margin: 3.077em auto 0;
 			display: block;
 			line-height: 44px;
 			border-bottom: none;
 			color: $color__link;
 			background: url(assets/images/more-bg.png);
 			background-size: cover;
+			text-transform: uppercase;
 		}
 	}
 
@@ -223,17 +233,17 @@
 		font-family: $font__code-secondary;
 		@include font-size(2);
 		text-align: center;
-		line-height: 1.378em;
+		line-height: 1.406;
 		color: $color__title;
-		margin-left: 1em;
-		margin-right: 1em;
-		margin-bottom: 1.333em;
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 1.406em;
 		position: relative;
 		box-sizing: content-box;
 		display: inline-block;
 		@extend %hyphening;
 		float: left;
-		background-size: 50px 43px;
+		background-size: 1.250em 1.406em;
 		background-color: $color__accent;
 		background-image: -webkit-linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
 		background-image: -moz-linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
@@ -245,8 +255,9 @@
 		box-decoration-break: clone;
 
 		blockquote {
-			margin-left: 0;
-			margin-right: 0;
+			margin-left: 1em;
+			margin-right: 1em;
+			margin-bottom: 0;
 		}
 
 		* {

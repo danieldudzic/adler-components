@@ -16,11 +16,10 @@ body:not(.has-hero-thumbnail) .site-header {
 
 	.site-title {
 		font-weight: bold;
-		@include font-size(1);
+		@include font-size(.875);
 		line-height: 1;
 		margin: 0;
 		font-family: $font__main;
-		letter-spacing: -1px;
 
 		a {
 			color: $color__light;
