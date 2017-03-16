@@ -1339,10 +1339,23 @@ body:not(.has-hero-thumbnail) .site-branding, .search-results .site-branding, .p
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em;
+  margin: 0;
+  padding: 1em 1.846em 0.385em;
+  color: #f7f7f7;
   /* Make sure select elements fit in widgets. */ }
   .widget select {
     max-width: 100%; }
+  .widget .widget-title {
+    color: #fff; }
+  .widget table, .widget caption {
+    background: transparent; }
+  .widget ul {
+    padding-left: 0;
+    margin-left: 0; }
+  .widget #wp-calendar td {
+    text-align: center; }
+  .widget input.search-submit {
+    color: #f7f7f7; }
 
 .footer-widgets-wrapper, .full-width-widget-area {
   float: none;

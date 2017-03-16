@@ -6,11 +6,34 @@
 }
 
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0;
+	padding: 1em 1.846em 0.385em;
+	color: $color__contrast;
 
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
+	}
+
+	.widget-title {
+		color: $color__light;
+	}
+
+	table, caption {
+		background: transparent;
+	}
+
+	ul {
+		padding-left: 0;
+		margin-left: 0;
+	}
+
+	#wp-calendar td {
+		text-align: center;
+	}
+
+	input.search-submit {
+		color: $color__contrast;
 	}
 }
 
