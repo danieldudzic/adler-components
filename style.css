@@ -1505,9 +1505,11 @@ figure {
       margin: 0; }
   .wp-caption.aligncenter, .wp-caption.alignnone {
     text-align: center;
-    display: inline-block; }
+    display: inline-block;
+    width: auto !important; }
     .wp-caption.aligncenter img, .wp-caption.alignnone img {
-      margin: 0 auto; }
+      margin: 0 auto;
+      width: 100%; }
   .wp-caption.alignleft, .wp-caption .alignright {
     margin-top: 2em;
     float: none;
