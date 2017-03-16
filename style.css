@@ -1391,10 +1391,6 @@ body:not(.has-hero-thumbnail) .site-branding, .search-results .site-branding, .p
     background-color: #f7f7f7; }
     .hfeed .infinite-wrap.odd .hentry:nth-of-type(even) .entry-main:after {
       background-color: #fff; }
-  .hfeed .infinite-wrap.odd .hentry:nth-of-type(even) .entry-wrapper blockquote {
-    background-image: -webkit-linear-gradient(#f7f7f7 70%, transparent 70%, transparent);
-    background-image: -moz-linear-gradient(#f7f7f7 70%, transparent 70%, transparent);
-    background-image: linear-gradient(#f7f7f7 70%, transparent 70%, transparent); }
 .hfeed .infinite-wrap.even .hentry:nth-of-type(even) {
   background-color: #fff; }
   .hfeed .infinite-wrap.even .hentry:nth-of-type(even) .entry-main {
@@ -1407,6 +1403,10 @@ body:not(.has-hero-thumbnail) .site-branding, .search-results .site-branding, .p
     background-color: #f7f7f7; }
     .hfeed .infinite-wrap.even .hentry:nth-of-type(odd) .entry-main:after {
       background-color: #fff; }
+  .hfeed .infinite-wrap.even .hentry:nth-of-type(odd) .entry-wrapper blockquote {
+    background-image: -webkit-linear-gradient(#f7f7f7 70%, transparent 70%, transparent);
+    background-image: -moz-linear-gradient(#f7f7f7 70%, transparent 70%, transparent);
+    background-image: linear-gradient(#f7f7f7 70%, transparent 70%, transparent); }
 
 .hfeed:not(.search-results):not(.archive) .infinite-wrap .hentry.has-post-thumbnail:first-of-type {
   padding: 6.154em 0 0 0;

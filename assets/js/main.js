@@ -15,7 +15,7 @@
 		bodyWrapper  = $( '.body-wrapper' ),
 		scrollIndicatorWrapper = $( '.scroll-indicator-wrapper' ),
 		scrollIndicatorAnchor = $( '#scroll-indicator-anchor' ),
-		articles = $( '.site-main > article' );
+		siteMain = $( '.site-main' );
 
 	/**
 	* Full width feature images
@@ -83,7 +83,7 @@
 			$this.toggleClass( 'toggle-on' );
 			$this.attr( 'aria-expanded', $( this ).attr( 'aria-expanded' ) == 'false' ? 'true' : 'false');
 
-			if( slideMenu.hasClass( 'expanded' ) ) {
+			if ( slideMenu.hasClass( 'expanded' ) ) {
 				actionText.text( 'hide' );
 			} else {
 				bodyWrapper.removeAttr('style');
@@ -108,34 +108,34 @@
 		// New posts have been added to the page.
 		$( document.body ).on( 'post-load', function () {
 
-			if( ! $( '#infinite-view-1' ).hasClass( 'odd' ) && ! $( '#infinite-view-1' ).hasClass( 'even' ) ) {
+			articleNumber = siteMain.children( '.hentry' ).size();
+
+			if ( ! $( '#infinite-view-1' ).hasClass( 'odd' ) && ! $( '#infinite-view-1' ).hasClass( 'even' ) ) {
 				// Count the initial articles.
-				if( articles.size() % 2 == 0 ) {
+				if ( articleNumber % 2 == 0 ) {
 					$( '#infinite-view-1' ).addClass( 'odd' );
-					var modifier = 0;
+
 				} else {
 					$( '#infinite-view-1' ).addClass( 'even' );
-					var modifier = 1;
 				}
 			}
 
+			$( '.infinite-wrap' ).each( function( i ) {
 
-			$( '.infinite-wrap' ).each(function( i = 1 ) {
+				if ( ! $( this ).hasClass( 'odd' ) && ! $( this ).hasClass( 'even' ) ) {
 
-				++i;
-
-				if( ! $( this ).hasClass( 'odd' ) && ! $( this ).hasClass( 'even' ) ) {
-					if( ( $( this ).find( '.hentry' ).size() + i + modifier ) % 2 == 0 ) {
-						$( '#infinite-view-'+i ).addClass( 'even' );
-					} else {
-						$( '#infinite-view-'+i ).addClass( 'odd' );
+					if ( i % 2 == 0 ) {
+						if ( articleNumber % 2 == 0 ) {
+							$( this ).addClass( 'odd' );
+						} else {
+							$( this ).addClass( 'even' );
+						}
 					}
 				}
 
+				$( '.infinite-wrap' ).removeClass( 'last' );
+				$( '.infinite-wrap' ).last().toggleClass( 'last' );
 			});
-
-			$( '.infinite-wrap' ).removeClass( 'last' );
-			$( '.infinite-wrap' ).last().toggleClass( 'last' );
 		});
 	}
 

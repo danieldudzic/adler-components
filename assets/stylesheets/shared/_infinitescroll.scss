@@ -43,12 +43,6 @@
 							background-color: $color__background-body;
 						}
 					}
-
-					.entry-wrapper blockquote {
-						background-image: -webkit-linear-gradient(rgba(247, 247, 247, 1) 70%, transparent 70%, transparent);
-						background-image: -moz-linear-gradient(rgba(247, 247, 247, 1) 70%, transparent 70%, transparent);
-						background-image: linear-gradient(rgba(247, 247, 247, 1) 70%, transparent 70%, transparent);
-					}
 				}
 			}
 		}
@@ -76,6 +70,12 @@
 						&:after {
 							background-color: $color__background-body;
 						}
+					}
+
+					.entry-wrapper blockquote {
+						background-image: -webkit-linear-gradient(rgba(247, 247, 247, 1) 70%, transparent 70%, transparent);
+						background-image: -moz-linear-gradient(rgba(247, 247, 247, 1) 70%, transparent 70%, transparent);
+						background-image: linear-gradient(rgba(247, 247, 247, 1) 70%, transparent 70%, transparent);
 					}
 				}
 			}
