@@ -14,7 +14,8 @@
 		menuToggle = $( '.menu-toggle' ),
 		bodyWrapper  = $( '.body-wrapper' ),
 		scrollIndicatorWrapper = $( '.scroll-indicator-wrapper' ),
-		scrollIndicatorAnchor = $( '#scroll-indicator-anchor' );
+		scrollIndicatorAnchor = $( '#scroll-indicator-anchor' ),
+		articles = $( '.site-main > article' );
 
 	/**
 	* Full width feature images
@@ -100,6 +101,61 @@
 	}
 
 	/**
+	* Count articles for the purpose of styling
+	*/
+	function countArticles() {
+
+		// New posts have been added to the page.
+		$( document.body ).on( 'post-load', function () {
+
+			if( ! $( '#infinite-view-1' ).hasClass( 'odd' ) && ! $( '#infinite-view-1' ).hasClass( 'even' ) ) {
+				// Count the initial articles.
+				if( articles.size() % 2 == 0 ) {
+					$( '#infinite-view-1' ).addClass( 'odd' );
+					var modifier = 0;
+				} else {
+					$( '#infinite-view-1' ).addClass( 'even' );
+					var modifier = 1;
+				}
+			}
+
+
+			$( '.infinite-wrap' ).each(function( i = 1 ) {
+
+				++i;
+
+				if( ! $( this ).hasClass( 'odd' ) && ! $( this ).hasClass( 'even' ) ) {
+					if( ( $( this ).find( '.hentry' ).size() + i + modifier ) % 2 == 0 ) {
+						$( '#infinite-view-'+i ).addClass( 'even' );
+					} else {
+						$( '#infinite-view-'+i ).addClass( 'odd' );
+					}
+				}
+
+			});
+
+			$( '.infinite-wrap' ).removeClass( 'last' );
+			$( '.infinite-wrap' ).last().toggleClass( 'last' );
+		});
+	}
+
+	// Scroll down when the arrow is clicked.
+	function scroll() {
+		if ( ! $( '#scroll-indicator' ) ) {
+			return;
+		}
+
+		$( '#scroll-indicator' ).on( 'click.adler', function() {
+			scrollIndicatorWrapper.click( function() {
+		        htmlBody.animate({
+		            scrollTop: scrollIndicatorAnchor.offset().top
+		        }, 500 );
+		        return false;
+			} );
+		} );
+	}
+
+	/**
 	* Navigation sub menu show and hide
 	*
 	* Show sub menus with an arrow click to work across all devices
@@ -122,22 +178,6 @@
 			$this.parent().next( '.children, .sub-menu' ).toggleClass( 'sub-on' );
 			$this.attr( 'aria-expanded', $this.attr( 'aria-expanded' ) == 'false' ? 'true' : 'false');
 	} );
-
-	// Scroll down when the arrow is clicked.
-	function scroll() {
-		if ( ! $( '#scroll-indicator' ) ) {
-			return;
-		}
-
-		$( '#scroll-indicator' ).on( 'click.adler', function() {
-			scrollIndicatorWrapper.click( function() {
-		        htmlBody.animate({
-		            scrollTop: scrollIndicatorAnchor.offset().top
-		        }, 500 );
-		        return false;
-			} );
-		} );
-	}
 
 	// Add a class to change opacity of the arrow and to move the entry header.
 	$( function() {
@@ -184,6 +224,7 @@
 			}, 100 );
 		} );
 
+		countArticles();
 		bigImageClass();
 		slideControl();
 		scroll();

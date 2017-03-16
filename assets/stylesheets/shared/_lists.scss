@@ -1,24 +1,24 @@
 ul, ol {
-	margin: 0 0 .8em 1.6em;
+	margin: 0 0 .769em 1.538em;
 }
 
 ul {
 	list-style: none;
-	padding-left: 1.6em;
+	padding-left: 1.538em;
 
 	li:before {
 		content: '\002022';
 		color: $color__accent;
-		font-size: 1.2em;
+		font-size: font-size(1);
 	    font-weight: 900;
-	    padding-right: .6em;
+	    padding-right: .538em;
 	}
 }
 
 ol {
 	list-style: none;
 	counter-reset: li;
-	padding-left: 1.6em;
+	padding-left: 1.538em;
 
 	li {
 		counter-increment: li;
@@ -26,7 +26,7 @@ ol {
 		&:before {
 			content: counter(li);
 			color: $color__accent;
-		    padding-right: .6em;
+		    padding-right: .538em;
 		    vertical-align: bottom;
 		}
 
@@ -36,7 +36,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: .8em;
+	margin-left: .769em;
 }
 
 dt {
@@ -44,5 +44,5 @@ dt {
 }
 
 dd {
-	margin: 0 1.6em 1.6em;
+	margin: 0 1.538em 1.538em;
 }

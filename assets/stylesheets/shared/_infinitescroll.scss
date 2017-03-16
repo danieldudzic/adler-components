@@ -8,3 +8,82 @@
 .infinity-end.neverending .site-footer {
 	display: block;
 }
+
+.infinity-success .hentry:last-of-type .entry-main:after {
+	display: block;
+}
+
+.infinity-success .infinite-wrap.last .hentry:last-of-type .entry-main:after {
+	display: none;
+}
+
+.hfeed {
+	.infinite-wrap {
+		&.odd {
+			.hentry {
+				&:nth-of-type(odd) {
+					background-color: $color__background-body;
+
+					.entry-main {
+						background-color: $color__background-body;
+
+						&:after {
+							background-color: $color__background-post;
+						}
+					}
+				}
+
+				&:nth-of-type(even) {
+					background-color: $color__background-post;
+
+					.entry-main {
+						background-color: $color__background-post;
+
+						&:after {
+							background-color: $color__background-body;
+						}
+					}
+
+					.entry-wrapper blockquote {
+						background-image: -webkit-linear-gradient(rgba(247, 247, 247, 1) 70%, transparent 70%, transparent);
+						background-image: -moz-linear-gradient(rgba(247, 247, 247, 1) 70%, transparent 70%, transparent);
+						background-image: linear-gradient(rgba(247, 247, 247, 1) 70%, transparent 70%, transparent);
+					}
+				}
+			}
+		}
+
+		&.even {
+			.hentry {
+				&:nth-of-type(even) {
+					background-color: $color__background-body;
+
+					.entry-main {
+						background-color: $color__background-body;
+
+						&:after {
+							background-color: $color__background-post;
+						}
+					}
+				}
+
+				&:nth-of-type(odd) {
+					background-color: $color__background-post;
+
+					.entry-main {
+						background-color: $color__background-post;
+
+						&:after {
+							background-color: $color__background-body;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.hfeed:not(.search-results):not(.archive) .infinite-wrap .hentry.has-post-thumbnail:first-of-type {
+	padding: 6.154em 0 0 0;
+	overflow: visible;
+}

@@ -67,6 +67,15 @@
 			}
 		}
 
+		&:nth-of-type(even) {
+			.entry-wrapper blockquote {
+				background-image: -webkit-linear-gradient(rgba(247, 247, 247, 1) 70%, transparent 70%, transparent);
+				background-image: -moz-linear-gradient(rgba(247, 247, 247, 1) 70%, transparent 70%, transparent);
+				background-image: linear-gradient(rgba(247, 247, 247, 1) 70%, transparent 70%, transparent);
+
+			}
+		}
+
 		&:last-of-type {
 			.entry-main:after {
 				display: none;
