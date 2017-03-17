@@ -16,19 +16,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	@include font-size(3.75);
+	@include font-size(3.692);
 }
 
 h2 {
-	@include font-size(1.25);
+	@include font-size(1.231);
 }
 
 h3 {
-	@include font-size(1.625);
+	@include font-size(1.615);
 }
 
 h4 {
-	@include font-size(1.125);
+	@include font-size(1.077);
 }
 
 h5 {
@@ -36,11 +36,11 @@ h5 {
 }
 
 h6 {
-	@include font-size(.875);
+	@include font-size(0.846);
 }
 
 p {
-	margin: 0.8em 0 1.6em;
+	margin: 0.769em 0 1.538em;
 }
 
 b, strong {
@@ -52,23 +52,23 @@ dfn, cite, em, i {
 }
 
 address {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.538em;
 }
 
 pre {
 	background: $color__background-pre;
 	font-family: $font__pre;
-	@include font-size(0.9375);
+	@include font-size(0.923);
 	line-height: $font__line-height-pre;
-	margin-bottom: 1.6em;
+	margin-bottom: 1.538em;
 	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	padding: 1.538em;
 }
 
 code, kbd, tt, var {
 	font-family: $font__code;
-	@include font-size(0.9375);
+	@include font-size(0.923);
 }
 
 abbr, acronym {
@@ -90,8 +90,8 @@ blockquote {
 	text-align: center;
 	color: $color__title;
 	@extend %hyphening;
-	font-size: 1.625rem;
-	margin: 0 1.6em;
+	@include font-size(1.615);
+	margin: 0 1.538em;
 }
 
 blockquote, q {

@@ -352,31 +352,31 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Droid Serif", serif; }
 
 h1 {
-  font-size: 60px;
-  font-size: 3.75rem; }
+  font-size: 59.072px;
+  font-size: 3.692rem; }
 
 h2 {
-  font-size: 20px;
-  font-size: 1.25rem; }
+  font-size: 19.696px;
+  font-size: 1.231rem; }
 
 h3 {
-  font-size: 26px;
-  font-size: 1.625rem; }
+  font-size: 25.84px;
+  font-size: 1.615rem; }
 
 h4 {
-  font-size: 18px;
-  font-size: 1.125rem; }
+  font-size: 17.232px;
+  font-size: 1.077rem; }
 
 h5 {
   font-size: 16px;
   font-size: 1rem; }
 
 h6 {
-  font-size: 14px;
-  font-size: 0.875rem; }
+  font-size: 13.536px;
+  font-size: 0.846rem; }
 
 p {
-  margin: 0.8em 0 1.6em; }
+  margin: 0.769em 0 1.538em; }
 
 b, strong {
   font-weight: 800; }
@@ -385,23 +385,23 @@ dfn, cite, em, i {
   font-style: italic; }
 
 address {
-  margin: 0 0 1.5em; }
+  margin: 0 0 1.538em; }
 
 pre {
   background: #f7f7f7;
   font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 14.768px;
+  font-size: 0.923rem;
   line-height: 1.84615;
-  margin-bottom: 1.6em;
+  margin-bottom: 1.538em;
   max-width: 100%;
   overflow: auto;
-  padding: 1.6em; }
+  padding: 1.538em; }
 
 code, kbd, tt, var {
   font-family: "Droid Serif", serif;
-  font-size: 15px;
-  font-size: 0.9375rem; }
+  font-size: 14.768px;
+  font-size: 0.923rem; }
 
 abbr, acronym {
   border-bottom: 3px dotted #68f3c8;
@@ -418,8 +418,9 @@ blockquote {
   font-family: "Permanent Marker", cursive;
   text-align: center;
   color: #0e364f;
-  font-size: 1.625rem;
-  margin: 0 1.6em; }
+  font-size: 25.84px;
+  font-size: 1.615rem;
+  margin: 0 1.538em; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -1170,16 +1171,18 @@ body:not(.has-hero-thumbnail) .site-branding, .search-results .site-branding, .p
 /*--------------------------------------------------------------
 # Comments
 --------------------------------------------------------------*/
-#comments textarea {
-  width: 100%; }
-#comments .reply {
-  position: absolute;
-  right: 0;
-  top: 47px; }
-#comments .comment-notes {
-  margin-bottom: 1em; }
-#comments p {
-  margin: 0 0 1em; }
+#comments {
+  padding: 1.846em; }
+  #comments textarea {
+    width: 100%; }
+  #comments .reply {
+    position: absolute;
+    right: 0;
+    top: 47px; }
+  #comments .comment-notes {
+    margin-bottom: 1em; }
+  #comments p {
+    margin: 0 0 1em; }
 
 .comment-list li {
   position: relative; }
@@ -1189,6 +1192,8 @@ body:not(.has-hero-thumbnail) .site-branding, .search-results .site-branding, .p
     margin-bottom: 10px; }
     .comment-list li.bypostauthor .reply {
       right: 10px; }
+  .comment-list li .comment-reply-title {
+    margin-top: 1em; }
   .comment-list li:before {
     content: '';
     padding: 0; }
@@ -1204,26 +1209,26 @@ body:not(.has-hero-thumbnail) .site-branding, .search-results .site-branding, .p
 
 .comments-area {
   background-color: #f7f7f7;
-  padding: 1.6em;
-  margin: 0 0 1.6em; }
+  padding: 1.538px;
+  margin: 0 0 1.538em; }
 
 .comments-title,
 .comment-reply-title {
   line-height: 1.2;
   margin: 0 0 1em;
-  font-size: 20px;
-  font-size: 1.25rem; }
+  font-size: 19.696px;
+  font-size: 1.231rem; }
   .comments-title #cancel-comment-reply-link,
   .comment-reply-title #cancel-comment-reply-link {
     font-family: "Droid Sans Mono", serif;
     font-weight: normal;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 12.304px;
+    font-size: 0.769rem;
     float: right;
     margin-top: 43px; }
 
 .comment-reply-title {
-  margin: 1em 0 1em; }
+  margin-bottom: 1em; }
 
 .comment-content a {
   word-wrap: break-word; }
@@ -1525,7 +1530,6 @@ figure {
       width: 100%; }
   .wp-caption.alignleft, .wp-caption .alignright {
     margin-top: 2em;
-    float: none;
     margin: 0 auto; }
     p + .wp-caption.alignleft, p + .wp-caption .alignright {
       margin-top: 0; }

@@ -1,4 +1,5 @@
 #comments {
+	padding: 1.846em;
 	textarea {
 		width: 100%;
 	}
@@ -19,7 +20,6 @@
 }
 
 .comment-list {
-
 	li {
 		position: relative;
 
@@ -31,6 +31,10 @@
 					right: 10px;
 				}
 
+		}
+
+		.comment-reply-title {
+			margin-top: 1em;
 		}
 
 		&:before {
@@ -53,27 +57,27 @@
 
 .comments-area {
 	background-color: $color__background-post;
-	padding: 1.6em;
-	margin: 0 0 1.6em;
+	padding: 1.538px;
+	margin: 0 0 1.538em;
 }
 
 .comments-title,
 .comment-reply-title {
 	line-height: 1.2;
 	margin: 0 0 1em;
-	@include font-size(1.25);
+	@include font-size(1.231);
 
 	#cancel-comment-reply-link {
 		font-family: $font__main;
 		font-weight: normal;
-		@include font-size(.8125);
+		@include font-size(0.769);
 		float: right;
 		margin-top: 43px;
 	}
 }
 
 .comment-reply-title {
-	margin: 1em 0 1em;
+	margin-bottom: 1em;
 }
 
 .comment-content a {
