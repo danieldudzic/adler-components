@@ -96,8 +96,14 @@
 				color: $color__contrast;
 			}
 
-			.post-meta-categories, a {
+			.cat-links, a {
 				display: inline;
+			}
+
+			.cat-links {
+				svg {
+					display: none;
+				}
 			}
 
 			.posted-on {

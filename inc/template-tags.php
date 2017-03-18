@@ -13,17 +13,13 @@ if ( ! function_exists( 'adler_posted_on' ) ) :
  */
 function adler_posted_on() { ?>
 
-	<div class="post-meta-categories">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="categories-icon" d="M13 5H8l-.7-1.4c-.2-.4-.5-.6-.9-.6H3c-.5 0-1 .5-1 1v8c0 .6.5 1 1 1h10c.6 0 1-.4 1-1V6c0-.6-.4-1-1-1z"/></g></svg>
+	<div class="cat-links">
 		<?php
-		$categories = get_the_category();
-		$separator  = ' ';
-		$output     = '';
-		if ( $categories ) {
-			foreach ( $categories as $category ) {
-				$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( esc_html__( "View all posts in %s", 'adler' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
-			}
-			echo trim( $output, $separator );
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( esc_html__( ', ', 'adler' ) );
+
+		if ( $categories_list && adler_categorized_blog() ) {
+			printf( '<span class="cat-links"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="categories-icon" d="M13 5H8l-.7-1.4c-.2-.4-.5-.6-.9-.6H3c-.5 0-1 .5-1 1v8c0 .6.5 1 1 1h10c.6 0 1-.4 1-1V6c0-.6-.4-1-1-1z"/></g></svg>' . esc_html__( 'Posted in %1$s', 'adler' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		} ?>
 	</div>
 
@@ -62,11 +58,6 @@ if ( ! function_exists( 'adler_entry_footer' ) ) :
 function adler_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'adler' ) );
-		if ( $categories_list && adler_categorized_blog() ) {
-			printf( '<span class="cat-links"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="categories-icon" d="M13 5H8l-.7-1.4c-.2-.4-.5-.6-.9-.6H3c-.5 0-1 .5-1 1v8c0 .6.5 1 1 1h10c.6 0 1-.4 1-1V6c0-.6-.4-1-1-1z"/></g></svg>' . esc_html__( 'Posted in %1$s', 'adler' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'adler' ) );

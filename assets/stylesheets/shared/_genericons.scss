@@ -1,10 +1,9 @@
 /**
  * Genericons
  */
-.post-meta-categories,
+ .cat-links,
 .posted-on,
 .byline,
-.cat-links,
 .tags-links,
 .comments-link,
 .edit-link,
@@ -24,9 +23,9 @@
 	}
 }
 
-.post-meta-categories svg {
-	margin-top: -2px;
-	margin-right: -1px;
+.cat-links svg {
+	margin-top: -3px;
+	margin-right: 4px;
 }
 
 .posted-on svg {
@@ -56,11 +55,6 @@
 
 .hero-wrapper .post-meta-categories svg {
 	display: none;
-}
-
-.cat-links svg {
-	margin-top: -3px;
-	margin-right: 4px;
 }
 
 .menu-toggle svg {

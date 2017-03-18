@@ -854,8 +854,6 @@ body {
     display: none; }
   .hfeed .hentry .entry-content {
     text-align: center; }
-.hfeed .entry-footer .cat-links {
-  display: none; }
 
 .hentry:not(.has-post-thumbnail) .entry-wrapper .entry-header .entry-title {
   margin-bottom: 0.676em; }
@@ -1607,10 +1605,9 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 /**
  * Genericons
  */
-.post-meta-categories svg,
+.cat-links svg,
 .posted-on svg,
 .byline svg,
-.cat-links svg,
 .tags-links svg,
 .comments-link svg,
 .edit-link svg,
@@ -1621,10 +1618,9 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
   height: auto;
   vertical-align: middle;
   width: 16px; }
-  .post-meta-categories svg path,
+  .cat-links svg path,
   .posted-on svg path,
   .byline svg path,
-  .cat-links svg path,
   .tags-links svg path,
   .comments-link svg path,
   .edit-link svg path,
@@ -1634,9 +1630,9 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
     height: 32px;
     width: 32px; }
 
-.post-meta-categories svg {
-  margin-top: -2px;
-  margin-right: -1px; }
+.cat-links svg {
+  margin-top: -3px;
+  margin-right: 4px; }
 
 .posted-on svg {
   margin-top: -2px;
@@ -1660,10 +1656,6 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 
 .hero-wrapper .post-meta-categories svg {
   display: none; }
-
-.cat-links svg {
-  margin-top: -3px;
-  margin-right: 4px; }
 
 .menu-toggle svg {
   display: block;
@@ -1900,8 +1892,10 @@ a {
       .hero-wrapper .hero-content .entry-meta .hero_date {
         display: inline-block;
         color: #f7f7f7; }
-      .hero-wrapper .hero-content .entry-meta .post-meta-categories, .hero-wrapper .hero-content .entry-meta a {
+      .hero-wrapper .hero-content .entry-meta .cat-links, .hero-wrapper .hero-content .entry-meta a {
         display: inline; }
+      .hero-wrapper .hero-content .entry-meta .cat-links svg {
+        display: none; }
       .hero-wrapper .hero-content .entry-meta .posted-on:before {
         content: ' - ';
         color: #f7f7f7; }
