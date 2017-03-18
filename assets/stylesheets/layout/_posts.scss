@@ -192,17 +192,17 @@
 		}
 
 		.more-link {
-			width: 170px;
+			width: 13.455em;
 			text-align: center;
-			margin: 0 auto 3.077em;
+			margin: 0 auto 4.545em;
 			display: inline-block;
-			line-height: 70px;
+			line-height: 5.636;
 			border-bottom: none;
 			color: $color__link;
 			background: url(assets/images/more-bg.png);
 			background-size: cover;
 			text-transform: uppercase;
-			@include font-size(0.750);
+			@include font-size(0.688);
 		}
 	}
 

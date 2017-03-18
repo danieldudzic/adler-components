@@ -921,18 +921,18 @@ body {
       background: url(assets/images/leaf.png) center center no-repeat;
       background-color: #fff; }
     .entry-wrapper .entry-main .more-link {
-      width: 170px;
+      width: 13.455em;
       text-align: center;
-      margin: 0 auto 3.077em;
+      margin: 0 auto 4.545em;
       display: inline-block;
-      line-height: 70px;
+      line-height: 5.636;
       border-bottom: none;
       color: #45525a;
       background: url(assets/images/more-bg.png);
       background-size: cover;
       text-transform: uppercase;
-      font-size: 12px;
-      font-size: 0.75rem; }
+      font-size: 11.008px;
+      font-size: 0.688rem; }
   .entry-wrapper .entry-footer {
     width: 100%;
     content: "";
@@ -1221,11 +1221,11 @@ body:not(.has-hero-thumbnail) .site-branding, .search-results .site-branding, .p
 #comments p {
   margin: 0 0 1.538em; }
 
-.comment-list li.comment {
+.comment-list .comment, .comment-list .pingback {
   position: relative; }
-  .comment-list li.comment .comment-reply-title {
+  .comment-list .comment .comment-reply-title, .comment-list .pingback .comment-reply-title {
     margin-top: 1em; }
-  .comment-list li.comment:before {
+  .comment-list .comment:before, .comment-list .pingback:before {
     content: '';
     padding-right: 0; }
 

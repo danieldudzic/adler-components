@@ -41,7 +41,7 @@
 }
 
 .comment-list {
-	li.comment {
+	.comment, .pingback {
 		position: relative;
 
 		&.bypostauthor {
