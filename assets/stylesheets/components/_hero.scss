@@ -99,6 +99,17 @@
 			.post-meta-categories, a {
 				display: inline;
 			}
+
+			.posted-on {
+				&:before {
+					content: ' - ';
+					color: $color__contrast;
+				}
+
+				svg {
+					display: none;
+				}
+			}
 		}
 
 	}

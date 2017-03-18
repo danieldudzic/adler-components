@@ -116,17 +116,16 @@
 				width: auto;
 				display: inline;
 				text-align: left;
+				.cat-links, .tags-links, .comments-link {
+					margin-right: 1em;
+					margin-left: 1em;
+				}
 			}
 
 			.entry-meta {
 				.post-meta-categories {
 					display: inline-block;
 					text-align: left;
-
-					&::after {
-						content: " - ";
-						color: $color__contrast;
-					}
 
 					a {
 						text-decoration: none;
@@ -141,7 +140,6 @@
 				}
 
 				.byline {
-					display: inline;
 				}
 			}
 

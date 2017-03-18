@@ -896,7 +896,8 @@ body {
   .entry-wrapper .edit-link {
     float: right;
     display: inline-block;
-    clear: right; }
+    clear: right;
+    margin-bottom: 0.231em; }
   .entry-wrapper .entry-main {
     position: relative;
     background-color: #f7f7f7;
@@ -942,11 +943,17 @@ body {
     .entry-wrapper .entry-footer span {
       display: block;
       width: 100%; }
+    .entry-wrapper .entry-footer .cat-links, .entry-wrapper .entry-footer .tags-links, .entry-wrapper .entry-footer .comments-link {
+      margin-bottom: 0.231em; }
     .entry-wrapper .entry-footer .byline {
       display: inline-block; }
       .entry-wrapper .entry-footer .byline .author {
         width: auto;
         display: inline-block; }
+    .entry-wrapper .entry-footer .entry-meta .post-meta-categories, .entry-wrapper .entry-footer .entry-meta .posted-on, .entry-wrapper .entry-footer .entry-meta .byline {
+      display: block;
+      line-height: 2;
+      margin-bottom: 0.231em; }
     .has-hero-thumbnail .header-content .entry-wrapper .entry-footer .entry-meta {
       display: none; }
     .entry-wrapper .entry-footer .entry-meta .separator {
@@ -1601,11 +1608,12 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
  * Genericons
  */
 .post-meta-categories svg,
-.tags-links svg,
-.edit-link svg,
+.posted-on svg,
+.byline svg,
+.cat-links svg,
 .tags-links svg,
 .comments-link svg,
-.cat-links svg,
+.edit-link svg,
 .menu-toggle svg,
 .showsub-toggle svg {
   width: 16px;
@@ -1614,11 +1622,12 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
   vertical-align: middle;
   width: 16px; }
   .post-meta-categories svg path,
-  .tags-links svg path,
-  .edit-link svg path,
+  .posted-on svg path,
+  .byline svg path,
+  .cat-links svg path,
   .tags-links svg path,
   .comments-link svg path,
-  .cat-links svg path,
+  .edit-link svg path,
   .menu-toggle svg path,
   .showsub-toggle svg path {
     fill: currentcolor;
@@ -1629,6 +1638,18 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
   margin-top: -2px;
   margin-right: -1px; }
 
+.posted-on svg {
+  margin-top: -2px;
+  margin-right: 5px; }
+
+.byline svg {
+  margin-top: -2px;
+  margin-right: 5px; }
+
+.tags-links svg {
+  margin-top: -2px;
+  margin-right: 4px; }
+
 .comments-link svg {
   margin-top: -3px;
   margin-right: 5px; }
@@ -1636,10 +1657,6 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 .edit-link svg {
   margin-top: -2px;
   margin-right: 5px; }
-
-.tags-links svg {
-  margin-top: -2px;
-  margin-right: 4px; }
 
 .hero-wrapper .post-meta-categories svg {
   display: none; }
@@ -1885,6 +1902,11 @@ a {
         color: #f7f7f7; }
       .hero-wrapper .hero-content .entry-meta .post-meta-categories, .hero-wrapper .hero-content .entry-meta a {
         display: inline; }
+      .hero-wrapper .hero-content .entry-meta .posted-on:before {
+        content: ' - ';
+        color: #f7f7f7; }
+      .hero-wrapper .hero-content .entry-meta .posted-on svg {
+        display: none; }
 
 .hfeed:not(.search-results):not(.archive) .hentry.has-post-thumbnail:first-of-type {
   padding-top: 0;
@@ -2014,12 +2036,12 @@ a {
       width: auto;
       display: inline;
       text-align: left; }
+      .entry-wrapper .entry-footer span .cat-links, .entry-wrapper .entry-footer span .tags-links, .entry-wrapper .entry-footer span .comments-link {
+        margin-right: 1em;
+        margin-left: 1em; }
     .entry-wrapper .entry-footer .entry-meta .post-meta-categories {
       display: inline-block;
       text-align: left; }
-      .entry-wrapper .entry-footer .entry-meta .post-meta-categories::after {
-        content: " - ";
-        color: #f7f7f7; }
       .entry-wrapper .entry-footer .entry-meta .post-meta-categories a {
         text-decoration: none;
         color: #45525a; }
@@ -2027,8 +2049,6 @@ a {
       display: inline-block;
       padding-left: 5px;
       padding-right: 5px; }
-    .entry-wrapper .entry-footer .entry-meta .byline {
-      display: inline; }
     .entry-wrapper .entry-footer > * {
       display: inline-block; }
     .entry-wrapper .entry-footer .posted-on a {

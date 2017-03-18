@@ -156,6 +156,7 @@
 		float: right;
 		display: inline-block;
 		clear: right;
+		margin-bottom: 0.231em;
 	}
 
 	// Main post wrapper
@@ -211,9 +212,14 @@
 	.entry-footer {
 		width: 100%;
 		@include clearfix();
+
 		span {
 			display: block;
 			width: 100%;
+		}
+
+		.cat-links, .tags-links, .comments-link {
+			margin-bottom: 0.231em;
 		}
 
 		.byline {
@@ -225,7 +231,10 @@
 		}
 
 		.entry-meta {
-			.post-meta-categories {
+			.post-meta-categories, .posted-on, .byline {
+				display: block;
+				line-height: 2;
+				margin-bottom: 0.231em;
 			}
 
 			.has-hero-thumbnail .header-content & {
