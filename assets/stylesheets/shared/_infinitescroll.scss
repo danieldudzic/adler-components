@@ -16,15 +16,19 @@
 	margin: 0 7.6923%;
 	padding: 6.154em 0 3.077em;
 	text-align: center;
+	line-height: 1;
+	text-transform: uppercase;
+	transition: 0.3s;
 
 	span {
 		text-transform: uppercase;
-		background: $color__background-sliding-panel;
-		color: $color__contrast;
+		background: $color__background-button;
+		color: $color__light;
+		padding: 0.692em 1em;
+
 
 		&:hover, &:focus {
-			background: lighten( $color__background-sliding-panel, 5% );
-			color: $color__accent;
+			background: lighten( $color__background-button, 5% );
 			outline: 1px solid transparent;
 		}
 

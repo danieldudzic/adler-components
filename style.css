@@ -528,7 +528,7 @@ input[type="submit"],
   .button:hover {
     border-color: #ccc #bbb #aaa;
     box-shadow: none;
-    color: #45525a; }
+    background: #80f5d1; }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -866,7 +866,7 @@ body {
   position: relative; }
   body:not(.hfeed) .entry-wrapper {
     margin-top: 3.077em;
-    margin-bottom: 3.846em; }
+    margin-bottom: 3.077em; }
   .entry-wrapper h1, .entry-wrapper h1 a, .entry-wrapper h2, .entry-wrapper h2 a {
     text-align: center; }
   .entry-wrapper p {
@@ -920,19 +920,20 @@ body {
       border-radius: 50%;
       background: url(assets/images/leaf.png) center center no-repeat;
       background-color: #fff; }
-    .entry-wrapper .entry-main .more-link {
-      width: 13.455em;
-      text-align: center;
-      margin: 0 auto 4.545em;
-      display: inline-block;
-      line-height: 5.636;
-      border-bottom: none;
-      color: #45525a;
-      background: url(assets/images/more-bg.png);
-      background-size: cover;
-      text-transform: uppercase;
-      font-size: 11.008px;
-      font-size: 0.688rem; }
+    .entry-wrapper .entry-main .read-more {
+      text-align: center; }
+      .entry-wrapper .entry-main .read-more .more-link {
+        width: 13.455em;
+        margin: 0 auto 4.545em;
+        display: inline-block;
+        line-height: 5.636;
+        border-bottom: none;
+        color: #45525a;
+        background: url(assets/images/more-bg.png);
+        background-size: cover;
+        text-transform: uppercase;
+        font-size: 11.008px;
+        font-size: 0.688rem; }
   .entry-wrapper .entry-footer {
     width: 100%;
     content: "";
@@ -1197,20 +1198,20 @@ body:not(.has-hero-thumbnail) .site-branding, .search-results .site-branding, .p
 #comments textarea {
   width: 100%; }
 #comments .reply {
-  float: left;
-  background: #68f3c8;
-  letter-spacing: 1px;
-  line-height: 1;
-  padding: 0.692em 1em;
-  text-transform: uppercase;
-  transition: 0.3s;
-  font-size: 11.072px;
-  font-size: 0.692rem; }
+  float: left; }
   #comments .reply a {
-    color: #fff; }
+    background: #68f3c8;
+    letter-spacing: 1px;
+    line-height: 1;
+    padding: 0.692em 1em;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-size: 11.072px;
+    font-size: 0.692rem;
+    color: #fff;
+    border: none; }
     #comments .reply a:hover {
-      border-color: #ccc #bbb #aaa;
-      color: #45525a;
+      background: #80f5d1;
       border: none; }
     #comments .reply a:active, #comments .reply a:focus {
       border-color: #aaa #bbb #bbb;
@@ -1418,14 +1419,17 @@ body:not(.has-hero-thumbnail) .site-branding, .search-results .site-branding, .p
   clear: both;
   margin: 0 7.6923%;
   padding: 6.154em 0 3.077em;
-  text-align: center; }
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: 0.3s; }
   #infinite-handle span {
     text-transform: uppercase;
-    background: #0e364f;
-    color: #f7f7f7; }
+    background: #68f3c8;
+    color: #fff;
+    padding: 0.692em 1em; }
     #infinite-handle span:hover, #infinite-handle span:focus {
-      background: #124565;
-      color: #68f3c8;
+      background: #80f5d1;
       outline: 1px solid transparent; }
 
 /* Spinner */

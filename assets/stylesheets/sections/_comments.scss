@@ -5,20 +5,19 @@
 
 	.reply {
 		float: left;
-		background: $color__background-button;
-		letter-spacing: 1px;
-		line-height: 1;
-		padding: 0.692em 1em;
-		text-transform: uppercase;
-		transition: 0.3s;
-		@include font-size(0.692);
-
 		a {
+			background: $color__background-button;
+			letter-spacing: 1px;
+			line-height: 1;
+			padding: 0.692em 1em;
+			text-transform: uppercase;
+			transition: 0.3s;
+			@include font-size(0.692);
 			color: $color__light;
+			border: none;
 
 			&:hover {
-				border-color: $color__border-button-hover;
-				color: $color__link-hover;
+				background: lighten( $color__background-button, 5% );
 				border: none;
 			}
 

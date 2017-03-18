@@ -20,7 +20,7 @@ input[type="submit"],
 	&:hover {
 		border-color: $color__border-button-hover;
 		box-shadow: none;
-		color: $color__link-hover;
+		background: lighten( $color__background-button, 5% );
 	}
 
 	&:active,
