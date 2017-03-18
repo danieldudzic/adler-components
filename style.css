@@ -704,14 +704,12 @@ td {
   padding: 0;
   position: absolute;
   right: 0;
-  z-index: 10;
-  outline: 1px solid transparent; }
+  z-index: 10; }
   .menu-toggle:focus, .menu-toggle:active {
     color: #f7f7f7; }
   .menu-toggle:hover {
     background: #124565;
-    color: #68f3c8;
-    outline: 1px solid transparent; }
+    color: #68f3c8; }
 
 /* Dropdown Toggle */
 .showsub-toggle {
@@ -834,8 +832,10 @@ body {
   background-color: transparent; }
 .single:not(.has-hero-thumbnail) .hentry {
   padding-top: 0; }
-.single .post .entry-wrapper .entry-footer .tags-links {
-  float: right; }
+.single .post .entry-wrapper .entry-footer {
+  margin-bottom: 3.846em; }
+  .single .post .entry-wrapper .entry-footer .tags-links {
+    float: right; }
 
 .hfeed .hentry {
   background-color: #f7f7f7;
@@ -958,7 +958,6 @@ body {
       display: none; }
   .entry-wrapper .entry-author {
     background-color: #f7f7f7;
-    margin: 3.846em 0 0;
     padding: 1.538em 2em 2em;
     border-top: 3px solid #68f3c8; }
     .entry-wrapper .entry-author .avatar {
@@ -1100,17 +1099,17 @@ body:not(.has-hero-thumbnail) .site-header {
 .has-hero-thumbnail .site-branding {
   text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.2); }
 
-body:not(.has-hero-thumbnail) .site-branding, .search-results .site-branding, .page .site-branding {
+body:not(.has-hero-thumbnail) .site-branding, .search-results .site-branding, .archive .site-branding {
   position: relative;
   text-shadow: none; }
-  body:not(.has-hero-thumbnail) .site-branding .site-title a, .search-results .site-branding .site-title a, .page .site-branding .site-title a {
+  body:not(.has-hero-thumbnail) .site-branding .site-title a, .search-results .site-branding .site-title a, .archive .site-branding .site-title a {
     color: #0e364f; }
-    body:not(.has-hero-thumbnail) .site-branding .site-title a:active, body:not(.has-hero-thumbnail) .site-branding .site-title a:focus, body:not(.has-hero-thumbnail) .site-branding .site-title a:hover, .search-results .site-branding .site-title a:active, .search-results .site-branding .site-title a:focus, .search-results .site-branding .site-title a:hover, .page .site-branding .site-title a:active, .page .site-branding .site-title a:focus, .page .site-branding .site-title a:hover {
+    body:not(.has-hero-thumbnail) .site-branding .site-title a:active, body:not(.has-hero-thumbnail) .site-branding .site-title a:focus, body:not(.has-hero-thumbnail) .site-branding .site-title a:hover, .search-results .site-branding .site-title a:active, .search-results .site-branding .site-title a:focus, .search-results .site-branding .site-title a:hover, .archive .site-branding .site-title a:active, .archive .site-branding .site-title a:focus, .archive .site-branding .site-title a:hover {
       color: rgba(14, 54, 79, 0.8); }
-  body:not(.has-hero-thumbnail) .site-branding .site-description, .search-results .site-branding .site-description, .page .site-branding .site-description {
+  body:not(.has-hero-thumbnail) .site-branding .site-description, .search-results .site-branding .site-description, .archive .site-branding .site-description {
     clear: both;
     color: #0e364f; }
-  body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thumbnail) .site-branding .site-description, .search-results .site-branding .site-title, .search-results .site-branding .site-description, .page .site-branding .site-title, .page .site-branding .site-description {
+  body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thumbnail) .site-branding .site-description, .search-results .site-branding .site-title, .search-results .site-branding .site-description, .archive .site-branding .site-title, .archive .site-branding .site-description {
     float: left; }
 
 .no-site-title {

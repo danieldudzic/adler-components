@@ -10,12 +10,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
 	<?php
-	$hero_class = '';
-	$hero_style = '';
-	$attachment_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'adler-large' );
-	$image_url = $attachment_image[0];
+		$attachment_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'adler-large' );
+		$image_url = $attachment_image[0];
 	?>
 
 	<div class="hero-wrapper">

@@ -42,6 +42,8 @@
 	.post {
 		.entry-wrapper {
 			.entry-footer {
+				margin-bottom: 3.846em;
+
 				.tags-links {
 					float: right;
 				}
@@ -245,7 +247,6 @@
 
 	.entry-author {
 		background-color: $color__background-post;
-		margin: 3.846em 0 0;
 		padding: 1.538em 2em 2em;
 		border-top: 3px solid $color__accent;
 

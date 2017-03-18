@@ -92,7 +92,9 @@ function adler_author_bio_avatar_size() {
 }
 add_filter( 'jetpack_author_bio_avatar_size', 'adler_author_bio_avatar_size' );
 
-
+/**
+ * Get the Blog Display Content Options value.
+ */
 function adler_get_blog_display() {
 	$options      = get_theme_support( 'jetpack-content-options' );
 	$blog_display = ( ! empty( $options[0]['blog-display'] ) ) ? $options[0]['blog-display'] : null;
@@ -110,7 +112,6 @@ function adler_get_blog_display() {
 function adler_hero_content_to_the_excerpt( $content ) {
 
 	$blog_display = adler_get_blog_display();
-
 	$display_option = get_option( 'jetpack_content_blog_display', $blog_display );
 
 	if ( 'content' === $display_option ) {
@@ -172,3 +173,59 @@ function adler_custom_content_display() {
 }
 
 add_action( 'customize_preview_init', 'adler_custom_content_display' );
+
+
+/**
+ * Show/Hide Featured Image on .single if option is ticked.
+ */
+function adler_jetpack_featured_image_display() {
+    if ( ! function_exists( 'jetpack_featured_images_remove_post_thumbnail' ) ) {
+        return true;
+    } else {
+        $options         = get_theme_support( 'jetpack-content-options' );
+        $featured_images = ( ! empty( $options[0]['featured-images'] ) ) ? $options[0]['featured-images'] : null;
+
+        $settings = array(
+            'post-default' => ( isset( $featured_images['post-default'] ) && false === $featured_images['post-default'] ) ? '' : 1,
+            'page-default' => ( isset( $featured_images['page-default'] ) && false === $featured_images['page-default'] ) ? '' : 1,
+        );
+
+        $settings = array_merge( $settings, array(
+            'post-option'  => get_option( 'jetpack_content_featured_images_post', $settings['post-default'] ),
+            'page-option'  => get_option( 'jetpack_content_featured_images_page', $settings['page-default'] ),
+        ) );
+
+        if ( ( ! $settings['post-option'] && is_single() )
+            || ( ! $settings['page-option'] && is_singular() && is_page() ) ) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
+
+/**
+ * Display a Featured Image on archive pages if option is ticked.
+ */
+function adler_jetpack_featured_image_archive_display() {
+    if ( ! function_exists( 'jetpack_featured_images_remove_post_thumbnail' ) ) {
+        return false;
+    } else {
+        $options         = get_theme_support( 'jetpack-content-options' );
+        $featured_images = ( ! empty( $options[0]['featured-images'] ) ) ? $options[0]['featured-images'] : null;
+
+        $settings = array(
+            'archive-default' => ( isset( $featured_images['archive-default'] ) && false === $featured_images['archive-default'] ) ? '' : 1,
+        );
+
+        $settings = array_merge( $settings, array(
+            'archive-option'  => get_option( 'jetpack_content_featured_images_archive', $settings['archive-default'] ),
+        ) );
+
+        if ( $settings['archive-option'] ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}

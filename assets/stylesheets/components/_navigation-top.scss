@@ -128,7 +128,6 @@
 	position: absolute;
 	right: 0;
 	z-index: 10;
-	outline: 1px solid transparent;
 
 	&:focus, &:active {
 		color: $color__contrast;
@@ -137,7 +136,6 @@
 	&:hover {
 		background: lighten( $color__background-sliding-panel, 5% );
 		color: $color__accent;
-		outline: 1px solid transparent;
 	}
 }
 
