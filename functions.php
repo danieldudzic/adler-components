@@ -43,7 +43,7 @@ function adler_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	add_image_size( 'adler-featured-image', 800, 9999 );
-	add_image_size( 'adler-large', 2000, 1500, true );
+	add_image_size( 'adler-hero', 2000, 1500, true );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(

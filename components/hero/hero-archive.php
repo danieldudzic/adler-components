@@ -10,13 +10,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php
-		$attachment_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'adler-large' );
-		$image_url = $attachment_image[0];
-	?>
-
 	<div class="hero-wrapper">
-		<div class="hero-bg feature-header" style="background-image:url( <?php echo esc_url( $image_url ); ?> )"></div>
+		<div class="hero-bg feature-header" style="background-image:url( <?php echo esc_url( the_post_thumbnail_url( 'adler-hero' ) ); ?> )"></div>
 
 		<div class="hero-content">
 			<?php  get_template_part( 'components/post/content', 'meta' ); ?>

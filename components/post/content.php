@@ -17,7 +17,7 @@
 			?>
 		</header>
 
-		<?php if ( '' != get_the_post_thumbnail() ) : ?>
+		<?php if ( adler_has_post_thumbnail() ) : ?>
 			<div class="post-thumbnail">
 				<a href="<?php the_permalink(); ?>">
 					<?php the_post_thumbnail( 'adler-featured-image' ); ?>

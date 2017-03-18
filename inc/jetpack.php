@@ -43,6 +43,7 @@ function adler_jetpack_setup() {
 			'archive'    => true,
 			'post'       => true,
 			'page'       => true,
+			'fallback'   => true,
 		),
 	) );
 }
@@ -228,4 +229,15 @@ function adler_jetpack_featured_image_archive_display() {
             return false;
         }
     }
+}
+
+/**
+ * Check for fallback Featured Images.
+ */
+function adler_has_post_thumbnail( $post = null ) {
+	if ( ! function_exists( 'jetpack_has_featured_image' ) ) {
+		return has_post_thumbnail( $post );
+	} else {
+		return jetpack_has_featured_image( $post );
+	}
 }
