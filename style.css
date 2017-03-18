@@ -1907,6 +1907,10 @@ a {
         color: #f7f7f7; }
       .hero-wrapper .hero-content .entry-meta .posted-on svg {
         display: none; }
+      .hero-wrapper .hero-content .entry-meta .byline:before {
+        content: ' '; }
+      .hero-wrapper .hero-content .entry-meta .byline svg {
+        display: none; }
 
 .hfeed:not(.search-results):not(.archive) .hentry.has-post-thumbnail:first-of-type {
   padding-top: 0;

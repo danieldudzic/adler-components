@@ -110,6 +110,16 @@
 					display: none;
 				}
 			}
+
+			.byline {
+				&:before {
+					content: ' ';
+				}
+
+				svg {
+					display: none;
+				}
+			}
 		}
 
 	}
