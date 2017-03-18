@@ -16,19 +16,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	@include font-size(3.692);
+	@include font-size(3.750);
 }
 
 h2 {
-	@include font-size(1.231);
+	@include font-size(1.250);
 }
 
 h3 {
-	@include font-size(1.615);
+	@include font-size(1.625);
 }
 
 h4 {
-	@include font-size(1.077);
+	@include font-size(1.125);
 }
 
 h5 {

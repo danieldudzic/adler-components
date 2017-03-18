@@ -93,8 +93,6 @@
 }
 
 .hentry {
-	padding-left: 7.6923%;
-	padding-right: 7.6923%;
 	&:not(.has-post-thumbnail) .entry-wrapper .entry-header .entry-title {
 		margin-bottom: 0.676em;
 	}
@@ -160,37 +158,6 @@
 		clear: right;
 	}
 
-	.entry-footer {
-		width: 100%;
-		@include clearfix();
-		span {
-			display: block;
-			width: 100%;
-			margin-bottom: 5px;
-		}
-
-		.byline {
-			display: inline-block;
-			.author {
-				width: auto;
-				display: inline-block;
-			}
-		}
-
-		.entry-meta {
-			.post-meta-categories {
-			}
-
-			.has-hero-thumbnail .header-content & {
-				display: none;
-			}
-
-			.separator {
-				display: none;
-			}
-		}
-	}
-
 	// Main post wrapper
 	.entry-main {
 		position: relative;
@@ -225,17 +192,90 @@
 		}
 
 		.more-link {
-			width: 105px;
+			width: 170px;
 			text-align: center;
-			margin: 3.077em auto 0;
-			display: block;
-			line-height: 44px;
+			margin: 0 auto 3.077em;
+			display: inline-block;
+			line-height: 70px;
 			border-bottom: none;
 			color: $color__link;
 			background: url(assets/images/more-bg.png);
 			background-size: cover;
 			text-transform: uppercase;
+			@include font-size(0.750);
 		}
+	}
+
+	.entry-footer {
+		width: 100%;
+		@include clearfix();
+		span {
+			display: block;
+			width: 100%;
+		}
+
+		.byline {
+			display: inline-block;
+			.author {
+				width: auto;
+				display: inline-block;
+			}
+		}
+
+		.entry-meta {
+			.post-meta-categories {
+			}
+
+			.has-hero-thumbnail .header-content & {
+				display: none;
+			}
+
+			.separator {
+				display: none;
+			}
+		}
+	}
+
+	.entry-author {
+		background-color: $color__background-post;
+		margin: 3.846em 0 0;
+		padding: 1.538em 2em 2em;
+		border-top: 3px solid $color__accent;
+
+		.avatar {
+			float: left;
+			margin: 0.769em 2em 2em 0;
+			border-radius: 100%;
+		}
+	}
+
+	.author-heading {
+		clear: none;
+		margin: 0;
+	}
+
+	.author-title {
+		clear: none;
+		margin: 0;
+		text-align: left;
+	}
+
+	.author-bio {
+		@include font-size(0.750);
+		overflow: hidden;
+		margin-bottom: 0;
+	}
+
+	.author-description {
+		@extend %hyphening;
+
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.author-link {
+		white-space: nowrap;
 	}
 
 	blockquote {
@@ -250,7 +290,6 @@
 		position: relative;
 		box-sizing: content-box;
 		display: inline-block;
-		@extend %hyphening;
 		float: left;
 		background-size: 1.250em 1.406em;
 		background-color: $color__accent;
@@ -262,6 +301,8 @@
 		-ms-box-decoration-break: clone;
 		-o-box-decoration-break: clone;
 		box-decoration-break: clone;
+
+		@extend %hyphening;
 
 		blockquote {
 			margin-left: 1em;

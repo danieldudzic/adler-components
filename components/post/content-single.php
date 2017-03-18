@@ -16,7 +16,7 @@
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			?>
 		</header>
-		
+
 		<?php if ( '' != get_the_post_thumbnail() ) : ?>
 			<div class="post-thumbnail">
 				<a href="<?php the_permalink(); ?>">
@@ -31,7 +31,7 @@
 					wp_kses( esc_html__( 'Read More', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				) );
-	
+
 				wp_link_pages( array(
 					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'adler' ),
 					'after'  => '</div>',

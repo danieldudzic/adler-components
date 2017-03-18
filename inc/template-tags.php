@@ -12,7 +12,7 @@ if ( ! function_exists( 'adler_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function adler_posted_on() { ?>
-	
+
 	<div class="post-meta-categories">
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="categories-icon" d="M13 5H8l-.7-1.4c-.2-.4-.5-.6-.9-.6H3c-.5 0-1 .5-1 1v8c0 .6.5 1 1 1h10c.6 0 1-.4 1-1V6c0-.6-.4-1-1-1z"/></g></svg>
 		<?php
@@ -26,10 +26,10 @@ function adler_posted_on() { ?>
 			echo trim( $output, $separator );
 		} ?>
 	</div>
-	
+
 
 	<?php echo '<span class="separator"> - </span>'; ?>
-		
+
 	<?php
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
@@ -139,3 +139,11 @@ function adler_category_transient_flusher() {
 }
 add_action( 'edit_category', 'adler_category_transient_flusher' );
 add_action( 'save_post',     'adler_category_transient_flusher' );
+
+/**
+ * Filter the excerpt in order to display a Continue Reading button.
+ */
+function adler_excerpt_more( $more ) {
+	return '...<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( 'Continue Reading', 'adler' ) . '</a></div>';
+}
+add_filter( 'excerpt_more', 'adler_excerpt_more', 11 );
