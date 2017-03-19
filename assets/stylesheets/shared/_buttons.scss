@@ -34,13 +34,13 @@ input[type="submit"],
 /*--------------------------------------------------------------
 # Search
 --------------------------------------------------------------*/
-input.search-submit {
-	width: 105px;
+.search-form .search-submit {
+	width: 90px;
 	text-align: center;
-	margin-bottom: 15px;
-	margin-left: auto;
 	margin-right: auto;
-	line-height: 44px;
+	margin-left: auto;
+	line-height: 36px;
+	font-size: 1em;
 	border-bottom: none;
 	color: $color__link;
 	background: url(assets/images/more-bg.png);

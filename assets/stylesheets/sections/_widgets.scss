@@ -15,27 +15,84 @@
 	}
 }
 
-.slide-panel .widget {
-	color: $color__contrast;
-	.widget-title {
-		color: $color__light;
-	}
-
-	table, caption {
-		background: transparent;
-	}
-
-	ul {
-		padding-left: 0;
-		margin-left: 0;
-	}
-
-	#wp-calendar td {
-		text-align: center;
-	}
-
-	input.search-submit {
+.slide-panel {
+	.widget {
 		color: $color__contrast;
+
+		.widget-title {
+			color: $color__light;
+		}
+
+		table, caption {
+			background: transparent;
+		}
+
+		ul {
+			padding-left: 0;
+			margin-left: 0;
+
+			li:before {
+				content: '';
+			    padding-right: 0;
+			}
+		}
+
+		ol {
+			counter-reset: none;
+			padding-left: 0;
+
+			li {
+				counter-increment: none;
+
+				&:before {
+					content: counter(li);
+				    padding-right: 0;
+				}
+
+			}
+		}
+
+		.search-form .search-submit {
+			color: $color__contrast;
+
+			&:hover {
+				background: url(assets/images/more-bg.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				border-color: none;
+			}
+		}
+	}
+
+	.widget_calendar {
+
+		.calendar_wrap {
+			padding: 2em;
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+
+		table {
+
+			margin-bottom: 0;
+
+			td {
+				text-align: center;
+			}
+		}
+	}
+
+	.widget_rss {
+		li {
+			margin-bottom: 1em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.widget-title a {
+			border-bottom: none;
+		}
 	}
 }
 

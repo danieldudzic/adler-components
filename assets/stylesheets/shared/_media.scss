@@ -30,6 +30,10 @@ figure {
 	margin-bottom: 1.6em;
 	max-width: 100%;
 
+	p {
+		margin: 0;
+	}
+
 	img[class*="wp-image-"] {
 		@include center-block;
 	}
