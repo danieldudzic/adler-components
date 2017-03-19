@@ -77,6 +77,7 @@ function adler_setup() {
 	add_theme_support( 'custom-background', apply_filters( 'adler_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
+		'wp-head-callback' => 'adler_custom_background_cb'
 	) ) );
 }
 endif;
@@ -105,6 +106,42 @@ function adler_the_custom_logo() {
 	} else {
 		the_custom_logo();
 	}
+}
+
+/**
+ * Add a wp-head callback to the custom background
+ *
+ */
+function adler_custom_background_cb() {
+	$background_image = get_background_image();
+	$color = get_background_color();
+
+	if ( ! $background_image && ! $color ) {
+		return;
+	}
+?>
+	<style type="text/css" id="adler-custom-background-css">
+	<?php if ( ! empty ( $background_image ) ) { ?>
+			body.custom-background {
+				background-image: url(<?php echo esc_url( $background_image ); ?>);
+			}
+
+	<?php } elseif ( 'ffffff' != $color ) { ?>
+			body.custom-background,
+			.entry-wrapper .entry-main,
+			.hfeed .hentry:nth-of-type(2n+1) .entry-main {
+				background-color: #<?php echo esc_attr( $color ); ?>;
+			}
+
+			.hfeed .hentry:nth-of-type(2n) .entry-wrapper blockquote {
+				background-image: -webkit-linear-gradient(#<?php echo esc_attr( $color ); ?> 70%, transparent 70%, transparent);
+				background-image: -moz-linear-gradient(#<?php echo esc_attr( $color ); ?> 70%, transparent 70%, transparent);
+				background-image: linear-gradient(#<?php echo esc_attr( $color ); ?> 70%, transparent 70%, transparent);
+			}
+}
+	<?php } ?>
+	</style>
+<?php
 }
 
 /**

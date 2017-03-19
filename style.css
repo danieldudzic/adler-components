@@ -957,7 +957,7 @@ body {
     .entry-wrapper .entry-footer .entry-meta .separator {
       display: none; }
   .entry-wrapper .entry-author {
-    background-color: #f7f7f7;
+    background-color: rgba(0, 0, 0, 0.03);
     padding: 1.538em 2em 2em;
     border-top: 3px solid #68f3c8; }
     .entry-wrapper .entry-author .avatar {
@@ -996,9 +996,9 @@ body {
     float: left;
     background-size: 1.250em 1.406em;
     background-color: #68f3c8;
-    background-image: -webkit-linear-gradient(white 70%, transparent 70%, transparent);
-    background-image: -moz-linear-gradient(white 70%, transparent 70%, transparent);
-    background-image: linear-gradient(white 70%, transparent 70%, transparent);
+    background-image: -webkit-linear-gradient(#fff 70%, transparent 70%, transparent);
+    background-image: -moz-linear-gradient(#fff 70%, transparent 70%, transparent);
+    background-image: linear-gradient(#fff 70%, transparent 70%, transparent);
     -webkit-box-decoration-break: clone;
     -ms-box-decoration-break: clone;
     -o-box-decoration-break: clone;
@@ -1014,6 +1014,15 @@ body {
 
 .content-area, .full-width-widget-area {
   margin-bottom: 6.154em; }
+
+.custom-background .hentry {
+  background-color: transparent; }
+  .custom-background .hentry:nth-of-type(odd) {
+    background-color: transparent; }
+    .custom-background .hentry:nth-of-type(odd) .entry-main:after {
+      background-color: transparent; }
+.custom-background .entry-wrapper .entry-main:after {
+  background-color: transparent; }
 
 /*--------------------------------------------------------------
 ## Pages
@@ -1476,31 +1485,31 @@ body:not(.has-hero-thumbnail) .custom-logo-link, .search-results .custom-logo-li
 .infinity-success .infinite-wrap.last .hentry:last-of-type .entry-main:after {
   display: none; }
 
-.hfeed .infinite-wrap.odd .hentry:nth-of-type(odd) {
+.hfeed:not(.custom-background) .infinite-wrap.odd .hentry:nth-of-type(odd) {
   background-color: #fff; }
-  .hfeed .infinite-wrap.odd .hentry:nth-of-type(odd) .entry-main {
+  .hfeed:not(.custom-background) .infinite-wrap.odd .hentry:nth-of-type(odd) .entry-main {
     background-color: #fff; }
-    .hfeed .infinite-wrap.odd .hentry:nth-of-type(odd) .entry-main:after {
+    .hfeed:not(.custom-background) .infinite-wrap.odd .hentry:nth-of-type(odd) .entry-main:after {
       background-color: #f7f7f7; }
-.hfeed .infinite-wrap.odd .hentry:nth-of-type(even) {
+.hfeed:not(.custom-background) .infinite-wrap.odd .hentry:nth-of-type(even) {
   background-color: #f7f7f7; }
-  .hfeed .infinite-wrap.odd .hentry:nth-of-type(even) .entry-main {
+  .hfeed:not(.custom-background) .infinite-wrap.odd .hentry:nth-of-type(even) .entry-main {
     background-color: #f7f7f7; }
-    .hfeed .infinite-wrap.odd .hentry:nth-of-type(even) .entry-main:after {
+    .hfeed:not(.custom-background) .infinite-wrap.odd .hentry:nth-of-type(even) .entry-main:after {
       background-color: #fff; }
-.hfeed .infinite-wrap.even .hentry:nth-of-type(even) {
+.hfeed:not(.custom-background) .infinite-wrap.even .hentry:nth-of-type(even) {
   background-color: #fff; }
-  .hfeed .infinite-wrap.even .hentry:nth-of-type(even) .entry-main {
+  .hfeed:not(.custom-background) .infinite-wrap.even .hentry:nth-of-type(even) .entry-main {
     background-color: #fff; }
-    .hfeed .infinite-wrap.even .hentry:nth-of-type(even) .entry-main:after {
+    .hfeed:not(.custom-background) .infinite-wrap.even .hentry:nth-of-type(even) .entry-main:after {
       background-color: #f7f7f7; }
-.hfeed .infinite-wrap.even .hentry:nth-of-type(odd) {
+.hfeed:not(.custom-background) .infinite-wrap.even .hentry:nth-of-type(odd) {
   background-color: #f7f7f7; }
-  .hfeed .infinite-wrap.even .hentry:nth-of-type(odd) .entry-main {
+  .hfeed:not(.custom-background) .infinite-wrap.even .hentry:nth-of-type(odd) .entry-main {
     background-color: #f7f7f7; }
-    .hfeed .infinite-wrap.even .hentry:nth-of-type(odd) .entry-main:after {
+    .hfeed:not(.custom-background) .infinite-wrap.even .hentry:nth-of-type(odd) .entry-main:after {
       background-color: #fff; }
-  .hfeed .infinite-wrap.even .hentry:nth-of-type(odd) .entry-wrapper blockquote {
+  .hfeed:not(.custom-background) .infinite-wrap.even .hentry:nth-of-type(odd) .entry-wrapper blockquote {
     background-image: -webkit-linear-gradient(#f7f7f7 70%, transparent 70%, transparent);
     background-image: -moz-linear-gradient(#f7f7f7 70%, transparent 70%, transparent);
     background-image: linear-gradient(#f7f7f7 70%, transparent 70%, transparent); }

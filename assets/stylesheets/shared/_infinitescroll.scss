@@ -76,7 +76,7 @@
 	display: none;
 }
 
-.hfeed {
+.hfeed:not(.custom-background) {
 	.infinite-wrap {
 		&.odd {
 			.hentry {

@@ -71,9 +71,9 @@
 
 		&:nth-of-type(even) {
 			.entry-wrapper blockquote {
-				background-image: -webkit-linear-gradient(rgba(247, 247, 247, 1) 70%, transparent 70%, transparent);
-				background-image: -moz-linear-gradient(rgba(247, 247, 247, 1) 70%, transparent 70%, transparent);
-				background-image: linear-gradient(rgba(247, 247, 247, 1) 70%, transparent 70%, transparent);
+				background-image: -webkit-linear-gradient($color__background-post 70%, transparent 70%, transparent);
+				background-image: -moz-linear-gradient($color__background-post 70%, transparent 70%, transparent);
+				background-image: linear-gradient($color__background-post 70%, transparent 70%, transparent);
 
 			}
 		}
@@ -157,7 +157,6 @@
 		margin-bottom: 0.231em;
 	}
 
-	// Main post wrapper
 	.entry-main {
 		position: relative;
 		background-color: $color__background-post;
@@ -246,7 +245,7 @@
 	}
 
 	.entry-author {
-		background-color: $color__background-post;
+		background-color: rgba(0, 0, 0, 0.03);
 		padding: 1.538em 2em 2em;
 		border-top: 3px solid $color__accent;
 
@@ -301,9 +300,9 @@
 		float: left;
 		background-size: 1.250em 1.406em;
 		background-color: $color__accent;
-		background-image: -webkit-linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
-		background-image: -moz-linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
-		background-image: linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
+		background-image: -webkit-linear-gradient($color__background-body 70%, transparent 70%, transparent);
+		background-image: -moz-linear-gradient($color__background-body 70%, transparent 70%, transparent);
+		background-image: linear-gradient($color__background-body 70%, transparent 70%, transparent);
 
 		-webkit-box-decoration-break: clone;
 		-ms-box-decoration-break: clone;
@@ -330,4 +329,28 @@
 
 .content-area, .full-width-widget-area {
 	margin-bottom: 6.154em;
+}
+
+.custom-background {
+	.hentry {
+		background-color: transparent;
+
+		&:nth-of-type(odd) {
+			background-color: transparent;
+
+			.entry-main {
+				&:after {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+
+	.entry-wrapper {
+		.entry-main {
+			&:after {
+				background-color: transparent;
+			}
+		}
+	}
 }
