@@ -25,7 +25,6 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'adler' ); ?></a>
 
 		<header id="masthead" class="site-header" role="banner">
-
 			<?php get_template_part( 'components/header/sliding', 'panel' ); ?>
 
 			<div class="site-branding">
@@ -34,6 +33,5 @@
 			</div>
 
 			<?php adler_the_custom_logo(); ?>
-
 		</header>
 		<div id="content" class="site-content">

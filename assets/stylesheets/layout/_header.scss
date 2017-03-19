@@ -49,6 +49,15 @@ body:not(.has-hero-thumbnail) .site-header {
 	}
 }
 
+.custom-logo-link {
+	margin-bottom: 0px;
+	margin: 2.308em 9em 0 3.077em;
+	position: absolute;
+	z-index: 50;
+	left: 0;
+	border: none;
+}
+
 .has-hero-thumbnail {
 	.site-branding {
 		text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.20) ;
@@ -60,6 +69,7 @@ body:not(.has-hero-thumbnail), .search-results, .archive {
 	.site-branding {
 		position: relative;
 		text-shadow: none;
+		overflow: hidden;
 
 		.site-title a {
 		    color: $color__title;
@@ -77,6 +87,10 @@ body:not(.has-hero-thumbnail), .search-results, .archive {
 		.site-title, .site-description {
 			float: left;
 		}
+	}
+
+	.custom-logo-link {
+		position: relative;
 	}
 }
 

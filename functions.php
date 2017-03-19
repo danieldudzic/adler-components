@@ -54,10 +54,11 @@ function adler_setup() {
 	 * Add support for core custom logo.
 	 */
 	add_theme_support( 'custom-logo', array(
-		'height'      => 200,
-		'width'       => 200,
+		'height'      => 100,
+		'width'       => 600,
 		'flex-width'  => true,
 		'flex-height' => true,
+		'header-text' => array( 'site-title', 'site-description' )
 	) );
 
 	/*
@@ -192,11 +193,6 @@ function adler_fonts_url() {
 
 	return esc_url_raw( $fonts_url );
 }
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

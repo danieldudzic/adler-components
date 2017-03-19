@@ -8,13 +8,15 @@
 .widget {
 	margin: 0;
 	padding: 1em 1.846em 0.385em;
-	color: $color__contrast;
 
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
 	}
+}
 
+.slide-panel .widget {
+	color: $color__contrast;
 	.widget-title {
 		color: $color__light;
 	}
