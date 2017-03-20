@@ -644,8 +644,8 @@ input[type="submit"]:focus,
 # Search
 --------------------------------------------------------------*/
 .search-form .search-submit {
-  background-size: cover;
   background: url(assets/images/more-bg.png);
+  background-size: cover;
   border-bottom: none;
   color: #45525a;
   font-size: 1em;
@@ -684,6 +684,7 @@ ul li:before {
   color: #68f3c8;
   content: '\002022';
   font-size: font-size(1);
+  float: left;
   padding-right: .538em;
 }
 
@@ -1185,8 +1186,8 @@ body:not(.hfeed) .entry-wrapper {
 }
 
 .entry-wrapper .entry-main .read-more .more-link {
-  background-size: cover;
   background: url(assets/images/more-bg.png);
+  background-size: cover;
   border-bottom: none;
   color: #45525a;
   display: inline-block;
