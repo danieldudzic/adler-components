@@ -1523,6 +1523,10 @@ body:not(.has-hero-thumbnail) .custom-logo-link, .search-results .custom-logo-li
   margin-right: 0;
 }
 
+.search-no-results .site-content .content-area .page-content {
+  margin-top: 3.077em;
+}
+
 .search-no-results .site-content .content-area .page-content .widget {
   display: none;
 }
