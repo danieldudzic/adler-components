@@ -65,18 +65,131 @@
 	}
 
 	.widget_calendar {
-
 		.calendar_wrap {
 			padding: 2em;
 			background-color: rgba(0, 0, 0, 0.1);
 		}
 
 		table {
-
 			margin-bottom: 0;
 
 			td {
 				text-align: center;
+			}
+		}
+	}
+
+	.widget_authors {
+		img {
+			border-radius: 100%;
+		}
+
+		ul {
+			margin-bottom: 0;
+		}
+
+		li {
+			a {
+				border-bottom: none;
+			}
+
+			li a {
+				border-bottom: 3px solid $color__accent;
+			}
+		}
+
+		& > ul > li {
+			margin-bottom: 2em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.widget_jetpack_display_posts_widget {
+		a {
+			margin-bottom: 1em;
+			display: block;
+			border-bottom: none;
+		}
+
+		p {
+			margin-bottom: 1em !important;
+
+			&:last-of-type {
+				margin-bottom: 0 !important;
+			}
+		}
+
+		.jetpack-display-remote-posts {
+			margin-bottom: 0;
+
+			h4 {
+				@include font-size(1.125);
+
+				a {
+					border-bottom: 3px solid $color__accent;
+					margin-bottom: 0;
+				    display: inline;
+				}
+			}
+		}
+	}
+
+	.widget_facebook_likebox {
+		h2 {
+			a {
+				border-bottom: none;
+			}
+		}
+	}
+
+	.widget-grofile {
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	.widget-gallery-circle {
+		.tiled-gallery {
+			margin-bottom: 0;
+		}
+	}
+
+	.widget_wpcom_social_media_icons_widget {
+		ul {
+			margin-bottom: 0;
+			li {
+				padding: 0.615em 0.4em 0.769em;
+
+				&:before {
+				    content: '';
+				    padding-right: 0;
+				}
+
+				a {
+					@include font-size(1.813);
+					margin-bottom: 0.621em;
+
+					&:hover,
+					&:focus {
+						opacity: 1;
+						color: $color__accent;
+					}
+				}
+			}
+		}
+	}
+
+	.widget_upcoming_events_widget {
+		ul {
+			margin-bottom: 0;
+
+			li {
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
@@ -93,6 +206,10 @@
 		.widget-title a {
 			border-bottom: none;
 		}
+
+		p {
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -105,7 +222,7 @@
 
 	.widget-area {
 		width: 100%;
-		margin: 0 0 1.6em;
+		margin: 0 0 1.625em;
 	}
 
 	.widget-gallery,
