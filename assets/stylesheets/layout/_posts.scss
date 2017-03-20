@@ -65,10 +65,7 @@
 
 		&:nth-of-type(even) {
 			.entry-wrapper blockquote {
-				background-image: -webkit-linear-gradient($color__background-post 70%, transparent 70%, transparent);
-				background-image: -moz-linear-gradient($color__background-post 70%, transparent 70%, transparent);
 				background-image: linear-gradient($color__background-post 70%, transparent 70%, transparent);
-
 			}
 		}
 
@@ -86,11 +83,11 @@
 
 .hentry {
 	&:not(.has-post-thumbnail) .entry-wrapper .entry-header .entry-title {
-		margin-bottom: 0.676em;
+		margin-bottom: 0.667em;
 	}
 
 	&.has-post-thumbnail .entry-wrapper .entry-main {
-		margin-top: 2.500em;
+		margin-top: 2.462em;
 	}
 }
 
@@ -295,13 +292,8 @@
 		float: left;
 		background-size: 1.250em 1.406em;
 		background-color: $color__accent;
-		background-image: -webkit-linear-gradient($color__background-body 70%, transparent 70%, transparent);
-		background-image: -moz-linear-gradient($color__background-body 70%, transparent 70%, transparent);
 		background-image: linear-gradient($color__background-body 70%, transparent 70%, transparent);
 
-		-webkit-box-decoration-break: clone;
-		-ms-box-decoration-break: clone;
-		-o-box-decoration-break: clone;
 		box-decoration-break: clone;
 
 		@extend %hyphening;

@@ -80,16 +80,10 @@
 
 .showsub-toggle.sub-on svg  {
 	transform:rotate(180deg);
-	-ms-transform:rotate(180deg);
-	-webkit-transform:rotate(180deg);
 }
 
 .showsub-toggle svg  {
 	@include transition(all 0 ease-in-out);
 	transform:rotate(0deg);
 	transform-origin:50% 50%;
-	-ms-transform:rotate(0deg);
-	-ms-transform-origin:50% 50%;
-	-webkit-transform:rotate(0deg);
-	-webkit-transform-origin:50% 50%;
 }
