@@ -17,33 +17,33 @@ function adler_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'adler_infinite_scroll_render',
-		'footer'    => 'page',
+		'render'	=> 'adler_infinite_scroll_render',
+		'footer'	=> 'page',
 	) );
 
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
 
-	// Add theme support for Social Menus
+	// Add theme support for Social Menus.
 	add_theme_support( 'jetpack-social-menu', 'svg' );
 
 		//Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
-		'blog-display'       => 'excerpt',
-		'author-bio'         => true,
+		'blog-display'		 => 'excerpt',
+		'author-bio'		 => true,
 		'author-bio-default' => false,
-		'post-details'       => array(
+		'post-details'	 => array(
 			'stylesheet' => 'adler-style',
-			'date'       => '.posted-on',
+			'date'		 => '.posted-on',
 			'categories' => '.cat-links',
-			'tags'       => '.tags-links',
-			'author'     => '.byline',
+			'tags'		 => '.tags-links',
+			'author'	 => '.byline',
 		),
-		'featured-images'    => array(
-			'archive'    => true,
-			'post'       => true,
-			'page'       => true,
-			'fallback'   => true,
+		'featured-images' => array(
+			'archive'	  => true,
+			'post'		  => true,
+			'page'		  => true,
+			'fallback'	  => true,
 		),
 	) );
 }
@@ -64,7 +64,7 @@ function adler_infinite_scroll_render() {
 }
 
 /*
- * Only display social menu if function exists
+ * Only display social menu if function exists.
  */
 function adler_social_menu() {
 	if ( ! function_exists( 'jetpack_social_menu' ) ) {
@@ -111,7 +111,6 @@ function adler_get_blog_display() {
  * Display Excerpt instead of Content for the Hero post.
 */
 function adler_hero_content_to_the_excerpt( $content ) {
-
 	$blog_display = adler_get_blog_display();
 	$display_option = get_option( 'jetpack_content_blog_display', $blog_display );
 
@@ -180,55 +179,55 @@ add_action( 'customize_preview_init', 'adler_custom_content_display' );
  * Show/Hide Featured Image on .single if option is ticked.
  */
 function adler_jetpack_featured_image_display() {
-    if ( ! function_exists( 'jetpack_featured_images_remove_post_thumbnail' ) ) {
-        return true;
-    } else {
-        $options         = get_theme_support( 'jetpack-content-options' );
-        $featured_images = ( ! empty( $options[0]['featured-images'] ) ) ? $options[0]['featured-images'] : null;
+	if ( ! function_exists( 'jetpack_featured_images_remove_post_thumbnail' ) ) {
+		return true;
+	} else {
+		$options		 = get_theme_support( 'jetpack-content-options' );
+		$featured_images = ( ! empty( $options[0]['featured-images'] ) ) ? $options[0]['featured-images'] : null;
 
-        $settings = array(
-            'post-default' => ( isset( $featured_images['post-default'] ) && false === $featured_images['post-default'] ) ? '' : 1,
-            'page-default' => ( isset( $featured_images['page-default'] ) && false === $featured_images['page-default'] ) ? '' : 1,
-        );
+		$settings = array(
+			'post-default' => ( isset( $featured_images['post-default'] ) && false === $featured_images['post-default'] ) ? '' : 1,
+			'page-default' => ( isset( $featured_images['page-default'] ) && false === $featured_images['page-default'] ) ? '' : 1,
+		);
 
-        $settings = array_merge( $settings, array(
-            'post-option'  => get_option( 'jetpack_content_featured_images_post', $settings['post-default'] ),
-            'page-option'  => get_option( 'jetpack_content_featured_images_page', $settings['page-default'] ),
-        ) );
+		$settings = array_merge( $settings, array(
+			'post-option'  => get_option( 'jetpack_content_featured_images_post', $settings['post-default'] ),
+			'page-option'  => get_option( 'jetpack_content_featured_images_page', $settings['page-default'] ),
+		) );
 
-        if ( ( ! $settings['post-option'] && is_single() )
-            || ( ! $settings['page-option'] && is_singular() && is_page() ) ) {
-            return false;
-        } else {
-            return true;
-        }
-    }
+		if ( ( ! $settings['post-option'] && is_single() )
+		|| ( ! $settings['page-option'] && is_singular() && is_page() ) ) {
+			return false;
+		} else {
+			return true;
+		}
+	}
 }
 
 /**
  * Display a Featured Image on archive pages if option is ticked.
  */
 function adler_jetpack_featured_image_archive_display() {
-    if ( ! function_exists( 'jetpack_featured_images_remove_post_thumbnail' ) ) {
-        return false;
-    } else {
-        $options         = get_theme_support( 'jetpack-content-options' );
-        $featured_images = ( ! empty( $options[0]['featured-images'] ) ) ? $options[0]['featured-images'] : null;
+	if ( ! function_exists( 'jetpack_featured_images_remove_post_thumbnail' ) ) {
+		return false;
+	} else {
+		$options		 = get_theme_support( 'jetpack-content-options' );
+		$featured_images = ( ! empty( $options[0]['featured-images'] ) ) ? $options[0]['featured-images'] : null;
 
-        $settings = array(
-            'archive-default' => ( isset( $featured_images['archive-default'] ) && false === $featured_images['archive-default'] ) ? '' : 1,
-        );
+		$settings = array(
+			'archive-default' => ( isset( $featured_images['archive-default'] ) && false === $featured_images['archive-default'] ) ? '' : 1,
+		);
 
-        $settings = array_merge( $settings, array(
-            'archive-option'  => get_option( 'jetpack_content_featured_images_archive', $settings['archive-default'] ),
-        ) );
+		$settings = array_merge( $settings, array(
+			'archive-option'  => get_option( 'jetpack_content_featured_images_archive', $settings['archive-default'] ),
+		) );
 
-        if ( $settings['archive-option'] ) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+		if ( $settings['archive-option'] ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
 
 /**

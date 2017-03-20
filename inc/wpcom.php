@@ -18,11 +18,11 @@ function adler_wpcom_setup() {
 	// Set theme colors for third party services.
 	if ( ! isset( $themecolors ) ) {
 		$themecolors = array(
-			'bg'     => 'ffffff',
+			'bg'	 => 'ffffff',
 			'border' => '68f3c8',
-			'text'   => '45525a',
-			'link'   => '45525a',
-			'url'    => '45525a',
+			'text'	 => '45525a',
+			'link'	 => '45525a',
+			'url'	 => '45525a',
 		);
 	}
 

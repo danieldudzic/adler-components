@@ -6,7 +6,7 @@
 				<?php if ( has_nav_menu( 'top' ) ) : ?>
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'top' ) ); ?>
-					</nav><!-- #site-navigation -->
+					</nav>
 				<?php endif; ?>
 
 				<?php if ( is_active_sidebar( 'sidebar-1' ) ) {

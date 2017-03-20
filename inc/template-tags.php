@@ -94,10 +94,10 @@ function adler_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'adler_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
-			'fields'     => 'ids',
+			'fields'	 => 'ids',
 			'hide_empty' => 1,
 			// We only need to know if there is more than one category.
-			'number'     => 2,
+			'number'	 => 2,
 		) );
 
 		// Count the number of categories that are attached to the posts.
@@ -126,7 +126,7 @@ function adler_category_transient_flusher() {
 	delete_transient( 'adler_categories' );
 }
 add_action( 'edit_category', 'adler_category_transient_flusher' );
-add_action( 'save_post',     'adler_category_transient_flusher' );
+add_action( 'save_post',	 'adler_category_transient_flusher' );
 
 /**
  * Filter the excerpt in order to display a Continue Reading button.
