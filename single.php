@@ -16,7 +16,7 @@ while ( have_posts() ) : the_post(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
-			if ( has_post_thumbnail() ) {
+			if ( adler_has_post_thumbnail() ) {
 				get_template_part( 'components/hero/hero', 'single' );
 			} else {
 				get_template_part( 'components/post/content', 'single' );

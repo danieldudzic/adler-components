@@ -20,7 +20,7 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post();
 
-				if ( has_post_thumbnail() ) {
+				if ( adler_has_post_thumbnail() ) {
 					get_template_part( 'components/hero/hero', 'page' );
 				} else {
 					get_template_part( 'components/page/content', 'page' );

@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="hero-wrapper">
-		<div class="hero-bg feature-header" style="background-image:url( <?php echo esc_url( the_post_thumbnail_url( 'adler-hero' ) ); ?> )"></div>
+		<div class="hero-bg feature-header" style="background-image:url( <?php echo esc_url( adler_get_post_thumbnail_url( 'adler-hero' ) ); ?> )"></div>
 
 		<div class="hero-content">
 			<?php  get_template_part( 'components/post/content', 'meta' ); ?>

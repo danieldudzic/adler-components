@@ -27,29 +27,11 @@
 			background: transparent;
 		}
 
-		ul {
+		ul, ol {
 			margin-left: 0;
 			padding-left: 0;
+			list-style: none;
 
-			li:before {
-				content: '';
-			    padding-right: 0;
-			}
-		}
-
-		ol {
-			counter-reset: none;
-			padding-left: 0;
-
-			li {
-				counter-increment: none;
-
-				&:before {
-					content: counter(li);
-				    padding-right: 0;
-				}
-
-			}
 		}
 
 		.search-form .search-submit {

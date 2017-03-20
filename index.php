@@ -30,7 +30,7 @@ get_header(); ?>
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
-				if ( 0 === $wp_query->current_post && has_post_thumbnail() ) :
+				if ( 0 === $wp_query->current_post && adler_has_post_thumbnail() ) :
 
 					get_template_part( 'components/hero/hero', 'archive' );
 

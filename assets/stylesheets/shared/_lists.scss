@@ -1,36 +1,17 @@
 ul, ol {
 	margin: 0 0 .769em 1.538em;
+
+	li {
+		line-height: 2.308;
+	}
 }
 
 ul {
-	list-style: none;
 	padding-left: 1.538em;
-
-	li:before {
-		color: $color__accent;
-		content: '\002022';
-		font-size: font-size(1);
-	    float: left;
-	    padding-right: .538em;
-	}
 }
 
 ol {
-	counter-reset: li;
-	list-style: none;
 	padding-left: 1.538em;
-
-	li {
-		counter-increment: li;
-
-		&:before {
-			color: $color__accent;
-			content: counter(li);
-		    padding-right: .538em;
-		    vertical-align: bottom;
-		}
-
-	}
 }
 
 li > ul,

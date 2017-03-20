@@ -30,11 +30,10 @@ function adler_body_classes( $classes ) {
 	}
 
 	// Add a class of has-post-thumbnail if the post or page ( or the blog page - first post ) has a featured image set.
-	if ( has_post_thumbnail() && ! is_archive() ) {
+	if ( adler_has_post_thumbnail() && ! is_archive() ) {
 		if  ( adler_jetpack_featured_image_display() === true ) {
 			$classes[] = 'has-hero-thumbnail';
 		}
-
 		if  ( ! is_singular() &&  adler_jetpack_featured_image_archive_display() === true ) {
 			$classes[] = 'has-hero-thumbnail';
 		}
