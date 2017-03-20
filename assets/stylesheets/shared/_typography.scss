@@ -11,8 +11,8 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	color: $color__title;
-	font-weight: 700;
 	font-family: $font__code;
+	font-weight: 700;
 }
 
 h1 {
@@ -86,12 +86,12 @@ big {
 }
 
 blockquote {
-	font-family: $font__code-secondary;
-	text-align: center;
 	color: $color__title;
-	@extend %hyphening;
+	font-family: $font__code-secondary;
 	@include font-size(1.615);
 	margin: 0 1.538em;
+	text-align: center;
+	@extend %hyphening;
 }
 
 blockquote, q {
@@ -104,6 +104,6 @@ blockquote, q {
 }
 
 %hyphening {
-	word-break: break-word;
 	hyphens: auto;
+	word-break: break-word;
 }

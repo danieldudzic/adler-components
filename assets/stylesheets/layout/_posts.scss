@@ -11,10 +11,10 @@
 }
 
 .intro {
+	color: $color__title;
 	@include font-size(1);
 	line-height: 1.75;
 	margin-bottom: 1.563em;
-	color: $color__title;
 }
 
 .single .byline,
@@ -95,8 +95,8 @@
 	position: relative;
 
 	body:not(.hfeed) & {
-		margin-top: 3.077em;
 		margin-bottom: 3.077em;
+		margin-top: 3.077em;
 	}
 
 	h1, h2 {
@@ -106,20 +106,20 @@
 	}
 
 	p {
-		margin-top: 0;
 		margin-bottom: 3.077em;
+		margin-top: 0;
 	}
 
 	.entry-header {
 		.entry-title {
 			font-family: $font__code;
-			padding-bottom: 0;
-			position: relative;
+			@include font-size(2.5);
 			line-height: 1;
 			margin-bottom: 0;
-			overflow: visible;
 			margin-top: 0;
-			@include font-size(2.5);
+			overflow: visible;
+			padding-bottom: 0;
+			position: relative;
 
 			.header-content & {
 				position: relative;
@@ -142,21 +142,21 @@
 	}
 
 	.edit-link {
-		float: right;
-		display: inline-block;
 		clear: right;
+		display: inline-block;
+		float: right;
 		margin-bottom: 0.231em;
 	}
 
 	.entry-main {
-		position: relative;
 		background-color: $color__background-post;
-		padding: 0 0 5.385em 0;
 		margin: 0;
+		padding: 0 0 5.385em 0;
+		position: relative;
 
 		.hentry:not(.has-post-thumbnail) & {
-			margin-top: 0;
 			background-color: transparent;
+			margin-top: 0;
 		}
 
 		.search-results .hentry:not(.has-post-thumbnail) & {
@@ -168,38 +168,38 @@
 		}
 
 		&:after {
-			content: ' ';
-			position: absolute;
+			background-color: $color__background-body;
+			background: url(assets/images/leaf.png) center center no-repeat;
+			border-radius: 50%;
 			bottom: -30px;
+			content: ' ';
+			height: 60px;
 			left: 50%;
+			position: absolute;
 			transform: translateX(-50%);
 			width: 60px;
-			height: 60px;
-			border-radius: 50%;
-			background: url(assets/images/leaf.png) center center no-repeat;
-			background-color: $color__background-body;
 		}
 
 		.read-more {
 			text-align: center;
 			.more-link {
-				width: 13.455em;
-				margin: 0 auto 4.545em;
-				display: inline-block;
-				line-height: 5.636;
+				background-size: cover;
+				background: url(assets/images/more-bg.png);
 				border-bottom: none;
 				color: $color__link;
-				background: url(assets/images/more-bg.png);
-				background-size: cover;
-				text-transform: uppercase;
+				display: inline-block;
 				@include font-size(0.688);
+				line-height: 5.636;
+				margin: 0 auto 4.545em;
+				text-transform: uppercase;
+				width: 13.455em;
 			}
 		}
 	}
 
 	.entry-footer {
-		width: 100%;
 		@include clearfix();
+		width: 100%;
 
 		span {
 			display: block;
@@ -213,8 +213,8 @@
 		.byline {
 			display: inline-block;
 			.author {
-				width: auto;
 				display: inline-block;
+				width: auto;
 			}
 		}
 
@@ -237,14 +237,14 @@
 
 	.entry-author {
 		background-color: rgba(0, 0, 0, 0.03);
-		padding: 1.538em 2em 2em;
 		border-top: 3px solid $color__accent;
 		overflow: hidden;
+		padding: 1.538em 2em 2em;
 
 		.avatar {
 			float: left;
-			margin: 0.769em 2em 2em 0;
 			border-radius: 100%;
+			margin: 0.769em 2em 2em 0;
 		}
 	}
 
@@ -261,8 +261,8 @@
 
 	.author-bio {
 		@include font-size(0.750);
-		overflow: hidden;
 		margin-bottom: 0;
+		overflow: hidden;
 	}
 
 	.author-description {
@@ -278,30 +278,29 @@
 	}
 
 	blockquote {
-		font-family: $font__code-secondary;
-		@include font-size(2);
-		text-align: center;
-		line-height: 1.406;
-		color: $color__title;
-		margin-left: 0;
-		margin-right: 0;
-		margin-bottom: 1.406em;
-		position: relative;
-		box-sizing: content-box;
-		display: inline-block;
-		float: left;
-		background-size: 1.250em 1.406em;
 		background-color: $color__accent;
 		background-image: linear-gradient($color__background-body 70%, transparent 70%, transparent);
-
+		background-size: 1.250em 1.406em;
 		box-decoration-break: clone;
+		box-sizing: content-box;
+		color: $color__title;
+		display: inline-block;
+		float: left;
+		font-family: $font__code-secondary;
+		@include font-size(2);
+		line-height: 1.406;
+		margin-bottom: 1.406em;
+		margin-left: 0;
+		margin-right: 0;
+		position: relative;
+		text-align: center;
 
 		@extend %hyphening;
 
 		blockquote {
+			margin-bottom: 0;
 			margin-left: 1em;
 			margin-right: 1em;
-			margin-bottom: 0;
 		}
 
 		* {

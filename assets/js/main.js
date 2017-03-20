@@ -15,7 +15,7 @@
 		bodyWrapper  = $( '.body-wrapper' ),
 		scrollIndicatorWrapper = $( '.scroll-indicator-wrapper' ),
 		scrollIndicatorAnchor = $( '#scroll-indicator-anchor' ),
-		siteMain = $( '.site-main' );
+		siteMain = $( '.site-main' ),
 
 	/**
 	* Full width feature images

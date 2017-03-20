@@ -28,8 +28,8 @@
 		}
 
 		ul {
-			padding-left: 0;
 			margin-left: 0;
+			padding-left: 0;
 
 			li:before {
 				content: '';
@@ -56,9 +56,9 @@
 			color: $color__contrast;
 
 			&:hover {
-				background: url(assets/images/more-bg.png);
-				background-size: cover;
 				background-repeat: no-repeat;
+				background-size: cover;
+				background: url(assets/images/more-bg.png);
 				border-color: none;
 			}
 		}
@@ -66,8 +66,8 @@
 
 	.widget_calendar {
 		.calendar_wrap {
-			padding: 2em;
 			background-color: rgba(0, 0, 0, 0.1);
+			padding: 2em;
 		}
 
 		table {
@@ -109,9 +109,9 @@
 
 	.widget_jetpack_display_posts_widget {
 		a {
-			margin-bottom: 1em;
-			display: block;
 			border-bottom: none;
+			display: block;
+			margin-bottom: 1em;
 		}
 
 		p {
@@ -174,8 +174,8 @@
 
 					&:hover,
 					&:focus {
-						opacity: 1;
 						color: $color__accent;
+						opacity: 1;
 					}
 				}
 			}
@@ -214,15 +214,15 @@
 }
 
 .footer-widgets-wrapper, .full-width-widget-area {
-	float: none;
 	display: flex;
 	flex-wrap: wrap;
+	float: none;
 	justify-content: space-between;
 	width: 100%;
 
 	.widget-area {
-		width: 100%;
 		margin: 0 0 1.625em;
+		width: 100%;
 	}
 
 	.widget-gallery,

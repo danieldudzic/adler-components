@@ -7,24 +7,24 @@ ul {
 	padding-left: 1.538em;
 
 	li:before {
-		content: '\002022';
 		color: $color__accent;
+		content: '\002022';
 		font-size: font-size(1);
 	    padding-right: .538em;
 	}
 }
 
 ol {
-	list-style: none;
 	counter-reset: li;
+	list-style: none;
 	padding-left: 1.538em;
 
 	li {
 		counter-increment: li;
 
 		&:before {
-			content: counter(li);
 			color: $color__accent;
+			content: counter(li);
 		    padding-right: .538em;
 		    vertical-align: bottom;
 		}
@@ -35,7 +35,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: .769em;
+	margin-left: 0.769em;
 }
 
 dt {

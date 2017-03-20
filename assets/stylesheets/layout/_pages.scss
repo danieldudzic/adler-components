@@ -6,27 +6,27 @@
 .content-area {
 	.site-main {
 		.page-title {
-			position: relative;
-			text-align: center;
-			font-family: $font__code-secondary;
-			@include font-size(2.42);
-			background-size: 1.042em 1.208em;
-			line-height: 1.208;
 			background-color: $color__accent;
 			background-image: linear-gradient(rgba(255, 255, 255, 1) 70%, transparent 70%, transparent);
+			background-size: 1.042em 1.208em;
 			box-decoration-break: clone;
-			margin: 0.385em 0 0;
+			font-family: $font__code-secondary;
+			@include font-size(2.42);
+			line-height: 1.208;
 			margin-left: 0;
 			margin-right: 0;
+			margin: 0.385em 0 0;
+			position: relative;
+			text-align: center;
 		}
 	}
 }
 
 .error404 .content-area .site-main {
 	.page-title {
+		background-size: 1.042em 1.333em;
 		@include font-size(2);
 		line-height: 1.333;
-		background-size: 1.042em 1.333em;
 	}
 
 	.page-content {

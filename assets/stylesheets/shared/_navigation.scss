@@ -3,17 +3,17 @@
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-	padding-left: 7.6923%;
-	padding-right: 7.6923%;
-	font-weight: 700;
 	font-family: $font__code;
 	@include font-size(1.125);
+	font-weight: 700;
+	padding-left: 7.6923%;
+	padding-right: 7.6923%;
 
 	.title {
-		@include font-size(0.846);
 		clear: both;
 		color: $color__text-caption;
 		display: block;
+		@include font-size(0.846);
 		font-style: normal;
 		text-transform: uppercase;
 	}

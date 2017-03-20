@@ -1,16 +1,16 @@
 .alignleft {
 	display: inline;
 	float: left;
-	margin-right: 1.6em;
+	margin-right: 1.538em;
 }
 
 .alignright {
 	display: inline;
 	float: right;
-	margin-left: 1.6em;
+	margin-left: 1.538em;
 }
 
 .aligncenter {
-	clear: both;
 	@include center-block;
+	clear: both;
 }

@@ -7,14 +7,14 @@
 		float: left;
 		a {
 			background: $color__background-button;
+			border: none;
+			color: $color__light;
+			@include font-size(0.692);
 			letter-spacing: 1px;
 			line-height: 1;
 			padding: 0.692em 1em;
 			text-transform: uppercase;
 			transition: 0.3s;
-			@include font-size(0.692);
-			color: $color__light;
-			border: none;
 
 			&:hover {
 				background: lighten( $color__background-button, 5% );
@@ -24,8 +24,8 @@
 			&:active,
 			&:focus {
 				border-color: $color__border-button-focus;
-				color: $color__link-hover;
 				border: none;
+				color: $color__link-hover;
 			}
 		}
 	}
@@ -77,10 +77,10 @@
 	margin-bottom: 0;
 
 	#cancel-comment-reply-link {
-		font-family: $font__main;
-		font-weight: 400;
-		@include font-size(0.688);
 		float: right;
+		font-family: $font__main;
+		@include font-size(0.688);
+		font-weight: 400;
 		margin-top: 4.545em;
 	}
 }
@@ -118,11 +118,10 @@
 .comment-author {
 	.fn {
 		display: inline-block;
-		font-weight: 700;
-		text-transform: none;
-		letter-spacing: 0;
-
 		@include font-size(1);
+		font-weight: 700;
+		letter-spacing: 0;
+		text-transform: none;
 
 		a,
 		a:visited {
@@ -130,9 +129,9 @@
 	}
 
 	.avatar {
+		border-radius: 100%;
 		float: left;
 		margin-right: 1.231em;
-		border-radius: 100%;
 	}
 }
 
@@ -145,16 +144,16 @@
 .comment-metadata {
 	color: $color__text-input;
 	@include font-size(0.750);
-	text-transform: lowercase;
 	margin-bottom: 0.769em;
+	text-transform: lowercase;
 
 	a,
 	a:visited {
+		border-bottom: none;
 		color: $color__text-input;
 		display: inline-block;
 		font-weight: 400;
 		text-decoration: none;
-		border-bottom: none;
 
 		&:hover,
 		&:focus {
@@ -186,8 +185,8 @@
 }
 
 .no-comments {
-	font-style: italic;
 	display: block;
+	font-style: italic;
 	text-align: center;
 	width: 100%;
 }

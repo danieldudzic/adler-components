@@ -12,18 +12,18 @@
 /* Click-to-load */
 #infinite-handle {
 	clear: both;
+	line-height: 1;
 	margin: 0 7.6923%;
 	padding: 6.154em 0 3.077em;
 	text-align: center;
-	line-height: 1;
 	text-transform: uppercase;
 	transition: 0.3s;
 
 	span {
-		text-transform: uppercase;
 		background: $color__background-button;
 		color: $color__light;
 		padding: 0.692em 1em;
+		text-transform: uppercase;
 
 
 		&:hover, &:focus {
@@ -37,11 +37,11 @@
 /* Spinner */
 .infinite-loader {
 	clear: both;
-	padding: 6.154em 0 3.077em;
 	margin: 0 7.6923%;
+	padding: 6.154em 0 3.077em;
 	.spinner {
-		top: 50% !important;
 		left: 50% !important;
+		top: 50% !important;
 	}
 }
 
@@ -56,9 +56,9 @@
 	}
 
 	.blog-info a {
-		font-weight: 700;
-		@include font-size(.875);
 		font-family: $font__main;
+		@include font-size(.875);
+		font-weight: 700;
 
 		&:hover,
 		&:active {
@@ -140,6 +140,6 @@
 }
 
 .hfeed:not(.search-results):not(.archive) .infinite-wrap .hentry.has-post-thumbnail:first-of-type {
-	padding: 6.154em 0 0 0;
 	overflow: visible;
+	padding: 6.154em 0 0 0;
 }

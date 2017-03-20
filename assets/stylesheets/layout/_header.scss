@@ -7,23 +7,23 @@ body:not(.has-hero-thumbnail) .site-header {
 }
 
 .site-branding {
+	font-family: $font__code;
+	left: 0;
 	margin-bottom: 0px;
 	margin: 2.308em 9em 0 3.077em;
 	position: absolute;
 	z-index: 50;
-	left: 0;
-	font-family: $font__code;
 
 	.site-title {
-		font-weight: 700;
+		font-family: $font__main;
 		@include font-size(.875);
+		font-weight: 700;
 		line-height: 1;
 		margin: 0;
-		font-family: $font__main;
 
 		a {
-			color: $color__light;
 			border-bottom: 0;
+			color: $color__light;
 			text-decoration: none;
 
 			&:active, &:focus, &:hover {
@@ -33,29 +33,29 @@ body:not(.has-hero-thumbnail) .site-header {
 	}
 
 	.site-description {
-		font-weight: 400;
-		@include font-size(0.75);
-		margin-top: 1em;
 		color: $color__light;
-		margin: .556em 0 0;
+		@include font-size(0.75);
+		font-weight: 400;
 		letter-spacing: 1px;
+		margin-top: 1em;
+		margin: .556em 0 0;
 	}
 
 	a img {
-		position: absolute;
-		max-width: 23.077em;
 		max-height: 7.692em;
+		max-width: 23.077em;
 		overflow: hidden;
+		position: absolute;
 	}
 }
 
 .custom-logo-link {
+	border: none;
+	left: 0;
 	margin-bottom: 0px;
 	margin: 2.308em 9em 0 3.077em;
 	position: absolute;
 	z-index: 50;
-	left: 0;
-	border: none;
 }
 
 .has-hero-thumbnail {
@@ -67,9 +67,9 @@ body:not(.has-hero-thumbnail) .site-header {
 
 body:not(.has-hero-thumbnail), .search-results, .archive {
 	.site-branding {
+		overflow: hidden;
 		position: relative;
 		text-shadow: none;
-		overflow: hidden;
 
 		.site-title a {
 		    color: $color__title;

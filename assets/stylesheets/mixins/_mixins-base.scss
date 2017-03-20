@@ -18,13 +18,6 @@
 	table-layout: fixed;
 }
 
-@mixin transition($transition...) {
-    -moz-transition:    $transition;
-    -o-transition:      $transition;
-    -webkit-transition: $transition;
-    transition:         $transition;
-}
-
 // Clear after (not all clearfix need this also)
 @mixin clearfix-after() {
 	clear: both;
