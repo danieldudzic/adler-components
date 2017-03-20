@@ -150,7 +150,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 dfn {
@@ -295,7 +295,7 @@ textarea {
 }
 
 optgroup {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 table {
@@ -329,7 +329,7 @@ th {
   display: block;
   font-size: 14px;
   font-size: 0.875rem;
-  font-weight: bold;
+  font-weight: 700;
   height: auto;
   left: 5px;
   line-height: normal;
@@ -414,7 +414,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   color: #0e364f;
-  font-weight: bold;
+  font-weight: 700;
   font-family: "Droid Serif", serif;
 }
 
@@ -712,7 +712,7 @@ li > ol {
 }
 
 dt {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 dd {
@@ -895,12 +895,28 @@ td {
 .post-navigation {
   padding-left: 7.6923%;
   padding-right: 7.6923%;
+  font-weight: 700;
+  font-family: "Droid Serif", serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.comment-navigation .title,
+.posts-navigation .title,
+.post-navigation .title {
+  font-size: 13.536px;
+  font-size: 0.846rem;
+  clear: both;
+  color: #7c868b;
+  display: block;
+  font-style: normal;
+  text-transform: uppercase;
 }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
-  margin: 1.538em 0 1.538em;
+  margin: 1.538em 0 3.077em;
   overflow: hidden;
 }
 
@@ -923,6 +939,12 @@ td {
 .posts-navigation .nav-links,
 .post-navigation .nav-links {
   line-height: 2;
+}
+
+.comment-navigation .nav-links a,
+.posts-navigation .nav-links a,
+.post-navigation .nav-links a {
+  color: #0e364f;
 }
 
 /*--------------------------------------------------------------
@@ -1013,10 +1035,6 @@ body {
 .single .byline,
 .group-blog .byline {
   display: inline;
-}
-
-.single-post .post-navigation {
-  display: none;
 }
 
 .single .hentry {
@@ -1383,7 +1401,7 @@ body:not(.has-hero-thumbnail) .site-header {
 }
 
 .site-branding .site-title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1;
@@ -1402,7 +1420,7 @@ body:not(.has-hero-thumbnail) .site-header {
 }
 
 .site-branding .site-description {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 12px;
   font-size: 0.75rem;
   margin-top: 1em;
@@ -1563,13 +1581,7 @@ body:not(.has-hero-thumbnail) .custom-logo-link, .search-results .custom-logo-li
 .entry-wrapper {
   margin-left: 2.500em;
   margin-right: 2.500em;
-  max-width: 46.154em;
-}
-
-.full-width-widget-area {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 53.846em;
+  max-width: 600px;
 }
 
 /*--------------------------------------------------------------
@@ -1652,7 +1664,7 @@ body:not(.has-hero-thumbnail) .custom-logo-link, .search-results .custom-logo-li
 .comments-title #cancel-comment-reply-link,
 .comment-reply-title #cancel-comment-reply-link {
   font-family: "Droid Sans Mono", serif;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 11.008px;
   font-size: 0.688rem;
   float: right;
@@ -1693,7 +1705,7 @@ body:not(.has-hero-thumbnail) .custom-logo-link, .search-results .custom-logo-li
 
 .comment-author .fn {
   display: inline-block;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: none;
   letter-spacing: 0;
   font-size: 16px;
@@ -1722,7 +1734,7 @@ body:not(.has-hero-thumbnail) .custom-logo-link, .search-results .custom-logo-li
 .comment-metadata a:visited {
   color: #666;
   display: inline-block;
-  font-weight: normal;
+  font-weight: 400;
   text-decoration: none;
   border-bottom: none;
 }
@@ -2066,7 +2078,7 @@ body:not(.has-hero-thumbnail) .custom-logo-link, .search-results .custom-logo-li
 }
 
 #infinite-footer .blog-info a {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   font-size: 0.875rem;
   font-family: "Droid Sans Mono", serif;
@@ -2256,7 +2268,7 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 ## Galleries
 --------------------------------------------------------------*/
 .gallery {
-  margin-bottom: 1.6em;
+  margin-bottom: 1.538em;
 }
 
 .gallery-item {

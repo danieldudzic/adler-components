@@ -22,7 +22,7 @@ while ( have_posts() ) : the_post(); ?>
 				get_template_part( 'components/post/content', 'single' );
 			}
 
-			the_post_navigation();
+			the_post_navigation( array( 'prev_text' => '<span class="title">' . esc_html__( 'Previous post', 'adler' ) . '</span>%title', 'next_text' => '<span class="title">' . esc_html__( 'Next post', 'adler' ) . '</span>%title' ) );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :

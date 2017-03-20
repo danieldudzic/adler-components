@@ -5,8 +5,21 @@
 .post-navigation {
 	padding-left: 7.6923%;
 	padding-right: 7.6923%;
+	font-weight: 700;
+	font-family: $font__code;
+	@include font-size(1.125);
+
+	.title {
+		@include font-size(0.846);
+		clear: both;
+		color: $color__text-caption;
+		display: block;
+		font-style: normal;
+		text-transform: uppercase;
+	}
+
 	.site-main & {
-		margin: 1.538em 0 1.538em;
+		margin: 1.538em 0 3.077em;
 		overflow: hidden;
 	}
 
@@ -23,5 +36,9 @@
 
 	.nav-links {
 		line-height: 2;
+
+		a {
+			color: $color__title;
+		}
 	}
 }

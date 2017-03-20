@@ -16,8 +16,8 @@
 			<?php get_template_part( 'components/footer/footer', 'navigation' ); ?>
 		</footer>
 	</div>
-	<?php wp_footer(); ?>
 </div><!-- .body-wrapper -->
 
+<?php wp_footer(); ?>
 </body>
 </html>
