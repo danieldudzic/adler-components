@@ -13,3 +13,4 @@ assets/stylesheets/.sass-cache/*
 
 # Codekit
 config.codekit
+config.codekit3
