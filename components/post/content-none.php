@@ -33,4 +33,4 @@
 
 		endif; ?>
 	</div>
-</section>
+</section><!-- .no-results -->

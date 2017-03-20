@@ -30,4 +30,4 @@
 			<?php get_template_part( 'components/post/content', 'footer' ); ?>
 		</div><!-- .entry-main -->
 	</div><!-- .entry-wrapper -->
-</article>
+</article><!-- #post-## -->

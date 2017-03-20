@@ -168,8 +168,8 @@
 		}
 
 		&:after {
-			background-color: $color__background-body;
 			background: url(assets/images/leaf.png) center center no-repeat;
+			background-color: $color__background-body;
 			border-radius: 50%;
 			bottom: -30px;
 			content: ' ';

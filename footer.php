@@ -15,7 +15,7 @@
 			<?php get_template_part( 'components/footer/site', 'info' ); ?>
 			<?php get_template_part( 'components/footer/footer', 'navigation' ); ?>
 		</footer>
-	</div>
+	</div><!-- .site -->
 </div><!-- .body-wrapper -->
 
 <?php wp_footer(); ?>

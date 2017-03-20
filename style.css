@@ -1168,8 +1168,8 @@ body:not(.hfeed) .entry-wrapper {
 }
 
 .entry-wrapper .entry-main:after {
-  background-color: #fff;
   background: url(assets/images/leaf.png) center center no-repeat;
+  background-color: #fff;
   border-radius: 50%;
   bottom: -30px;
   content: ' ';
