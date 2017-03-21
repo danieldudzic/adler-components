@@ -34,7 +34,8 @@ input[type="submit"],
 /*--------------------------------------------------------------
 # Search
 --------------------------------------------------------------*/
-.search-form .search-submit {
+.search-form .search-submit,
+.search-form .search-submit:hover {
 	background: url(assets/images/more-bg.png);
 	background-size: cover;
 	border-bottom: none;
