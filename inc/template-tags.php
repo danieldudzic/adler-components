@@ -125,11 +125,3 @@ function adler_category_transient_flusher() {
 }
 add_action( 'edit_category', 'adler_category_transient_flusher' );
 add_action( 'save_post',	 'adler_category_transient_flusher' );
-
-/**
- * Filter the excerpt in order to display a Continue Reading button.
- */
-function adler_excerpt_more( $more ) {
-	return '...<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( 'Continue Reading', 'adler' ) . '</a></div>';
-}
-add_filter( 'excerpt_more', 'adler_excerpt_more', 11 );

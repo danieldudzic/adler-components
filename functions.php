@@ -231,6 +231,42 @@ function adler_fonts_url() {
 }
 
 /**
+ * Filter the excerpt more link in order to display a Continue Reading button.
+ */
+function adler_excerpt_more() {
+	return '...<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( 'Continue Reading', 'adler' ) . '</a></div>';
+
+}
+add_filter( 'excerpt_more', 'adler_excerpt_more', 11 );
+
+/**
+ * Filter the content more link in order to display a Continue Reading button.
+ */
+function adler_content_more() {
+	return '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( 'Continue Reading', 'adler' ) . '</a></div>';
+
+}
+add_filter( 'the_content_more_link', 'adler_content_more', 11 );
+
+/**
+ * Filter the excerpt in order to ensure correct display of the content and the display of the Continue Reading button.
+ */
+function adler_get_the_excerpt( $excerpt ) {
+	global $post;
+
+	if ( strpos( $post->post_content, '<!--more-->' ) ) {
+		$excerpt = get_the_content();
+	}
+
+	if ( has_excerpt() ) {
+		$excerpt .= '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( 'Continue Reading', 'adler' ) . '</a></div>';
+	}
+
+	return $excerpt;
+}
+add_filter( 'get_the_excerpt', 'adler_get_the_excerpt', 11 );
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';

@@ -97,22 +97,29 @@ add_filter( 'jetpack_author_bio_avatar_size', 'adler_author_bio_avatar_size' );
  * Get the Blog Display Content Options value.
  */
 function adler_get_blog_display() {
-	$options      = get_theme_support( 'jetpack-content-options' );
-	$blog_display = ( ! empty( $options[0]['blog-display'] ) ) ? $options[0]['blog-display'] : null;
-	$blog_display = preg_grep( '/^(content|excerpt)$/', (array) $blog_display );
-	sort( $blog_display );
-	$blog_display = implode( ', ', $blog_display );
-	$blog_display = ( 'content, excerpt' === $blog_display ) ? 'mixed' : $blog_display;
 
-	return $blog_display;
+	if ( function_exists( 'jetpack_blog_display_custom_excerpt' ) ) {
+		$options      = get_theme_support( 'jetpack-content-options' );
+		$blog_display = ( ! empty( $options[0]['blog-display'] ) ) ? $options[0]['blog-display'] : null;
+		$blog_display = preg_grep( '/^(content|excerpt)$/', (array) $blog_display );
+		sort( $blog_display );
+		$blog_display = implode( ', ', $blog_display );
+		$blog_display = ( 'content, excerpt' === $blog_display ) ? 'mixed' : $blog_display;
+		$display_option = get_option( 'jetpack_content_blog_display', $blog_display );
+	} else {
+		$display_option = 'excerpt';
+	}
+
+	return $display_option;
 }
 
 /**
  * Display Excerpt instead of Content for the Hero post.
 */
 function adler_hero_content_to_the_excerpt( $content ) {
-	$blog_display = adler_get_blog_display();
-	$display_option = get_option( 'jetpack_content_blog_display', $blog_display );
+	global $post;
+
+	$display_option = adler_get_blog_display();
 
 	if ( 'content' === $display_option ) {
 		global $wp_query;
@@ -121,7 +128,9 @@ function adler_hero_content_to_the_excerpt( $content ) {
 			if ( post_password_required() ) {
 				$content = sprintf( '<p>%s</p>', esc_html__( 'There is no excerpt because this is a protected post.', 'adler' ) );
 			} else {
-				$content = jetpack_blog_display_custom_excerpt( $content );
+				if ( ! strpos( $post->post_content, '<!--more-->' ) ) {
+					$content = jetpack_blog_display_custom_excerpt( $content );
+				}
 			}
 		}
 	}
@@ -132,7 +141,6 @@ function adler_hero_content_to_the_excerpt( $content ) {
 add_filter( 'the_content', 'adler_hero_content_to_the_excerpt', 11 );
 add_filter( 'the_excerpt', 'adler_hero_content_to_the_excerpt', 11 );
 
-
 /**
  * Prevent Hero post from displaying full content in the Customizer.
 */
@@ -141,16 +149,18 @@ function adler_the_excerpt_customizer( $excerpt ) {
 
 	if ( is_home() || is_archive() ) {
 		ob_start();
-		the_content( sprintf(
-			/* translators: %s: Name of current post. */
-			wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
-		) );
+		the_content();
 		$content = ob_get_clean();
 	}
 
 	if ( 0 === $wp_query->current_post && has_post_thumbnail() ) {
 		$content = $excerpt;
+		if ( has_excerpt() ) {
+			$excerpt .= '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( 'Continue Reading', 'adler' ) . '</a></div>';
+
+			$content .= '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( 'Continue Reading', 'adler' ) . '</a></div>';
+
+		}
 	}
 
 	if ( empty( $content ) ) {
@@ -164,11 +174,13 @@ function adler_the_excerpt_customizer( $excerpt ) {
  * Load the adler_the_excerpt_customizer in the Customizer.
 */
 function adler_custom_content_display() {
-	$blog_display = adler_get_blog_display();
+	if ( function_exists( 'jetpack_blog_display_custom_excerpt' ) ) {
+		$display_option = adler_get_blog_display();
 
-	if ( 'excerpt' === $blog_display ) {
-		remove_filter( 'the_excerpt', 'jetpack_the_excerpt_customizer' );
-		add_filter( 'the_excerpt', 'adler_the_excerpt_customizer' );
+		if ( 'excerpt' === $display_option ) {
+			remove_filter( 'the_excerpt', 'jetpack_the_excerpt_customizer' );
+			add_filter( 'the_excerpt', 'adler_the_excerpt_customizer' );
+		}
 	}
 }
 
