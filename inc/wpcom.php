@@ -21,12 +21,12 @@ function adler_wpcom_setup() {
 			'bg'	 => 'ffffff',
 			'border' => '68f3c8',
 			'text'	 => '45525a',
-			'link'	 => '45525a',
+			'link'	 => '0e364f',
 			'url'	 => '45525a',
 		);
 	}
 
 	/* Add WP.com print styles */
-	add_theme_support( 'print-styles' );
+	add_theme_support( 'print-style' );
 }
 add_action( 'after_setup_theme', 'adler_wpcom_setup' );
