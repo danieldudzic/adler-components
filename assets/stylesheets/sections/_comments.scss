@@ -80,9 +80,11 @@
 	#cancel-comment-reply-link {
 		float: right;
 		font-family: $font__main;
-		@include font-size(0.688);
 		font-weight: 400;
-		margin-top: 4.545em;
+		@include font-size(0.688);
+		margin-bottom: 1em;
+		margin-left: 1em;
+		margin-top: 1em;
 	}
 }
 

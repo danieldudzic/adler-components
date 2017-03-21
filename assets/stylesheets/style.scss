@@ -42,6 +42,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## No Content
 	## Search Results
 	## Containers
+	## Sliding panel
+	## Hero
 # Comments
 # Widgets
 # Infinite scroll
@@ -50,7 +52,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Genericons
 # Keyframes
 # Transitions
-# Adler
 # Media Queries
 --------------------------------------------------------------*/
 @import "variables/variables-base";
@@ -121,6 +122,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "layout/layout";
 
+@import "components";
+
 /*--------------------------------------------------------------
 # Comments
 --------------------------------------------------------------*/
@@ -155,11 +158,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Transitions
 --------------------------------------------------------------*/
 @import "shared/transitions";
-
-/*--------------------------------------------------------------
-# Adler
---------------------------------------------------------------*/
-@import "components";
 
 /*--------------------------------------------------------------
 # Media Queries
