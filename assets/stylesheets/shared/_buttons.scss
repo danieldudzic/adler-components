@@ -16,6 +16,7 @@ input[type="submit"],
 	text-shadow: none;
 	text-transform: uppercase;
 	transition: 0.3s;
+	outline: 1px solid transparent;
 
 	&:hover {
 		background: lighten( $color__background-button, 5% );
@@ -28,6 +29,7 @@ input[type="submit"],
 		border-color: $color__border-button-focus;
 		box-shadow: none;
 		color: $color__link-hover;
+		outline: 1px dotted $color__text-input-focus;
 	}
 }
 
