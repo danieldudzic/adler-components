@@ -234,7 +234,14 @@ function adler_fonts_url() {
  * Filter the excerpt more link in order to display a Continue Reading button.
  */
 function adler_excerpt_more() {
-	return '...<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( 'Continue Reading', 'adler' ) . '</a></div>';
+
+	$read_more = sprintf(
+		/* translators: %s: Name of current post. */
+		wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
+		the_title( '<span class="screen-reader-text">"', '"</span>', false )
+	);
+
+	return '...<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $read_more . '</a></div>';
 
 }
 add_filter( 'excerpt_more', 'adler_excerpt_more', 11 );
@@ -243,7 +250,14 @@ add_filter( 'excerpt_more', 'adler_excerpt_more', 11 );
  * Filter the content more link in order to display a Continue Reading button.
  */
 function adler_content_more() {
-	return '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( 'Continue Reading', 'adler' ) . '</a></div>';
+
+	$read_more = sprintf(
+		/* translators: %s: Name of current post. */
+		wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
+		the_title( '<span class="screen-reader-text">"', '"</span>', false )
+	);
+
+	return '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $read_more . '</a></div>';
 
 }
 add_filter( 'the_content_more_link', 'adler_content_more', 11 );
@@ -259,7 +273,14 @@ function adler_get_the_excerpt( $excerpt ) {
 	}
 
 	if ( has_excerpt() ) {
-		$excerpt .= '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( 'Continue Reading', 'adler' ) . '</a></div>';
+
+		$read_more = sprintf(
+			/* translators: %s: Name of current post. */
+			wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
+			the_title( '<span class="screen-reader-text">"', '"</span>', false )
+		);
+
+		$excerpt .= '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $read_more . '</a></div>';
 	}
 
 	return $excerpt;

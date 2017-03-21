@@ -155,11 +155,16 @@ function adler_the_excerpt_customizer( $excerpt ) {
 
 	if ( 0 === $wp_query->current_post && has_post_thumbnail() ) {
 		$content = $excerpt;
+
+		$read_more = sprintf(
+			/* translators: %s: Name of current post. */
+			wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
+			the_title( '<span class="screen-reader-text">"', '"</span>', false )
+		);
+
 		if ( has_excerpt() ) {
-			$excerpt .= '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( 'Continue Reading', 'adler' ) . '</a></div>';
-
-			$content .= '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( 'Continue Reading', 'adler' ) . '</a></div>';
-
+			$excerpt .= '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $read_more . '</a></div>';
+			$content .= '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $read_more . '</a></div>';
 		}
 	}
 
