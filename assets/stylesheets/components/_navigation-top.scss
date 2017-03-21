@@ -73,7 +73,7 @@
 		border-bottom: none;
 		color: $color__text-button;
 		display: block;
-		padding: 1.154em 1.846em;
+		padding: 0.929em 1.846em;
 
 		&:active,
 		&:focus,
@@ -105,11 +105,8 @@
 
 /* Small menu. */
 .menu-toggle,
+.main-navigation ul,
 .main-navigation.toggle-on ul {
-	display: block;
-}
-
-.main-navigation ul {
 	display: block;
 }
 

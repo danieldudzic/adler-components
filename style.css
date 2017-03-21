@@ -787,7 +787,7 @@ td {
   border-bottom: none;
   color: #f7f7f7;
   display: block;
-  padding: 1.154em 1.846em;
+  padding: 0.929em 1.846em;
 }
 
 .main-navigation a:active, .main-navigation a:focus, .main-navigation a:hover {
@@ -815,11 +815,8 @@ td {
 
 /* Small menu. */
 .menu-toggle,
+.main-navigation ul,
 .main-navigation.toggle-on ul {
-  display: block;
-}
-
-.main-navigation ul {
   display: block;
 }
 
@@ -1460,8 +1457,8 @@ body:not(.has-hero-thumbnail) .custom-logo-link, .search-results .custom-logo-li
 ## Footer
 --------------------------------------------------------------*/
 .site-footer {
-  line-height: 1.6;
-  margin: 30px 40px;
+  line-height: 1.538;
+  margin: 30px 40px 0;
 }
 
 .site-info {
@@ -2158,7 +2155,7 @@ figure img {
 }
 
 .wp-caption {
-  margin-bottom: 1.6em;
+  margin-bottom: 1.538em;
   max-width: 100%;
   /* Give some margin to floated elements, to prevent them butting up against text. */
 }
@@ -2191,7 +2188,7 @@ figure img {
 
 .wp-caption.aligncenter, .wp-caption.alignnone, .wp-caption.alignleft, .wp-caption.alignright {
   display: block;
-  margin-bottom: 1.2em;
+  margin-bottom: 1.154em;
   margin: 0;
 }
 
@@ -2285,9 +2282,6 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 /*--------------------------------------------------------------
 # Genericons
 --------------------------------------------------------------*/
-/**
- * Genericons
- */
 .cat-links svg,
 .posted-on svg,
 .byline svg,
@@ -2297,9 +2291,9 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 .menu-toggle svg,
 .showsub-toggle svg {
   font-size: 16px;
+  height: 16px;
   height: auto;
   vertical-align: middle;
-  width: 16px;
   width: 16px;
 }
 
@@ -2389,9 +2383,6 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 /*--------------------------------------------------------------
 # Keyframes
 --------------------------------------------------------------*/
-/**
- * Keyframes
- */
 @-webkit-keyframes opacityDown {
   from {
     opacity: 1;
