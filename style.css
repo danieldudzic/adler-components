@@ -675,10 +675,6 @@ ul, ol {
   margin: 0 0 .769em 1.538em;
 }
 
-ul li, ol li {
-  line-height: 2.308;
-}
-
 ul {
   padding-left: 1.538em;
 }
@@ -787,7 +783,7 @@ td {
   border-bottom: none;
   color: #f7f7f7;
   display: block;
-  padding: 0.929em 1.846em;
+  padding: 1.154em 1.846em;
 }
 
 .main-navigation a:active, .main-navigation a:focus, .main-navigation a:hover {
