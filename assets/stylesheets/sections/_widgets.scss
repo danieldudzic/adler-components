@@ -21,6 +21,7 @@
 
 		.widget-title {
 			color: $color__light;
+			@include font-size(1.250);
 		}
 
 		table, caption {

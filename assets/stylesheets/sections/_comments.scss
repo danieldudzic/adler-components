@@ -74,6 +74,7 @@
 
 .comments-title,
 .comment-reply-title {
+	@include font-size(1.250);
 	margin-bottom: 0;
 
 	#cancel-comment-reply-link {

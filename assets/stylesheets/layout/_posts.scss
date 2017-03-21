@@ -99,12 +99,6 @@
 		margin-top: 3.077em;
 	}
 
-	h1, h2 {
-		&, a {
-			text-align: center;
-		}
-	}
-
 	p {
 		margin-bottom: 3.077em;
 		margin-top: 0;
@@ -120,6 +114,7 @@
 			overflow: visible;
 			padding-bottom: 0;
 			position: relative;
+			text-align: center;
 
 			.header-content & {
 				position: relative;
@@ -219,7 +214,7 @@
 		}
 
 		.entry-meta {
-			.post-meta-categories, .posted-on, .byline {
+			.cat-links, .posted-on, .byline {
 				display: block;
 				line-height: 2;
 				margin-bottom: 0.231em;
@@ -255,6 +250,7 @@
 
 	.author-title {
 		clear: none;
+		@include font-size(1.250);
 		margin: 0;
 		text-align: left;
 	}

@@ -424,8 +424,8 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 36px;
+  font-size: 2.25rem;
 }
 
 h3 {
@@ -1076,10 +1076,6 @@ body:not(.hfeed) .entry-wrapper {
   margin-top: 3.077em;
 }
 
-.entry-wrapper h1, .entry-wrapper h1 a, .entry-wrapper h2, .entry-wrapper h2 a {
-  text-align: center;
-}
-
 .entry-wrapper p {
   margin-bottom: 3.077em;
   margin-top: 0;
@@ -1095,6 +1091,7 @@ body:not(.hfeed) .entry-wrapper {
   overflow: visible;
   padding-bottom: 0;
   position: relative;
+  text-align: center;
 }
 
 .header-content .entry-wrapper .entry-header .entry-title {
@@ -1200,7 +1197,7 @@ body:not(.hfeed) .entry-wrapper {
   width: auto;
 }
 
-.entry-wrapper .entry-footer .entry-meta .post-meta-categories, .entry-wrapper .entry-footer .entry-meta .posted-on, .entry-wrapper .entry-footer .entry-meta .byline {
+.entry-wrapper .entry-footer .entry-meta .cat-links, .entry-wrapper .entry-footer .entry-meta .posted-on, .entry-wrapper .entry-footer .entry-meta .byline {
   display: block;
   line-height: 2;
   margin-bottom: 0.231em;
@@ -1234,6 +1231,8 @@ body:not(.hfeed) .entry-wrapper {
 
 .entry-wrapper .author-title {
   clear: none;
+  font-size: 20px;
+  font-size: 1.25rem;
   margin: 0;
   text-align: left;
 }
@@ -1632,6 +1631,8 @@ body:not(.has-hero-thumbnail) .custom-logo-link, .search-results .custom-logo-li
 
 .comments-title,
 .comment-reply-title {
+  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 0;
 }
 
@@ -1805,6 +1806,8 @@ body:not(.has-hero-thumbnail) .custom-logo-link, .search-results .custom-logo-li
 
 .slide-panel .widget .widget-title {
   color: #fff;
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .slide-panel .widget table, .slide-panel .widget caption {
@@ -2154,6 +2157,7 @@ figure img {
 .wp-caption {
   margin-bottom: 1.538em;
   max-width: 100%;
+  text-align: center;
   /* Give some margin to floated elements, to prevent them butting up against text. */
 }
 
@@ -2337,7 +2341,7 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
   margin-top: -2px;
 }
 
-.hero-wrapper .post-meta-categories svg {
+.hero-wrapper .cat-links svg {
   display: none;
 }
 
@@ -2833,11 +2837,11 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
     margin-right: 1em;
     margin-left: 1em;
   }
-  .entry-wrapper .entry-footer .entry-meta .post-meta-categories {
+  .entry-wrapper .entry-footer .entry-meta .cat-links {
     display: inline-block;
     text-align: left;
   }
-  .entry-wrapper .entry-footer .entry-meta .post-meta-categories a {
+  .entry-wrapper .entry-footer .entry-meta .cat-links a {
     text-decoration: none;
     color: #45525a;
   }
@@ -2888,7 +2892,7 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   .scroll-indicator-wrapper {
     margin-bottom: 2.9412%;
   }
-  .post .entry-wrapper .post-meta-categories {
+  .post .entry-wrapper .cat-links {
     display: block;
   }
   .single .entry-wrapper .entry-header, body.page .entry-wrapper .entry-header {
