@@ -26,12 +26,20 @@
 	.nav-previous {
 		float: left;
 		width: 50%;
+
+		&:only-child {
+			width: 100%;
+		}
 	}
 
 	.nav-next {
 		float: right;
 		text-align: right;
 		width: 50%;
+
+		&:only-child {
+			width: 100%;
+		}
 	}
 
 	.nav-links {
