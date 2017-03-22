@@ -339,7 +339,7 @@ body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thu
     text-align: right;
   }
 
-  .entry-wrapper .entry-footer .entry-meta .post-meta-categories {
+  .entry-wrapper .entry-footer .entry-meta .cat-links {
     text-align: right;
   }
 

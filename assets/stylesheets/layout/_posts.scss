@@ -6,11 +6,6 @@
 	}
 }
 
-.byline,
-.updated:not(.published) {
-	display: none;
-}
-
 .intro {
 	color: $color__title;
 	@include font-size(1);
@@ -21,6 +16,11 @@
 .single .byline,
 .group-blog .byline {
 	display: inline;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
 }
 
 .single {
@@ -38,10 +38,6 @@
 		.entry-wrapper {
 			.entry-footer {
 				margin-bottom: 3.846em;
-
-				.tags-links {
-					float: right;
-				}
 			}
 		}
 	}

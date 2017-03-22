@@ -1,9 +1,9 @@
-body:not(.has-hero-thumbnail) .site-header {
-	margin-bottom: 2em;
-}
-
 .site-header {
 	display: block;
+	
+	body:not(.has-hero-thumbnail) & {
+		margin-bottom: 2em;
+	}
 }
 
 .site-branding {
@@ -63,7 +63,6 @@ body:not(.has-hero-thumbnail) .site-header {
 		text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.20) ;
 	}
 }
-
 
 body:not(.has-hero-thumbnail),
 .search-results, .archive {

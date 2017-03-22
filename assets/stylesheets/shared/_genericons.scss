@@ -54,33 +54,40 @@
 	display: none;
 }
 
-.menu-toggle svg {
-	display: block;
-	margin: 0 auto;
-	path {
-		height: 54px;
-		width: 54px;
+.menu-toggle {
+	svg {
+		display: block;
+		margin: 0 auto;
+		path {
+			height: 58px;
+			width: 58px;
+		}
+	}
+
+	.menu-toggle-icon-close svg {
+		display: none;
+	}
+
+
+	&.toggle-on {
+		.menu-toggle-icon svg {
+			display: none;
+		}
+
+		.menu-toggle-icon-close svg {
+			display: block;
+		}
 	}
 }
 
-.menu-toggle.toggle-on .menu-toggle-icon svg {
-	display: none;
-}
+.showsub-toggle {
+	svg  {
+		transform-origin: 50% 50%;
+		transform: rotate(0deg);
+		transition: all 0 ease-in-out;
+	}
 
-.menu-toggle.toggle-on .menu-toggle-icon-close svg {
-	display: block;
-}
-
-.menu-toggle .menu-toggle-icon-close svg {
-	display: none;
-}
-
-.showsub-toggle.sub-on svg  {
-	transform: rotate(180deg);
-}
-
-.showsub-toggle svg  {
-	transform-origin: 50% 50%;
-	transform: rotate(0deg);
-	transition: all 0 ease-in-out;
+	&.sub-on svg  {
+		transform: rotate(180deg);
+	}
 }

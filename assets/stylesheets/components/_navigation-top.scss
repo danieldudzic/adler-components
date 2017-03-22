@@ -139,13 +139,13 @@
 	background: $color__background-sliding-panel;
 	border: 0;
 	color: $color__contrast;
-	height: 3.625em;
+	height: 3.563em;
 	outline: 1px solid lighten( $color__background-sliding-panel, 5% );
 	padding: 0;
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 3.625em;
+	width: 3.563em;
 	z-index: 1;
 
 	&:active,

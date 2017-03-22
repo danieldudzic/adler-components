@@ -3,6 +3,7 @@
  */
 
 @media screen and ( min-width: 29.375em ) {
+
 	.hero-wrapper {
 		.hero-content {
 			.entry-title {
@@ -23,6 +24,7 @@
  */
 
 @media screen and ( min-width: 37.5625em ) {
+
 	.hero-wrapper {
 		.hero-content {
 			.entry-content {
@@ -40,7 +42,6 @@
 
  @media screen and ( min-width: 43.75em ) {
 
-	.hero-content,
 	.search-no-results .site-content .content-area,
 	.site-main .comment-navigation,
 	.site-main .posts-navigation,
@@ -89,9 +90,18 @@
  */
 
 @media screen and ( min-width: 51.755em ) {
+
 	.hentry {
 		padding-left: 0;
 		padding-right: 0;
+	}
+
+	.content-area {
+		.site-main {
+			.page-title {
+				@include font-size(2.85);
+			}
+		}
 	}
 
 	.entry-wrapper {
@@ -150,14 +160,6 @@
 				a {
 					border-bottom: none;
 				}
-			}
-		}
-	}
-
-	.content-area {
-		.site-main {
-			.page-title {
-				@include font-size(2.85);
 			}
 		}
 	}
@@ -312,6 +314,7 @@
  */
 
 @media screen and ( min-width: 68em ) {
+
 	.entry-wrapper {
 		.entry-header {
 			.entry-title {
@@ -382,6 +385,7 @@
  */
 
 @media screen and (min-width: 76em) {
+
 	.entry-wrapper {
 		blockquote {
 			margin-left: -5.250em;

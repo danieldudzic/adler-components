@@ -69,12 +69,14 @@
 	}
 }
 
-.infinity-success .hentry:last-of-type .entry-main:after {
-	display: block;
-}
+.infinity-success {
+	.hentry:last-of-type .entry-main:after {
+		display: block;
+	}
 
-.infinity-success .infinite-wrap.last .hentry:last-of-type .entry-main:after {
-	display: none;
+	.infinite-wrap.last .hentry:last-of-type .entry-main:after {
+		display: none;
+	}
 }
 
 .hfeed:not(.custom-background) {

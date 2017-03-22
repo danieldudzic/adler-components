@@ -1,5 +1,6 @@
 %li-style {
 	border-bottom: none;
+
 	&:hover {
 		color: $color__accent;
 	}
@@ -204,25 +205,5 @@
 		p {
 			margin-bottom: 0;
 		}
-	}
-}
-
-.footer-widgets-wrapper,
-.full-width-widget-area {
-	display: flex;
-	flex-wrap: wrap;
-	float: none;
-	justify-content: space-between;
-	width: 100%;
-
-	.widget-area {
-		margin: 0 0 1.625em;
-		width: 100%;
-	}
-
-	.widget-gallery,
-	.widget_text,
-	.widget_wpcom_instagram_widget {
-		flex-basis: 100%;
 	}
 }
