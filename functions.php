@@ -234,7 +234,6 @@ function adler_fonts_url() {
  * Filter the excerpt more link in order to display a Continue Reading button.
  */
 function adler_excerpt_more() {
-
 	$read_more = sprintf(
 		/* translators: %s: Name of current post. */
 		wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
@@ -250,7 +249,6 @@ add_filter( 'excerpt_more', 'adler_excerpt_more', 11 );
  * Filter the content more link in order to display a Continue Reading button.
  */
 function adler_content_more() {
-
 	$read_more = sprintf(
 		/* translators: %s: Name of current post. */
 		wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
@@ -273,7 +271,6 @@ function adler_get_the_excerpt( $excerpt ) {
 	}
 
 	if ( has_excerpt() ) {
-
 		$read_more = sprintf(
 			/* translators: %s: Name of current post. */
 			wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
