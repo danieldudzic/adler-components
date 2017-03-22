@@ -861,8 +861,6 @@ td {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 700;
-  padding-left: 7.6923%;
-  padding-right: 7.6923%;
 }
 
 .comment-navigation .title,
@@ -2891,7 +2889,6 @@ a {
     margin-left: 1em;
   }
   .entry-wrapper .entry-footer .entry-meta .cat-links {
-    display: inline-block;
     text-align: left;
   }
   .entry-wrapper .entry-footer .entry-meta .cat-links a {
