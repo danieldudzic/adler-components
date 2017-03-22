@@ -2159,9 +2159,9 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
 }
 
 .slide-panel .widget .search-form .search-submit:hover {
+  background: url(assets/images/more-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background: url(assets/images/more-bg.png);
   border-color: none;
 }
 
