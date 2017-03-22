@@ -1556,7 +1556,8 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 #comments,
 .content-area .site-main .page-header,
 .page-content,
-.entry-wrapper {
+.entry-wrapper,
+.error-404-widgets {
   margin-left: 30px;
   margin-right: 30px;
   max-width: 600px;
@@ -2095,18 +2096,18 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   /* Make sure select elements fit in widgets. */
 }
 
+.widget .widget-title,
+.widget .widgettitle {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
 .widget select {
   max-width: 100%;
 }
 
 .slide-panel .widget {
   color: #f7f7f7;
-}
-
-.slide-panel .widget .widget-title {
-  color: #fff;
-  font-size: 20px;
-  font-size: 1.25rem;
 }
 
 .slide-panel .widget table,
@@ -2812,7 +2813,8 @@ a {
   #comments,
   .content-area .site-main .page-header,
   .page-content,
-  .entry-wrapper {
+  .entry-wrapper,
+  .error-404-widgets {
     margin-left: auto;
     margin-right: auto;
   }

@@ -18,31 +18,35 @@ get_header(); ?>
 				</header>
 				<div class="page-content">
 					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'adler' ); ?></p>
+					<?php get_search_form(); ?>
+				</div>
+			</section>
+		</main>
 
-					<?php
-					get_search_form();
-					the_widget( 'WP_Widget_Recent_Posts' );
+		<aside id="error-404-widgets" class="error-404-widgets widget-area" role="complementary">
 
-					// Only show the widget if site has multiple categories.
-					if ( adler_categorized_blog() ) :
+					<?php the_widget( 'WP_Widget_Recent_Posts' );
+						// Only show the widget if site has multiple categories.
+						if ( adler_categorized_blog() ) :
 					?>
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'adler' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div>
+							<div class="widget widget_categories">
+								<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'adler' ); ?></h2>
+								<ul>
+								<?php
+									wp_list_categories( array(
+										'orderby'    => 'count',
+										'order'      => 'DESC',
+										'show_count' => 1,
+										'title_li'   => '',
+										'number'     => 10,
+									) );
+								?>
+								</ul>
+							</div>
+
 					<?php
-					endif;
+						endif;
 
 						/* translators: %1$s: smiley */
 						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'adler' ), convert_smilies( ':)' ) ) . '</p>';
@@ -50,10 +54,7 @@ get_header(); ?>
 
 						the_widget( 'WP_Widget_Tag_Cloud' );
 					?>
-
-				</div>
-			</section>
-		</main>
-	</div>
+		</aside>
+	</div><!-- #primary -->
 <?php
 get_footer();

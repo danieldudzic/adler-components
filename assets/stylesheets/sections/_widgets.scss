@@ -9,6 +9,11 @@
 	margin: 0;
 	padding: 1em 1.846em 0.385em;
 
+	.widget-title,
+	.widgettitle  {
+		@include font-size(1.250);
+	}
+
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
@@ -18,11 +23,6 @@
 .slide-panel {
 	.widget {
 		color: $color__contrast;
-
-		.widget-title {
-			color: $color__light;
-			@include font-size(1.250);
-		}
 
 		table,
 		caption {
