@@ -65,8 +65,8 @@ figure {
 	&.alignleft,
 	&.alignright {
 		display: block;
-		margin-bottom: 1.154em;
 		margin: 0;
+		margin-bottom: 1.154em;
 
 		.archive__grid & {
 			margin-bottom: 0;
@@ -93,8 +93,8 @@ figure {
 
 	&.alignleft,
 	.alignright {
-		margin-top: 2em;
 		margin: 0 auto;
+		margin-top: 2em;
 
 		p + & {
 			margin-top: 0;

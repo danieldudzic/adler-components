@@ -2498,8 +2498,8 @@ figure img {
 
 .wp-caption.aligncenter, .wp-caption.alignnone, .wp-caption.alignleft, .wp-caption.alignright {
   display: block;
-  margin-bottom: 1.154em;
   margin: 0;
+  margin-bottom: 1.154em;
 }
 
 .archive__grid .wp-caption.aligncenter, .archive__grid .wp-caption.alignnone, .archive__grid .wp-caption.alignleft, .archive__grid .wp-caption.alignright {
@@ -2534,8 +2534,8 @@ figure img {
 
 .wp-caption.alignleft,
 .wp-caption .alignright {
-  margin-top: 2em;
   margin: 0 auto;
+  margin-top: 2em;
 }
 
 p + .wp-caption.alignleft, p +
