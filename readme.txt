@@ -6,6 +6,8 @@ Tested up to: 4.7.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+Adler is based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc.
+
 == Description ==
 
 Adler is a personal blogging theme for sharing your own thoughts and writing about your latest findings!

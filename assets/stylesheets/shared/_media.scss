@@ -39,7 +39,8 @@ figure {
 		@include center-block;
 	}
 
-	.wp-caption-text, .gallery-caption {
+	.wp-caption-text,
+	.gallery-caption {
 		color: $color__text-caption;
 		display: inline-block;
 		margin: 1em 0;
@@ -69,12 +70,16 @@ figure {
 			margin-bottom: 0;
 		}
 
-		.widget &, .blog &, .archive &, .search &{
+		.widget &,
+		.blog &,
+		.archive &,
+		.search &{
 			margin: 0;
 		}
 	}
 
-	&.aligncenter, &.alignnone {
+	&.aligncenter,
+	&.alignnone {
 		display: inline-block;
 		text-align: center;
 
@@ -84,7 +89,8 @@ figure {
 		}
 	}
 
-	&.alignleft, .alignright {
+	&.alignleft,
+	.alignright {
 		margin-top: 2em;
 		margin: 0 auto;
 

@@ -35,14 +35,6 @@
 				position: relative;
 			}
 
-			:hover > a,
-			:focus > a {
-			}
-
-			a:hover,
-			a:focus {
-			}
-
 			&.sub-on {
 				border-bottom: 0;
 				border-left: 1px solid lighten( $color__background-sliding-panel, 5% );
@@ -130,7 +122,8 @@
 		outline: 1px solid $color__accent;
 	}
 
-	&:focus, &:active {
+	&:focus,
+	&:active {
 		color: $color__contrast;
 	}
 
@@ -154,7 +147,9 @@
 	width: 3.625em;
 	z-index: 1;
 
-	&:active, &:focus, &:hover {
+	&:active,
+	&:focus,
+	&:hover {
 		background: darken( $color__background-sliding-panel, 5% );
 		outline: 1px solid lighten( $color__background-sliding-panel, 5% );
 	}

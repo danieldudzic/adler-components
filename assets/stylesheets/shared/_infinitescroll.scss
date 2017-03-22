@@ -26,7 +26,8 @@
 		text-transform: uppercase;
 
 
-		&:hover, &:focus {
+		&:hover,
+		&:focus {
 			background: lighten( $color__background-button, 5% );
 			outline: 1px solid transparent;
 		}
@@ -39,6 +40,7 @@
 	clear: both;
 	margin: 0 7.6923%;
 	padding: 6.154em 0 3.077em;
+
 	.spinner {
 		left: 50% !important;
 		top: 50% !important;

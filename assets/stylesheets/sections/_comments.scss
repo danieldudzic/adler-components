@@ -40,11 +40,9 @@
 }
 
 .comment-list {
-	.comment, .pingback {
+	.comment,
+	.pingback {
 		position: relative;
-
-		&.bypostauthor {
-		}
 
 		.comment-reply-title {
 			margin-top: 1em;

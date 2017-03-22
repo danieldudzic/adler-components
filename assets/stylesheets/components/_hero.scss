@@ -78,7 +78,8 @@
 			color: $color__contrast;
 			width: 100%;
 
-			a, span {
+			a,
+			span {
 				border: none;
 				color: $color__contrast;
 			}
@@ -180,7 +181,8 @@
 		transform: rotate(135deg);
 	}
 
-	&:hover:before, &:hover:after {
+	&:hover:before,
+	&:hover:after {
 		opacity: 0.75;
 	}
 

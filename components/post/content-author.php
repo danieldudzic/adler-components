@@ -8,7 +8,7 @@
 			</div>
 
 			<p class="author-bio"><?php the_author_meta( 'description' ); ?>
-				<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php esc_attr_e( get_the_author() ); ?>">
+				<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>">
 					<?php echo sprintf( esc_html( 'View all posts by %s', 'adler' ), get_the_author() ); ?>
 				</a>
 			</p>

@@ -25,9 +25,6 @@
 @media screen and ( min-width: 37.5625em ) {
 	.hero-wrapper {
 		.hero-content {
-			.entry-title {
-			}
-
 			.entry-content {
 				p {
 					@include font-size(0.813);
@@ -136,9 +133,6 @@
 					display: inline-block;
 					padding-left: 5px;
 					padding-right: 5px;
-				}
-
-				.byline {
 				}
 			}
 
@@ -282,7 +276,8 @@
 		position: absolute;
 		padding: 30px 0 2em;
 
-		&.expanded, .single &.expanded {
+		&.expanded,
+		.single &.expanded {
 			height: 100%;
 			transition: 350ms all ease-in-out;
 		}
@@ -380,12 +375,6 @@
 			}
 		}
 	}
-
-	.error404 .content-area .site-main {
-		.page-content {
-			margin-top: 4em;
-		}
-	}
 }
 
 
@@ -401,7 +390,8 @@
 		}
 
 		.wp-caption {
-			&.alignleft, &.alignright {
+			&.alignleft,
+			&.alignright {
 				max-width: 37.692em;
 			}
 
@@ -415,7 +405,8 @@
 				margin-right: -16.154em;
 			}
 
-			&.aligncenter, &.alignnone {
+			&.aligncenter,
+			&.alignnone {
 				margin-left: -16.154em;
 				margin-right: -16.154em;
 				max-width: calc( 16.154em * 2 + 100% );

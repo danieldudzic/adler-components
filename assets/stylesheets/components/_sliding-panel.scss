@@ -42,6 +42,7 @@
 
 		a {
 			@include font-size(2);
+
 			&:hover,
 			&:focus {
 				color: $color__accent;

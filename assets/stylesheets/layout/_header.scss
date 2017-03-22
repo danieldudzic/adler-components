@@ -65,7 +65,8 @@ body:not(.has-hero-thumbnail) .site-header {
 }
 
 
-body:not(.has-hero-thumbnail), .search-results, .archive {
+body:not(.has-hero-thumbnail),
+.search-results, .archive {
 	.site-branding {
 		overflow: hidden;
 		position: relative;
@@ -84,7 +85,8 @@ body:not(.has-hero-thumbnail), .search-results, .archive {
 			color: $color__title;
 		}
 
-		.site-title, .site-description {
+		.site-title,
+		.site-description {
 			float: left;
 		}
 	}

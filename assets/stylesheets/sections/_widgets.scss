@@ -24,11 +24,13 @@
 			@include font-size(1.250);
 		}
 
-		table, caption {
+		table,
+		caption {
 			background: transparent;
 		}
 
-		ul, ol {
+		ul,
+		ol {
 			margin-left: 0;
 			padding-left: 0;
 			list-style: none;
@@ -196,7 +198,8 @@
 	}
 }
 
-.footer-widgets-wrapper, .full-width-widget-area {
+.footer-widgets-wrapper,
+.full-width-widget-area {
 	display: flex;
 	flex-wrap: wrap;
 	float: none;

@@ -1,12 +1,13 @@
 .sticky {
 	display: block;
+
 	.hero-wrapper .hero-content .entry-title {
 		color: $color__contrast;
 	}
 }
 
 .byline,
-.updated:not(.published){
+.updated:not(.published) {
 	display: none;
 }
 
@@ -75,7 +76,8 @@
 			}
 		}
 
-		.entry-content, .entry-summary {
+		.entry-content,
+		.entry-summary {
 			text-align: center;
 		}
 	}
@@ -177,6 +179,7 @@
 
 		.read-more {
 			text-align: center;
+
 			.more-link {
 				background: url(assets/images/more-bg.png);
 				background-size: cover;
@@ -201,12 +204,15 @@
 			width: 100%;
 		}
 
-		.cat-links, .tags-links, .comments-link {
+		.cat-links,
+		.tags-links,
+		.comments-link {
 			margin-bottom: 0.231em;
 		}
 
 		.byline {
 			display: inline-block;
+
 			.author {
 				display: inline-block;
 				width: auto;
@@ -214,7 +220,9 @@
 		}
 
 		.entry-meta {
-			.cat-links, .posted-on, .byline {
+			.cat-links,
+			.posted-on,
+			.byline {
 				display: block;
 				line-height: 2;
 				margin-bottom: 0.231em;
@@ -309,7 +317,8 @@
 	}
 }
 
-.content-area, .full-width-widget-area {
+.content-area,
+.full-width-widget-area {
 	margin-bottom: 6.154em;
 }
 

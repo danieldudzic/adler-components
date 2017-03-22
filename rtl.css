@@ -14,7 +14,6 @@ body {
 	unicode-bidi: embed;
 }
 
-
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
@@ -41,7 +40,8 @@ textarea {
 /*--------------------------------------------------------------
 # Lists
 --------------------------------------------------------------*/
-ul, ol {
+ul,
+ol {
   margin: 0 1.538em .769em 0;
 }
 
@@ -65,11 +65,11 @@ dd {
   margin: 0 1.538em 1.538em;
 }
 
-
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-.main-navigation .page_item_has_children > a, .main-navigation .menu-item-has-children > a {
+.main-navigation .page_item_has_children > a,
+.main-navigation .menu-item-has-children > a {
   padding-left: 5.714em;
   padding-right: 1.857em;
   word-wrap: break-word;
@@ -113,7 +113,6 @@ dd {
   text-align: left;
 }
 
-
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
@@ -121,7 +120,6 @@ dd {
   left: auto;
   right: 0;
 }
-
 
 /*--------------------------------------------------------------
 ## Posts
@@ -148,7 +146,6 @@ dd {
   float: right;
 }
 
-
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
@@ -168,7 +165,6 @@ body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thu
   float: right;
 }
 
-
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
@@ -177,7 +173,6 @@ body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thu
   margin-right: 0;
 }
 
-
 /*--------------------------------------------------------------
 # Comments
 --------------------------------------------------------------*/
@@ -185,13 +180,15 @@ body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thu
   float: right;
 }
 
-.comment-list .comment:before, .comment-list .pingback:before {
+.comment-list .comment:before,
+.comment-list .pingback:before {
   padding-left: 0;
 }
 
 .comments-title #cancel-comment-reply-link,
 .comment-reply-title #cancel-comment-reply-link {
   float: left;
+  margin-right: 1em;
 }
 
 .comment-list .edit-link {
@@ -214,11 +211,11 @@ body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thu
   float: left;
 }
 
-
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.slide-panel .widget ul, .slide-panel .widget ol {
+.slide-panel .widget ul,
+.slide-panel .widget ol {
   margin-right: 0;
   padding-right: 0;
 }
@@ -238,7 +235,6 @@ body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thu
   text-align: right;
 }
 
-
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -246,7 +242,6 @@ body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thu
   left: auto !important;
   right: 50% !important;
 }
-
 
 /*--------------------------------------------------------------
 # Genericons
@@ -280,7 +275,6 @@ body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thu
   margin-left: 5px;
   margin-right: 0;
 }
-
 
 /*--------------------------------------------------------------
 # Sliding panel
@@ -317,7 +311,6 @@ body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thu
   margin-right: 0;
 }
 
-
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
@@ -342,9 +335,7 @@ body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thu
     float: left;
     text-align: left;
   }
-
 }
-
 
 /**
  * >= 925px
@@ -374,9 +365,7 @@ body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thu
     left: auto;
     right: -320px;
   }
-
 }
-
 
 /**
  * >= 1088px
@@ -392,9 +381,7 @@ body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thu
     margin-right: 3em;
     margin-left: -14.453em;
   }
-
 }
-
 
 /**
  * >= 1216px
@@ -410,5 +397,4 @@ body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thu
     margin-right: 3em;
     margin-left: -16.154em;
   }
-
 }

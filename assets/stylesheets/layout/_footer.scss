@@ -31,13 +31,15 @@
 				content: "";
 			}
 
-			&.menu-item-has-children, &.page_item_has_children {
+			&.menu-item-has-children,
+			&.page_item_has_children {
 
 				&:after {
 					display: none;
 				}
 
-				.sub-menu, .children {
+				.sub-menu,
+				.children {
 					display: none;
 				}
 			}
