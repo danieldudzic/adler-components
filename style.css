@@ -1118,7 +1118,7 @@ body:not(.hfeed) .entry-wrapper {
   clear: right;
   display: inline-block;
   float: right;
-  margin-bottom: 0.231em;
+  line-height: 2;
 }
 
 .entry-wrapper .entry-main {
@@ -1185,9 +1185,9 @@ body:not(.hfeed) .entry-wrapper {
   width: 100%;
 }
 
-.entry-wrapper .entry-footer .cat-links,
 .entry-wrapper .entry-footer .tags-links,
 .entry-wrapper .entry-footer .comments-link {
+  line-height: 2;
   margin-bottom: 0.231em;
 }
 
@@ -1475,7 +1475,8 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 }
 
 .site-info {
-  margin-bottom: 2em;
+  line-height: 2.308;
+  margin-bottom: 1.538em;
   text-align: center;
   width: 100%;
 }
@@ -1487,6 +1488,11 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 
 .footer-navigation .menu-toggle {
   display: none;
+}
+
+.footer-navigation .menu {
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .footer-navigation .menu ul {
@@ -2918,9 +2924,8 @@ a {
     width: auto;
     margin-right: auto;
     display: inline-block;
-    line-height: 1.6;
-    margin-bottom: 0;
     text-align: left;
+    margin-bottom: 0.769em;
   }
   .site-footer .footer-navigation {
     width: auto;

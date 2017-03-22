@@ -168,6 +168,10 @@ body:not(.has-hero-thumbnail) .site-branding .site-title, body:not(.has-hero-thu
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
+.footer-navigation .menu {
+  padding-right: 0;
+}
+
 .footer-navigation .menu li {
   margin-left: 0.769em;
   margin-right: 0;

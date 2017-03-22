@@ -142,7 +142,7 @@
 		clear: right;
 		display: inline-block;
 		float: right;
-		margin-bottom: 0.231em;
+		line-height: 2;
 	}
 
 	.entry-main {
@@ -204,9 +204,9 @@
 			width: 100%;
 		}
 
-		.cat-links,
 		.tags-links,
 		.comments-link {
+			line-height: 2;
 			margin-bottom: 0.231em;
 		}
 
