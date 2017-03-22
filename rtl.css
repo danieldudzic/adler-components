@@ -128,9 +128,21 @@ dd {
   float: left;
 }
 
+.entry-wrapper .entry-meta {
+	margin-left: 1em;
+	margin-right: 0;
+}
+
 .entry-wrapper .edit-link {
   clear: left;
   float: left;
+  margin-left: 0;
+  margin-right: 1em;
+}
+
+.entry-wrapper .tags-links {
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .entry-wrapper .entry-author .avatar {

@@ -143,6 +143,7 @@
 		display: inline-block;
 		float: right;
 		line-height: 2;
+		margin-left: 1em;
 	}
 
 	.entry-main {
@@ -203,7 +204,11 @@
 			display: block;
 			width: 100%;
 		}
-
+		
+		.tags-links {
+			margin-right: 1em;
+		}
+		
 		.tags-links,
 		.comments-link {
 			line-height: 2;
@@ -220,6 +225,7 @@
 		}
 
 		.entry-meta {
+			margin-right: 1em;
 			.cat-links,
 			.posted-on,
 			.byline {
