@@ -14,3 +14,8 @@ assets/stylesheets/.sass-cache/*
 # Codekit
 config.codekit
 config.codekit3
+.codekit-cache/
+node_modules/
+#Grunt
+Gruntfile.js
+package.json
