@@ -618,7 +618,7 @@ input[type="submit"]:focus,
 .button:focus {
   border-color: #aaa #bbb #bbb;
   box-shadow: none;
-  color: #f7f7f7;
+  color: #45525a;
   outline: 1px dotted #0e364f;
 }
 
@@ -847,6 +847,7 @@ td {
 
 .showsub-toggle:active, .showsub-toggle:focus, .showsub-toggle:hover {
   background: #0a2739;
+  color: #f7f7f7;
   outline: 1px solid #124565;
 }
 
@@ -929,7 +930,7 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-  color: #f7f7f7;
+  color: #45525a;
 }
 
 a:focus {
@@ -1015,6 +1016,10 @@ body {
 
 .single .post .entry-wrapper .entry-footer {
   margin-bottom: 3.846em;
+}
+
+.single .post .entry-wrapper .entry-footer .edit-link {
+  margin-left: 0;
 }
 
 .hfeed .hentry {
@@ -1902,7 +1907,7 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
 #comments .reply a:active, #comments .reply a:focus {
   border-color: #aaa #bbb #bbb;
   border: none;
-  color: #f7f7f7;
+  color: #45525a;
 }
 
 #comments .comment-notes {

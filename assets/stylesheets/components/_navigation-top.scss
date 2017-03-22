@@ -152,6 +152,7 @@
 	&:focus,
 	&:hover {
 		background: darken( $color__background-sliding-panel, 5% );
+		color: $color__contrast;
 		outline: 1px solid lighten( $color__background-sliding-panel, 5% );
 	}
 
