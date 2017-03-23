@@ -1486,7 +1486,8 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 .footer-navigation {
   text-align: center;
   width: 100%;
-  margin-bottom: 1.538em;
+  margin-bottom: 0.769em;
+  line-height: 2.308;
 }
 
 .footer-navigation .menu-toggle {
@@ -1495,16 +1496,13 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 
 .footer-navigation .menu {
   padding-left: 0;
+  margin-bottom: 0;
   margin-left: 0;
-}
-
-.footer-navigation .menu ul {
-  margin: 0 auto;
 }
 
 .footer-navigation .menu li {
   display: inline-block;
-  margin-bottom: 0.769em;
+  margin-bottom: 0;
   margin-right: 0.769em;
 }
 

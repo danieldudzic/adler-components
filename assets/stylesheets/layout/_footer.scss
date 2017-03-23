@@ -13,7 +13,8 @@
 .footer-navigation {
 	text-align: center;
 	width: 100%;
-	margin-bottom: 1.538em;
+	margin-bottom: 0.769em;
+	line-height: 2.308;
 
 	.menu-toggle {
 		display: none;
@@ -21,15 +22,12 @@
 
 	.menu {
 		padding-left: 0;
+		margin-bottom: 0;
 		margin-left: 0;
-
-		ul {
-			margin: 0 auto;
-		}
 
 		li {
 			display: inline-block;
-			margin-bottom: 0.769em;
+			margin-bottom: 0;
 			margin-right: 0.769em;
 
 			&:before {
