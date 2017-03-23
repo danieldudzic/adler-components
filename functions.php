@@ -339,11 +339,14 @@ function adler_hero_content_to_the_excerpt( $content ) {
 			}
 		}
 	}
-	
+
 	return $content;
 }
 
-function adler_filter_the_excerpts() {
+/**
+ * Load the content flters and ensure correct display of the Hero excerpt and Continue Reading button.
+*/
+function adler_filter_the_contents() {
 	add_filter( 'the_excerpt', 'adler_hero_content_to_the_excerpt', 11 );
 	
 	if ( adler_is_hero() ) {
@@ -351,7 +354,7 @@ function adler_filter_the_excerpts() {
 	}
 }
 
-add_action( 'init', 'adler_filter_the_excerpts' );
+add_action( 'init', 'adler_filter_the_contents' );
 
 /**
  * Custom template tags for this theme.
