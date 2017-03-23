@@ -231,6 +231,18 @@ function adler_fonts_url() {
 }
 
 /**
+ * Check if the current item is a Hero item.
+ */
+function adler_is_hero() {
+	global $wp_query;
+	if ( 0 === $wp_query->current_post && ! is_paged() && ! is_archive() && ! is_search() && adler_has_post_thumbnail() ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/**
  * Filter the excerpt more link in order to display a Continue Reading button.
  */
 function adler_excerpt_more() {
@@ -248,13 +260,19 @@ add_filter( 'excerpt_more', 'adler_excerpt_more', 11 );
  * Filter the content more link in order to display a Continue Reading button.
  */
 function adler_content_more() {
-	$read_more = sprintf(
-		/* translators: %s: Name of current post. */
-		wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
-		the_title( '<span class="screen-reader-text">"', '"</span>', false )
-	);
-
-	return '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $read_more . '</a></div>';
+	global $post;
+		
+	if ( has_excerpt() && strpos( $post->post_content, '<!--more-->' ) ) {
+		return;
+	} else {
+		$read_more = sprintf(
+			/* translators: %s: Name of current post. */
+			wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
+			the_title( '<span class="screen-reader-text">"', '"</span>', false )
+		);
+	
+		return '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $read_more . '</a></div>';
+	}	
 }
 add_filter( 'the_content_more_link', 'adler_content_more', 11 );
 
@@ -289,26 +307,51 @@ function adler_hero_content_to_the_excerpt( $content ) {
 	global $post;
 
 	$display_option = adler_get_blog_display();
-
-	if ( 'content' === $display_option ) {
-		global $wp_query;
-
-		if ( 0 === $wp_query->current_post && has_post_thumbnail() ) {
+	
+	if ( ! is_singular() && 'content' === $display_option ) {
+		if ( adler_is_hero() ) {
 			if ( post_password_required() ) {
 				$content = sprintf( '<p>%s</p>', esc_html__( 'There is no excerpt because this is a protected post.', 'adler' ) );
 			} else {
-				if ( ! strpos( $post->post_content, '<!--more-->' ) ) {
-					$content = jetpack_blog_display_custom_excerpt( $content );
+				$content = jetpack_blog_display_custom_excerpt( $content );
+				
+				if ( has_excerpt() ) {
+					$read_more = sprintf(
+							/* translators: %s: Name of current post. */
+							wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
+							the_title( '<span class="screen-reader-text">"', '"</span>', false )
+					);
+			
+					$content .= '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $read_more . '</a></div>';
+				}
+			}
+		} else {
+			if ( has_excerpt() && strpos( $post->post_content, '<!--more-->' ) ) {
+				if ( ! is_customize_preview() ) {
+					$read_more = sprintf(
+							/* translators: %s: Name of current post. */
+							wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
+							the_title( '<span class="screen-reader-text">"', '"</span>', false )
+					);
+					
+					$content .= '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $read_more . '</a></div>';
 				}
 			}
 		}
 	}
-
+	
 	return $content;
 }
 
-add_filter( 'the_content', 'adler_hero_content_to_the_excerpt', 11 );
-add_filter( 'the_excerpt', 'adler_hero_content_to_the_excerpt', 11 );
+function adler_filter_the_excerpts() {
+	add_filter( 'the_excerpt', 'adler_hero_content_to_the_excerpt', 11 );
+	
+	if ( adler_is_hero() ) {
+		add_filter( 'the_content', 'adler_hero_content_to_the_excerpt', 11 );
+	}
+}
+
+add_action( 'init', 'adler_filter_the_excerpts' );
 
 /**
  * Custom template tags for this theme.
