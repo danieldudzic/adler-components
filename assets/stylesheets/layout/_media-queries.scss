@@ -342,7 +342,7 @@
 				margin-right: -14.453em;
 			}
 
-			&.aligncenter, &.alignnone {
+			&.aligncenter {
 				margin-left: -14.453em;
 				margin-right: -14.453em;
 				max-width: calc( 14.453em * 2 + 100% );
@@ -408,8 +408,7 @@
 				margin-right: -16.154em;
 			}
 
-			&.aligncenter,
-			&.alignnone {
+			&.aligncenter {
 				margin-left: -16.154em;
 				margin-right: -16.154em;
 				max-width: calc( 16.154em * 2 + 100% );

@@ -3023,7 +3023,7 @@ a {
     margin-left: 3em;
     margin-right: -14.453em;
   }
-  .entry-wrapper .wp-caption.aligncenter, .entry-wrapper .wp-caption.alignnone {
+  .entry-wrapper .wp-caption.aligncenter {
     margin-left: -14.453em;
     margin-right: -14.453em;
     max-width: calc( 14.453em * 2 + 100%);
@@ -3066,7 +3066,7 @@ a {
     margin-left: 3em;
     margin-right: -16.154em;
   }
-  .entry-wrapper .wp-caption.aligncenter, .entry-wrapper .wp-caption.alignnone {
+  .entry-wrapper .wp-caption.aligncenter {
     margin-left: -16.154em;
     margin-right: -16.154em;
     max-width: calc( 16.154em * 2 + 100%);
