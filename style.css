@@ -1486,6 +1486,7 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 .footer-navigation {
   text-align: center;
   width: 100%;
+  margin-bottom: 1.538em;
 }
 
 .footer-navigation .menu-toggle {
@@ -2307,7 +2308,7 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
 }
 
 /* Click-to-load */
-#infinite-handle {
+.infinite-scroll #infinite-handle {
   clear: both;
   line-height: 1;
   margin: 0 7.6923%;
@@ -2318,14 +2319,14 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   transition: 0.3s;
 }
 
-#infinite-handle span {
+.infinite-scroll #infinite-handle span {
   background: #68f3c8;
   color: #fff;
   padding: 0.692em 1em;
   text-transform: uppercase;
 }
 
-#infinite-handle span:hover, #infinite-handle span:focus {
+.infinite-scroll #infinite-handle span:hover, .infinite-scroll #infinite-handle span:focus {
   background: #80f5d1;
   outline: 1px solid transparent;
 }
@@ -2618,7 +2619,6 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 .showsub-toggle svg {
   font-size: 16px;
   height: 16px;
-  height: auto;
   vertical-align: middle;
   width: 16px;
 }

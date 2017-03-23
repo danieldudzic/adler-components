@@ -10,7 +10,7 @@
 }
 
 /* Click-to-load */
-#infinite-handle {
+.infinite-scroll #infinite-handle {
 	clear: both;
 	line-height: 1;
 	margin: 0 7.6923%;
@@ -24,7 +24,6 @@
 		color: $color__light;
 		padding: 0.692em 1em;
 		text-transform: uppercase;
-
 
 		&:hover,
 		&:focus {
