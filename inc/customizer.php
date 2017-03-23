@@ -68,7 +68,7 @@ function adler_the_content_customizer( $content ) {
 
 	if ( is_home() || is_archive() ) {
 		if ( post_password_required() ) {
-			$excerpt = sprintf( '<p>%s</p>', esc_html__( 'There is no excerpt because this is a protected post.', 'jetpack' ) );
+			$excerpt = sprintf( '<p>%s</p>', esc_html__( 'There is no excerpt because this is a protected post.', 'adler' ) );
 		} else {
 			$excerpt = jetpack_blog_display_custom_excerpt( $content );
 		}
