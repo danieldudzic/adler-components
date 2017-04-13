@@ -9,8 +9,8 @@
 
 if ( ! function_exists( 'adler_posted_on' ) ) :
 	/**
- * Prints HTML with meta information for the current post-date/time and author.
- */
+	 * Prints HTML with meta information for the current post-date/time and author.
+	 */
 	function adler_posted_on() {
 	?>
 			<div class="cat-links">
@@ -58,8 +58,8 @@ endif;
 
 if ( ! function_exists( 'adler_entry_footer' ) ) :
 	/**
- * Prints HTML with meta information for the categories, tags and comments.
- */
+	 * Prints HTML with meta information for the categories, tags and comments.
+	 */
 	function adler_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {

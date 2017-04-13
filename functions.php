@@ -9,12 +9,12 @@
 
 if ( ! function_exists( 'adler_setup' ) ) :
 	/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the aftercomponentsetup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * Note that this function is hooked into the aftercomponentsetup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
+	 */
 	function adler_setup() {
 		/*
 		 * Make theme available for translation.
@@ -110,7 +110,6 @@ function adler_the_custom_logo() {
 
 /**
  * Add a wp-head callback to the custom background
- *
  */
 function adler_custom_background_cb() {
 	$background_image = get_background_image();
@@ -191,17 +190,20 @@ add_action( 'wp_enqueue_scripts', 'adler_scripts' );
 function adler_fonts_url() {
 	$fonts_url = '';
 
-	/* translators: If there are characters in your language that are not supported
+	/*
+	 translators: If there are characters in your language that are not supported
 	 * by Droid Serif, translate this to 'off'. Do not translate into your own language.
 	 */
 	$droid_serif = esc_html_x( 'on', 'Droid Serif font: on or off',	'adler' );
 
-	/* translators: If there are characters in your language that are not supported
+	/*
+	 translators: If there are characters in your language that are not supported
 	 * by Permanent Marker, translate this to 'off'. Do not translate into your own language.
 	 */
 	$permanent_marker = esc_html_x( 'on', 'Permanent Marker font: on or off', 'adler' );
 
-	/* translators: If there are characters in your language that are not supported
+	/*
+	 translators: If there are characters in your language that are not supported
 	 * by Droid Sans Mono, translate this to 'off'. Do not translate into your own language.
 	 */
 	$droid_sans_mono = esc_html_x( 'on', 'Droid Sans Mono font: on or off', 'adler' );
@@ -314,7 +316,7 @@ add_filter( 'get_the_excerpt', 'adler_get_the_excerpt', 11 );
 
 /**
  * Display Excerpt instead of Content for the Hero post.
-*/
+ */
 function adler_hero_content_to_the_excerpt( $content ) {
 	global $post;
 
@@ -365,7 +367,7 @@ function adler_hero_content_to_the_excerpt( $content ) {
 
 /**
  * Load the content flters and ensure correct display of the Hero excerpt and Continue Reading button.
-*/
+ */
 function adler_filter_the_contents() {
 	add_filter( 'the_excerpt', 'adler_hero_content_to_the_excerpt', 11 );
 
