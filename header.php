@@ -25,13 +25,13 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'adler' ); ?></a>
 
 		<header id="masthead" class="site-header" role="banner">
-			<?php get_template_part( 'components/header/sliding', 'panel' ); ?>
+	<?php get_template_part( 'components/header/sliding', 'panel' ); ?>
 
 			<div class="site-branding">
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</div>
 
-			<?php adler_the_custom_logo(); ?>
+	<?php adler_the_custom_logo(); ?>
 		</header>
 		<div id="content" class="site-content">

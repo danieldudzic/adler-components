@@ -8,78 +8,78 @@
  */
 
 if ( ! function_exists( 'adler_setup' ) ) :
-/**
+	/**
  * Sets up theme defaults and registers support for various WordPress features.
  *
  * Note that this function is hooked into the aftercomponentsetup_theme hook, which
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function adler_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on components, use a find and replace
-	 * to change 'adler' to the name of your theme in all the template files.
-	 */
-	load_theme_textdomain( 'adler', get_template_directory() . '/languages' );
+	function adler_setup() {
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 * If you're building a theme based on components, use a find and replace
+		 * to change 'adler' to the name of your theme in all the template files.
+		 */
+		load_theme_textdomain( 'adler', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
+		/*
+		 * Let WordPress manage the document title.
+		 * By adding theme support, we declare that this theme does not use a
+		 * hard-coded <title> tag in the document head, and expect WordPress to
+		 * provide it for us.
+		 */
+		add_theme_support( 'title-tag' );
 
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-	 */
-	add_theme_support( 'post-thumbnails' );
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
+		add_theme_support( 'post-thumbnails' );
 
-	add_image_size( 'adler-featured-image', 800, 9999 );
-	add_image_size( 'adler-hero', 2000, 1500, true );
+		add_image_size( 'adler-featured-image', 800, 9999 );
+		add_image_size( 'adler-hero', 2000, 1500, true );
 
-	// This theme uses wp_nav_menu() in two locations.
-	register_nav_menus( array(
-		'top' => __( 'Top Menu', 'adler' ),
-		'footer'  => __( 'Footer Menu', 'adler' ),
-	) );
-	/**
+		// This theme uses wp_nav_menu() in two locations.
+		register_nav_menus( array(
+			'top' => __( 'Top Menu', 'adler' ),
+			'footer'  => __( 'Footer Menu', 'adler' ),
+		) );
+			/**
 	 * Add support for core custom logo.
 	 */
-	add_theme_support( 'custom-logo', array(
-		'height'      => 100,
-		'width'       => 600,
-		'flex-width'  => true,
-		'flex-height' => true,
-		'header-text' => array( 'site-title', 'site-description' ),
-	) );
+			add_theme_support( 'custom-logo', array(
+				'height'      => 100,
+				'width'       => 600,
+				'flex-width'  => true,
+				'flex-height' => true,
+				'header-text' => array( 'site-title', 'site-description' ),
+			) );
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
+			/*
+			 * Switch default core markup for search form, comment form, and comments
+			 * to output valid HTML5.
+			 */
+			add_theme_support( 'html5', array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			) );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'adler_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-		'wp-head-callback' => 'adler_custom_background_cb',
-	) ) );
-}
+			// Set up the WordPress core custom background feature.
+			add_theme_support( 'custom-background', apply_filters( 'adler_custom_background_args', array(
+				'default-color' => 'ffffff',
+				'default-image' => '',
+				'wp-head-callback' => 'adler_custom_background_cb',
+			) ) );
+	}
 endif;
 add_action( 'after_setup_theme', 'adler_setup' );
 
@@ -121,7 +121,7 @@ function adler_custom_background_cb() {
 	}
 ?>
 	<style type="text/css" id="adler-custom-background-css">
-	<?php if ( ! empty ( $background_image ) ) { ?>
+	<?php if ( ! empty( $background_image ) ) { ?>
 			body.custom-background {
 				background-image: url(<?php echo esc_url( $background_image ); ?>);
 			}
@@ -224,7 +224,7 @@ function adler_fonts_url() {
 			'family' => urlencode( implode( '|', $font_families ) ),
 			'subset' => urlencode( 'latin,latin-ext' ),
 		);
-		$fonts_url = add_query_arg( $query_args, "https://fonts.googleapis.com/css" );
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
 	}
 
 	return esc_url_raw( $fonts_url );
@@ -248,7 +248,11 @@ function adler_is_hero() {
 function adler_excerpt_more() {
 	$read_more = sprintf(
 		/* translators: %s: Name of current post. */
-		wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
+		wp_kses( __( 'Continue reading %s', 'adler' ), array(
+			'span' => array(
+				'class' => array(),
+			),
+		) ),
 		the_title( '<span class="screen-reader-text">"', '"</span>', false )
 	);
 
@@ -261,18 +265,22 @@ add_filter( 'excerpt_more', 'adler_excerpt_more', 11 );
  */
 function adler_content_more() {
 	global $post;
-		
+
 	if ( has_excerpt() && strpos( $post->post_content, '<!--more-->' ) ) {
 		return;
 	} else {
 		$read_more = sprintf(
 			/* translators: %s: Name of current post. */
-			wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
+			wp_kses( __( 'Continue reading %s', 'adler' ), array(
+				'span' => array(
+					'class' => array(),
+				),
+			) ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		);
-	
+
 		return '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $read_more . '</a></div>';
-	}	
+	}
 }
 add_filter( 'the_content_more_link', 'adler_content_more', 11 );
 
@@ -289,7 +297,11 @@ function adler_get_the_excerpt( $excerpt ) {
 	if ( has_excerpt() ) {
 		$read_more = sprintf(
 			/* translators: %s: Name of current post. */
-			wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
+			wp_kses( __( 'Continue reading %s', 'adler' ), array(
+				'span' => array(
+					'class' => array(),
+				),
+			) ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		);
 
@@ -307,21 +319,25 @@ function adler_hero_content_to_the_excerpt( $content ) {
 	global $post;
 
 	$display_option = adler_get_blog_display();
-	
+
 	if ( ! is_singular() && 'content' === $display_option ) {
 		if ( adler_is_hero() ) {
 			if ( post_password_required() ) {
 				$content = sprintf( '<p>%s</p>', esc_html__( 'There is no excerpt because this is a protected post.', 'adler' ) );
 			} else {
 				$content = jetpack_blog_display_custom_excerpt( $content );
-				
+
 				if ( has_excerpt() ) {
 					$read_more = sprintf(
-							/* translators: %s: Name of current post. */
-							wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
-							the_title( '<span class="screen-reader-text">"', '"</span>', false )
+						/* translators: %s: Name of current post. */
+							wp_kses( __( 'Continue reading %s', 'adler' ), array(
+								'span' => array(
+									'class' => array(),
+								),
+							) ),
+						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					);
-			
+
 					$content .= '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $read_more . '</a></div>';
 				}
 			}
@@ -329,16 +345,20 @@ function adler_hero_content_to_the_excerpt( $content ) {
 			if ( has_excerpt() && strpos( $post->post_content, '<!--more-->' ) ) {
 				if ( ! is_customize_preview() ) {
 					$read_more = sprintf(
-							/* translators: %s: Name of current post. */
-							wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
-							the_title( '<span class="screen-reader-text">"', '"</span>', false )
+						/* translators: %s: Name of current post. */
+							wp_kses( __( 'Continue reading %s', 'adler' ), array(
+								'span' => array(
+									'class' => array(),
+								),
+							) ),
+						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					);
-					
+
 					$content .= '<div class="read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . $read_more . '</a></div>';
 				}
 			}
-		}
-	}
+		}// End if().
+	}// End if().
 
 	return $content;
 }
@@ -348,7 +368,7 @@ function adler_hero_content_to_the_excerpt( $content ) {
 */
 function adler_filter_the_contents() {
 	add_filter( 'the_excerpt', 'adler_hero_content_to_the_excerpt', 11 );
-	
+
 	if ( adler_is_hero() ) {
 		add_filter( 'the_content', 'adler_hero_content_to_the_excerpt', 11 );
 	}

@@ -44,7 +44,11 @@ function adler_the_excerpt_customizer( $excerpt ) {
 	if ( ! adler_is_hero() && has_excerpt() && strpos( $post->post_content, '<!--more-->' ) ) {
 		$read_more = sprintf(
 			/* translators: %s: Name of current post. */
-			wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
+			wp_kses( __( 'Continue reading %s', 'adler' ), array(
+				'span' => array(
+					'class' => array(),
+				),
+			) ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		);
 
@@ -77,7 +81,11 @@ function adler_the_content_customizer( $content ) {
 	if ( has_excerpt() && strpos( $post->post_content, '<!--more-->' ) ) {
 		$read_more = sprintf(
 			/* translators: %s: Name of current post. */
-			wp_kses( __( 'Continue reading %s', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
+			wp_kses( __( 'Continue reading %s', 'adler' ), array(
+				'span' => array(
+					'class' => array(),
+				),
+			) ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		);
 

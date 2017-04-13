@@ -28,7 +28,11 @@
 		<div class="entry-content">
 			<?php
 				the_content( sprintf(
-					wp_kses( esc_html__( 'Read More', 'adler' ), array( 'span' => array( 'class' => array() ) ) ),
+					wp_kses( esc_html__( 'Read More', 'adler' ), array(
+						'span' => array(
+							'class' => array(),
+						),
+					) ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				) );
 

@@ -16,17 +16,20 @@ while ( have_posts() ) : the_post(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
-			if ( adler_has_post_thumbnail() ) {
-				get_template_part( 'components/hero/hero', 'single' );
-			} else {
-				get_template_part( 'components/post/content', 'single' );
-			}
+		if ( adler_has_post_thumbnail() ) {
+			get_template_part( 'components/hero/hero', 'single' );
+		} else {
+			get_template_part( 'components/post/content', 'single' );
+		}
 
-			the_post_navigation( array( 'prev_text' => '<span class="title">' . esc_html_x( 'Previous', 'previous post', 'adler' ) . '</span>%title', 'next_text' => '<span class="title">' . esc_html_x( 'Next', 'next post', 'adler' ) . '</span>%title' ) );
+			the_post_navigation( array(
+				'prev_text' => '<span class="title">' . esc_html_x( 'Previous', 'previous post', 'adler' ) . '</span>%title',
+				'next_text' => '<span class="title">' . esc_html_x( 'Next', 'next post', 'adler' ) . '</span>%title',
+			) );
 
 			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
+		if ( comments_open() || get_comments_number() ) :
+			comments_template();
 			endif;
 		?>
 

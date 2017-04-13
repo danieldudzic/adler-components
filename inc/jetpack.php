@@ -186,7 +186,7 @@ function adler_get_post_thumbnail_url( $size ) {
 		return the_post_thumbnail_url( $size );
 	} else {
 		// This is a workaround until Jetpack will support the jetpack_featured_images_fallback_get_image_url() function.
-		$fallback_image_html = jetpack_featured_images_fallback_get_image( '', get_the_ID(), '', $size, '');
+		$fallback_image_html = jetpack_featured_images_fallback_get_image( '', get_the_ID(), '', $size, '' );
 		$fallback_image_url = wp_extract_urls( $fallback_image_html );
 		return $fallback_image_url[0];
 	}
