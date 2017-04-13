@@ -19,7 +19,9 @@ if ( ! function_exists( 'adler_posted_on' ) ) :
 				$categories_list = get_the_category_list( esc_html__( ', ', 'adler' ) );
 
 				if ( $categories_list && adler_categorized_blog() ) {
-					printf( '<span class="cat-links"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="categories-icon" d="M13 5H8l-.7-1.4c-.2-.4-.5-.6-.9-.6H3c-.5 0-1 .5-1 1v8c0 .6.5 1 1 1h10c.6 0 1-.4 1-1V6c0-.6-.4-1-1-1z"/></g></svg>' . esc_html__( 'Posted in %1$s', 'adler' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+					printf( '<span class="cat-links">' . adler_get_svg( array(
+						'icon' => 'categories',
+					) ) . esc_html__( 'Posted in %1$s', 'adler' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 				} ?>
 			</div>
 
@@ -46,7 +48,11 @@ if ( ! function_exists( 'adler_posted_on' ) ) :
 				'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 			);
 
-			echo '<span class="posted-on"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="posted-icon" d="M12 3h-1V2H9v1H7V2H5v1H4c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 7c0 .4-.2.7-.4 1 .2.3.4.6.4 1v.5c0 .8-.7 1.5-1.5 1.5h-1C5.7 11 5 10.3 5 9.5V9h1v.5c0 .3.2.5.5.5h1c.3 0 .5-.2.5-.5V9c0-.3-.2-.5-.5-.5H7v-1h.5c.3 0 .5-.2.5-.5v-.5c0-.3-.2-.5-.5-.5h-1c-.3 0-.5.2-.5.5V7H5v-.5C5 5.7 5.7 5 6.5 5h1C8.3 5 9 5.7 9 6.5V7zm2 4h-1V5h1v6z"/></g></svg>' . $posted_on . '</span><span class="byline"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="author-icon" d="M8 8c1.7 0 3-1.3 3-3S9.7 2 8 2 5 3.3 5 5s1.3 3 3 3zm2 1H6c-1.7 0-3 1.3-3 3v2h10v-2c0-1.7-1.3-3-3-3z"/></g></svg>' . $byline . '</span>'; // WPCS: XSS OK.
+			echo '<span class="posted-on">' . adler_get_svg( array(
+				'icon' => 'posted',
+			) ) . $posted_on . '</span><span class="byline">' . adler_get_svg( array(
+				'icon' => 'author',
+			) ) . $byline . '</span>'; // WPCS: XSS OK.
 	}
 endif;
 
@@ -61,21 +67,27 @@ if ( ! function_exists( 'adler_entry_footer' ) ) :
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'adler' ) );
 			if ( $tags_list ) {
-				printf( '<span class="tags-links"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="tags-icon" d="M11.3 4.3c-.2-.2-.4-.3-.7-.3H3c-.5 0-1 .5-1 1v6c0 .6.5 1 1 1h7.6c.3 0 .5-.1.7-.3L15 8l-3.7-3.7zM10 9c-.5 0-1-.5-1-1s.5-1 1-1 1 .5 1 1-.5 1-1 1z"/></g></svg>' . esc_html__( 'Tagged %1$s', 'adler' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . adler_get_svg( array(
+					'icon' => 'tags',
+				) ) . esc_html__( 'Tagged %1$s', 'adler' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			echo '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="comments-icon" d="M7 3H3c-1.1 0-2 .9-2 2v7l2.4-2.4c.4-.4.9-.6 1.4-.6H6V8c0-1.7 1.3-3 3-3 0-1.1-.9-2-2-2zm6 3H9c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h2.2c.5 0 1 .2 1.4.6L15 15V8c0-1.1-.9-2-2-2z"/></g></svg>';
+			echo '<span class="comments-link">' . adler_get_svg( array(
+				'icon' => 'comments',
+			) );
 			comments_popup_link( esc_html__( 'Leave a comment', 'adler' ), esc_html__( '1 Comment', 'adler' ), esc_html__( '% Comments', 'adler' ) );
 			echo '</span>';
 		}
 
 		edit_post_link(
 			sprintf(
+				adler_get_svg( array(
+					'icon' => 'edit',
+				) ) .
 				/* translators: %s: Name of current post */
-				'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="edit-icon" d="M12.6 6.9l.5-.5c.8-.8.8-2 0-2.8l-.7-.7c-.8-.8-2-.8-2.8 0l-.5.5 3.5 3.5zM8.4 4.1L2 10.5V14h3.5l6.4-6.4"/></g></svg>' . esc_html__( 'Edit %s', 'adler' ),
+				esc_html__( 'Edit %s', 'adler' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			),
 			'<span class="edit-link">',

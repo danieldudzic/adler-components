@@ -395,3 +395,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * SVG icons functions and filters.
+ */
+require get_template_directory() . '/inc/icon-functions.php';
