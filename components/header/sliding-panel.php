@@ -5,6 +5,11 @@
 				'icon' => 'menu-toggle',
 			) ); ?>
 		</span>
+		<span class="menu-toggle-icon-close">
+			<?php echo adler_get_svg( array(
+				'icon' => 'menu-toggle-close',
+			) ); ?>
+		</span>
 		<span class="screen-reader-text"><?php esc_html_e( 'Toggle Menu', 'adler' ); ?></span>
 	</button>
 	<div class="slide-panel animated closed">
