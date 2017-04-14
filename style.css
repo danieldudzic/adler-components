@@ -1045,7 +1045,8 @@ body {
   background-image: linear-gradient(#f7f7f7 70%, transparent 70%, transparent);
 }
 
-.hfeed .hentry:last-of-type .entry-main:after {
+.hfeed .hentry:last-of-type .entry-main:after,
+.hfeed .hentry:last-of-type .entry-main .leaf {
   display: none;
 }
 
@@ -1137,8 +1138,7 @@ body:not(.hfeed) .entry-wrapper {
 }
 
 .entry-wrapper .entry-main:after {
-  background: url(assets/images/leaf.png) center center no-repeat;
-  background-color: #fff;
+  background: #fff;
   border-radius: 50%;
   bottom: -30px;
   content: ' ';
@@ -1148,6 +1148,20 @@ body:not(.hfeed) .entry-wrapper {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 60px;
+}
+
+.entry-wrapper .entry-main .leaf {
+  bottom: -24px;
+  left: 50%;
+  margin-left: -7px;
+  position: absolute;
+  z-index: 1;
+}
+
+.entry-wrapper .entry-main .leaf svg {
+  height: 30px;
+  width: 15px;
+  fill: currentcolor;
 }
 
 .entry-wrapper .entry-main .read-more {
@@ -2353,11 +2367,13 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   outline: 0;
 }
 
-.infinity-success .hentry:last-of-type .entry-main:after {
+.infinity-success .hentry:last-of-type .entry-main:after,
+.infinity-success .hentry:last-of-type .entry-main .leaf {
   display: block;
 }
 
-.infinity-success .infinite-wrap.last .hentry:last-of-type .entry-main:after {
+.infinity-success .infinite-wrap.last .hentry:last-of-type .entry-main:after,
+.infinity-success .infinite-wrap.last .hentry:last-of-type .entry-main .leaf {
   display: none;
 }
 
@@ -2457,7 +2473,6 @@ figure img {
   margin-bottom: 1.538em;
   max-width: 100%;
   text-align: center;
-  /* Give some margin to floated elements, to prevent them butting up against text. */
 }
 
 .wp-caption p {
@@ -2483,19 +2498,10 @@ figure img {
   color: #7c868b;
 }
 
-.wp-caption.aligncenter {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .wp-caption.aligncenter, .wp-caption.alignnone, .wp-caption.alignleft, .wp-caption.alignright {
   display: block;
   margin: 0;
   margin-bottom: 1.154em;
-}
-
-.archive__grid .wp-caption.aligncenter, .archive__grid .wp-caption.alignnone, .archive__grid .wp-caption.alignleft, .archive__grid .wp-caption.alignright {
-  margin-bottom: 0;
 }
 
 .widget .wp-caption.aligncenter,
@@ -2512,6 +2518,11 @@ figure img {
 .archive .wp-caption.alignright,
 .search .wp-caption.alignright {
   margin: 0;
+}
+
+.wp-caption.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .wp-caption.aligncenter, .wp-caption.alignnone {

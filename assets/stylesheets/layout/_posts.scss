@@ -38,7 +38,7 @@
 		.entry-wrapper {
 			.entry-footer {
 				margin-bottom: 3.846em;
-				
+
 				.edit-link {
 					margin-left: 0;
 				}
@@ -71,8 +71,11 @@
 		}
 
 		&:last-of-type {
-			.entry-main:after {
-				display: none;
+			.entry-main {
+				&:after,
+				.leaf {
+					display: none;
+				}
 			}
 		}
 
@@ -166,8 +169,7 @@
 		}
 
 		&:after {
-			background: url(assets/images/leaf.png) center center no-repeat;
-			background-color: $color__background-body;
+			background: $color__background-body;
 			border-radius: 50%;
 			bottom: -30px;
 			content: ' ';
@@ -176,6 +178,20 @@
 			position: absolute;
 			transform: translateX(-50%);
 			width: 60px;
+		}
+
+		.leaf {
+			bottom: -24px;
+			left: 50%;
+			margin-left: -7px;
+			position: absolute;
+			z-index: 1;
+
+			svg {
+				height: 30px;
+				width: 15px;
+				fill: currentcolor;
+			}
 		}
 
 		.read-more {
@@ -204,11 +220,11 @@
 			display: block;
 			width: 100%;
 		}
-		
+
 		.tags-links {
 			margin-right: 1em;
 		}
-		
+
 		.tags-links,
 		.comments-link {
 			line-height: 2;
