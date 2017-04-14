@@ -186,9 +186,9 @@
 
 		$window.on( 'scroll.adler', function() {
 			if ( 0 < $window.scrollTop() ) {
-				$( '#scroll-indicator' ).addClass ( 'scrolled' );
+				$( '#scroll-indicator' ).addClass( 'scrolled' );
 			} else {
-				$( '#scroll-indicator' ).removeClass ( 'scrolled' );
+				$( '#scroll-indicator' ).removeClass( 'scrolled' );
 			}
 		} );
 	} );
