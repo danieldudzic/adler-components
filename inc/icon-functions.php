@@ -34,12 +34,12 @@ add_action( 'wp_footer', 'adler_include_svg_icons', 9999 );
 function adler_get_svg( $args = array() ) {
 	// Make sure $args are an array.
 	if ( empty( $args ) ) {
-		return __( 'Please define default parameters in the form of an array.', 'adler' );
+		return esc_html__( 'Please define default parameters in the form of an array.', 'adler' );
 	}
 
 	// Define an icon.
 	if ( false === array_key_exists( 'icon', $args ) ) {
-		return __( 'Please define an SVG icon filename.', 'adler' );
+		return esc_html__( 'Please define an SVG icon filename.', 'adler' );
 	}
 
 	// Set defaults.

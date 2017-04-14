@@ -47,8 +47,8 @@ if ( ! function_exists( 'adler_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus( array(
-			'menu-1'	=> __( 'Header Menu', 'adler' ),
-			'menu-2'	=> __( 'Footer Menu', 'adler' ),
+			'menu-1'	=> esc_html__( 'Header Menu', 'adler' ),
+			'menu-2'	=> esc_html__( 'Footer Menu', 'adler' ),
 		) );
 			/**
 	 * Add support for core custom logo.
@@ -96,19 +96,6 @@ function adler_content_width() {
 add_action( 'after_setup_theme', 'adler_content_width', 0 );
 
 /**
- * Return early if Custom Logos are not available.
- *
- * @todo Remove after WP 4.7
- */
-function adler_the_custom_logo() {
-	if ( ! function_exists( 'the_custom_logo' ) ) {
-		return;
-	} else {
-		the_custom_logo();
-	}
-}
-
-/**
  * Add a wp-head callback to the custom background
  */
 function adler_custom_background_cb() {
@@ -149,7 +136,7 @@ function adler_custom_background_cb() {
  */
 function adler_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'adler' ),
+		'name'          => esc_html__( 'Sliding Panel Widgets', 'adler' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
