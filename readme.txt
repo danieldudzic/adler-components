@@ -31,7 +31,11 @@ Adler supports prominent Featured Images on the blog, single posts, and pages:
 
 -- Main Menu --
 
-This theme has one main menu area called "Top Menu." It is located in the Sliding Panel.
+This theme has one main menu area called "Header Menu." It is located in the Sliding Panel.
+
+-- Footer Menu --
+
+This theme has one secondary menu area called "Footer Menu." It is located in the site's footer.
 
 -- Social Links --
 
