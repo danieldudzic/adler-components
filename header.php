@@ -43,6 +43,6 @@
 				endif; ?>
 			</div><!-- .site-branding -->
 
-	<?php adler_the_custom_logo(); ?>
+	<?php the_custom_logo(); ?>
 		</header>
 		<div id="content" class="site-content">

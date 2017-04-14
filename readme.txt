@@ -86,6 +86,10 @@ Adler also supports the following features:
 * Genericons Neue icons by Automattic, http://genericons.com/ (Font: SIL OFL 1.1, CSS: MIT License)
 * Images in screenshot and demo site from http://unsplash.com/, CC0 license (https://unsplash.com/license)
 -- Todd Quackenbush / https://unsplash.com/photos/Nk5rSNq13sM/
+* Fonts:
+-- Droid Serif https://fonts.google.com/specimen/Droid+Serif / [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+-- Droid Sans Mono https://fonts.google.com/specimen/Droid+Sans+Mono / [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+-- Permanent Marker https://fonts.google.com/specimen/Permanent+Marker / [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 
 == Changelog ==
