@@ -1,4 +1,4 @@
-<?php if ( is_active_sidebar( 'sidebar-1' ) || has_nav_menu( 'top' ) || has_nav_menu( 'social' ) ) : ?>
+<?php if ( is_active_sidebar( 'sidebar-1' ) || has_nav_menu( 'menu-1' ) || has_nav_menu( 'social' ) ) : ?>
 	<button class="menu-toggle animated" aria-expanded="false" >
 		<span class="menu-toggle-icon">
 			<?php echo adler_get_svg( array(
@@ -15,10 +15,10 @@
 	<div class="slide-panel animated closed">
 		<?php adler_social_menu(); ?>
 
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
+		<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php wp_nav_menu( array(
-					'theme_location' => 'top',
+					'theme_location' => 'menu-1',
 				) ); ?>
 			</nav>
 		<?php endif; ?>

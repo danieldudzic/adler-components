@@ -1,6 +1,6 @@
 <?php
 /**
- * components functions and definitions
+ * Adler functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -11,7 +11,7 @@ if ( ! function_exists( 'adler_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * Note that this function is hooked into the aftercomponentsetup_theme hook, which
+	 * Note that this function is hooked into the after_setup_theme hook, which
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
@@ -47,8 +47,8 @@ if ( ! function_exists( 'adler_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus( array(
-			'top' => __( 'Top Menu', 'adler' ),
-			'footer'  => __( 'Footer Menu', 'adler' ),
+			'menu-1'	=> __( 'Top Menu', 'adler' ),
+			'menu-2'	=> __( 'Footer Menu', 'adler' ),
 		) );
 			/**
 	 * Add support for core custom logo.
