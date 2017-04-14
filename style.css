@@ -2619,23 +2619,11 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 .edit-link svg,
 .menu-toggle svg,
 .showsub-toggle svg {
+  fill: currentcolor;
   font-size: 16px;
   height: 16px;
   vertical-align: middle;
   width: 16px;
-}
-
-.cat-links svg path,
-.posted-on svg path,
-.byline svg path,
-.tags-links svg path,
-.comments-link svg path,
-.edit-link svg path,
-.menu-toggle svg path,
-.showsub-toggle svg path {
-  fill: currentcolor;
-  height: 32px;
-  width: 32px;
 }
 
 .cat-links svg {

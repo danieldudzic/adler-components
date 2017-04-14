@@ -43,16 +43,15 @@
 	* Full screen size images: props to Resonar for solution
 	*/
 	function fullscreenFeaturedImage() {
-		var entryHeaderBackground, entryHeaderHeight, windowWidth;
-		entryHeaderBackground = $( '.feature-header' );
+		var entryHeaderHeight = $window.height();
+		var windowWidth       = $window.width();
+		var entryHeaderBackground = $( '.feature-header' );
 
 		if ( ! entryHeaderBackground ) {
 			return;
 		}
 
-		toolbarHeight     = body.is( '.admin-bar' ) ? $( '#wpadminbar' ).height() : 0;
-		entryHeaderHeight = $window.height();
-		windowWidth       = $window.width();
+		toolbarHeight = body.is( '.admin-bar' ) ? $( '#wpadminbar' ).height() : 0;
 
 		entryHeaderBackground.css( {
 			'height': entryHeaderHeight + 'px',
@@ -140,7 +139,7 @@
 	}
 
 	// Scroll down when the arrow is clicked.
-	function scroll() {
+	function heroScroll() {
 		if ( ! $( '#scroll-indicator' ) ) {
 			return;
 		}
@@ -227,7 +226,7 @@
 		countArticles();
 		bigImageClass();
 		slideControl();
-		scroll();
+		heroScroll();
 	} );
 
 } )( jQuery );
