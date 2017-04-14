@@ -9,7 +9,7 @@
 
 get_header();
 
-//Starting The Loop earlier to take advantage of functions like has_post_thumbnail()
+// Starting The Loop earlier to take advantage of functions like has_post_thumbnail()
 while ( have_posts() ) : the_post(); ?>
 
 	<div id="primary" class="content-area">
@@ -23,8 +23,12 @@ while ( have_posts() ) : the_post(); ?>
 		}
 
 			the_post_navigation( array(
-				'prev_text' => '<span class="title">' . esc_html_x( 'Previous', 'previous post', 'adler' ) . '</span>%title',
-				'next_text' => '<span class="title">' . esc_html_x( 'Next', 'next post', 'adler' ) . '</span>%title',
+				'prev_text' => '<span class="title">' .
+									esc_html_x( 'Previous', 'previous post', 'adler' ) .
+								'</span>%title',
+				'next_text' => '<span class="title">' .
+									esc_html_x( 'Next', 'next post', 'adler' ) .
+								'</span>%title',
 			) );
 
 			// If comments are open or we have at least one comment, load up the comment template.
