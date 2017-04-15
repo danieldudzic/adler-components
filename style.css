@@ -807,14 +807,11 @@ td {
   border-radius: 0;
   border: 0;
   color: #f7f7f7;
-  height: 3.625em;
-  line-height: 3.625em;
   margin: 0;
   outline: 1px solid transparent;
-  padding: 0;
+  padding: 1em;
   position: absolute;
   right: 0;
-  width: 3.625em;
   z-index: 10;
 }
 
@@ -829,6 +826,21 @@ td {
 .menu-toggle:hover {
   background: #124565;
   color: #68f3c8;
+}
+
+.menu-toggle .menu-toggle-label {
+  display: inline;
+  margin-right: 10px;
+}
+
+.menu-toggle .menu-toggle-icon,
+.menu-toggle .menu-toggle-icon-close {
+  float: right;
+}
+
+.menu-toggle .menu-toggle-icon svg,
+.menu-toggle .menu-toggle-icon-close svg {
+  vertical-align: top;
 }
 
 /* Dropdown Toggle */
@@ -1652,7 +1664,7 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 
 .slide-panel .jetpack-social-navigation {
   border-top: 1px solid #124565;
-  margin-bottom: 0em;
+  margin-bottom: 1em;
 }
 
 .slide-panel .jetpack-social-navigation ul {
@@ -1661,7 +1673,7 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 }
 
 .slide-panel .jetpack-social-navigation li {
-  padding: 0.769em 0.4em 0.769em;
+  padding: 0.4em 0.4em 0.769em;
 }
 
 .slide-panel .jetpack-social-navigation li:before {
@@ -2661,13 +2673,8 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 }
 
 .menu-toggle svg {
-  display: block;
-  margin: 0 auto;
-}
-
-.menu-toggle svg path {
-  height: 58px;
-  width: 58px;
+  height: 16px;
+  width: 16px;
 }
 
 .menu-toggle .menu-toggle-icon-close svg {

@@ -51,18 +51,12 @@
 
 .menu-toggle {
 	svg {
-		display: block;
-		margin: 0 auto;
-		path {
-			height: 58px;
-			width: 58px;
-		}
+		height: 16px;
+		width: 16px;
 	}
-
 	.menu-toggle-icon-close svg {
 		display: none;
 	}
-
 
 	&.toggle-on {
 		.menu-toggle-icon svg {
