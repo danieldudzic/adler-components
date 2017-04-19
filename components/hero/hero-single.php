@@ -18,7 +18,9 @@
 				<?php the_title( '<h1 class="entry-title"><span class="hero-title">', '</span></h1>' ); ?>
 			</header>
 
-			<?php get_template_part( 'components/post/content', 'meta' ); ?>
+			<div class="entry-meta">
+				<?php adler_posted_on(); ?>
+			</div><!-- .entry-meta -->
 		</div><!-- .hero-content -->
 
 		<?php get_template_part( 'components/hero/hero', 'scroll-indicator' ); ?>

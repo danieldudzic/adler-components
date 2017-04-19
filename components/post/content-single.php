@@ -17,14 +17,6 @@
 			?>
 		</header>
 
-		<?php if ( '' != get_the_post_thumbnail() ) : ?>
-			<div class="post-thumbnail">
-				<a href="<?php the_permalink(); ?>">
-					<?php the_post_thumbnail( 'adler-featured-image' ); ?>
-				</a>
-			</div>
-		<?php endif; ?>
-
 		<div class="entry-content">
 			<?php
 				the_content( sprintf(
