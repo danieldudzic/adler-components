@@ -14,7 +14,9 @@
 		<div class="hero-bg feature-header" style="background-image:url( <?php echo esc_url( adler_get_post_thumbnail_url( 'adler-hero' ) ); ?> )"></div>
 
 		<div class="hero-content">
-			<?php get_template_part( 'components/post/content', 'meta' ); ?>
+			<div class="entry-meta">
+				<?php adler_posted_on(); ?>
+			</div><!-- .entry-meta -->
 
 			<header class="entry-header">
 				<?php
