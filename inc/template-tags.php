@@ -12,47 +12,48 @@ if ( ! function_exists( 'adler_posted_on' ) ) :
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
 	function adler_posted_on() {
-	?>
-			<div class="cat-links">
-				<?php
-				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( esc_html__( ', ', 'adler' ) );
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( esc_html__( ', ', 'adler' ) );
 
-				if ( $categories_list && adler_categorized_blog() ) {
-					printf( '<span class="cat-links">' . adler_get_svg( array(
-						'icon' => 'categories',
-					) ) . esc_html__( 'Posted in %1$s', 'adler' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-				} ?>
-			</div>
+		$categories = '';
+		if ( $categories_list && adler_categorized_blog() ) {
+			$categories = sprintf( '<div class="cat-links"><span class="cat-links">' . adler_get_svg( array(
+				'icon' => 'categories',
+			) ) . esc_html__( 'Posted in %1$s', 'adler' ) . '</span></div>', $categories_list ); // WPCS: XSS OK.
+		}
 
-			<?php
-			$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-			if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-				$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-			}
+		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		}
 
-			$time_string = sprintf( $time_string,
-				esc_attr( get_the_date( 'c' ) ),
-				esc_html( get_the_date() ),
-				esc_attr( get_the_modified_date( 'c' ) ),
-				esc_html( get_the_modified_date() )
-			);
+		$time_string = sprintf( $time_string,
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date() )
+		);
 
-			$posted_on = sprintf(
-				esc_html_x( '%s', 'post date', 'adler' ),
-				'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-			);
+		$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
-			$byline = sprintf(
-				esc_html_x( 'by %s', 'post author', 'adler' ),
-				'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-			);
+		$byline = sprintf(
+			esc_html_x( 'by %s', 'post author', 'adler' ),
+			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		);
 
-			echo '<span class="posted-on">' . adler_get_svg( array(
+		echo $categories .
+		'<span class="posted-on">' .
+			adler_get_svg( array(
 				'icon' => 'posted',
-			) ) . $posted_on . '</span><span class="byline">' . adler_get_svg( array(
+			) ) .
+			$posted_on .
+		'</span>' .
+		'<span class="byline">' .
+			adler_get_svg( array(
 				'icon' => 'author',
-			) ) . $byline . '</span>'; // WPCS: XSS OK.
+			) ) .
+			$byline .
+		'</span>'; // WPCS: XSS OK.
 	}
 endif;
 
