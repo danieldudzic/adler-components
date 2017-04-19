@@ -14,7 +14,7 @@
 		<div class="hero-bg feature-header" style="background-image:url( <?php echo esc_url( adler_get_post_thumbnail_url( 'adler-hero' ) ); ?> )"></div>
 
 		<div class="hero-content">
-			<?php  get_template_part( 'components/post/content', 'meta' ); ?>
+			<?php get_template_part( 'components/post/content', 'meta' ); ?>
 
 			<header class="entry-header">
 				<?php
@@ -28,10 +28,7 @@
 
 		</div><!-- .hero-content -->
 
-		<div class="scroll-indicator-wrapper">
-			<a href="#" id="scroll-indicator" class="scroll-indicator"><span class="screen-reader-text"><?php esc_html_e( 'Scroll down to see more content', 'adler' ); ?></span></a>
-		</div><!-- .scroll-indicator-wrapper -->
-
+		<?php get_template_part( 'components/hero/hero', 'scroll-indicator' ); ?>
 	</div><!-- .hero-wrapper -->
 </article><!-- #post-## -->
 <div id="scroll-indicator-anchor"></div>

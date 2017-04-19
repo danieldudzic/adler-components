@@ -32,7 +32,7 @@ get_header(); ?>
 
 				if ( 0 === $wp_query->current_post && adler_has_post_thumbnail() ) :
 
-					get_template_part( 'components/hero/hero', 'archive' );
+					get_template_part( 'components/hero/hero', get_post_format() );
 
 				else :
 

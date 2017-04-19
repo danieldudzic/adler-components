@@ -19,10 +19,7 @@
 			</header>
 		</div><!-- .hero-content -->
 
-		<div class="scroll-indicator-wrapper">
-			<a href="#" id="scroll-indicator" class="scroll-indicator"><span class="screen-reader-text"><?php esc_html_e( 'Scroll down to see more content', 'adler' ); ?></span></a>
-		</div>
-
+		<?php get_template_part( 'components/hero/hero', 'scroll-indicator' ); ?>
 	</div><!-- .hero-wrapper -->
 	<div id="scroll-indicator-anchor"></div>
 
