@@ -58,7 +58,7 @@ function adler_the_excerpt_customizer( $excerpt ) {
 	if ( empty( $content ) ) {
 		return $excerpt;
 	} else {
-		return sprintf( '<div class="jetpack-blog-display jetpack-the-content">%s</div><div class="jetpack-blog-display jetpack-the-excerpt">%s</div>', $content, $excerpt );
+		return sprintf( '<div class="jetpack-blog-display jetpack-the-content">%1$s</div><div class="jetpack-blog-display jetpack-the-excerpt">%2$s</div>', $content, $excerpt );
 	}
 }
 
@@ -95,7 +95,7 @@ function adler_the_content_customizer( $content ) {
 	if ( empty( $excerpt ) ) {
 		return $content;
 	} else {
-		return sprintf( '<div class="jetpack-blog-display %s jetpack-the-content">%s</div><div class="jetpack-blog-display %s jetpack-the-excerpt">%s</div>', $class, $content, $class, $excerpt );
+		return sprintf( '<div class="jetpack-blog-display %1$s jetpack-the-content">%2$s</div><div class="jetpack-blog-display %3$s jetpack-the-excerpt">%4$s</div>', $class, $content, $class, $excerpt );
 	}
 }
 
