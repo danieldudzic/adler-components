@@ -1,17 +1,29 @@
 <footer class="entry-footer">
 	<?php if ( ! is_single() && 'post' === get_post_type() ) {
-		get_template_part( 'components/post/content', 'meta' );
+		?>
+
+		<div class="entry-meta">
+			<?php adler_posted_on(); ?>
+		</div><!-- .entry-meta -->
+
+		<?php
 	} ?>
+
 	<?php adler_entry_footer(); ?>
 </footer><!-- .entry-footer -->
+
 <?php if ( is_single() && 'post' === get_post_type() ) {
 	adler_author_bio();
 } ?>
 
 <?php if ( ! is_single() && 'post' === get_post_type() ) {
-	echo '<span class="leaf">' .
-			adler_get_svg( array(
-				'icon' => 'leaf',
-			) ) .
-		 '</span>';
+	?>
+
+	<span class="leaf">
+		<?php echo adler_get_svg( array(
+			'icon' => 'leaf',
+		) ); ?>
+	</span><!-- .leaf -->
+
+	<?php
 } ?>
