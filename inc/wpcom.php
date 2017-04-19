@@ -22,7 +22,7 @@ function adler_wpcom_setup() {
 			'border' => '68f3c8',
 			'text'	 => '45525a',
 			'link'	 => '0e364f',
-			'url'	 => '45525a',
+			'url'	 => '0e364f',
 		);
 	}
 
