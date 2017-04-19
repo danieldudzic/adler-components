@@ -48,7 +48,8 @@
 			margin: 0;
 			position: relative;
 
-			a {
+			a,
+			.hero-title {
 				background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
 				background-size: 100% 100%;
 				border-bottom: none;

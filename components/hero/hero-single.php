@@ -15,9 +15,7 @@
 
 		<div class="hero-content">
 			<header class="entry-header">
-				<?php
-					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-				?>
+				<?php the_title( '<h1 class="entry-title"><span class="hero-title">', '</span></h1>' ); ?>
 			</header>
 
 			<?php get_template_part( 'components/post/content', 'meta' ); ?>
@@ -25,9 +23,8 @@
 
 		<?php get_template_part( 'components/hero/hero', 'scroll-indicator' ); ?>
 	</div><!-- .hero-wrapper -->
-	<div id="scroll-indicator-anchor"></div>
 
-	<div class="entry-wrapper">
+	<div id="scroll-indicator-anchor" class="entry-wrapper">
 		<div class="entry-content">
 			<?php
 				the_content();

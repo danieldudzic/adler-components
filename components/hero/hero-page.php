@@ -15,15 +15,14 @@
 
 		<div class="hero-content">
 			<header class="entry-header">
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				<?php the_title( '<h1 class="entry-title"><span class="hero-title">', '</span></h1>' ); ?>
 			</header>
 		</div><!-- .hero-content -->
 
 		<?php get_template_part( 'components/hero/hero', 'scroll-indicator' ); ?>
 	</div><!-- .hero-wrapper -->
-	<div id="scroll-indicator-anchor"></div>
 
-	<div class="entry-wrapper">
+	<div id="scroll-indicator-anchor" class="entry-wrapper">
 		<div class="entry-content">
 			<?php
 				the_content();
