@@ -41,19 +41,19 @@ if ( ! function_exists( 'adler_posted_on' ) ) :
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo $categories .
-		'<span class="posted-on">' .
+		$posted_on_string = '%1$s<span class="posted-on">%2$s%3$s</span><span class="byline">%4$s%5$s</span>';
+
+		printf( $posted_on_string,
+			$categories,
 			adler_get_svg( array(
 				'icon' => 'posted',
-			) ) .
-			$posted_on .
-		'</span>' .
-		'<span class="byline">' .
+			) ),
+			$posted_on,
 			adler_get_svg( array(
 				'icon' => 'author',
-			) ) .
-			$byline .
-		'</span>'; // WPCS: XSS OK.
+			) ),
+			$byline
+		);
 	}
 endif;
 
@@ -67,30 +67,49 @@ if ( ! function_exists( 'adler_entry_footer' ) ) :
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'adler' ) );
+
 			if ( $tags_list ) {
-				printf( '<span class="tags-links">' . adler_get_svg( array(
-					'icon' => 'tags',
-				) ) . esc_html__( 'Tagged %1$s', 'adler' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				$tags_list = sprintf( esc_html__( 'Tagged %1$s', 'adler' ), $tags_list ); // WPCS: XSS OK.
+
+				$tags_list_string = '<span class="tags-links">%1$s%2$s</span>';
+
+				printf( $tags_list_string,
+					adler_get_svg( array(
+						'icon' => 'tags',
+					) ),
+					$tags_list
+				);
 			}
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">' . adler_get_svg( array(
+			echo '<span class="comments-link">' .
+			adler_get_svg( array(
 				'icon' => 'comments',
 			) );
 			comments_popup_link( esc_html__( 'Leave a comment', 'adler' ), esc_html__( '1 Comment', 'adler' ), esc_html__( '% Comments', 'adler' ) );
 			echo '</span>';
 		}
 
+		adler_edit_link();
+	}
+endif;
+
+if ( ! function_exists( 'adler_edit_link' ) ) :
+	/**
+	 * Prints the Edit Post link.
+	 */
+	function adler_edit_link() {
+		$edit_link = sprintf(
+			/* translators: %s: Name of current post */
+			esc_html__( 'Edit %s', 'adler' ),
+			the_title( '<span class="screen-reader-text">"', '"</span>', false )
+		);
+
 		edit_post_link(
-			sprintf(
-				adler_get_svg( array(
-					'icon' => 'edit',
-				) ) .
-				/* translators: %s: Name of current post */
-				esc_html__( 'Edit %s', 'adler' ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			),
+			adler_get_svg( array(
+				'icon' => 'edit',
+			) ) . $edit_link,
 			'<span class="edit-link">',
 			'</span>'
 		);
