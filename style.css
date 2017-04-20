@@ -1451,10 +1451,6 @@ body:not(.has-hero-thumbnail) .site-header {
 }
 
 .custom-logo {
-  display: block;
-  width: auto;
-  height: auto;
-  margin: 0 auto;
   max-height: 100px;
 }
 
