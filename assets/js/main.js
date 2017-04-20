@@ -7,7 +7,7 @@
 		$document = $( document ),
 		resizeTimer,
 		toolbarHeight,
-		slideMenu = $( '.slide-panel' ),
+		slidingPanel = $( '.slide-panel' ),
 		body = $( 'body' ),
 		htmlBody = $( 'html, body' ),
 		actionText = $('.action-text'),
@@ -60,39 +60,48 @@
 	}
 
 	/**
-	* Sliding panel
+	* Sliding panel height
 	*
-	* Swaps classes for sliding panel so it uses CSS transformations.
+	* Ensure the Sliding Panel always is as tall as the browser window.
 	*/
-	function slideControl() {
+	function slidingPanelHeight() {
+		slidingPanel.each( function() {
+			var bodyWrapperHeight = bodyWrapper.height();
+			var browserWindowHeight = $window.innerHeight();
+
+			if ( bodyWrapperHeight <= browserWindowHeight ) {
+				 slidingPanel.css( 'height', browserWindowHeight );
+				 bodyWrapper.css( 'height', browserWindowHeight );
+			}
+		} );
+	}
+
+	/**
+	* Sliding panel control
+	*
+	* Swap classes for sliding panel so it uses CSS transformations.
+	*/
+	function slidingPanelControl() {
 		menuToggle.on( 'click', function( e ) {
 			e.preventDefault();
 			var $this = $( this );
 
-			var bodyWrapperHeight = function() {
-
-				bodyWrapper.css( {
-					'height': slideMenu.outerHeight() + 'px',
-				} );
-			};
-
-			slideMenu.toggleClass( 'expanded' ).resize();
+			slidingPanel.toggleClass( 'expanded' ).resize();
 			body.toggleClass( 'slide-panel-open' );
 
 			$this.toggleClass( 'toggle-on' );
 			$this.attr( 'aria-expanded', $( this ).attr( 'aria-expanded' ) == 'false' ? 'true' : 'false');
 
-			if ( slideMenu.hasClass( 'expanded' ) ) {
+			if ( slidingPanel.hasClass( 'expanded' ) ) {
 				actionText.text( 'hide' );
 			} else {
-				bodyWrapper.removeAttr('style');
 				actionText.text( 'show' );
 			}
 
 			//Close slide menu with double click
 			body.dblclick( function( e ) {
 				e.preventDefault();
-				slideMenu.removeClass( 'expanded' ).resize();
+				slidingPanel.removeClass( 'expanded' ).resize();
 				$( this ).removeClass( 'slide-panel-open' );
 				menuToggle.removeClass( 'toggle-on' );
 			} );
@@ -103,7 +112,6 @@
 	* Count articles for the purpose of styling
 	*/
 	function countArticles() {
-
 		// New posts have been added to the page.
 		$( document.body ).on( 'post-load', function () {
 
@@ -199,12 +207,12 @@
 	* Adds in this functionality
 	*/
 	$document.keyup( function( e ) {
-		if ( e.keyCode === 27 && slideMenu.hasClass( 'expanded' ) ) {
+		if ( e.keyCode === 27 && slidingPanel.hasClass( 'expanded' ) ) {
 			body.removeClass( 'sidebar-open' );
 			menuToggle.removeClass( 'toggle-on' );
-			slideMenu.removeClass( 'expanded' ).resize();
+			slidingPanel.removeClass( 'expanded' ).resize();
 
-			if( slideMenu.hasClass( 'expanded' ) ) {
+			if( slidingPanel.hasClass( 'expanded' ) ) {
 				actionText.text( 'hide' );
 			} else {
 				actionText.text( 'show' );
@@ -220,12 +228,14 @@
 			clearTimeout( resizeTimer );
 			resizeTimer = setTimeout( function() {
 				fullscreenFeaturedImage();
+				slidingPanelHeight();
 			}, 100 );
 		} );
 
 		countArticles();
 		bigImageClass();
-		slideControl();
+		slidingPanelControl();
+		slidingPanelHeight();
 		heroScroll();
 	} );
 

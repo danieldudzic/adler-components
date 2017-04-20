@@ -2982,9 +2982,8 @@ a {
     padding: 30px 0 2em;
   }
   .slide-panel.expanded, .single .slide-panel.expanded {
-    height: 100%;
-    -webkit-transition: 350ms all ease-in-out;
-    transition: 350ms all ease-in-out;
+    -webkit-transition: visibility 350ms ease-in-out;
+    transition: visibility 350ms ease-in-out;
   }
   .site {
     position: relative;
