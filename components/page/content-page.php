@@ -25,20 +25,7 @@
 			?>
 		</div>
 		<footer class="entry-footer">
-			<?php
-				edit_post_link(
-					sprintf(
-						adler_get_svg( array(
-							'icon' => 'edit',
-						) ) .
-						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'adler' ),
-						the_title( '<span class="screen-reader-text">"', '"</span>', false )
-					),
-					'<span class="edit-link">',
-					'</span>'
-				);
-			?>
+			<?php echo adler_meta_edit_link(); ?>
 		</footer>
 	</div>
 </article><!-- #post-## -->

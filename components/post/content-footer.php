@@ -2,12 +2,11 @@
 	<?php if ( ! is_single() && 'post' === get_post_type() ) : ?>
 
 		<div class="entry-meta">
-			<?php adler_posted_on(); ?>
+			<?php adler_entry_footer(); ?>
+			<?php adler_entry_meta(); ?>
 		</div><!-- .entry-meta -->
 
 	<?php endif; ?>
-
-	<?php adler_entry_footer(); ?>
 </footer><!-- .entry-footer -->
 
 <?php if ( is_single() && 'post' === get_post_type() ) {
