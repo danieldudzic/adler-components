@@ -79,7 +79,7 @@
 	.hero-wrapper {
 		.hero-content {
 			.entry-title {
-				@include font-size(3.95);
+				@include font-size(4.136);
 			}
 		}
 	}
@@ -260,7 +260,7 @@
 	.hero-wrapper {
 		.hero-content {
 			.entry-title {
-				@include font-size(5.472);
+				@include font-size(4.136);
 			}
 		}
 	}
@@ -372,7 +372,7 @@
 	.hero-wrapper {
 		.hero-content {
 			.entry-title {
-				@include font-size(6.438);
+				@include font-size(4.864);
 			}
 		}
 	}
@@ -418,6 +418,29 @@
 	.error404 .content-area .site-main {
 		.page-content {
 			margin-top: 5em;
+		}
+	}
+
+	.hero-wrapper {
+		.hero-content {
+			.entry-title {
+				@include font-size(5.437);
+			}
+		}
+	}
+}
+
+/**
+ * >= 1440px
+ */
+
+@media screen and (min-width: 90em) {
+
+	.hero-wrapper {
+		.hero-content {
+			.entry-title {
+				@include font-size(6.438);
+			}
 		}
 	}
 }

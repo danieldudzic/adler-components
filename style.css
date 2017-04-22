@@ -2837,8 +2837,8 @@ a {
     font-size: 2.42rem;
   }
   .hero-wrapper .hero-content .entry-title {
-    font-size: 63.2px;
-    font-size: 3.95rem;
+    font-size: 66.176px;
+    font-size: 4.136rem;
   }
 }
 
@@ -2963,8 +2963,8 @@ a {
     font-size: 2.55rem;
   }
   .hero-wrapper .hero-content .entry-title {
-    font-size: 87.552px;
-    font-size: 5.472rem;
+    font-size: 66.176px;
+    font-size: 4.136rem;
   }
   .menu-toggle {
     right: 40px;
@@ -3046,8 +3046,8 @@ a {
     margin-top: 3.846em;
   }
   .hero-wrapper .hero-content .entry-title {
-    font-size: 103.008px;
-    font-size: 6.438rem;
+    font-size: 77.824px;
+    font-size: 4.864rem;
   }
 }
 
@@ -3077,5 +3077,19 @@ a {
   }
   .error404 .content-area .site-main .page-content {
     margin-top: 5em;
+  }
+  .hero-wrapper .hero-content .entry-title {
+    font-size: 86.992px;
+    font-size: 5.437rem;
+  }
+}
+
+/**
+ * >= 1440px
+ */
+@media screen and (min-width: 90em) {
+  .hero-wrapper .hero-content .entry-title {
+    font-size: 103.008px;
+    font-size: 6.438rem;
   }
 }
