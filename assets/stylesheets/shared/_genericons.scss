@@ -1,6 +1,6 @@
-.cat-links,
 .posted-on,
 .byline,
+.cats-links,
 .tags-links,
 .comments-link,
 .edit-link,
@@ -15,9 +15,14 @@
 	}
 }
 
-.cat-links svg {
+.cats-links svg {
 	margin-right: 4px;
 	margin-top: -3px;
+}
+
+.tags-links svg {
+	margin-right: 4px;
+	margin-top: -2px;
 }
 
 .posted-on svg {
@@ -27,11 +32,6 @@
 
 .byline svg {
 	margin-right: 5px;
-	margin-top: -2px;
-}
-
-.tags-links svg {
-	margin-right: 4px;
 	margin-top: -2px;
 }
 
@@ -45,7 +45,7 @@
 	margin-top: -2px;
 }
 
-.hero-wrapper .cat-links svg {
+.hero-wrapper .cats-links svg {
 	display: none;
 }
 

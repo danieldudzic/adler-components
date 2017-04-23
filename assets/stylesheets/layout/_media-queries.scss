@@ -116,23 +116,24 @@
 		}
 
 		.entry-footer {
-			display: flex;
-			justify-content: space-between;
-
-			span {
-				width: auto;
-				display: inline;
-				text-align: left;
-				.cat-links, .tags-links, .comments-link {
-					margin-right: 1em;
-					margin-left: 1em;
-				}
-			}
-
 			.entry-meta {
-				.cat-links {
-					text-align: left;
+				.meta-links {
+					.posted-on,
+					.byline,
+					.comments-link {
+						display: inline;
+						margin-right: 2em;
+						width: auto;
+					}
 
+					.edit-link {
+						display: inline;
+						margin-right: 0;
+						width: auto;
+					}
+				}
+
+				.cats-links {
 					a {
 						text-decoration: none;
 						color: $color__text-main;

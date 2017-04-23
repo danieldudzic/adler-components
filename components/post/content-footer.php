@@ -2,8 +2,8 @@
 	<?php if ( ! is_single() && 'post' === get_post_type() ) : ?>
 
 		<div class="entry-meta">
-			<?php adler_entry_footer(); ?>
 			<?php adler_entry_meta(); ?>
+			<?php adler_entry_footer(); ?>
 		</div><!-- .entry-meta -->
 
 	<?php endif; ?>

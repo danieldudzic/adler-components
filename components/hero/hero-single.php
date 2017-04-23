@@ -19,7 +19,8 @@
 			</header>
 
 			<div class="entry-meta">
-				<?php adler_posted_on(); ?>
+				<?php echo adler_meta_categories(); ?>
+				<?php echo adler_meta_posted_on(); ?>
 			</div><!-- .entry-meta -->
 		</div><!-- .hero-content -->
 

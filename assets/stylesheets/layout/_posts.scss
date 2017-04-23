@@ -141,14 +141,6 @@
 		}
 	}
 
-	.edit-link {
-		clear: right;
-		display: inline-block;
-		float: right;
-		line-height: 2;
-		margin-left: 1em;
-	}
-
 	.entry-main {
 		background-color: $color__background-post;
 		margin: 0;
@@ -216,21 +208,6 @@
 		@include clearfix();
 		width: 100%;
 
-		span {
-			display: block;
-			width: 100%;
-		}
-
-		.tags-links {
-			margin-right: 1em;
-		}
-
-		.tags-links,
-		.comments-link {
-			line-height: 2;
-			margin-bottom: 0.231em;
-		}
-
 		.byline {
 			display: inline-block;
 
@@ -242,12 +219,27 @@
 
 		.entry-meta {
 			margin-right: 1em;
-			.cat-links,
-			.posted-on,
-			.byline {
-				display: block;
-				line-height: 2;
-				margin-bottom: 0.231em;
+			width: 100%;
+
+			.taxonomies-links {
+				.cats-links,
+				.tags-links {
+					display: block;
+					line-height: 2.308;
+					width: 100%;
+				}
+			}
+
+			.meta-links {
+				.posted-on,
+				.byline,
+				.comments-link,
+				.edit-link {
+					display: block;
+					line-height: 2;
+					line-height: 2.308;
+					width: 100%;
+				}
 			}
 
 			.has-hero-thumbnail .header-content & {

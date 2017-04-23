@@ -112,7 +112,7 @@ function adler_meta_categories() {
 	$categories_list = get_the_category_list( esc_html__( ', ', 'adler' ) );
 
 	if ( $categories_list && adler_categorized_blog() ) {
-		$cats_list_string = '<span class="cat-links">%1$s%2$s %3$s</span>';
+		$cats_list_string = '<span class="cats-links">%1$s%2$s %3$s</span>';
 
 		$categories = sprintf( $cats_list_string,
 			adler_get_svg( array(

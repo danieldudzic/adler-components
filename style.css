@@ -1121,14 +1121,6 @@ body:not(.hfeed) .entry-wrapper {
   display: block;
 }
 
-.entry-wrapper .edit-link {
-  clear: right;
-  display: inline-block;
-  float: right;
-  line-height: 2;
-  margin-left: 1em;
-}
-
 .entry-wrapper .entry-main {
   background-color: #f7f7f7;
   margin: 0;
@@ -1201,21 +1193,6 @@ body:not(.hfeed) .entry-wrapper {
   width: 100%;
 }
 
-.entry-wrapper .entry-footer span {
-  display: block;
-  width: 100%;
-}
-
-.entry-wrapper .entry-footer .tags-links {
-  margin-right: 1em;
-}
-
-.entry-wrapper .entry-footer .tags-links,
-.entry-wrapper .entry-footer .comments-link {
-  line-height: 2;
-  margin-bottom: 0.231em;
-}
-
 .entry-wrapper .entry-footer .byline {
   display: inline-block;
 }
@@ -1227,14 +1204,24 @@ body:not(.hfeed) .entry-wrapper {
 
 .entry-wrapper .entry-footer .entry-meta {
   margin-right: 1em;
+  width: 100%;
 }
 
-.entry-wrapper .entry-footer .entry-meta .cat-links,
-.entry-wrapper .entry-footer .entry-meta .posted-on,
-.entry-wrapper .entry-footer .entry-meta .byline {
+.entry-wrapper .entry-footer .entry-meta .taxonomies-links .cats-links,
+.entry-wrapper .entry-footer .entry-meta .taxonomies-links .tags-links {
+  display: block;
+  line-height: 2.308;
+  width: 100%;
+}
+
+.entry-wrapper .entry-footer .entry-meta .meta-links .posted-on,
+.entry-wrapper .entry-footer .entry-meta .meta-links .byline,
+.entry-wrapper .entry-footer .entry-meta .meta-links .comments-link,
+.entry-wrapper .entry-footer .entry-meta .meta-links .edit-link {
   display: block;
   line-height: 2;
-  margin-bottom: 0.231em;
+  line-height: 2.308;
+  width: 100%;
 }
 
 .has-hero-thumbnail .header-content .entry-wrapper .entry-footer .entry-meta {
@@ -1808,11 +1795,6 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 
 body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry-meta {
   display: none;
-}
-
-.hero-wrapper .hero-content .entry-meta .hero_date {
-  color: #f7f7f7;
-  display: inline-block;
 }
 
 .hero-wrapper .hero-content .entry-meta .cat-links, .hero-wrapper .hero-content .entry-meta a {
@@ -2629,9 +2611,9 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 /*--------------------------------------------------------------
 # Genericons
 --------------------------------------------------------------*/
-.cat-links svg,
 .posted-on svg,
 .byline svg,
+.cats-links svg,
 .tags-links svg,
 .comments-link svg,
 .edit-link svg,
@@ -2644,9 +2626,14 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
   width: 16px;
 }
 
-.cat-links svg {
+.cats-links svg {
   margin-right: 4px;
   margin-top: -3px;
+}
+
+.tags-links svg {
+  margin-right: 4px;
+  margin-top: -2px;
 }
 
 .posted-on svg {
@@ -2656,11 +2643,6 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 
 .byline svg {
   margin-right: 5px;
-  margin-top: -2px;
-}
-
-.tags-links svg {
-  margin-right: 4px;
   margin-top: -2px;
 }
 
@@ -2674,7 +2656,7 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
   margin-top: -2px;
 }
 
-.hero-wrapper .cat-links svg {
+.hero-wrapper .cats-links svg {
   display: none;
 }
 
@@ -2862,27 +2844,19 @@ a {
     font-size: 50.992px;
     font-size: 3.187rem;
   }
-  .entry-wrapper .entry-footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .entry-wrapper .entry-footer span {
-    width: auto;
+  .entry-wrapper .entry-footer .entry-meta .meta-links .posted-on,
+  .entry-wrapper .entry-footer .entry-meta .meta-links .byline,
+  .entry-wrapper .entry-footer .entry-meta .meta-links .comments-link {
     display: inline;
-    text-align: left;
+    margin-right: 2em;
+    width: auto;
   }
-  .entry-wrapper .entry-footer span .cat-links, .entry-wrapper .entry-footer span .tags-links, .entry-wrapper .entry-footer span .comments-link {
-    margin-right: 1em;
-    margin-left: 1em;
+  .entry-wrapper .entry-footer .entry-meta .meta-links .edit-link {
+    display: inline;
+    margin-right: 0;
+    width: auto;
   }
-  .entry-wrapper .entry-footer .entry-meta .cat-links {
-    text-align: left;
-  }
-  .entry-wrapper .entry-footer .entry-meta .cat-links a {
+  .entry-wrapper .entry-footer .entry-meta .cats-links a {
     text-decoration: none;
     color: #45525a;
   }
