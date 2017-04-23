@@ -1062,11 +1062,6 @@ body {
   display: none;
 }
 
-.hfeed .hentry .entry-content,
-.hfeed .hentry .entry-summary {
-  text-align: center;
-}
-
 .hentry:not(.has-post-thumbnail) .entry-wrapper .entry-header .entry-title {
   margin-bottom: 0.667em;
 }
