@@ -99,9 +99,17 @@
 		margin-top: 3.077em;
 	}
 
+	.entry-content {
+		margin-bottom: 3.077em;
+	}
+
 	p {
 		margin-bottom: 3.077em;
 		margin-top: 0;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 	}
 
 	.entry-header {
@@ -192,7 +200,7 @@
 				display: inline-block;
 				@include font-size(0.688);
 				line-height: 5.636;
-				margin: 0 auto 4.545em;
+				margin: 2.727em auto 0;
 				text-transform: uppercase;
 				width: 13.455em;
 			}
