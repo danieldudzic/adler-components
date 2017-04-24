@@ -17,8 +17,7 @@ function adler_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'	=> 'adler_infinite_scroll_render',
-		'footer'	=> 'page',
+		'render'	=> 'adler_infinite_scroll_render'
 	) );
 
 	// Add theme support for Responsive Videos.
@@ -35,7 +34,7 @@ function adler_jetpack_setup() {
 		'post-details'	 => array(
 			'stylesheet' => 'adler-style',
 			'date'		 => '.posted-on',
-			'categories' => '.cat-links',
+			'categories' => '.cats-links',
 			'tags'		 => '.tags-links',
 			'author'	 => '.byline',
 		),
@@ -62,6 +61,18 @@ function adler_infinite_scroll_render() {
 		endif;
 	}
 }
+
+/*
+ * Switch Infinite Scroll mode to "Click" if the footer menu is present
+ */
+function adler_has_footer_menu() {
+	if ( has_nav_menu( 'menu-2' ) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+add_filter( 'infinite_scroll_has_footer_widgets', 'adler_has_footer_menu' );
 
 /*
  * Only display social menu if function exists.

@@ -170,27 +170,6 @@
 			@include font-size(2.167);
 		}
 	}
-
-	.site-footer {
-		.site-info {
-			width: auto;
-			margin-right: auto;
-			display: inline-block;
-			text-align: left;
-			margin-bottom: 0.769em;
-		}
-
-		.footer-navigation {
-			width: auto;
-			float: right;
-			text-align: right;
-
-			.menu ul li {
-				margin-bottom: 0;
-			}
-		}
-	}
-
 }
 
 /**

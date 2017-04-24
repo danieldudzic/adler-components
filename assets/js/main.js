@@ -6,6 +6,7 @@
 	var $window   = $( window ),
 		$document = $( document ),
 		resizeTimer,
+		offsetTimer,
 		toolbarHeight,
 		slidingPanel = $( '.slide-panel' ),
 		body = $( 'body' ),
@@ -105,6 +106,8 @@
 				$( this ).removeClass( 'slide-panel-open' );
 				menuToggle.removeClass( 'toggle-on' );
 			} );
+
+			resizeInfiniteScrollFooter();
 		} );
 	}
 
@@ -146,7 +149,9 @@
 		});
 	}
 
-	// Scroll down when the arrow is clicked.
+	/**
+	* Scroll down when the hero arrow is clicked
+	*/
 	function heroScroll() {
 		if ( ! $( '#scroll-indicator' ) ) {
 			return;
@@ -160,6 +165,51 @@
 		        return false;
 			} );
 		} );
+	}
+
+	/**
+	* Make sure the Infinite Scroll footer matches the size of the page
+	*/
+	function resizeInfiniteScrollFooter() {
+		var footerContainer = $( '#infinite-footer .container' );
+
+		if ( ! footerContainer ) {
+			return;
+		}
+
+		clearTimeout( offsetTimer );
+		offsetTimer = setTimeout( function() {
+
+			var site = $( '.site' );
+			var pageWidth = $( '#page' ).width();
+			var slidingPanelOffset = '0px';
+			var slidingPanelOffsetDirection = '';
+
+			footerContainer.css( 'margin-left', '0' );
+			footerContainer.css( 'margin-right', '0' );
+			footerContainer.css( 'width', pageWidth );
+
+			if ( '0px' != site.css('left') ) {
+				slidingPanelOffset = site.css('left');
+				slidingPanelOffsetDirection = 'left';
+			}
+
+			if ( '0px' != site.css('right') ) {
+				slidingPanelOffset = site.css('right');
+				slidingPanelOffsetDirection = 'right';
+			}
+
+			if ( slidingPanelOffset && slidingPanelOffsetDirection ) {
+
+				if ( 'left' === slidingPanelOffsetDirection ) {
+					footerContainer.css( 'margin-right', '-' + slidingPanelOffset );
+				}
+
+				if ( 'right' === slidingPanelOffsetDirection ) {
+					footerContainer.css( 'margin-left','-' + slidingPanelOffset );
+				}
+			}
+		}, 500 );
 	}
 
 	/**
@@ -203,8 +253,6 @@
 
 	/**
 	* Close slide menu with escape key
-	*
-	* Adds in this functionality
 	*/
 	$document.keyup( function( e ) {
 		if ( e.keyCode === 27 && slidingPanel.hasClass( 'expanded' ) ) {
@@ -229,6 +277,7 @@
 			resizeTimer = setTimeout( function() {
 				fullscreenFeaturedImage();
 				slidingPanelHeight();
+				resizeInfiniteScrollFooter();
 			}, 100 );
 		} );
 
@@ -237,6 +286,7 @@
 		slidingPanelControl();
 		slidingPanelHeight();
 		heroScroll();
+		resizeInfiniteScrollFooter();
 	} );
 
 } )( jQuery );
