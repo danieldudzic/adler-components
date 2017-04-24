@@ -199,15 +199,12 @@
 				slidingPanelOffsetDirection = 'right';
 			}
 
-			if ( slidingPanelOffset && slidingPanelOffsetDirection ) {
+			if ( 'left' === slidingPanelOffsetDirection ) {
+				footerContainer.css( 'margin-right', '-' + slidingPanelOffset );
+			}
 
-				if ( 'left' === slidingPanelOffsetDirection ) {
-					footerContainer.css( 'margin-right', '-' + slidingPanelOffset );
-				}
-
-				if ( 'right' === slidingPanelOffsetDirection ) {
-					footerContainer.css( 'margin-left','-' + slidingPanelOffset );
-				}
+			if ( 'right' === slidingPanelOffsetDirection ) {
+				footerContainer.css( 'margin-left','-' + slidingPanelOffset );
 			}
 		}, 500 );
 	}
