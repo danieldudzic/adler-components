@@ -209,6 +209,7 @@ function adler_meta_edit_link() {
 }
 endif;
 
+if ( ! function_exists( 'adler_meta_sticky' ) ) :
 /**
  * Return the Sticky post label
  */
@@ -224,6 +225,7 @@ function adler_meta_sticky() {
 
 	return $sticky;
 }
+endif;
 
 /**
  * Return true if a blog has more than 1 category.

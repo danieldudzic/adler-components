@@ -2616,7 +2616,7 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 .edit-link svg,
 .menu-toggle svg,
 .showsub-toggle svg,
-.sticky svg {
+.sticky-label svg {
   fill: currentcolor;
   font-size: 16px;
   height: 16px;
@@ -2654,7 +2654,7 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
   margin-top: -2px;
 }
 
-.sticky svg {
+.sticky-label svg {
   margin-right: 3px;
   margin-top: -3px;
 }
