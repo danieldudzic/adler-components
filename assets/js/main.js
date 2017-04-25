@@ -7,11 +7,10 @@
 		$document = $( document ),
 		resizeTimer,
 		offsetTimer,
-		toolbarHeight,
 		slidingPanel = $( '.slide-panel' ),
 		body = $( 'body' ),
 		htmlBody = $( 'html, body' ),
-		actionText = $('.action-text'),
+		actionText = $( '.action-text' ),
 		menuToggle = $( '.menu-toggle' ),
 		bodyWrapper  = $( '.body-wrapper' ),
 		scrollIndicatorWrapper = $( '.scroll-indicator-wrapper' ),
@@ -45,7 +44,6 @@
 	*/
 	function fullscreenFeaturedImage() {
 		var entryHeaderHeight = $window.height();
-		var windowWidth       = $window.width();
 		var entryHeaderBackground = $( '.feature-header' );
 
 		if ( ! entryHeaderBackground ) {
