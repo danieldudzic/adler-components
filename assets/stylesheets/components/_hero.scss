@@ -101,15 +101,16 @@
 				}
 			}
 
-			.posted-on {
+			.posted-on,
+			.sticky-label {
 				&:before {
 					color: $color__contrast;
 					content: ' - ';
 				}
+			}
 
-				svg {
-					display: none;
-				}
+			.posted-on svg {
+				display: none;
 			}
 
 			.byline {

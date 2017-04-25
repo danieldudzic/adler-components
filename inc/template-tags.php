@@ -9,7 +9,7 @@
 
 if ( ! function_exists( 'adler_entry_meta' ) ) :
 /**
- * Prints HTML with meta information for the current post-date/time and author.
+ * Print HTML with meta information for the current post-date/time and author.
  */
 function adler_entry_meta() {
 	$meta_links_string = '<div class="meta-links">%1$s%2$s%3$s%4$s</div>';
@@ -25,7 +25,7 @@ endif;
 
 if ( ! function_exists( 'adler_entry_footer' ) ) :
 /**
- * Prints HTML with meta information for the categories, tags and comments.
+ * Print HTML with meta information for the categories, tags and comments.
  */
 function adler_entry_footer() {
 	// Hide category and tag text for pages.
@@ -42,39 +42,44 @@ endif;
 
 if ( ! function_exists( 'adler_meta_posted_on' ) ) :
 /**
- * Returns the HTML for post-date/time.
+ * Return the HTML for post-date/time.
  */
 function adler_meta_posted_on() {
-	$time_date_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_date_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+	if ( is_sticky() && ! is_single() ) {
+		return adler_meta_sticky();
+	} else {
+		$time_date_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$time_date_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		}
+
+		$time_date = sprintf( $time_date_string,
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date() )
+		);
+
+		$posted_on_string = '<span class="posted-on">%1$s<a href="%2$s" rel="bookmark">%3$s</a></span>';
+
+		$posted_on = sprintf( $posted_on_string,
+			adler_get_svg( array(
+				'icon' => 'posted',
+			) ),
+			esc_url( get_permalink() ),
+			$time_date
+		);
+
+		return $posted_on;
 	}
-
-	$time_date = sprintf( $time_date_string,
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date() )
-	);
-
-	$posted_on_string = '<span class="posted-on">%1$s<a href="%2$s" rel="bookmark">%3$s</a></span>';
-
-	$posted_on = sprintf( $posted_on_string,
-		adler_get_svg( array(
-			'icon' => 'posted',
-		) ),
-		esc_url( get_permalink() ),
-		$time_date
-	);
-
-	return $posted_on;
 }
 endif;
 
 if ( ! function_exists( 'adler_meta_author' ) ) :
 /**
- * Returns the HTML for author.
+ * Return the HTML for author.
  */
 function adler_meta_author() {
 	$byline_string = '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s</a></span>';
@@ -103,7 +108,7 @@ endif;
 
 if ( ! function_exists( 'adler_meta_categories' ) ) :
 /**
- * Returns the HTML for categories.
+ * Return the HTML for categories.
  */
 function adler_meta_categories() {
 	$categories = '';
@@ -129,7 +134,7 @@ endif;
 
 if ( ! function_exists( 'adler_meta_tags' ) ) :
 /**
- * Returns the HTML for tags.
+ * Return the HTML for tags.
  */
 function adler_meta_tags() {
 	$tags = '';
@@ -155,7 +160,7 @@ endif;
 
 if ( ! function_exists( 'adler_meta_comments_link' ) ) :
 /**
- * Returns the HTML for comment link.
+ * Return the HTML for comment link.
  */
 function adler_meta_comments_link() {
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
@@ -180,7 +185,7 @@ endif;
 
 if ( ! function_exists( 'adler_meta_edit_link' ) ) :
 /**
- * Returns the Edit Post link.
+ * Return the Edit Post link.
  */
 function adler_meta_edit_link() {
 	$edit_link = sprintf(
@@ -205,7 +210,23 @@ function adler_meta_edit_link() {
 endif;
 
 /**
- * Returns true if a blog has more than 1 category.
+ * Return the Sticky post label
+ */
+function adler_meta_sticky() {
+	$sticky_string = '<span class="sticky-label">%1$s%2$s</span>';
+
+	$sticky = sprintf( $sticky_string,
+		adler_get_svg( array(
+			'icon' => 'sticky',
+		) ),
+		esc_html__( 'Sticky', 'adler' )
+	);
+
+	return $sticky;
+}
+
+/**
+ * Return true if a blog has more than 1 category.
  *
  * @return bool
  */
