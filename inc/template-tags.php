@@ -30,12 +30,20 @@ if ( ! function_exists( 'adler_entry_footer' ) ) :
 function adler_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
-		$taxonomies_string = '<div class="taxonomies-links">%1$s%2$s</div>';
+		if ( ! is_single() ) {
+			$taxonomies_string = '<div class="taxonomies-links">%1$s%2$s</div>';
 
-		printf( $taxonomies_string,
-			adler_meta_categories(),
-			adler_meta_tags()
-		);
+			printf( $taxonomies_string,
+				adler_meta_categories(),
+				adler_meta_tags()
+			);
+		} else {
+			$taxonomies_string = '<div class="taxonomies-links">%1$s</div>';
+
+			printf( $taxonomies_string,
+				adler_meta_tags()
+			);
+		}
 	}
 }
 endif;
