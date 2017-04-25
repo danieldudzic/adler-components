@@ -52,11 +52,8 @@
 			return;
 		}
 
-		toolbarHeight = body.is( '.admin-bar' ) ? $( '#wpadminbar' ).height() : 0;
-
 		entryHeaderBackground.css( {
 			'height': entryHeaderHeight + 'px',
-			'margin-top': '-' + toolbarHeight + 'px',
 		} );
 	}
 

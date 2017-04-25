@@ -1704,6 +1704,7 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
   text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5);
   vertical-align: middle;
   width: 100%;
+  overflow: hidden;
   /* Admin Bar Fix */
 }
 
@@ -1729,9 +1730,11 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
   left: 50%;
   margin-left: 0;
   margin-right: 0;
+  margin-top: 10vh;
+  max-height: 45vh;
   overflow: visible;
   position: absolute;
-  top: 50%;
+  top: 40%;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
 }
@@ -2772,6 +2775,11 @@ a {
  * >= 470px
  */
 @media screen and (min-width: 29.375em) {
+  .hero-wrapper .hero-content {
+    margin-top: 0;
+    max-height: 60vh;
+    top: 50%;
+  }
   .hero-wrapper .hero-content .entry-title {
     font-size: 53.76px;
     font-size: 3.36rem;
@@ -2785,6 +2793,9 @@ a {
  * >= 601px
  */
 @media screen and (min-width: 37.5625em) {
+  .hero-wrapper .hero-content {
+    max-height: 75vh;
+  }
   .hero-wrapper .hero-content .entry-content p {
     font-size: 13.008px;
     font-size: 0.813rem;

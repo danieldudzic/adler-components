@@ -6,6 +6,9 @@
 
 	.hero-wrapper {
 		.hero-content {
+			margin-top: 0;
+			max-height: 60vh;
+			top: 50%;
 			.entry-title {
 				@include font-size(3.36);
 			}
@@ -27,6 +30,7 @@
 
 	.hero-wrapper {
 		.hero-content {
+			max-height: 75vh;
 			.entry-content {
 				p {
 					@include font-size(0.813);
