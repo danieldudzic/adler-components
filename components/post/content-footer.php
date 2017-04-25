@@ -9,6 +9,12 @@
 			</div><!-- .entry-meta -->
 		</footer><!-- .entry-footer -->
 
+		<span class="leaf">
+			<?php echo adler_get_svg( array(
+				'icon' => 'leaf',
+			) ); ?>
+		</span><!-- .leaf -->
+
 	<?php } else { ?>
 
 		<?php if ( has_tag() || has_category() && ! has_category( 'uncategorized' ) ) : ?>
@@ -20,19 +26,9 @@
 			</footer><!-- .entry-footer -->
 
 		<?php endif; ?>
+
+		<?php adler_author_bio(); ?>
+
 	<?php } ?>
 
-	<?php if ( is_single() ) {
-		adler_author_bio();
-	} ?>
-
-	<?php if ( ! is_single() ) : ?>
-
-		<span class="leaf">
-			<?php echo adler_get_svg( array(
-				'icon' => 'leaf',
-			) ); ?>
-		</span><!-- .leaf -->
-
-	<?php endif; ?>
 <?php endif; ?>
