@@ -1097,6 +1097,8 @@ body:not(.hfeed) .entry-wrapper {
   padding-bottom: 0;
   position: relative;
   text-align: center;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 
 .header-content .entry-wrapper .entry-header .entry-title {

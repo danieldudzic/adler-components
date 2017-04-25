@@ -115,6 +115,8 @@
 			padding-bottom: 0;
 			position: relative;
 			text-align: center;
+			word-break: break-word;
+			word-wrap: break-word;
 
 			.header-content & {
 				position: relative;
