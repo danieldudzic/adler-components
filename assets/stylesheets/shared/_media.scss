@@ -43,9 +43,12 @@ figure {
 
 	.wp-caption-text,
 	.gallery-caption {
+		border-bottom: 2px dashed $color__accent;
 		color: $color__text-caption;
 		display: inline-block;
+		@include font-size(0.875);
 		margin: 1em 0;
+		padding-bottom: 0.5em;
 		text-align: center;
 
 		a {

@@ -2491,9 +2491,13 @@ figure img {
 
 .wp-caption .wp-caption-text,
 .wp-caption .gallery-caption {
+  border-bottom: 2px dashed #68f3c8;
   color: #7c868b;
   display: inline-block;
+  font-size: 14px;
+  font-size: 0.875rem;
   margin: 1em 0;
+  padding-bottom: 0.5em;
   text-align: center;
 }
 
