@@ -48,13 +48,21 @@
 		}
 
 		.search-form .search-submit {
-			color: $color__contrast;
+			color: $color__link;
 
 			&:hover {
 				background: url(assets/images/more-bg.png);
 				background-repeat: no-repeat;
 				background-size: cover;
 				border-color: none;
+			}
+		}
+
+		.wp-caption  {
+			.wp-caption-text,
+			.gallery-caption {
+				color: $color__contrast;
+				font-style: italic;
 			}
 		}
 	}

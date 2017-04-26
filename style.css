@@ -634,7 +634,8 @@ input[type="submit"]:focus,
   background-size: cover;
   border-bottom: none;
   color: #45525a;
-  font-size: 1em;
+  font-size: 13.008px;
+  font-size: 0.813rem;
   line-height: 36px;
   margin-left: auto;
   margin-right: auto;
@@ -2165,7 +2166,7 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
 }
 
 .slide-panel .widget .search-form .search-submit {
-  color: #f7f7f7;
+  color: #45525a;
 }
 
 .slide-panel .widget .search-form .search-submit:hover {
@@ -2173,6 +2174,12 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   background-repeat: no-repeat;
   background-size: cover;
   border-color: none;
+}
+
+.slide-panel .widget .wp-caption .wp-caption-text,
+.slide-panel .widget .wp-caption .gallery-caption {
+  color: #f7f7f7;
+  font-style: italic;
 }
 
 .slide-panel .widget_calendar .calendar_wrap {
