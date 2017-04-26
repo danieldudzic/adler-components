@@ -3009,10 +3009,45 @@ a {
     margin-left: 3em;
     margin-right: -14.453em;
   }
-  .entry-wrapper .wp-caption.aligncenter {
+  .entry-wrapper .wp-caption.size-big, .entry-wrapper .wp-caption.size-large, .entry-wrapper .wp-caption.caption-big {
     margin-left: -14.453em;
     margin-right: -14.453em;
     max-width: calc( 14.453em * 2 + 100%);
+    width: calc( 14.453em * 2 + 100%);
+  }
+  .entry-wrapper .wp-caption img.alignleft, .entry-wrapper .wp-caption img.alignright {
+    max-width: 100%;
+  }
+  .entry-wrapper .wp-caption img.alignleft {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .entry-wrapper .wp-caption img.alignright {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .entry-wrapper .wp-caption img.size-big, .entry-wrapper .wp-caption img.size-large, .entry-wrapper .wp-caption img.caption-big {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .entry-wrapper img.alignleft, .entry-wrapper img.alignright {
+    max-width: 30.1536em;
+  }
+  .entry-wrapper img.alignleft {
+    margin-right: 3em;
+    margin-left: -14.453em;
+  }
+  .entry-wrapper img.alignright {
+    margin-left: 3em;
+    margin-right: -14.453em;
+  }
+  .entry-wrapper img.size-big, .entry-wrapper img.size-large, .entry-wrapper img.caption-big {
+    margin-left: -14.453em;
+    margin-right: -14.453em;
+    max-width: calc( 14.453em * 2 + 100%);
+    width: calc( 14.453em * 2 + 100%);
   }
   .content-area .site-main .page-title {
     font-size: 60px;
@@ -3052,10 +3087,28 @@ a {
     margin-left: 3em;
     margin-right: -16.154em;
   }
-  .entry-wrapper .wp-caption.aligncenter {
+  .entry-wrapper .wp-caption.size-big, .entry-wrapper .wp-caption.size-large, .entry-wrapper .wp-caption.caption-big {
     margin-left: -16.154em;
     margin-right: -16.154em;
     max-width: calc( 16.154em * 2 + 100%);
+    width: calc( 16.154em * 2 + 100%);
+  }
+  .entry-wrapper img.alignleft, .entry-wrapper img.alignright {
+    max-width: 37.692em;
+  }
+  .entry-wrapper img.alignleft {
+    margin-left: -16.154em;
+    margin-right: 3em;
+  }
+  .entry-wrapper img.alignright {
+    margin-right: -16.154em;
+    margin-left: 3em;
+  }
+  .entry-wrapper img.size-big, .entry-wrapper img.size-large, .entry-wrapper img.caption-big {
+    margin-left: -16.154em;
+    margin-right: -16.154em;
+    max-width: calc( 16.154em * 2 + 100%);
+    width: calc( 16.154em * 2 + 100%);
   }
   .error404 .content-area .site-main .page-content {
     margin-top: 5em;

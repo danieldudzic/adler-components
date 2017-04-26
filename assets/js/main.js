@@ -18,22 +18,28 @@
 		siteMain = $( '.site-main' );
 
 	/**
-	* Full width feature images
+	* Full width images
 	*
-	* Makes full width images have a class.
+	* Add a class to big images and captions >= 1088px.
 	*/
 	function bigImageClass() {
 		$( '.entry-content img.size-full' ).each( function() {
 			var img = $( this ),
-			newImg = new Image();
+			    caption = $( this ).closest( 'figure' ),
+			    newImg = new Image();
 
 			newImg.src = img.attr( 'src' );
 
 			$( newImg ).load( function() {
 				var imgWidth = newImg.width;
 
-				if ( imgWidth >= 1080 ) {
+				if ( 1088 <= imgWidth ) {
 					$( img ).addClass( 'size-big' );
+				}
+
+				if ( caption.hasClass( 'wp-caption' ) && 1088 <= imgWidth ) {
+					caption.addClass( 'caption-big' );
+					caption.removeAttr( 'style' );
 				}
 			} );
 		} );
