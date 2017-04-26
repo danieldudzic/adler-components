@@ -119,11 +119,12 @@
 		// New posts have been added to the page.
 		$( document.body ).on( 'post-load', function () {
 
-			articleNumber = siteMain.children( '.hentry' ).size();
+			var articleNumber = siteMain.children( '.hentry' ).size();
+			var infiniteArticleNumber = articleNumber;
 
 			if ( ! $( '#infinite-view-1' ).hasClass( 'odd' ) && ! $( '#infinite-view-1' ).hasClass( 'even' ) ) {
 				// Count the initial articles.
-				if ( articleNumber % 2 == 0 ) {
+				if ( articleNumber % 2 === 0 ) {
 					$( '#infinite-view-1' ).addClass( 'odd' );
 
 				} else {
@@ -134,18 +135,23 @@
 			$( '.infinite-wrap' ).each( function( i ) {
 
 				if ( ! $( this ).hasClass( 'odd' ) && ! $( this ).hasClass( 'even' ) ) {
+					infiniteArticleNumber = infiniteArticleNumber + i;
 
-					if ( i % 2 == 0 ) {
-						if ( articleNumber % 2 == 0 ) {
-							$( this ).addClass( 'odd' );
-						} else {
+					if ( articleNumber % 2 === 0 ) {
+						if ( infiniteArticleNumber % 2 === 0 ) {
 							$( this ).addClass( 'even' );
+						} else {
+							$( this ).addClass( 'odd' );
 						}
+					} else {
+						$( this ).addClass( 'even' );
 					}
 				}
 
 				$( '.infinite-wrap' ).removeClass( 'last' );
 				$( '.infinite-wrap' ).last().toggleClass( 'last' );
+
+				infiniteArticleNumber = $( this ).children( '.hentry' ).size();
 			});
 		});
 	}
