@@ -17,8 +17,50 @@ img {
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
-object {
+object,
+video {
 	max-width: 100%;
+	margin-bottom: 3.077em;
+}
+
+p > embed,
+p > iframe,
+p > object,
+p > video {
+	margin-bottom: 0;
+}
+
+.entry-content .mejs-container .mejs-controls .mejs-time {
+	padding-top: 1em;
+}
+
+.wp-audio-shortcode,
+.wp-video,
+.wp-playlist.wp-audio-playlist {
+	margin-top: 0;
+	margin-bottom: 3.077em;
+}
+
+.wp-playlist.wp-playlist {
+	padding-bottom: 0;
+}
+
+.wp-playlist .wp-playlist-tracks {
+	margin-top: 0;
+}
+
+.wp-playlist-item .wp-playlist-caption {
+	border-bottom: 0;
+	padding: 1em 0;
+}
+
+.wp-playlist-item .wp-playlist-item-length {
+	top: 1em;
+}
+
+.hentry .latex {
+	margin: 0;
+	max-width: 100%
 }
 
 figure {
