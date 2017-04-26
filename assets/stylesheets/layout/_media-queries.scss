@@ -334,31 +334,6 @@
 				max-width: calc( 14.453em * 2 + 100% );
 				width: calc( 14.453em * 2 + 100% );
 			}
-
-			img {
-				&.alignleft, &.alignright {
-					max-width: 100%;
-				}
-
-				&.alignleft {
-					margin-right: 0;
-					margin-left: 0;
-				}
-
-				&.alignright {
-					margin-left: 0;
-					margin-right: 0;
-				}
-
-				&.size-big,
-				&.size-large,
-				&.caption-big {
-					margin-left: 0;
-					margin-right: 0;
-					max-width: 100%;
-					width: 100%;
-				}
-			}
 		}
 
 		img {
@@ -383,6 +358,34 @@
 				margin-right: -14.453em;
 				max-width: calc( 14.453em * 2 + 100% );
 				width: calc( 14.453em * 2 + 100% );
+			}
+		}
+
+		.wp-caption,
+		.gallery {
+			img {
+				&.alignleft, &.alignright {
+					max-width: 100%;
+				}
+
+				&.alignleft {
+					margin-right: 0;
+					margin-left: 0;
+				}
+
+				&.alignright {
+					margin-left: 0;
+					margin-right: 0;
+				}
+
+				&.size-big,
+				&.size-large,
+				&.caption-big {
+					margin-left: 0;
+					margin-right: 0;
+					max-width: 100%;
+					width: 100%;
+				}
 			}
 		}
 	}

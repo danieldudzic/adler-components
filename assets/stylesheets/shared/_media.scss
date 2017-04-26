@@ -83,21 +83,6 @@ figure {
 		@include center-block;
 	}
 
-	.wp-caption-text,
-	.gallery-caption {
-		border-bottom: 2px dashed $color__accent;
-		color: $color__text-caption;
-		display: inline-block;
-		@include font-size(0.875);
-		margin: 1em 0;
-		padding-bottom: 0.5em;
-		text-align: center;
-
-		a {
-			color: $color__text-caption;
-		}
-	}
-
 	&.aligncenter,
 	&.alignnone,
 	&.alignleft,
@@ -144,8 +129,23 @@ figure {
 			margin-top: 0;
 		}
 	}
-
 }
+
+.wp-caption-text,
+.gallery-caption {
+	border-bottom: 2px dashed $color__accent;
+	color: $color__text-caption;
+	display: inline-block;
+	@include font-size(0.875);
+	margin: 1em 0;
+	padding-bottom: 0.5em;
+	text-align: center;
+
+	a {
+		color: $color__text-caption;
+	}
+}
+
 
 p {
 	a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".gif"] {
