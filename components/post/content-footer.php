@@ -9,12 +9,6 @@
 			</div><!-- .entry-meta -->
 		</footer><!-- .entry-footer -->
 
-		<span class="leaf">
-			<?php echo adler_get_svg( array(
-				'icon' => 'leaf',
-			) ); ?>
-		</span><!-- .leaf -->
-
 	<?php } else { ?>
 
 		<?php if ( has_tag() || has_category() && ! has_category( 'uncategorized' ) ) : ?>
@@ -31,4 +25,12 @@
 
 	<?php } ?>
 
+<?php endif; ?>
+
+<?php if ( ! is_single() ) : ?>
+	<span class="leaf">
+		<?php echo adler_get_svg( array(
+			'icon' => 'leaf',
+		) ); ?>
+	</span><!-- .leaf -->
 <?php endif; ?>

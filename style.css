@@ -566,11 +566,11 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
-  padding: 3px;
+  padding: 3px 6px;
 }
 
 textarea {
-  padding-left: 3px;
+  padding: 3px 6px;
   width: 100%;
 }
 
@@ -583,12 +583,12 @@ input[type="reset"],
 input[type="submit"],
 .button {
   background: #68f3c8;
-  border-color: #ccc #ccc #bbb;
   border: none;
+  border-radius: 3px;
   box-shadow: none;
   color: #f7f7f7;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 14px;
+  font-size: 0.875rem;
   letter-spacing: 1px;
   line-height: 1;
   padding: 0.692em 1em;

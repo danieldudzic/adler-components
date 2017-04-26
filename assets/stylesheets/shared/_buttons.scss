@@ -4,11 +4,11 @@ input[type="reset"],
 input[type="submit"],
 .button {
 	background: $color__background-button;
-	border-color: $color__border-button;
 	border: none;
+	border-radius: 3px;
 	box-shadow: none;
 	color: $color__text-button;
-	@include font-size(1);
+	@include font-size(0.875);
 	letter-spacing: 1px;
 	line-height: 1;
 	padding: 0.692em 1em;

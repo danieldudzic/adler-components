@@ -42,10 +42,10 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
-	padding: 3px;
+	padding: 3px 6px;
 }
 
 textarea {
-	padding-left: 3px;
+	padding: 3px 6px;
 	width: 100%;
 }
