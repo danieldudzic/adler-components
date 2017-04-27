@@ -61,15 +61,6 @@
 				background-image: linear-gradient($color__background-post 70%, transparent 70%, transparent);
 			}
 		}
-
-		&:last-of-type {
-			.entry-main {
-				&:after,
-				.leaf {
-					display: none;
-				}
-			}
-		}
 	}
 }
 
@@ -80,6 +71,15 @@
 
 	&.has-post-thumbnail .entry-wrapper .entry-main {
 		margin-top: 2.462em;
+	}
+
+	&:last-of-type {
+		.entry-main {
+			&:after,
+			.leaf {
+				display: none;
+			}
+		}
 	}
 }
 

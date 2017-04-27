@@ -1052,17 +1052,17 @@ body {
   background-image: linear-gradient(#f7f7f7 70%, transparent 70%, transparent);
 }
 
-.hfeed .hentry:last-of-type .entry-main:after,
-.hfeed .hentry:last-of-type .entry-main .leaf {
-  display: none;
-}
-
 .hentry:not(.has-post-thumbnail) .entry-wrapper .entry-header .entry-title {
   margin-bottom: 0.667em;
 }
 
 .hentry.has-post-thumbnail .entry-wrapper .entry-main {
   margin-top: 2.462em;
+}
+
+.hentry:last-of-type .entry-main:after,
+.hentry:last-of-type .entry-main .leaf {
+  display: none;
 }
 
 .entry-wrapper {
@@ -2433,14 +2433,23 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
 
 .infinite-scroll #infinite-handle span {
   background: #f7f7f7;
-  color: #fff;
+  border-bottom: 2px solid #68f3c8;
+  border-radius: 3px;
+  color: #666;
+  letter-spacing: 1px;
   padding: 0.692em 1em;
   text-transform: uppercase;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.infinite-scroll #infinite-handle span:hover, .infinite-scroll #infinite-handle span:focus {
-  background: white;
-  outline: 1px solid transparent;
+.infinite-scroll #infinite-handle span:hover {
+  background: #f7f7f7;
+  border-color: #c4c4c4;
+}
+
+.infinite-scroll #infinite-handle span:active, .infinite-scroll #infinite-handle span:focus {
+  border-color: #dedddd;
 }
 
 /* Spinner */

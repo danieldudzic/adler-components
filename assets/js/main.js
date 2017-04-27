@@ -62,23 +62,6 @@
 	}
 
 	/**
-	* Sliding panel height
-	*
-	* Ensure the Sliding Panel always is as tall as the browser window.
-	*/
-	function slidingPanelHeight() {
-		slidingPanel.each( function() {
-			var bodyWrapperHeight = bodyWrapper.height();
-			var browserWindowHeight = $window.innerHeight();
-
-			if ( bodyWrapperHeight <= browserWindowHeight ) {
-				 slidingPanel.css( 'height', browserWindowHeight );
-				 bodyWrapper.css( 'height', browserWindowHeight );
-			}
-		} );
-	}
-
-	/**
 	* Sliding panel control
 	*
 	* Swap classes for sliding panel so it uses CSS transformations.
@@ -92,7 +75,7 @@
 			body.toggleClass( 'slide-panel-open' );
 
 			$this.toggleClass( 'toggle-on' );
-			$this.attr( 'aria-expanded', $( this ).attr( 'aria-expanded' ) == 'false' ? 'true' : 'false');
+			$this.attr( 'aria-expanded', $( this ).attr( 'aria-expanded' ) == 'false' ? 'true' : 'false' );
 
 			if ( slidingPanel.hasClass( 'expanded' ) ) {
 				actionText.text( 'hide' );
@@ -108,7 +91,39 @@
 				menuToggle.removeClass( 'toggle-on' );
 			} );
 
+			slidingPanelHeight();
 			resizeInfiniteScrollFooter();
+		} );
+	}
+
+	/**
+	* Sliding panel height
+	*
+	* Ensure the Sliding Panel always is as tall as the browser window.
+	*/
+	function slidingPanelHeight() {
+		slidingPanel.each( function() {
+			var bodyWrapperHeight		= bodyWrapper.height();
+			var browserWindowHeight = $window.innerHeight();
+			var browserWindowWidth	= $window.width();
+			var slidingPanelHeight = 0;
+
+			slidingPanel.children().each( function(){
+				slidingPanelHeight = slidingPanelHeight + $( this ).outerHeight( true );
+			});
+
+			if ( 924 > browserWindowWidth ) {
+				if ( $( this ).hasClass( 'expanded' ) ) {
+					bodyWrapper.css( 'height', slidingPanelHeight );
+				} else {
+					bodyWrapper.css( 'height', 'auto' );
+				}
+			}
+
+			if ( bodyWrapperHeight <= browserWindowHeight ) {
+				bodyWrapper.css( 'height', browserWindowHeight );
+				slidingPanel.css( 'height', browserWindowHeight );
+			}
 		} );
 	}
 
@@ -118,15 +133,13 @@
 	function countArticles() {
 		// New posts have been added to the page.
 		$( document.body ).on( 'post-load', function () {
-
 			var articleNumber = siteMain.children( '.hentry' ).size();
-			var infiniteArticleNumber = articleNumber;
+			var infiniteArticleNumber;
 
 			if ( ! $( '#infinite-view-1' ).hasClass( 'odd' ) && ! $( '#infinite-view-1' ).hasClass( 'even' ) ) {
 				// Count the initial articles.
 				if ( articleNumber % 2 === 0 ) {
 					$( '#infinite-view-1' ).addClass( 'odd' );
-
 				} else {
 					$( '#infinite-view-1' ).addClass( 'even' );
 				}
@@ -135,23 +148,37 @@
 			$( '.infinite-wrap' ).each( function( i ) {
 
 				if ( ! $( this ).hasClass( 'odd' ) && ! $( this ).hasClass( 'even' ) ) {
-					infiniteArticleNumber = infiniteArticleNumber + i;
+					infiniteArticleNumber = $( this ).children( '.hentry' ).size();
 
-					if ( articleNumber % 2 === 0 ) {
-						if ( infiniteArticleNumber % 2 === 0 ) {
-							$( this ).addClass( 'even' );
-						} else {
+					if ( infiniteArticleNumber % 2 === 0 ) {
+						if ( articleNumber % 2 === 0 ) {
+							// Initially loaded: even / Subsequently loaded: even
 							$( this ).addClass( 'odd' );
+						} else {
+							// Initially loaded: odd / Subsequently loaded: even
+							$( this ).addClass( 'even' );
 						}
 					} else {
-						$( this ).addClass( 'even' );
+						if ( articleNumber % 2 === 0 ) {
+							// Initially loaded: even / Subsequently loaded: odd
+							if ( i % 2 === 0 ) {
+								$( this ).addClass( 'odd' );
+							} else {
+								$( this ).addClass( 'even' );
+							}
+						} else {
+							// Initially loaded: odd / Subsequently loaded: odd
+							if ( i % 2 === 0 ) {
+								$( this ).addClass( 'even' );
+							} else {
+								$( this ).addClass( 'odd' );
+							}
+						}
 					}
 				}
 
 				$( '.infinite-wrap' ).removeClass( 'last' );
 				$( '.infinite-wrap' ).last().toggleClass( 'last' );
-
-				infiniteArticleNumber = $( this ).children( '.hentry' ).size();
 			});
 		});
 	}

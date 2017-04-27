@@ -21,16 +21,23 @@
 
 	span {
 		background: $color__background-button;
-		color: $color__light;
+		border-bottom: 2px solid $color__border-button;
+		border-radius: 3px;
+		color: $color__text-button;
+		letter-spacing: 1px;
 		padding: 0.692em 1em;
 		text-transform: uppercase;
+		transition: 0.3s;
 
-		&:hover,
-		&:focus {
-			background: lighten( $color__background-button, 5% );
-			outline: 1px solid transparent;
+		&:hover {
+			background: $color__background-button;
+			border-color: darken( $color__background-button, 20% );
 		}
 
+		&:active,
+		&:focus {
+			border-color: darken( $color__background-button, 10% );
+		}
 	}
 }
 
