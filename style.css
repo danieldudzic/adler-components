@@ -2086,8 +2086,8 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   margin-bottom: 0.769em;
 }
 
-.edit-link,
-.comment-metadata .edit-link {
+.comment-metadata .edit-link,
+.comment-metadata .comment-metadata .edit-link {
   font-size: 13.008px;
   font-size: 0.813rem;
   float: right;
@@ -2096,22 +2096,22 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   color: #45525a;
 }
 
-.edit-link a,
-.edit-link a:visited,
 .comment-metadata .edit-link a,
-.comment-metadata .edit-link a:visited {
+.comment-metadata .edit-link a:visited,
+.comment-metadata .comment-metadata .edit-link a,
+.comment-metadata .comment-metadata .edit-link a:visited {
   border-bottom: 3px solid #68f3c8;
   color: #45525a;
   display: inline;
 }
 
-.edit-link a:hover, .edit-link a:focus,
-.edit-link a:visited:hover,
-.edit-link a:visited:focus,
-.comment-metadata .edit-link a:hover,
-.comment-metadata .edit-link a:focus,
+.comment-metadata .edit-link a:hover, .comment-metadata .edit-link a:focus,
 .comment-metadata .edit-link a:visited:hover,
-.comment-metadata .edit-link a:visited:focus {
+.comment-metadata .edit-link a:visited:focus,
+.comment-metadata .comment-metadata .edit-link a:hover,
+.comment-metadata .comment-metadata .edit-link a:focus,
+.comment-metadata .comment-metadata .edit-link a:visited:hover,
+.comment-metadata .comment-metadata .edit-link a:visited:focus {
   text-decoration: none;
 }
 
@@ -2487,12 +2487,16 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
 }
 
 .infinity-success .hentry:last-of-type .entry-main:after,
-.infinity-success .hentry:last-of-type .entry-main .leaf {
+.infinity-success .hentry:last-of-type .entry-main .leaf,
+.infinity-end .hentry:last-of-type .entry-main:after,
+.infinity-end .hentry:last-of-type .entry-main .leaf {
   display: block;
 }
 
 .infinity-success .infinite-wrap.last .hentry:last-of-type .entry-main:after,
-.infinity-success .infinite-wrap.last .hentry:last-of-type .entry-main .leaf {
+.infinity-success .infinite-wrap.last .hentry:last-of-type .entry-main .leaf,
+.infinity-end .infinite-wrap.last .hentry:last-of-type .entry-main:after,
+.infinity-end .infinite-wrap.last .hentry:last-of-type .entry-main .leaf {
   display: none;
 }
 

@@ -148,8 +148,6 @@
 			$( '.infinite-wrap' ).each( function( i ) {
 
 				if ( ! $( this ).hasClass( 'odd' ) && ! $( this ).hasClass( 'even' ) ) {
-					infiniteArticleNumber = $( this ).children( '.hentry' ).size();
-
 					if ( infiniteArticleNumber % 2 === 0 ) {
 						if ( articleNumber % 2 === 0 ) {
 							// Initially loaded: even / Subsequently loaded: even
@@ -176,6 +174,8 @@
 						}
 					}
 				}
+
+				infiniteArticleNumber = $( this ).children( '.hentry' ).size();
 
 				$( '.infinite-wrap' ).removeClass( 'last' );
 				$( '.infinite-wrap' ).last().toggleClass( 'last' );

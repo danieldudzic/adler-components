@@ -182,26 +182,26 @@
 		display: inline-block;
 		margin-bottom: 0.769em;
 	}
-}
 
-.edit-link {
-	&,
-	.comment-metadata & {
-		@include font-size(0.813);
-		float: right;
-		text-decoration: none;
-		text-transform: capitalize;
-	    color: $color__text-main;
+	.edit-link {
+		&,
+		.comment-metadata & {
+			@include font-size(0.813);
+			float: right;
+			text-decoration: none;
+			text-transform: capitalize;
+		    color: $color__text-main;
 
-	    a,
-		a:visited {
-			border-bottom: 3px solid $color__accent;
-			color: $color__text-main;
-			display: inline;
+		    a,
+			a:visited {
+				border-bottom: 3px solid $color__accent;
+				color: $color__text-main;
+				display: inline;
 
-			&:hover,
-			&:focus {
-				text-decoration: none;
+				&:hover,
+				&:focus {
+					text-decoration: none;
+				}
 			}
 		}
 	}
