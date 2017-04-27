@@ -7,18 +7,22 @@
 }
 
 .widget {
-	margin: 0;
-	padding: 1em 1.846em 0.385em;
+	margin: 0 0 3.077em;
+	padding: 0 1.846em 0;
 
 	.widget-title,
 	.widgettitle  {
 		@include font-size(1.250);
+		margin-top: 0;
 	}
 
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
 	}
+}
+.search-form {
+	margin: 0 0 3.077em;
 }
 
 .slide-panel {
@@ -47,22 +51,28 @@
 
 		}
 
-		.search-form .search-submit {
-			color: $color__link;
-
-			&:hover {
-				background: url(assets/images/more-bg.png);
-				background-repeat: no-repeat;
-				background-size: cover;
-				border-color: none;
-			}
-		}
-
 		.wp-caption  {
 			.wp-caption-text,
 			.gallery-caption {
 				color: $color__contrast;
 				font-style: italic;
+			}
+		}
+	}
+
+	.widget_search {
+		.search-form {
+			margin-bottom: 0;
+
+				.search-submit {
+					color: $color__link;
+
+					&:hover {
+						background: url(assets/images/more-bg.png);
+						background-repeat: no-repeat;
+						background-size: cover;
+						border-color: none;
+					}
 			}
 		}
 	}
@@ -107,6 +117,12 @@
 			&:last-child {
 				margin-bottom: 0;
 			}
+		}
+	}
+
+	.widget_contact_info {
+		.contact-map {
+			margin-bottom: 1em;
 		}
 	}
 

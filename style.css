@@ -2165,8 +2165,8 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0;
-  padding: 1em 1.846em 0.385em;
+  margin: 0 0 3.077em;
+  padding: 0 1.846em 0;
   /* Make sure select elements fit in widgets. */
 }
 
@@ -2174,10 +2174,15 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
 .widget .widgettitle {
   font-size: 20px;
   font-size: 1.25rem;
+  margin-top: 0;
 }
 
 .widget select {
   max-width: 100%;
+}
+
+.search-form {
+  margin: 0 0 3.077em;
 }
 
 .slide-panel .widget {
@@ -2205,21 +2210,25 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   list-style: none;
 }
 
-.slide-panel .widget .search-form .search-submit {
-  color: #45525a;
-}
-
-.slide-panel .widget .search-form .search-submit:hover {
-  background: url(assets/images/more-bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-color: none;
-}
-
 .slide-panel .widget .wp-caption .wp-caption-text,
 .slide-panel .widget .wp-caption .gallery-caption {
   color: #f7f7f7;
   font-style: italic;
+}
+
+.slide-panel .widget_search .search-form {
+  margin-bottom: 0;
+}
+
+.slide-panel .widget_search .search-form .search-submit {
+  color: #45525a;
+}
+
+.slide-panel .widget_search .search-form .search-submit:hover {
+  background: url(assets/images/more-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-color: none;
 }
 
 .slide-panel .widget_calendar .calendar_wrap {
@@ -2257,6 +2266,10 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
 
 .slide-panel .widget_authors > ul > li:last-child {
   margin-bottom: 0;
+}
+
+.slide-panel .widget_contact_info .contact-map {
+  margin-bottom: 1em;
 }
 
 .slide-panel .widget_jetpack_display_posts_widget a {
