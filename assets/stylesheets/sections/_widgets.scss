@@ -203,6 +203,27 @@
 		}
 	}
 
+	.widget_goodreads {
+		div[class^="gr_custom_container"] {
+			background: transparent;
+			border: none;
+			color: $color__light;
+
+			a {
+				color: $color__light;
+				border-bottom: none;
+			}
+		}
+
+		div[class^="gr_custom_each_container"] {
+			border: none;
+
+			a {
+				border-bottom: 3px solid $color__accent;
+			}
+		}
+	}
+
 	.widget_rss {
 		li {
 			margin-bottom: 1em;

@@ -2336,6 +2336,25 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   border-bottom: none;
 }
 
+.slide-panel .widget_goodreads div[class^="gr_custom_container"] {
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+
+.slide-panel .widget_goodreads div[class^="gr_custom_container"] a {
+  color: #fff;
+  border-bottom: none;
+}
+
+.slide-panel .widget_goodreads div[class^="gr_custom_each_container"] {
+  border: none;
+}
+
+.slide-panel .widget_goodreads div[class^="gr_custom_each_container"] a {
+  border-bottom: 3px solid #68f3c8;
+}
+
 .slide-panel .widget_rss li {
   margin-bottom: 1em;
 }
