@@ -23,6 +23,10 @@
 }
 .search-form {
 	margin: 0 0 3.077em;
+
+	.search-field {
+		width: 94%
+	}
 }
 
 .slide-panel {
@@ -64,15 +68,20 @@
 		.search-form {
 			margin-bottom: 0;
 
-				.search-submit {
-					color: $color__link;
+			.search-submit {
+				color: $color__link;
+				width: 90px;
 
-					&:hover {
-						background: url(assets/images/more-bg.png);
-						background-repeat: no-repeat;
-						background-size: cover;
-						border-color: none;
-					}
+				&:hover {
+					background: url(assets/images/more-bg.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+					border-color: none;
+				}
+			}
+
+			.search-field {
+				width: 160px;
 			}
 		}
 	}

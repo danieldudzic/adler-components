@@ -1,4 +1,16 @@
 /**
+ * >= 360px
+ */
+
+@media screen and ( min-width: 22.500em ) {
+	.search-form {
+		.search-field {
+			width: 62%;
+		}
+	}
+}
+
+/**
  * >= 470px
  */
 
@@ -20,6 +32,12 @@
 			}
 		}
 	}
+
+	.search-form {
+		.search-field {
+			width: 72%;
+		}
+	}
 }
 
 /**
@@ -36,6 +54,18 @@
 					@include font-size(0.813);
 				}
 			}
+		}
+	}
+}
+
+/**
+ * >= 659px
+ */
+
+@media screen and ( min-width: 41.188em ) {
+	.search-form {
+		.search-field {
+			width: 81.333%;
 		}
 	}
 }
