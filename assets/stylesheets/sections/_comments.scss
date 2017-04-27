@@ -136,9 +136,11 @@
 		font-weight: 700;
 		letter-spacing: 0;
 		text-transform: none;
+		border-bottom: 3px solid $color__accent;
 
 		a,
 		a:visited {
+			border-bottom: none;
 		}
 	}
 

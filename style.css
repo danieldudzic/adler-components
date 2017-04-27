@@ -2039,6 +2039,12 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   font-weight: 700;
   letter-spacing: 0;
   text-transform: none;
+  border-bottom: 3px solid #68f3c8;
+}
+
+.comment-author .fn a,
+.comment-author .fn a:visited {
+  border-bottom: none;
 }
 
 .comment-author .avatar {
