@@ -588,11 +588,11 @@ input[type="submit"],
   border-radius: 3px;
   box-shadow: none;
   color: #666;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 13.008px;
+  font-size: 0.813rem;
   letter-spacing: 1px;
   line-height: 1;
-  padding: 0.692em 1em;
+  padding: 0.714em 1.071em;
   text-decoration: none;
   text-shadow: none;
   text-transform: uppercase;
@@ -1912,8 +1912,8 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   border-bottom: 2px solid #68f3c8;
   border-radius: 3px;
   color: #666;
-  font-size: 11.072px;
-  font-size: 0.692rem;
+  font-size: 11.008px;
+  font-size: 0.688rem;
   letter-spacing: 1px;
   line-height: 1;
   padding: 0.692em 1em;
@@ -2000,12 +2000,13 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
 }
 
 .bypostauthor .post-author .icon-author {
-  fill: currentcolor;
   color: #fff;
-  margin-top: -10px;
   display: inline-block;
-  width: 0.750em;
+  fill: currentcolor;
   height: 0.750em;
+  margin-right: -1px;
+  margin-top: -10px;
+  width: 0.750em;
 }
 
 .comment-list {
@@ -2436,8 +2437,10 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   border-bottom: 2px solid #68f3c8;
   border-radius: 3px;
   color: #666;
+  font-size: 13.008px;
+  font-size: 0.813rem;
   letter-spacing: 1px;
-  padding: 0.692em 1em;
+  padding: 0.714em 1.071em;
   text-transform: uppercase;
   -webkit-transition: 0.3s;
   transition: 0.3s;
