@@ -8,7 +8,9 @@
 		a {
 			background: $color__background-button;
 			border: none;
-			color: $color__light;
+			border-bottom: 2px solid $color__border-button;
+			border-radius: 3px;
+			color: $color__text-button;
 			@include font-size(0.692);
 			letter-spacing: 1px;
 			line-height: 1;
@@ -17,15 +19,13 @@
 			transition: 0.3s;
 
 			&:hover {
-				background: lighten( $color__background-button, 5% );
-				border: none;
+				background: $color__background-button;
+				border-color: darken( $color__background-button, 20% );
 			}
 
 			&:active,
 			&:focus {
-				border-color: $color__border-button-focus;
-				border: none;
-				color: $color__link-hover;
+				border-color: darken( $color__background-button, 10% );
 			}
 		}
 	}
@@ -84,7 +84,27 @@
 }
 
 .bypostauthor {
-	display: block;
+	.post-author {
+		height: 22px;
+		width: 22px;
+		background: $color__accent;
+		border-radius: 100%;
+		display: block;
+		text-align: center;
+		position: absolute;
+		left: 31px;
+		top: 32px;
+		border: 3px solid $color__background-body;
+
+		 .icon-author {
+			 fill: currentcolor;
+			 color: $color__light;
+			 margin-top: -10px;
+			 display: inline-block;
+			 width: 0.750em;
+			 height: 0.750em;
+		}
+	}
 }
 
 .comment-list {
@@ -155,26 +175,32 @@
 		}
 	}
 
-	.edit-link {
-		float: none;
-	}
-
-	.edit-link:before {
-		content: "|";
-		margin-left: 0.385em;
-		margin-right: 0.769em;
-	}
-
 	a:first-of-type {
 		display: inline-block;
 		margin-bottom: 0.769em;
 	}
 }
 
-.pingback,
-.trackback {
-	.edit-link {
+.edit-link {
+	&,
+	.comment-metadata & {
+		@include font-size(0.813);
 		float: right;
+		text-decoration: none;
+		text-transform: capitalize;
+	    color: $color__text-main;
+
+	    a,
+		a:visited {
+			border-bottom: 3px solid $color__accent;
+			color: $color__text-main;
+			display: inline;
+
+			&:hover,
+			&:focus {
+				text-decoration: none;
+			}
+		}
 	}
 }
 

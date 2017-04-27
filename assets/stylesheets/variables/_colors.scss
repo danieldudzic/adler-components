@@ -5,7 +5,7 @@ $color__light: #fff;
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
-$color__background-button: #68f3c8;
+$color__background-button: $color__contrast;
 $color__background-pre: #f7f7f7;
 $color__background-ins: $color__accent;
 $color__background-post: #f7f7f7;
@@ -20,10 +20,10 @@ $color__link-hover: $color__link;
 
 $color__title: #0e364f;
 $color__text-main: #45525a;
-$color__text-button: $color__background-post;
+$color__text-button: #666;
 
-$color__border-button: #ccc #ccc #bbb;
-$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button: $color__accent;
+$color__border-button-hover: $color__text-main;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
