@@ -810,6 +810,8 @@ td {
   border-radius: 0;
   border: 0;
   color: #f7f7f7;
+  font-size: 16px;
+  font-size: 1rem;
   margin: 0;
   outline: 1px solid transparent;
   padding: 1em;
@@ -903,12 +905,6 @@ td {
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
-  width: 50%;
-}
-
-.comment-navigation .nav-previous:only-child,
-.posts-navigation .nav-previous:only-child,
-.post-navigation .nav-previous:only-child {
   width: 100%;
 }
 
@@ -917,12 +913,6 @@ td {
 .post-navigation .nav-next {
   float: right;
   text-align: right;
-  width: 50%;
-}
-
-.comment-navigation .nav-next:only-child,
-.posts-navigation .nav-next:only-child,
-.post-navigation .nav-next:only-child {
   width: 100%;
 }
 
@@ -2990,6 +2980,26 @@ a {
   .post-navigation {
     padding-left: 0;
     padding-right: 0;
+  }
+  .comment-navigation .nav-previous,
+  .posts-navigation .nav-previous,
+  .post-navigation .nav-previous {
+    width: 50%;
+  }
+  .comment-navigation .nav-previous:only-child,
+  .posts-navigation .nav-previous:only-child,
+  .post-navigation .nav-previous:only-child {
+    width: 100%;
+  }
+  .comment-navigation .nav-next,
+  .posts-navigation .nav-next,
+  .post-navigation .nav-next {
+    width: 50%;
+  }
+  .comment-navigation .nav-next:only-child,
+  .posts-navigation .nav-next:only-child,
+  .post-navigation .nav-next:only-child {
+    width: 100%;
   }
   .entry-wrapper blockquote {
     font-size: 32px;
