@@ -2332,6 +2332,10 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   margin-bottom: 0;
 }
 
+.slide-panel .widget_google_translate_widget a {
+  border-bottom: none;
+}
+
 .slide-panel .widget_rss li {
   margin-bottom: 1em;
 }
