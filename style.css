@@ -574,6 +574,15 @@ textarea {
   width: 100%;
 }
 
+.post-password-form input[type="password"] {
+  width: 100%;
+  margin: 1em 0;
+}
+
+.post-password-form input[type="submit"] {
+  width: 100%;
+}
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -2943,6 +2952,13 @@ a {
   }
   .hero-wrapper .hero-content .entry-content p {
     display: block;
+  }
+  .post-password-form input[type="password"] {
+    width: auto;
+    margin: 0;
+  }
+  .post-password-form input[type="submit"] {
+    width: auto;
   }
 }
 

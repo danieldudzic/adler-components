@@ -20,6 +20,17 @@
 			}
 		}
 	}
+
+	.post-password-form {
+		input[type="password"] {
+			width: auto;
+			margin: 0;
+		}
+
+		input[type="submit"] {
+			width: auto;
+		}
+	}
 }
 
 /**
