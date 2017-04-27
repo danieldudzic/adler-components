@@ -11,7 +11,7 @@
 
 	<?php } else { ?>
 
-		<?php if ( has_tag() || has_category() && ! has_category( 'uncategorized' ) ) : ?>
+		<?php if ( has_tag() ) : ?>
 
 			<footer class="entry-footer">
 				<div class="entry-meta">
