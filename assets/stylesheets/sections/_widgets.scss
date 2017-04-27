@@ -23,9 +23,21 @@
 }
 .search-form {
 	margin: 0 0 3.077em;
+	display: flex;
+	width: 100%;
 
-	.search-field {
-		width: 94%
+	label {
+		flex: 1;
+		margin-right: 10px;
+
+		.search-field {
+			width: 100%;
+			box-sizing: border-box;
+		}
+	}
+
+	.search-submit {
+		width: 90px;
 	}
 }
 
@@ -68,20 +80,15 @@
 		.search-form {
 			margin-bottom: 0;
 
-			.search-submit {
-				color: $color__link;
-				width: 90px;
+				.search-submit {
+					color: $color__link;
 
-				&:hover {
-					background: url(assets/images/more-bg.png);
-					background-repeat: no-repeat;
-					background-size: cover;
-					border-color: none;
-				}
-			}
-
-			.search-field {
-				width: 160px;
+					&:hover {
+						background: url(assets/images/more-bg.png);
+						background-repeat: no-repeat;
+						background-size: cover;
+						border-color: none;
+					}
 			}
 		}
 	}
