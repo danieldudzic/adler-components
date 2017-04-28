@@ -250,7 +250,6 @@
 	* This switches classes and changes the genericon.
 	*/
 	$( '.main-navigation .menu-item-has-children > a' ).after( '<button class="showsub-toggle" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path d="M8 12.7L1.3 6l1.4-1.4L8 9.9l5.3-5.3L14.7 6"/></g></svg><span class="screen-reader-text">' + menuToggleText.open + '</span></button>' );
-
 	$( '.main-navigation .page_item_has_children > li' ).append( '<button class="showsub-toggle" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path d="M8 12.7L1.3 6l1.4-1.4L8 9.9l5.3-5.3L14.7 6"/></g></svg><span class="screen-reader-text">' + menuToggleText.open + '</span></button>' );
 
 	$( '.main-navigation .current-menu-ancestor > a' ).addClass( 'sub-on' );
@@ -309,7 +308,7 @@
 				fullscreenFeaturedImage();
 				slidingPanelHeight();
 				resizeInfiniteScrollFooter();
-			}, 100 );
+			}, 300 );
 		} );
 
 		countArticles();
