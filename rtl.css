@@ -28,13 +28,11 @@ body {
 --------------------------------------------------------------*/
 
 .alignleft {
-	float: right;
 	margin-left: 1.538em;
 	margin-right: 0;
 }
 
 .alignright {
-	float: left;
 	margin-left: 0;
 	margin-right: 1.538em;
 }
