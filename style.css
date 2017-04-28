@@ -1430,7 +1430,7 @@ body:not(.has-hero-thumbnail) .site-header {
 }
 
 .site-branding .site-title a:active, .site-branding .site-title a:focus, .site-branding .site-title a:hover {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .site-branding .site-description {
@@ -1792,7 +1792,7 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
   background-image: -webkit-linear-gradient(transparent 0%, transparent 55%, rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.5) 100%, transparent 100%, transparent 100%);
   background-image: linear-gradient(transparent 0%, transparent 55%, rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.5) 100%, transparent 100%, transparent 100%);
   background-size: 100% 100%;
-  border-bottom: none;
+  border: none;
   color: #f7f7f7;
   position: relative;
   text-decoration: none;
@@ -1816,10 +1816,6 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 }
 
 .hero-wrapper .hero-content .entry-content .more-link:hover {
-  color: #defcf3;
-}
-
-.hero-wrapper .hero-content .entry-content .more-link:active {
   color: #68f3c8;
 }
 
@@ -2984,7 +2980,8 @@ textarea,
 .search-form:before,
 .site-logo-link,
 .sticky-post,
-.more-link {
+.more-link,
+.hero-title a {
   -webkit-transition: 350ms all ease-in-out;
   transition: 350ms all ease-in-out;
 }
