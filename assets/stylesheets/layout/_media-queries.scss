@@ -169,6 +169,10 @@
 					a {
 						text-decoration: none;
 						color: $color__text-main;
+
+						&:hover {
+							color: lighten( $color__text-main, 10% );
+						}
 					}
 				}
 
@@ -186,12 +190,20 @@
 			.posted-on {
 				a {
 					border-bottom: none;
+
+					&:hover {
+						color: lighten( $color__text-main, 10% );
+					}
 				}
 			}
 
 			.comments-link {
 				a {
 					border-bottom: none;
+
+					&:hover {
+						color: lighten( $color__text-main, 10% );
+					}
 				}
 			}
 		}

@@ -19,13 +19,15 @@
 			transition: 0.3s;
 
 			&:hover {
-				background: $color__background-button;
-				border-color: darken( $color__background-button, 20% );
+				background: lighten( $color__background-button, 0.5% );
+				border-color: lighten( $color__border-button, 8% );
+				color: lighten( $color__text-button, 10% );
 			}
 
 			&:active,
 			&:focus {
-				border-color: darken( $color__background-button, 10% );
+				border-color: lighten( $color__text-button, 20% );
+				outline: 1px dotted $color__text-input-focus;
 			}
 		}
 	}

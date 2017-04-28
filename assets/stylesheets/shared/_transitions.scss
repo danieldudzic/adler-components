@@ -12,7 +12,8 @@ textarea,
 .post-thumbnail img,
 .search-form:before,
 .site-logo-link,
-.sticky-post {
+.sticky-post,
+.more-link {
 	transition: 350ms all ease-in-out;
 }
 
@@ -22,5 +23,5 @@ textarea,
 }
 
 a {
-	transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out;
+	transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out, border 350ms ease-in-out;
 }

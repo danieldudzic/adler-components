@@ -8,6 +8,7 @@
 	outline-style: solid;
 	outline-width: 0;
 	overflow: scroll;
+	padding-top: 3.692em;
 	position: absolute;
 	right: -100%;
 	visibility: hidden;
@@ -20,11 +21,15 @@
 
 	a {
 		color: $color__background-sliding-panel-link;
+
+		&:hover {
+			color: $color__accent;
+		}
 	}
 
 	.jetpack-social-navigation {
 		border-top: 1px solid lighten( $color__background-sliding-panel, 5% );
-		margin-bottom: 1em;
+		margin-bottom: 2em;
 
 		ul {
 			margin-bottom: 2px;

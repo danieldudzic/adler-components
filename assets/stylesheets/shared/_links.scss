@@ -7,10 +7,15 @@ a {
 		color: $color__link-visited;
 	}
 
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
+	&:hover {
+		color: lighten( $color__text-main, 10% );
+		border-color: lighten( $color__accent, 8% );
+	}
+
+	&:active,
+	&:focus {
+		color: lighten( $color__text-main, 15% );
+		border-color: lighten( $color__accent, 5% );
 	}
 
 	&:focus {

@@ -596,12 +596,12 @@ input[type="submit"],
   border-bottom: 2px solid #68f3c8;
   border-radius: 3px;
   box-shadow: none;
-  color: #666;
+  color: #777;
   font-size: 13.008px;
   font-size: 0.813rem;
   letter-spacing: 1px;
   line-height: 1;
-  padding: 0.714em 1.071em;
+  padding: 0.923em 1.071em 0.769em;
   text-decoration: none;
   text-shadow: none;
   text-transform: uppercase;
@@ -615,9 +615,9 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 .button:hover {
-  background: #f7f7f7;
-  border-color: #c4c4c4;
-  box-shadow: none;
+  background: #f8f8f8;
+  border-color: #8ef6d6;
+  color: #919090;
 }
 
 button:active, button:focus,
@@ -629,8 +629,7 @@ input[type="submit"]:active,
 input[type="submit"]:focus,
 .button:active,
 .button:focus {
-  border-color: #dedddd;
-  box-shadow: none;
+  border-color: #aaaaaa;
   outline: 1px dotted #0e364f;
 }
 
@@ -778,7 +777,7 @@ td {
 
 .main-navigation a {
   border-bottom: none;
-  color: #666;
+  color: #777;
   display: block;
   padding: 1.154em 1.846em;
 }
@@ -931,6 +930,12 @@ td {
   color: #0e364f;
 }
 
+.comment-navigation .nav-links a:hover,
+.posts-navigation .nav-links a:hover,
+.post-navigation .nav-links a:hover {
+  color: #16547a;
+}
+
 /*--------------------------------------------------------------
 # Links
 --------------------------------------------------------------*/
@@ -944,8 +949,14 @@ a:visited {
   color: #45525a;
 }
 
-a:hover, a:focus, a:active {
-  color: #45525a;
+a:hover {
+  color: #5b6c77;
+  border-color: #8ef6d6;
+}
+
+a:active, a:focus {
+  color: #667985;
+  border-color: #80f5d1;
 }
 
 a:focus {
@@ -1110,6 +1121,10 @@ body:not(.hfeed) .entry-wrapper {
   color: #0e364f;
 }
 
+.entry-wrapper .entry-header .entry-title a:hover {
+  color: #134869;
+}
+
 .entry-wrapper .post-thumbnail {
   margin-top: 0px;
   text-align: center;
@@ -1183,6 +1198,14 @@ body:not(.hfeed) .entry-wrapper {
   margin: 2.727em auto 0;
   text-transform: uppercase;
   width: 13.455em;
+}
+
+.entry-wrapper .entry-main .read-more .more-link:hover {
+  opacity: 0.85;
+}
+
+.entry-wrapper .entry-main .read-more .more-link:active {
+  opacity: 0.95;
 }
 
 .entry-wrapper .entry-footer {
@@ -1639,6 +1662,7 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
   outline-style: solid;
   outline-width: 0;
   overflow: scroll;
+  padding-top: 3.692em;
   position: absolute;
   right: -100%;
   visibility: hidden;
@@ -1654,9 +1678,13 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
   color: #fff;
 }
 
+.slide-panel a:hover {
+  color: #68f3c8;
+}
+
 .slide-panel .jetpack-social-navigation {
   border-top: 1px solid #124565;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .slide-panel .jetpack-social-navigation ul {
@@ -1787,6 +1815,14 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
   text-transform: uppercase;
 }
 
+.hero-wrapper .hero-content .entry-content .more-link:hover {
+  color: #defcf3;
+}
+
+.hero-wrapper .hero-content .entry-content .more-link:active {
+  color: #68f3c8;
+}
+
 .hero-wrapper .hero-content .entry-meta {
   color: #f7f7f7;
   width: 100%;
@@ -1794,8 +1830,12 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 
 .hero-wrapper .hero-content .entry-meta a,
 .hero-wrapper .hero-content .entry-meta span {
-  border: none;
+  border-bottom: 2px solid transparent;
   color: #f7f7f7;
+}
+
+.hero-wrapper .hero-content .entry-meta a:hover {
+  border-bottom: 2px solid #f7f7f7;
 }
 
 body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry-meta {
@@ -1910,7 +1950,7 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   border: none;
   border-bottom: 2px solid #68f3c8;
   border-radius: 3px;
-  color: #666;
+  color: #777;
   font-size: 11.008px;
   font-size: 0.688rem;
   letter-spacing: 1px;
@@ -1922,12 +1962,14 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
 }
 
 #comments .reply a:hover {
-  background: #f7f7f7;
-  border-color: #c4c4c4;
+  background: #f8f8f8;
+  border-color: #8ef6d6;
+  color: #919090;
 }
 
 #comments .reply a:active, #comments .reply a:focus {
-  border-color: #dedddd;
+  border-color: #aaaaaa;
+  outline: 1px dotted #0e364f;
 }
 
 #comments .comment-notes {
@@ -2249,6 +2291,11 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   background-repeat: no-repeat;
   background-size: cover;
   border-color: none;
+  opacity: 0.90;
+}
+
+.slide-panel .widget_search .search-form .search-submit:active {
+  opacity: 0.95;
 }
 
 .slide-panel .widget_calendar .calendar_wrap {
@@ -2278,6 +2325,10 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
 
 .slide-panel .widget_authors li li a {
   border-bottom: 3px solid #68f3c8;
+}
+
+.slide-panel .widget_authors li li a:hover {
+  color: #68f3c8;
 }
 
 .slide-panel .widget_authors > ul > li {
@@ -2319,6 +2370,10 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   border-bottom: 3px solid #68f3c8;
   margin-bottom: 0;
   display: inline;
+}
+
+.slide-panel .widget_jetpack_display_posts_widget .jetpack-display-remote-posts h4 a:hover {
+  color: #68f3c8;
 }
 
 .slide-panel .widget_facebook_likebox h2 a {
@@ -2369,6 +2424,10 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   border-bottom: none;
 }
 
+.slide-panel .widget_google_translate_widget a:hover {
+  color: inherit;
+}
+
 .slide-panel .widget_goodreads div[class^="gr_custom_container"] {
   background: transparent;
   border: none;
@@ -2386,6 +2445,10 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
 
 .slide-panel .widget_goodreads div[class^="gr_custom_each_container"] a {
   border-bottom: 3px solid #68f3c8;
+}
+
+.slide-panel .widget_goodreads div[class^="gr_custom_each_container"] a:hover {
+  color: #68f3c8;
 }
 
 .slide-panel .widget_rss li {
@@ -2435,23 +2498,24 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   background: #f7f7f7;
   border-bottom: 2px solid #68f3c8;
   border-radius: 3px;
-  color: #666;
+  color: #777;
   font-size: 13.008px;
   font-size: 0.813rem;
   letter-spacing: 1px;
-  padding: 0.714em 1.071em;
+  padding: 0.923em 1.071em 0.769em;
   text-transform: uppercase;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .infinite-scroll #infinite-handle span:hover {
-  background: #f7f7f7;
-  border-color: #c4c4c4;
+  background: #f8f8f8;
+  border-color: #8ef6d6;
+  color: #919090;
 }
 
 .infinite-scroll #infinite-handle span:active, .infinite-scroll #infinite-handle span:focus {
-  border-color: #dedddd;
+  border-color: #aaaaaa;
 }
 
 /* Spinner */
@@ -2919,7 +2983,8 @@ textarea,
 .post-thumbnail img,
 .search-form:before,
 .site-logo-link,
-.sticky-post {
+.sticky-post,
+.more-link {
   -webkit-transition: 350ms all ease-in-out;
   transition: 350ms all ease-in-out;
 }
@@ -2930,8 +2995,8 @@ textarea,
 }
 
 a {
-  -webkit-transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out;
-  transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out;
+  -webkit-transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out, border 350ms ease-in-out;
+  transition: color 350ms ease-in-out, background-color 350ms ease-in-out, box-shadow 350ms ease-in-out, border 350ms ease-in-out;
 }
 
 /*--------------------------------------------------------------
@@ -3068,6 +3133,9 @@ a {
     text-decoration: none;
     color: #45525a;
   }
+  .entry-wrapper .entry-footer .entry-meta .cats-links a:hover {
+    color: #5b6c77;
+  }
   .entry-wrapper .entry-footer .entry-meta .separator {
     display: inline-block;
     padding-left: 5px;
@@ -3079,8 +3147,14 @@ a {
   .entry-wrapper .entry-footer .posted-on a {
     border-bottom: none;
   }
+  .entry-wrapper .entry-footer .posted-on a:hover {
+    color: #5b6c77;
+  }
   .entry-wrapper .entry-footer .comments-link a {
     border-bottom: none;
+  }
+  .entry-wrapper .entry-footer .comments-link a:hover {
+    color: #5b6c77;
   }
   .error404 .content-area .site-main .page-title {
     font-size: 34.672px;

@@ -50,7 +50,7 @@
 	*/
 	function fullscreenFeaturedImage() {
 		var entryHeaderHeight = $window.height();
-		var entryHeaderBackground = $( '.feature-header' );
+		var entryHeaderBackground = $( '.hero-wrapper' );
 
 		if ( ! entryHeaderBackground ) {
 			return;
@@ -317,6 +317,7 @@
 		slidingPanelHeight();
 		heroScroll();
 		resizeInfiniteScrollFooter();
+		fullscreenFeaturedImage();
 	} );
 
 } )( jQuery );

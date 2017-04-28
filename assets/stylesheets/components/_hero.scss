@@ -79,6 +79,14 @@
 				line-height: 1.308;
 				margin-top: 1.692em;
 				text-transform: uppercase;
+
+				&:hover {
+					color: lighten( $color__accent, 25% );
+				}
+
+				&:active {
+					color: $color__accent;
+				}
 			}
 		}
 
@@ -88,8 +96,12 @@
 
 			a,
 			span {
-				border: none;
+				border-bottom: 2px solid transparent;
 				color: $color__contrast;
+			}
+
+			a:hover {
+				border-bottom: 2px solid $color__contrast;
 			}
 
 			body:not(.has-hero-thumbnail) .header-content & {

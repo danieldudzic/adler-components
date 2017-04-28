@@ -35,6 +35,10 @@
 	.nav-links {
 		a {
 			color: $color__title;
+
+			&:hover {
+				color: lighten( $color__title, 10% );
+			}
 		}
 	}
 }
