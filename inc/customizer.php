@@ -27,7 +27,7 @@ add_action( 'customize_preview_init', 'adler_customize_preview_js' );
 
 /**
  * Filter the excerpt in the Customizer.
-*/
+ */
 function adler_the_excerpt_customizer( $excerpt ) {
 	global $post;
 
@@ -64,7 +64,7 @@ function adler_the_excerpt_customizer( $excerpt ) {
 
 /**
  * Filter the content in the Customizer.
-*/
+ */
 function adler_the_content_customizer( $content ) {
 	global $post;
 
@@ -101,7 +101,7 @@ function adler_the_content_customizer( $content ) {
 
 /**
  * Load the adler_the_excerpt_customizer in the Customizer.
-*/
+ */
 function adler_custom_content_display() {
 	if ( function_exists( 'jetpack_blog_display_custom_excerpt' ) ) {
 		$display_option = adler_get_blog_display();

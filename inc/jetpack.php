@@ -17,7 +17,7 @@ function adler_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'	=> 'adler_infinite_scroll_render'
+		'render'	=> 'adler_infinite_scroll_render',
 	) );
 
 	// Add theme support for Responsive Videos.
@@ -26,7 +26,7 @@ function adler_jetpack_setup() {
 	// Add theme support for Social Menus.
 	add_theme_support( 'jetpack-social-menu', 'svg' );
 
-		//Add theme support for Content Options.
+		// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'blog-display'		 => 'excerpt',
 		'author-bio'		 => true,

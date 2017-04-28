@@ -43,7 +43,7 @@ if ( post_password_required() ) {
 					'style'		  => 'ol',
 					'short_ping'  => true,
 					'avatar_size' => 50,
-					'callback'	  => 'adler_comment',	
+					'callback'	  => 'adler_comment',
 				) );
 			?>
 		</ol>
