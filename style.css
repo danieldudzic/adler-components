@@ -510,8 +510,8 @@ blockquote,
 .entry-wrapper .author-description,
 .entry-wrapper blockquote {
 	-webkit-hyphens: auto;
-			-ms-hyphens: auto;
-					hyphens: auto;
+		-ms-hyphens: auto;
+			hyphens: auto;
 	word-break: break-word;
 }
 
@@ -1198,7 +1198,7 @@ body:not(.hfeed) .entry-wrapper {
 	left: 50%;
 	position: absolute;
 	-webkit-transform: translateX(-50%);
-					transform: translateX(-50%);
+			transform: translateX(-50%);
 	width: 60px;
 }
 
@@ -1336,7 +1336,7 @@ body:not(.hfeed) .entry-wrapper {
 	background-image: linear-gradient(#fff 70%, transparent 70%, transparent);
 	background-size: 1.250em 1.406em;
 	-webkit-box-decoration-break: clone;
-					box-decoration-break: clone;
+			box-decoration-break: clone;
 	box-sizing: content-box;
 	color: #0e364f;
 	display: inline-block;
@@ -1402,7 +1402,7 @@ body:not(.hfeed) .entry-wrapper {
 	background-image: linear-gradient(white 70%, transparent 70%, transparent);
 	background-size: 1.042em 1.208em;
 	-webkit-box-decoration-break: clone;
-					box-decoration-break: clone;
+			box-decoration-break: clone;
 	font-family: "Permanent Marker", cursive;
 	font-size: 38.72px;
 	font-size: 2.42rem;
@@ -1477,7 +1477,6 @@ body:not(.has-hero-thumbnail) .site-header {
 	font-size: 0.75rem;
 	font-weight: 400;
 	letter-spacing: 1px;
-	margin-top: 1em;
 	margin: .556em 0 0;
 }
 
@@ -1826,7 +1825,7 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 	position: absolute;
 	top: 40%;
 	-webkit-transform: translateX(-50%) translateY(-50%);
-					transform: translateX(-50%) translateY(-50%);
+			transform: translateX(-50%) translateY(-50%);
 }
 
 .hero-wrapper .hero-content .entry-header {
@@ -1941,7 +1940,7 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
 
 .scroll-indicator {
 	-webkit-animation: opacityUp .5s ease both;
-					animation: opacityUp .5s ease both;
+			animation: opacityUp .5s ease both;
 	border-bottom: none;
 	bottom: 0;
 	display: block;
@@ -1950,13 +1949,13 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
 	opacity: 1;
 	position: absolute;
 	-webkit-transform: translateX(-50%);
-					transform: translateX(-50%);
+			transform: translateX(-50%);
 	width: 48px;
 }
 
 .scroll-indicator.scrolled {
 	-webkit-animation: opacityDown .5s ease both;
-					animation: opacityDown .5s ease both;
+			animation: opacityDown .5s ease both;
 }
 
 .scroll-indicator:before,
@@ -1972,14 +1971,14 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
 	left: -5px;
 	top: 11px;
 	-webkit-transform: rotate(45deg);
-					transform: rotate(45deg);
+			transform: rotate(45deg);
 }
 
 .scroll-indicator:after {
 	left: 19px;
 	top: 11px;
 	-webkit-transform: rotate(135deg);
-					transform: rotate(135deg);
+			transform: rotate(135deg);
 }
 
 .scroll-indicator:hover:before,
@@ -3373,7 +3372,7 @@ a {
 		-webkit-transition: none;
 		transition: none;
 		-webkit-transition-delay: none;
-						transition-delay: none;
+				transition-delay: none;
 	}
 
 	.slide-panel-open .menu-toggle {
