@@ -2274,6 +2274,10 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   font-style: italic;
 }
 
+.slide-panel .widget_search {
+  margin-bottom: 2em;
+}
+
 .slide-panel .widget_search .search-form {
   margin-bottom: 0;
 }
