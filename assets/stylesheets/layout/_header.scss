@@ -9,8 +9,8 @@
 .site-branding {
 	font-family: $font__code;
 	left: 0;
-	margin-bottom: 0px;
-	margin: 2.308em 9em 0 3.077em;
+	margin-bottom: 0;
+	margin: 2.308em 10.769em 0 3.077em;
 	position: absolute;
 	z-index: 50;
 
@@ -41,26 +41,25 @@
 		margin: .556em 0 0;
 	}
 
-	a img {
-		max-height: 7.692em;
-		max-width: 23.077em;
-		overflow: hidden;
-		position: absolute;
+	.custom-logo-link {
+		border: none;
+		display: inline-block;
+		vertical-align: middle;
+		width: auto;
+
+		img {
+			max-width: 100%;
+			display: inline-block;
+			max-height: 60px;
+			width: auto;
+			height: auto;
+		}
+
+		a:hover,
+		a:focus {
+			opacity: 0.9;
+		}
 	}
-}
-
-.custom-logo-link {
-	border: none;
-	left: 0;
-	margin-bottom: 0px;
-	margin: 2.308em 9em 0 3.077em;
-	position: absolute;
-	z-index: 50;
-	max-width: 600px;
-}
-
-.custom-logo {
-	max-height: 100px;
 }
 
 .has-hero-thumbnail {
@@ -91,7 +90,6 @@ body:not(.has-hero-thumbnail),
 
 		.site-title,
 		.site-description {
-			float: left;
 		}
 	}
 

@@ -4,11 +4,20 @@
 
 @media screen and ( min-width: 29.375em ) {
 
+	.site-branding {
+		.custom-logo-link {
+			img {
+				max-height: 100px;
+			}
+		}
+	}
+
 	.hero-wrapper {
 		.hero-content {
 			margin-top: 0;
 			max-height: 60vh;
 			top: 50%;
+
 			.entry-title {
 				@include font-size(3.36);
 			}
@@ -19,6 +28,11 @@
 				}
 			}
 		}
+	}
+
+	body.wp-custom-logo .hero-wrapper .hero-content {
+		max-height: 35vh;
+		top: 50%;
 	}
 
 	.post-password-form {
@@ -48,6 +62,11 @@
 				}
 			}
 		}
+	}
+
+	body.wp-custom-logo .hero-wrapper .hero-content {
+		max-height: 40vh;
+		top: 50%;
 	}
 }
 
@@ -121,6 +140,14 @@
  */
 
 @media screen and ( min-width: 51.755em ) {
+
+	.site-branding {
+		.custom-logo-link {
+			img {
+				max-width: 600px;
+			}
+		}
+	}
 
 	.hentry {
 		padding-left: 0;

@@ -39,11 +39,6 @@ function adler_body_classes( $classes ) {
 		}
 	}
 
-	// If no active social links are present in the menu and the header text is hidden, narrow the top bar.
-	if ( ! has_nav_menu( 'jetpack-social-menu' ) && 'blank' === get_header_textcolor() ) {
-		$classes[] = 'no-top-bar';
-	}
-
 	return $classes;
 }
 add_filter( 'body_class', 'adler_body_classes' );
