@@ -109,7 +109,7 @@ add_filter( 'jetpack_author_bio_avatar_size', 'adler_author_bio_avatar_size' );
  */
 function adler_get_blog_display() {
 	if ( function_exists( 'jetpack_blog_display_custom_excerpt' ) ) {
-		$options      = get_theme_support( 'jetpack-content-options' );
+		$options 	  = get_theme_support( 'jetpack-content-options' );
 		$blog_display = ( ! empty( $options[0]['blog-display'] ) ) ? $options[0]['blog-display'] : null;
 		$blog_display = preg_grep( '/^(content|excerpt)$/', (array) $blog_display );
 		sort( $blog_display );
@@ -121,6 +121,19 @@ function adler_get_blog_display() {
 	}
 
 	return $display_option;
+}
+
+/**
+ * Check if the display of Post Categories is enabled.
+ */
+function adler_displays_categories() {
+	$categories = get_option( 'jetpack_content_post_details_categories' );
+
+	if ( empty( $categories ) ) {
+		return false;
+	} else {
+		return true;
+	}
 }
 
 /**

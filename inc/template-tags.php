@@ -222,13 +222,20 @@ if ( ! function_exists( 'adler_meta_sticky' ) ) :
  * Return the Sticky post label
  */
 function adler_meta_sticky() {
+
 	$sticky_string = '<span class="sticky-label">%1$s%2$s</span>';
+
+	if ( function_exists( 'adler_displays_categories' ) ) {
+		if ( false === adler_displays_categories() ) {
+			$sticky_string = '<span class="sticky-label no-dash">%1$s%2$s</span>';
+		}
+	}
 
 	$sticky = sprintf( $sticky_string,
 		adler_get_svg( array(
 			'icon' => 'sticky',
 		) ),
-		esc_html__( 'Sticky', 'adler' )
+		esc_html__( 'Featured', 'adler' )
 	);
 
 	return $sticky;

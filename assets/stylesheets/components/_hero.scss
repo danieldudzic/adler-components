@@ -114,11 +114,11 @@
 				}
 			}
 
-			.posted-on,
-			.sticky-label {
+			.sticky-label:not(.no-dash) {
 				&:before {
 					color: $color__contrast;
 					content: ' - ';
+					padding-left: 3px;
 				}
 			}
 

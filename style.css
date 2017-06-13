@@ -1837,10 +1837,10 @@ body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry
   display: none;
 }
 
-.hero-wrapper .hero-content .entry-meta .posted-on:before,
-.hero-wrapper .hero-content .entry-meta .sticky-label:before {
+.hero-wrapper .hero-content .entry-meta .sticky-label:not(.no-dash):before {
   color: #f7f7f7;
   content: ' - ';
+  padding-left: 3px;
 }
 
 .hero-wrapper .hero-content .entry-meta .posted-on svg {

@@ -49,4 +49,16 @@
 		} );
 	} );
 
+	// Hero sticky label dash.
+	wp.customize( 'jetpack_content_post_details_categories', function( value ) {
+		value.bind( function( to ) {
+
+			if ( false === to ) {
+				$( '.hero-wrapper .sticky-label' ).addClass( 'no-dash' );
+			} else {
+				$( '.hero-wrapper .sticky-label' ).removeClass( 'no-dash' );
+			}
+		} );
+	} );
+
 } )( jQuery );
