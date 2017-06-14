@@ -18,6 +18,7 @@ function adler_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
 		'render'	=> 'adler_infinite_scroll_render',
+		'wrapper'	=> false,
 	) );
 
 	// Add theme support for Responsive Videos.

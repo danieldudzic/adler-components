@@ -128,62 +128,6 @@
 	}
 
 	/**
-	* Count articles for the purpose of styling
-	*/
-	function countArticles() {
-		// New posts have been added to the page.
-		$( document.body ).on( 'post-load', function () {
-			var articleNumber = siteMain.children( '.hentry' ).size();
-			var infiniteArticleNumber;
-
-			if ( ! $( '#infinite-view-1' ).hasClass( 'odd' ) && ! $( '#infinite-view-1' ).hasClass( 'even' ) ) {
-				// Count the initial articles.
-				if ( articleNumber % 2 === 0 ) {
-					$( '#infinite-view-1' ).addClass( 'odd' );
-				} else {
-					$( '#infinite-view-1' ).addClass( 'even' );
-				}
-			}
-
-			$( '.infinite-wrap' ).each( function( i ) {
-
-				if ( ! $( this ).hasClass( 'odd' ) && ! $( this ).hasClass( 'even' ) ) {
-					if ( infiniteArticleNumber % 2 === 0 ) {
-						if ( articleNumber % 2 === 0 ) {
-							// Initially loaded: even / Subsequently loaded: even
-							$( this ).addClass( 'odd' );
-						} else {
-							// Initially loaded: odd / Subsequently loaded: even
-							$( this ).addClass( 'even' );
-						}
-					} else {
-						if ( articleNumber % 2 === 0 ) {
-							// Initially loaded: even / Subsequently loaded: odd
-							if ( i % 2 === 0 ) {
-								$( this ).addClass( 'odd' );
-							} else {
-								$( this ).addClass( 'even' );
-							}
-						} else {
-							// Initially loaded: odd / Subsequently loaded: odd
-							if ( i % 2 === 0 ) {
-								$( this ).addClass( 'even' );
-							} else {
-								$( this ).addClass( 'odd' );
-							}
-						}
-					}
-				}
-
-				infiniteArticleNumber = $( this ).children( '.hentry' ).size();
-
-				$( '.infinite-wrap' ).removeClass( 'last' );
-				$( '.infinite-wrap' ).last().toggleClass( 'last' );
-			});
-		});
-	}
-
-	/**
 	* Scroll down when the hero arrow is clicked
 	*/
 	function heroScroll() {
@@ -311,7 +255,6 @@
 			}, 300 );
 		} );
 
-		countArticles();
 		bigImageClass();
 		slidingPanelControl();
 		slidingPanelHeight();
