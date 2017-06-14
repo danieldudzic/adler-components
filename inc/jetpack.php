@@ -127,10 +127,14 @@ function adler_get_blog_display() {
  * Check if the display of Post Categories is enabled.
  */
 function adler_displays_categories() {
-	$categories = get_option( 'jetpack_content_post_details_categories' );
+	if ( function_exists( 'jetpack_post_details_should_run' ) ) {
+		$categories = get_option( 'jetpack_content_post_details_categories' );
 
-	if ( empty( $categories ) ) {
-		return false;
+		if ( empty( $categories ) ) {
+			return false;
+		} else {
+			return true;
+		}
 	} else {
 		return true;
 	}

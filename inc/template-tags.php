@@ -222,16 +222,18 @@ if ( ! function_exists( 'adler_meta_sticky' ) ) :
  * Return the Sticky post label
  */
 function adler_meta_sticky() {
+	global $wp_query;
 
-	$sticky_string = '<span class="sticky-label">%1$s%2$s</span>';
+	$sticky_class = 'sticky-label';
 
-	if ( function_exists( 'adler_displays_categories' ) ) {
-		if ( false === adler_displays_categories() ) {
-			$sticky_string = '<span class="sticky-label no-dash">%1$s%2$s</span>';
-		}
+	if ( ! adler_displays_categories() && adler_has_post_thumbnail() && 0 === $wp_query->current_post ) {
+		$sticky_class .= ' no-dash';
 	}
 
+	$sticky_string = '<span class="%1$s">%2$s%3$s</span>';
+
 	$sticky = sprintf( $sticky_string,
+		$sticky_class,
 		adler_get_svg( array(
 			'icon' => 'sticky',
 		) ),
