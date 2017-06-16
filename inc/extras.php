@@ -39,6 +39,13 @@ function adler_body_classes( $classes ) {
 		}
 	}
 
+	// Add class if the site title and tagline is hidden.
+	$theme_mods = get_theme_mods();
+
+	if ( 'blank' === $theme_mods['header_textcolor'] ) {
+		$classes[] = 'title-tagline-hidden';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'adler_body_classes' );

@@ -38,6 +38,20 @@
 		position: absolute;
 		top: 40%;
 		transform: translateX(-50%) translateY(-50%);
+		width: 100%;
+		padding: 0 30px;
+
+		// Logo, Site Title and Tagline enabled
+		body:not(.title-tagline-hidden).wp-custom-logo & {
+			max-height: 35vh;
+			top: 45%;
+		}
+
+		// Logo enabled, Site Title and Tagline disabled
+		body.title-tagline-hidden.wp-custom-logo & {
+			max-height: 60vh;
+			top: 40%;
+		}
 
 		.entry-header {
 			margin: 0 0 1.538em;

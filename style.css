@@ -1453,7 +1453,6 @@ body:not(.has-hero-thumbnail) .site-header {
   font-size: 14px;
   font-size: 0.875rem;
   font-weight: 700;
-  line-height: 1;
   margin: 0;
 }
 
@@ -1794,6 +1793,18 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
   top: 40%;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  padding: 0 30px;
+}
+
+body:not(.title-tagline-hidden).wp-custom-logo .hero-wrapper .hero-content {
+  max-height: 35vh;
+  top: 45%;
+}
+
+body.title-tagline-hidden.wp-custom-logo .hero-wrapper .hero-content {
+  max-height: 60vh;
+  top: 40%;
 }
 
 .hero-wrapper .hero-content .entry-header {
@@ -2967,11 +2978,7 @@ a {
 @media screen and (min-width: 29.375em) {
   .site-branding .custom-logo-link img {
     max-height: 100px;
-  }
-  .hero-wrapper .hero-content {
-    margin-top: 0;
-    max-height: 60vh;
-    top: 50%;
+    max-width: 300px;
   }
   .hero-wrapper .hero-content .entry-title {
     font-size: 53.76px;
@@ -2979,10 +2986,6 @@ a {
   }
   .hero-wrapper .hero-content .entry-content p {
     display: block;
-  }
-  body.wp-custom-logo .hero-wrapper .hero-content {
-    max-height: 35vh;
-    top: 50%;
   }
   .post-password-form input[type="password"] {
     width: auto;
@@ -2997,16 +3000,9 @@ a {
  * >= 601px
  */
 @media screen and (min-width: 37.5625em) {
-  .hero-wrapper .hero-content {
-    max-height: 75vh;
-  }
   .hero-wrapper .hero-content .entry-content p {
     font-size: 13.008px;
     font-size: 0.813rem;
-  }
-  body.wp-custom-logo .hero-wrapper .hero-content {
-    max-height: 40vh;
-    top: 50%;
   }
 }
 
@@ -3014,6 +3010,9 @@ a {
  * >= 700px
  */
 @media screen and (min-width: 43.75em) {
+  .site-branding .custom-logo-link img {
+    max-width: 400px;
+  }
   .search-no-results .site-content .content-area,
   .site-main .comment-navigation,
   .site-main .posts-navigation,
@@ -3060,6 +3059,13 @@ a {
     font-size: 38.72px;
     font-size: 2.42rem;
   }
+  body:not(.title-tagline-hidden).wp-custom-logo .hero-wrapper .hero-content {
+    max-height: 35vh;
+    top: 40%;
+  }
+  body.title-tagline-hidden.wp-custom-logo .hero-wrapper .hero-content {
+    max-height: 40vh;
+  }
   .hero-wrapper .hero-content .entry-title {
     font-size: 66.176px;
     font-size: 4.136rem;
@@ -3070,9 +3076,6 @@ a {
  * >= 828px
  */
 @media screen and (min-width: 51.755em) {
-  .site-branding .custom-logo-link img {
-    max-width: 600px;
-  }
   .hentry {
     padding-left: 0;
     padding-right: 0;
@@ -3352,6 +3355,10 @@ a {
   .error404 .content-area .site-main .page-content {
     margin-top: 5em;
   }
+  body:not(.title-tagline-hidden).wp-custom-logo .hero-wrapper .hero-content {
+    max-height: 35vh;
+    top: 35%;
+  }
   .hero-wrapper .hero-content .entry-title {
     font-size: 86.992px;
     font-size: 5.437rem;
@@ -3362,6 +3369,15 @@ a {
  * >= 1440px
  */
 @media screen and (min-width: 90em) {
+  .site-branding .custom-logo-link img {
+    max-width: 600px;
+  }
+  .hero-wrapper .hero-content {
+    max-width: 800px;
+  }
+  body:not(.title-tagline-hidden).wp-custom-logo .hero-wrapper .hero-content {
+    max-height: 40vh;
+  }
   .hero-wrapper .hero-content .entry-title {
     font-size: 103.008px;
     font-size: 6.438rem;

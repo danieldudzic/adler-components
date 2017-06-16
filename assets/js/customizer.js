@@ -20,22 +20,21 @@
 		} );
 	} );
 
-	// Header text color.
+	// Site title and tagline display.
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {
 			if ( 'blank' === to ) {
-				$( '.site-title a, .site-description' ).css( {
+				$( '.site-title, .site-description' ).css( {
 					'clip': 'rect(1px, 1px, 1px, 1px)',
 					'position': 'absolute'
 				} );
+				$( 'body' ).addClass( 'title-tagline-hidden' );
 			} else {
-				$( '.site-title a, .site-description' ).css( {
+				$( '.site-title, .site-description' ).css( {
 					'clip': 'auto',
 					'position': 'relative'
 				} );
-				$( '.site-title a, .site-description' ).css( {
-					'color': to
-				} );
+				$( 'body' ).removeClass( 'title-tagline-hidden' );
 			}
 		} );
 	} );
@@ -52,7 +51,6 @@
 	// Hero sticky label dash.
 	wp.customize( 'jetpack_content_post_details_categories', function( value ) {
 		value.bind( function( to ) {
-
 			if ( false === to ) {
 				$( '.hero-wrapper .sticky-label' ).addClass( 'no-dash' );
 			} else {

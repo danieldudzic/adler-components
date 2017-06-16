@@ -80,6 +80,14 @@ function adler_setup() {
 		'default-image' => '',
 		'wp-head-callback' => 'adler_custom_background_cb',
 	) ) );
+
+	/*
+	 * Enabling WordPress core custom header support solely for "Display Site Title and Tagline" option.
+	 * See inc/customizer.php for removal of the "Header Image" Customizer panel.
+	 */
+	add_theme_support( 'custom-header', array(
+		'wp-head-callback' => 'adler_style_site_title_and_tagline',
+	) );
 }
 endif;
 add_action( 'after_setup_theme', 'adler_setup' );
@@ -438,6 +446,29 @@ function adler_filter_the_contents() {
 }
 
 add_action( 'init', 'adler_filter_the_contents' );
+
+/**
+ * Style the Site Title and Tagline.
+ */
+function adler_style_site_title_and_tagline() {
+
+	// If header text is set to display, let's bail.
+	if ( display_header_text() ) {
+		return;
+	}
+
+	// If we get this far, we have custom styles. Let's do this.
+	?>
+	<style type="text/css">
+		.site-title,
+		.site-description {
+			position: absolute;
+			clip: rect(1px, 1px, 1px, 1px);
+		}
+	</style>
+	<?php
+}
+
 
 /**
  * Custom template tags for this theme.

@@ -14,6 +14,10 @@ function adler_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport			= 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport	= 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+	// Adler doesn't support a header image. No need to customize the header text color either.
+	$wp_customize->remove_control( 'header_image' );
+	$wp_customize->remove_control( 'header_textcolor' );
 }
 add_action( 'customize_register', 'adler_customize_register' );
 
