@@ -82,7 +82,7 @@ function adler_setup() {
 	) ) );
 
 	/*
-	 * Enabling WordPress core custom header support solely for "Display Site Title and Tagline" option.
+	 * Enable WordPress core custom header support solely for "Display Site Title and Tagline" option.
 	 * See inc/customizer.php for removal of the "Header Image" Customizer panel.
 	 */
 	add_theme_support( 'custom-header', array(
@@ -452,12 +452,10 @@ add_action( 'init', 'adler_filter_the_contents' );
  */
 function adler_style_site_title_and_tagline() {
 
-	// If header text is set to display, let's bail.
 	if ( display_header_text() ) {
 		return;
 	}
 
-	// If we get this far, we have custom styles. Let's do this.
 	?>
 	<style type="text/css">
 		.site-title,
@@ -468,7 +466,6 @@ function adler_style_site_title_and_tagline() {
 	</style>
 	<?php
 }
-
 
 /**
  * Custom template tags for this theme.
