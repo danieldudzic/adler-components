@@ -133,19 +133,25 @@ figure {
 
 .wp-caption-text,
 .gallery-caption {
-	border-bottom: 2px dashed $color__accent;
 	color: $color__text-caption;
 	display: inline-block;
-	@include font-size(0.875);
+	@include font-size(0.714);
 	margin: 1em 0;
-	padding-bottom: 0.5em;
-	text-align: center;
+	padding-bottom: 0.214em;
+	font-style: italic;
+	max-width: 100%;
 
 	a {
 		color: $color__text-caption;
 	}
 }
 
+.gallery-caption {
+	display: block;
+	margin-bottom: 0;
+	padding: 0 10px 0 0;
+	text-align: left;
+}
 
 p {
 	a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".gif"] {

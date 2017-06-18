@@ -894,7 +894,7 @@ td {
 .posts-navigation .title,
 .post-navigation .title {
   clear: both;
-  color: #7c868b;
+  color: #0e364f;
   display: block;
   font-size: 13.536px;
   font-size: 0.846rem;
@@ -991,6 +991,11 @@ body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */
   width: 100%;
+}
+
+#page {
+  position: relative;
+  word-wrap: break-word;
 }
 
 .body-wrapper {
@@ -2745,19 +2750,26 @@ p > :first-child >
 
 .wp-caption-text,
 .gallery-caption {
-  border-bottom: 2px dashed #68f3c8;
-  color: #7c868b;
+  color: #0e364f;
   display: inline-block;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 11.424px;
+  font-size: 0.714rem;
   margin: 1em 0;
-  padding-bottom: 0.5em;
-  text-align: center;
+  padding-bottom: 0.214em;
+  font-style: italic;
+  max-width: 100%;
 }
 
 .wp-caption-text a,
 .gallery-caption a {
-  color: #7c868b;
+  color: #0e364f;
+}
+
+.gallery-caption {
+  display: block;
+  margin-bottom: 0;
+  padding: 0 10px 0 0;
+  text-align: left;
 }
 
 p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
@@ -2773,10 +2785,10 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 
 .gallery-item {
   display: inline-block;
-  text-align: center;
+  margin: 0 0 1.538em;
+  padding: 0 1em 0 0;
   vertical-align: top;
   width: 100%;
-  padding: 0.625em;
 }
 
 .gallery-columns-2 .gallery-item {
