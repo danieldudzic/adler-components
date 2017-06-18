@@ -136,9 +136,15 @@
 	.post-thumbnail {
 		margin-top: 0px;
 		text-align: center;
+
 		a {
 			border: none;
 			display: block;
+		}
+
+		img {
+			display: block;
+			margin: 0 auto;
 		}
 	}
 

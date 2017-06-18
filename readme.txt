@@ -24,7 +24,7 @@ Adler is a personal blogging theme for sharing your own thoughts and writing abo
 Adler supports prominent Featured Images on the blog, single posts, and pages:
 
 * First post on the blog page, single and pages -- full-screen width, unlimited height.
-* Subsequent posts on blog -- 800 pixels wide and 475px in height.
+* Subsequent posts on blog -- 1200 pixels wide and 475px in height.
 
 
 == Custom Menus ==
@@ -75,7 +75,7 @@ Adler also supports the following features:
 * The sliding panel width is 320.
 * The sliding panel widget area is a maximum of 270.
 * Featured Images are displayed at full-screen width and height on single posts and pages and for the first post on the blog page.
-* Featured Images for the subsequent posts on blog are displayed at 800 pixels width and 475px height.
+* Featured Images for the subsequent posts on blog are displayed at 1200 pixels width and 475px height.
 * The site logo appears at a maximum width of 600 and height of 100.
 
 
