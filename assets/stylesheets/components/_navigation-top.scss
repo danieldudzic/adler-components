@@ -63,8 +63,8 @@
 			padding: 0;
 		}
 
-		&.menu-item-has-children a {
-			padding: 0.857em 1.786em 0.929em;
+		&.menu-item-has-children > a {
+			padding: 0.857em 5.714em 0.929em 1.786em;
 		}
 	}
 

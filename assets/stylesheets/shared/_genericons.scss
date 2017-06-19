@@ -77,13 +77,13 @@
 }
 
 .showsub-toggle {
-	svg  {
+	use  {
 		transform-origin: 50% 50%;
 		transform: rotate(0deg);
 		transition: all 0 ease-in-out;
 	}
 
-	&.sub-on svg  {
+	&.sub-on use  {
 		transform: rotate(180deg);
 	}
 }

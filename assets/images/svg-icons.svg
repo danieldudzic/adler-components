@@ -24,6 +24,9 @@
 <symbol id="icon-menu-toggle-close" viewBox="0 0 16 16">
 <path class="path1" d="M14.7 2.7l-1.4-1.4L8 6.6 2.7 1.3 1.3 2.7 6.6 8l-5.3 5.3 1.4 1.4L8 9.4l5.3 5.3 1.4-1.4L9.4 8"></path>
 </symbol>
+<symbol id="icon-showsub-toggle" viewBox="0 0 16 16">
+<path class="path1" d="M8 12.7L1.3 6l1.4-1.4L8 9.9l5.3-5.3L14.7 6"></path>
+</symbol>
 <symbol id="icon-sticky" viewBox="0 0 16 16">
 <path class="path1" d="M12,8c0-0.5-0.5-1-1-1h-0.6l-0.3-3C10.6,3.9,11,3.5,11,3c0-0.5-0.5-1-1-1H6C5.5,2,5,2.5,5,3c0,0.5,0.4,0.9,0.9,1L5.6,7H5 C4.5,7,4,7.5,4,8v1h3v6l2-1V9h3V8z"></path>
 </symbol>

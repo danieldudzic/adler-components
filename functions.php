@@ -170,6 +170,9 @@ function adler_scripts() {
 	wp_localize_script( 'adler-main', 'menuToggleText', array(
 		'open'   => esc_html__( 'Open Sub-menu', 'adler' ),
 		'close'  => esc_html__( 'Close Sub-menu', 'adler' ),
+		'showsubToggle' => adler_get_svg( array(
+			'icon' => 'showsub-toggle',
+		 ) ),
 	) );
 
 	wp_enqueue_script( 'adler-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
