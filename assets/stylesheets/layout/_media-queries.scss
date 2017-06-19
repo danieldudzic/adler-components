@@ -106,12 +106,6 @@
 		}
 	}
 
-	 .entry-wrapper {
-		blockquote {
-			@include font-size(2);
-		}
-	}
-
 	.content-area {
 		.site-main {
 			.page-title {
@@ -160,9 +154,6 @@
 	}
 
 	.entry-wrapper {
-		blockquote {
-			@include font-size(2.5);
-		}
 
 		.entry-header {
 			.entry-title {
@@ -302,11 +293,11 @@
 	}
 
 	.slide-panel {
+		overflow: scroll;
+		padding: 30px 0 2em;
+		position: absolute;
 		right: -24.625em;
 		width: 24.625em;
-		overflow: scroll;
-		position: absolute;
-		padding: 30px 0 2em;
 
 		&.expanded,
 		.single &.expanded {
@@ -350,11 +341,6 @@
 			.entry-title {
 				@include font-size(3.750);
 			}
-		}
-
-		blockquote {
-			margin-left: -4.675em;
-			margin-right: -4.675em;
 		}
 
 		.wp-caption {
@@ -439,6 +425,16 @@
 			margin-left: -14.453em;
 			margin-right: -14.453em;
 		}
+
+		blockquote {
+			margin-left: -5.250em;
+			margin-right: -5.250em;
+
+			blockquote {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
 	}
 
 	.site-main .hentry .entry-wrapper .entry-main {
@@ -490,10 +486,6 @@
 @media screen and (min-width: 76em) {
 
 	.entry-wrapper {
-		blockquote {
-			margin-left: -5.250em;
-			margin-right: -5.250em;
-		}
 
 		.wp-caption {
 			&.alignleft,

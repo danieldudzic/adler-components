@@ -55,12 +55,6 @@
 				}
 			}
 		}
-
-		&:nth-of-type(even) {
-			.entry-wrapper blockquote {
-				background-image: linear-gradient( $color__background-post 70%, transparent 70%, transparent );
-			}
-		}
 	}
 }
 
@@ -270,7 +264,7 @@
 
 	.entry-author {
 		background-color: rgba(0, 0, 0, 0.03);
-		border-top: 3px solid $color__accent;
+		border-top: 4px solid $color__accent;
 		overflow: hidden;
 		padding: 1.538em 2em 2em;
 
@@ -311,38 +305,11 @@
 		white-space: nowrap;
 	}
 
+
 	blockquote {
-		background-color: $color__accent;
-		background-image: linear-gradient($color__background-body 70%, transparent 70%, transparent);
-		background-size: 1.250em 1.406em;
-		box-decoration-break: clone;
-		box-sizing: content-box;
-		color: $color__title;
-		display: inline-block;
-		float: left;
-		font-family: $font__code-secondary;
-		@include font-size(2);
-		line-height: 1.406;
-		margin-bottom: 1.406em;
-		margin-left: 0;
-		margin-right: 0;
-		position: relative;
-		text-align: center;
-
-		@extend %hyphening;
-
-		blockquote {
-			margin-bottom: 0;
-			margin-left: 1em;
-			margin-right: 1em;
-		}
-
-		* {
-			width: auto;
-		}
-
-		p {
-			margin: 0;
+		p,
+		p:last-of-type {
+			margin-bottom: 1.5em;
 		}
 	}
 }

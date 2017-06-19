@@ -100,17 +100,47 @@ big {
 }
 
 blockquote {
-	color: $color__title;
 	font-family: $font__code-secondary;
-	@include font-size(1.615);
-	margin: 0 1.538em;
-	text-align: center;
-	@extend %hyphening;
+	@include font-size(1.250);
+
+	border-left: 4px solid $color__accent;
+	font-style: italic;
+	margin: 0 0 1.5em;
+	padding: 0 0 0 1.5em;
+
+	p,
+	p:last-of-type {
+		margin-bottom: 1.5em;
+	}
+
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+
+	cite,
+	small {
+		@include font-size(1);
+	}
+
+	em,
+	i,
+	cite {
+		font-style: normal;
+	}
+
+	strong,
+	b {
+		font-weight: 700;
+	}
 }
 
 blockquote,
 q {
-	quotes: "" "";
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	quotes: none;
 
 	&:before,
 	&:after {

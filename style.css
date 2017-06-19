@@ -478,17 +478,47 @@ big {
 }
 
 blockquote {
-  color: #0e364f;
   font-family: "Permanent Marker", cursive;
-  font-size: 25.84px;
-  font-size: 1.615rem;
-  margin: 0 1.538em;
-  text-align: center;
+  font-size: 20px;
+  font-size: 1.25rem;
+  border-left: 4px solid #68f3c8;
+  font-style: italic;
+  margin: 0 0 1.5em;
+  padding: 0 0 0 1.5em;
+}
+
+blockquote p,
+blockquote p:last-of-type {
+  margin-bottom: 1.5em;
+}
+
+blockquote > *:last-child {
+  margin-bottom: 0;
+}
+
+blockquote cite,
+blockquote small {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+blockquote em,
+blockquote i,
+blockquote cite {
+  font-style: normal;
+}
+
+blockquote strong,
+blockquote b {
+  font-weight: 700;
 }
 
 blockquote,
 q {
-  quotes: "" "";
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  quotes: none;
 }
 
 blockquote:before, blockquote:after,
@@ -497,7 +527,7 @@ q:after {
   content: "";
 }
 
-blockquote, .entry-wrapper .author-description, .entry-wrapper blockquote {
+.entry-wrapper .author-description {
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
@@ -1069,11 +1099,6 @@ body {
   background-color: #f7f7f7;
 }
 
-.hfeed .hentry:nth-of-type(even) .entry-wrapper blockquote {
-  background-image: -webkit-linear-gradient(#f7f7f7 70%, transparent 70%, transparent);
-  background-image: linear-gradient(#f7f7f7 70%, transparent 70%, transparent);
-}
-
 .hentry:not(.has-post-thumbnail) .entry-wrapper .entry-header .entry-title {
   margin-bottom: 0.667em;
 }
@@ -1274,7 +1299,7 @@ body:not(.hfeed) .entry-wrapper {
 
 .entry-wrapper .entry-author {
   background-color: rgba(0, 0, 0, 0.03);
-  border-top: 3px solid #68f3c8;
+  border-top: 4px solid #68f3c8;
   overflow: hidden;
   padding: 1.538em 2em 2em;
 }
@@ -1313,40 +1338,9 @@ body:not(.hfeed) .entry-wrapper {
   white-space: nowrap;
 }
 
-.entry-wrapper blockquote {
-  background-color: #68f3c8;
-  background-image: -webkit-linear-gradient(#fff 70%, transparent 70%, transparent);
-  background-image: linear-gradient(#fff 70%, transparent 70%, transparent);
-  background-size: 1.250em 1.406em;
-  -webkit-box-decoration-break: clone;
-          box-decoration-break: clone;
-  box-sizing: content-box;
-  color: #0e364f;
-  display: inline-block;
-  float: left;
-  font-family: "Permanent Marker", cursive;
-  font-size: 32px;
-  font-size: 2rem;
-  line-height: 1.406;
-  margin-bottom: 1.406em;
-  margin-left: 0;
-  margin-right: 0;
-  position: relative;
-  text-align: center;
-}
-
-.entry-wrapper blockquote blockquote {
-  margin-bottom: 0;
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-.entry-wrapper blockquote * {
-  width: auto;
-}
-
-.entry-wrapper blockquote p {
-  margin: 0;
+.entry-wrapper blockquote p,
+.entry-wrapper blockquote p:last-of-type {
+  margin-bottom: 1.5em;
 }
 
 .content-area,
@@ -1708,6 +1702,7 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
   visibility: hidden;
   width: 100%;
   z-index: 3;
+  height: 100%;
 }
 
 .slide-panel.expanded, .single .slide-panel.expanded {
@@ -3073,10 +3068,6 @@ a {
   .post-navigation .nav-next:only-child {
     width: 100%;
   }
-  .entry-wrapper blockquote {
-    font-size: 32px;
-    font-size: 2rem;
-  }
   .content-area .site-main .page-title {
     font-size: 38.72px;
     font-size: 2.42rem;
@@ -3105,10 +3096,6 @@ a {
   .content-area .site-main .page-title {
     font-size: 45.6px;
     font-size: 2.85rem;
-  }
-  .entry-wrapper blockquote {
-    font-size: 40px;
-    font-size: 2.5rem;
   }
   .entry-wrapper .entry-header .entry-title {
     font-size: 50.992px;
@@ -3196,11 +3183,11 @@ a {
     top: 30px;
   }
   .slide-panel {
+    overflow: scroll;
+    padding: 30px 0 2em;
+    position: absolute;
     right: -24.625em;
     width: 24.625em;
-    overflow: scroll;
-    position: absolute;
-    padding: 30px 0 2em;
   }
   .slide-panel.expanded, .single .slide-panel.expanded {
     -webkit-transition: visibility 350ms ease-in-out;
@@ -3236,10 +3223,6 @@ a {
   .entry-wrapper .entry-header .entry-title {
     font-size: 60px;
     font-size: 3.75rem;
-  }
-  .entry-wrapper blockquote {
-    margin-left: -4.675em;
-    margin-right: -4.675em;
   }
   .entry-wrapper .wp-caption.alignleft, .entry-wrapper .wp-caption.alignright {
     max-width: 30.1536em;
@@ -3303,6 +3286,14 @@ a {
     margin-left: -14.453em;
     margin-right: -14.453em;
   }
+  .entry-wrapper blockquote {
+    margin-left: -5.250em;
+    margin-right: -5.250em;
+  }
+  .entry-wrapper blockquote blockquote {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .site-main .hentry .entry-wrapper .entry-main {
     position: relative;
     padding: 3.846em 3.846em 5.385em 3.846em;
@@ -3336,10 +3327,6 @@ a {
  * >= 1216px
  */
 @media screen and (min-width: 76em) {
-  .entry-wrapper blockquote {
-    margin-left: -5.250em;
-    margin-right: -5.250em;
-  }
   .entry-wrapper .wp-caption.alignleft, .entry-wrapper .wp-caption.alignright {
     max-width: 37.692em;
   }
