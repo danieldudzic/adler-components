@@ -2,7 +2,9 @@
 	clear: both;
 	display: block;
 	@include font-size(0.875);
+	line-height: 1.786;
 	width: 100%;
+	margin: 0 0 2.857em;
 
 	& > div > ul > li:last-child {
 		border-bottom: 1px solid lighten( $color__background-sliding-panel, 5% );
@@ -60,13 +62,17 @@
 			content: '';
 			padding: 0;
 		}
+
+		&.menu-item-has-children a {
+			padding: 0.857em 1.786em 0.929em;
+		}
 	}
 
 	a {
 		border-bottom: none;
 		color: $color__text-button;
 		display: block;
-		padding: 1.154em 1.846em;
+		padding: 0.929em 1.786em;
 
 		&:active,
 		&:focus,
@@ -115,6 +121,7 @@
 	padding: 1em;
 	position: absolute;
 	right: 0;
+	top: 0;
 	z-index: 10;
 
 	&:focus {
@@ -151,13 +158,13 @@
 	background: $color__background-sliding-panel;
 	border: 0;
 	color: $color__contrast;
-	height: 3.563em;
+	height: 50px;
 	outline: 1px solid lighten( $color__background-sliding-panel, 5% );
 	padding: 0;
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 3.563em;
+	width: 50px;
 	z-index: 1;
 
 	&:active,

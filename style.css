@@ -719,7 +719,9 @@ td {
   display: block;
   font-size: 14px;
   font-size: 0.875rem;
+  line-height: 1.786;
   width: 100%;
+  margin: 0 0 2.857em;
 }
 
 .main-navigation > div > ul > li:last-child {
@@ -775,11 +777,15 @@ td {
   padding: 0;
 }
 
+.main-navigation li.menu-item-has-children a {
+  padding: 0.857em 1.786em 0.929em;
+}
+
 .main-navigation a {
   border-bottom: none;
   color: #777;
   display: block;
-  padding: 1.154em 1.846em;
+  padding: 0.929em 1.786em;
 }
 
 .main-navigation a:active, .main-navigation a:focus, .main-navigation a:hover {
@@ -825,6 +831,7 @@ td {
   padding: 1em;
   position: absolute;
   right: 0;
+  top: 0;
   z-index: 10;
 }
 
@@ -861,13 +868,13 @@ td {
   background: #0e364f;
   border: 0;
   color: #f7f7f7;
-  height: 3.563em;
+  height: 50px;
   outline: 1px solid #124565;
   padding: 0;
   position: absolute;
   right: 0;
   top: 0;
-  width: 3.563em;
+  width: 50px;
   z-index: 1;
 }
 
@@ -1691,7 +1698,6 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 .slide-panel {
   background: #0e364f;
   display: block;
-  height: 100%;
   outline-color: #124565;
   outline-style: solid;
   outline-width: 0;
@@ -1718,16 +1724,15 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 
 .slide-panel .jetpack-social-navigation {
   border-top: 1px solid #124565;
-  margin-bottom: 2em;
 }
 
 .slide-panel .jetpack-social-navigation ul {
-  margin-bottom: 2px;
+  margin-bottom: 0;
   text-align: center;
 }
 
 .slide-panel .jetpack-social-navigation li {
-  padding: 0.4em 0.4em 0.769em;
+  padding: 4px 3px 7px;
 }
 
 .slide-panel .jetpack-social-navigation li:before {
