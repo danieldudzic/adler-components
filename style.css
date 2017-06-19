@@ -1454,7 +1454,7 @@ body:not(.has-hero-thumbnail) .site-header {
   font-family: "Droid Serif", serif;
   left: 0;
   margin-bottom: 0;
-  margin: 2.308em 10.769em 0 3.077em;
+  margin: 2.308em 10.769em 0 2.308em;
   position: absolute;
   z-index: 50;
 }
@@ -3179,7 +3179,7 @@ a {
     font-size: 4.136rem;
   }
   .menu-toggle {
-    right: 40px;
+    right: 30px;
     top: 30px;
   }
   .slide-panel {
