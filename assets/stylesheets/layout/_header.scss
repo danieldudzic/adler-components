@@ -1,7 +1,7 @@
 .site-header {
 	display: block;
 
-	body:not(.has-hero-thumbnail) & {
+	body:not(.has-entry-featured-background-thumbnail) & {
 		margin-bottom: 2em;
 	}
 }
@@ -61,13 +61,13 @@
 	}
 }
 
-.has-hero-thumbnail {
+.has-entry-featured-background-thumbnail {
 	.site-branding {
 		text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.20) ;
 	}
 }
 
-body:not(.has-hero-thumbnail),
+body:not(.has-entry-featured-background-thumbnail),
 .search-results, .archive {
 	.site-branding {
 		overflow: hidden;

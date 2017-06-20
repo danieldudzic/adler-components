@@ -50,7 +50,7 @@
 	*/
 	function fullscreenFeaturedImage() {
 		var entryHeaderHeight = $window.height();
-		var entryHeaderBackground = $( '.hero-wrapper' );
+		var entryHeaderBackground = $( '.entry-featured-background-wrapper' );
 
 		if ( ! entryHeaderBackground ) {
 			return;
@@ -128,9 +128,9 @@
 	}
 
 	/**
-	* Scroll down when the hero arrow is clicked
+	* Scroll down when the Entry Featured Background arrow is clicked
 	*/
-	function heroScroll() {
+	function entryFeaturedBackgroundScroll() {
 		if ( ! $( '#scroll-indicator' ) ) {
 			return;
 		}
@@ -258,7 +258,7 @@
 		bigImageClass();
 		slidingPanelControl();
 		slidingPanelHeight();
-		heroScroll();
+		entryFeaturedBackgroundScroll();
 		resizeInfiniteScrollFooter();
 		fullscreenFeaturedImage();
 	} );

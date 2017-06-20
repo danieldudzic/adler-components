@@ -13,8 +13,8 @@
 		}
 	}
 
-	.hero-wrapper {
-		.hero-content {
+	.entry-featured-background-wrapper {
+		.entry-featured-background-content {
 			.entry-title {
 				@include font-size(3.36);
 			}
@@ -45,8 +45,8 @@
 
 @media screen and ( min-width: 37.5625em ) {
 
-	.hero-wrapper {
-		.hero-content {
+	.entry-featured-background-wrapper {
+		.entry-featured-background-content {
 			.entry-content {
 				p {
 					@include font-size(0.813);
@@ -114,8 +114,8 @@
 		}
 	}
 
-	.hero-wrapper {
-		.hero-content {
+	.entry-featured-background-wrapper {
+		.entry-featured-background-content {
 
 			body:not(.title-tagline-hidden).wp-custom-logo & {
 				max-height: 35vh;
@@ -279,8 +279,8 @@
 		}
 	}
 
-	.hero-wrapper {
-		.hero-content {
+	.entry-featured-background-wrapper {
+		.entry-featured-background-content {
 			.entry-title {
 				@include font-size(4.136);
 			}
@@ -469,8 +469,8 @@
 		}
 	}
 
-	.hero-wrapper {
-		.hero-content {
+	.entry-featured-background-wrapper {
+		.entry-featured-background-content {
 			.entry-title {
 				@include font-size(4.864);
 			}
@@ -551,8 +551,8 @@
 		}
 	}
 
-	.hero-wrapper {
-		.hero-content {
+	.entry-featured-background-wrapper {
+		.entry-featured-background-content {
 
 			body:not(.title-tagline-hidden).wp-custom-logo & {
 				max-height: 35vh;
@@ -580,8 +580,8 @@
 		}
 	}
 
-	.hero-wrapper {
-		.hero-content {
+	.entry-featured-background-wrapper {
+		.entry-featured-background-content {
 			max-width: 800px;
 
 			body:not(.title-tagline-hidden).wp-custom-logo & {

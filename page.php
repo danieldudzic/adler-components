@@ -21,7 +21,7 @@ get_header(); ?>
 			while ( have_posts() ) : the_post();
 
 				if ( adler_has_post_thumbnail() ) {
-					get_template_part( 'components/hero/hero', 'page' );
+					get_template_part( 'components/entry-featured-background/entry-featured-background', 'page' );
 				} else {
 					get_template_part( 'components/page/content', 'page' );
 				}

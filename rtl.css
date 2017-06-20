@@ -186,8 +186,8 @@ li > ol {
 	right: 0;
 }
 
-body:not(.has-hero-thumbnail) .site-branding .site-title,
-body:not(.has-hero-thumbnail) .site-branding .site-description,
+body:not(.has-entry-featured-background-thumbnail) .site-branding .site-title,
+body:not(.has-entry-featured-background-thumbnail) .site-branding .site-description,
 .search-results .site-branding .site-title,
 .search-results .site-branding .site-description,
 .archive .site-branding .site-title,

@@ -43,7 +43,7 @@ function adler_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	add_image_size( 'adler-featured-image', 1200, 9999 );
-	add_image_size( 'adler-hero', 2000, 1500, true );
+	add_image_size( 'adler-entry-featured-background', 2000, 1500, true );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -305,9 +305,9 @@ function adler_comment( $comment, $args, $depth ) {
 }
 
 /**
- * Check if the current item is a Hero item.
+ * Check if the current item is an Entry Featured Background item.
  */
-function adler_is_hero() {
+function adler_is_entry_featured_background() {
 	global $wp_query;
 	if ( 0 === $wp_query->current_post && ! is_paged() && ! is_archive() && ! is_search() && adler_has_post_thumbnail() ) {
 		return true;
@@ -387,15 +387,15 @@ function adler_get_the_excerpt( $excerpt ) {
 add_filter( 'get_the_excerpt', 'adler_get_the_excerpt', 11 );
 
 /**
- * Display Excerpt instead of Content for the Hero post.
+ * Display Excerpt instead of Content for the Entry Featured Background post.
  */
-function adler_hero_content_to_the_excerpt( $content ) {
+function adler_entry_featured_background_content_to_the_excerpt( $content ) {
 	global $post;
 
 	$display_option = adler_get_blog_display();
 
 	if ( ! is_singular() && 'content' === $display_option ) {
-		if ( adler_is_hero() ) {
+		if ( adler_is_entry_featured_background() ) {
 			if ( post_password_required() ) {
 				$content = sprintf( '<p>%s</p>', esc_html__( 'There is no excerpt because this is a protected post.', 'adler' ) );
 			} else {
@@ -438,13 +438,13 @@ function adler_hero_content_to_the_excerpt( $content ) {
 }
 
 /**
- * Load the content flters and ensure correct display of the Hero excerpt and Continue Reading button.
+ * Load the content flters and ensure correct display of the Entry Featured Background excerpt and Continue Reading button.
  */
 function adler_filter_the_contents() {
-	add_filter( 'the_excerpt', 'adler_hero_content_to_the_excerpt', 11 );
+	add_filter( 'the_excerpt', 'adler_entry_featured_background_content_to_the_excerpt', 11 );
 
-	if ( adler_is_hero() ) {
-		add_filter( 'the_content', 'adler_hero_content_to_the_excerpt', 11 );
+	if ( adler_is_entry_featured_background() ) {
+		add_filter( 'the_content', 'adler_entry_featured_background_content_to_the_excerpt', 11 );
 	}
 }
 

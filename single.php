@@ -17,7 +17,7 @@ while ( have_posts() ) : the_post(); ?>
 
 		<?php
 			if ( adler_has_post_thumbnail() ) {
-				get_template_part( 'components/hero/hero', 'single' );
+				get_template_part( 'components/entry-featured-background/entry-featured-background', 'single' );
 			} else {
 				get_template_part( 'components/post/content', 'single' );
 			}

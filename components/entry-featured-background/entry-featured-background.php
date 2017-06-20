@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying hero posts.
+ * Template part for displaying entry featured background posts.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -10,10 +10,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="hero-wrapper">
-		<div class="hero-bg feature-header" style="background-image:url( <?php echo esc_url( adler_get_post_thumbnail_url( 'adler-hero' ) ); ?> )"></div>
+	<div class="entry-featured-background-wrapper">
+		<div class="entry-featured-background-bg feature-header" style="background-image:url( <?php echo esc_url( adler_get_post_thumbnail_url( 'adler-entry-featured-background' ) ); ?> )"></div>
 
-		<div class="hero-content">
+		<div class="entry-featured-background-content">
 			<div class="entry-meta">
 				<?php echo adler_meta_categories(); ?>
 				<?php echo adler_meta_posted_on(); ?>
@@ -29,9 +29,9 @@
 				<?php the_excerpt(); ?>
 			</div><!-- .entry-content -->
 
-		</div><!-- .hero-content -->
+		</div><!-- .entry-featured-background-content -->
 
-		<?php get_template_part( 'components/hero/hero', 'scroll-indicator' ); ?>
-	</div><!-- .hero-wrapper -->
+		<?php get_template_part( 'components/entry-featured-background/entry-featured-background', 'scroll-indicator' ); ?>
+	</div><!-- .entry-featured-background-wrapper -->
 </article><!-- #post-## -->
 <div id="scroll-indicator-anchor"></div>

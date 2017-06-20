@@ -8,7 +8,7 @@ Author URI: http://pixelgrade.com/
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: adler
-Tags: author-bio, blog, blog-excerpts, blue, custom-background, custom-colors, custom-menu, featured-images, green, infinite-scroll, light, microformats, multiple-menus, one-column, responsive-layout, rtl-language-support, site-logo, social-menu, sticky-post, threaded-comments, translation-ready, white
+Tags: author-bio, blog, blog-excerpts, blue, custom-background, custom-colors, custom-menu, featured-images, featured-image-header, green, infinite-scroll, light, microformats, multiple-menus, one-column, responsive-layout, rtl-language-support, site-logo, social-menu, sticky-post, threaded-comments, translation-ready, white
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -43,7 +43,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Search Results
 	## Containers
 	## Sliding panel
-	## Hero
+	## Entry featured background
 # Comments
 # Widgets
 # Infinite scroll
@@ -1070,7 +1070,7 @@ body {
   background-color: transparent;
 }
 
-.single:not(.has-hero-thumbnail) .hentry {
+.single:not(.has-entry-featured-background-thumbnail) .hentry {
   padding-top: 0;
 }
 
@@ -1289,7 +1289,7 @@ body:not(.hfeed) .entry-wrapper {
   width: 100%;
 }
 
-.has-hero-thumbnail .header-content .entry-wrapper .entry-footer .entry-meta {
+.has-entry-featured-background-thumbnail .header-content .entry-wrapper .entry-footer .entry-meta {
   display: none;
 }
 
@@ -1446,7 +1446,7 @@ body:not(.hfeed) .entry-wrapper {
   display: block;
 }
 
-body:not(.has-hero-thumbnail) .site-header {
+body:not(.has-entry-featured-background-thumbnail) .site-header {
   margin-bottom: 2em;
 }
 
@@ -1507,36 +1507,36 @@ body:not(.has-hero-thumbnail) .site-header {
   opacity: 0.9;
 }
 
-.has-hero-thumbnail .site-branding {
+.has-entry-featured-background-thumbnail .site-branding {
   text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.2);
 }
 
-body:not(.has-hero-thumbnail) .site-branding,
+body:not(.has-entry-featured-background-thumbnail) .site-branding,
 .search-results .site-branding, .archive .site-branding {
   overflow: hidden;
   position: relative;
   text-shadow: none;
 }
 
-body:not(.has-hero-thumbnail) .site-branding .site-title a,
+body:not(.has-entry-featured-background-thumbnail) .site-branding .site-title a,
 .search-results .site-branding .site-title a, .archive .site-branding .site-title a {
   color: #0e364f;
 }
 
-body:not(.has-hero-thumbnail) .site-branding .site-title a:active, body:not(.has-hero-thumbnail) .site-branding .site-title a:focus, body:not(.has-hero-thumbnail) .site-branding .site-title a:hover,
+body:not(.has-entry-featured-background-thumbnail) .site-branding .site-title a:active, body:not(.has-entry-featured-background-thumbnail) .site-branding .site-title a:focus, body:not(.has-entry-featured-background-thumbnail) .site-branding .site-title a:hover,
 .search-results .site-branding .site-title a:active,
 .search-results .site-branding .site-title a:focus,
 .search-results .site-branding .site-title a:hover, .archive .site-branding .site-title a:active, .archive .site-branding .site-title a:focus, .archive .site-branding .site-title a:hover {
   color: rgba(14, 54, 79, 0.8);
 }
 
-body:not(.has-hero-thumbnail) .site-branding .site-description,
+body:not(.has-entry-featured-background-thumbnail) .site-branding .site-description,
 .search-results .site-branding .site-description, .archive .site-branding .site-description {
   clear: both;
   color: #0e364f;
 }
 
-body:not(.has-hero-thumbnail) .custom-logo-link,
+body:not(.has-entry-featured-background-thumbnail) .custom-logo-link,
 .search-results .custom-logo-link, .archive .custom-logo-link {
   position: relative;
 }
@@ -1630,7 +1630,7 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 /*--------------------------------------------------------------
 ## Search Results
 --------------------------------------------------------------*/
-.search-results .content-area .hero_categories {
+.search-results .content-area .entry-featured-background-categories {
   display: inline-block;
 }
 
@@ -1645,7 +1645,7 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 /*--------------------------------------------------------------
 ## Containers
 --------------------------------------------------------------*/
-.hero-content,
+.entry-featured-background-content,
 .search-no-results .site-content .content-area,
 .site-main .comment-navigation,
 .site-main .posts-navigation,
@@ -1759,9 +1759,9 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
 }
 
 /*--------------------------------------------------------------
-## Hero
+## Entry featured background
 --------------------------------------------------------------*/
-.hero-wrapper {
+.entry-featured-background-wrapper {
   background: transparent;
   box-shadow: none;
   height: 100vh;
@@ -1774,16 +1774,16 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
   /* Admin Bar Fix */
 }
 
-.admin-bar .hero-wrapper {
+.admin-bar .entry-featured-background-wrapper {
   margin-top: -32px;
 }
 
-.hero-wrapper .hero-bg {
+.entry-featured-background-wrapper .entry-featured-background-bg {
   height: 100%;
   width: 100%;
 }
 
-.has-hero-thumbnail .hero-wrapper .hero-bg {
+.has-entry-featured-background-thumbnail .entry-featured-background-wrapper .entry-featured-background-bg {
   background-attachment: inherit;
   background-color: #0e364f;
   background-position: center center;
@@ -1792,7 +1792,7 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
   box-shadow: inset 0px 0px 250px 0px rgba(0, 0, 0, 0.75);
 }
 
-.hero-wrapper .hero-content {
+.entry-featured-background-wrapper .entry-featured-background-content {
   left: 50%;
   margin-left: 0;
   margin-right: 0;
@@ -1807,21 +1807,21 @@ body:not(.has-hero-thumbnail) .custom-logo-link,
   padding: 0 30px;
 }
 
-body:not(.title-tagline-hidden).wp-custom-logo .hero-wrapper .hero-content {
+body:not(.title-tagline-hidden).wp-custom-logo .entry-featured-background-wrapper .entry-featured-background-content {
   max-height: 35vh;
   top: 45%;
 }
 
-body.title-tagline-hidden.wp-custom-logo .hero-wrapper .hero-content {
+body.title-tagline-hidden.wp-custom-logo .entry-featured-background-wrapper .entry-featured-background-content {
   max-height: 60vh;
   top: 40%;
 }
 
-.hero-wrapper .hero-content .entry-header {
+.entry-featured-background-wrapper .entry-featured-background-content .entry-header {
   margin: 0 0 1.538em;
 }
 
-.hero-wrapper .hero-content .entry-title {
+.entry-featured-background-wrapper .entry-featured-background-content .entry-title {
   background-size: 100% 100%;
   color: #f7f7f7;
   font-size: 45.6px;
@@ -1833,8 +1833,8 @@ body.title-tagline-hidden.wp-custom-logo .hero-wrapper .hero-content {
   word-wrap: break-word;
 }
 
-.hero-wrapper .hero-content .entry-title a,
-.hero-wrapper .hero-content .entry-title .hero-title {
+.entry-featured-background-wrapper .entry-featured-background-content .entry-title a,
+.entry-featured-background-wrapper .entry-featured-background-content .entry-title .entry-featured-background-title {
   background-image: -webkit-linear-gradient(transparent 0%, transparent 55%, rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.5) 100%, transparent 100%, transparent 100%);
   background-image: linear-gradient(transparent 0%, transparent 55%, rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.5) 100%, transparent 100%, transparent 100%);
   background-size: 100% 100%;
@@ -1845,7 +1845,7 @@ body.title-tagline-hidden.wp-custom-logo .hero-wrapper .hero-content {
   width: 100%;
 }
 
-.hero-wrapper .hero-content .entry-content p {
+.entry-featured-background-wrapper .entry-featured-background-content .entry-content p {
   color: #f7f7f7;
   display: none;
   font-size: 11.008px;
@@ -1853,7 +1853,7 @@ body.title-tagline-hidden.wp-custom-logo .hero-wrapper .hero-content {
   text-align: center;
 }
 
-.hero-wrapper .hero-content .entry-content .more-link {
+.entry-featured-background-wrapper .entry-featured-background-content .entry-content .more-link {
   color: #f7f7f7;
   display: inline-block;
   line-height: 1.308;
@@ -1861,56 +1861,56 @@ body.title-tagline-hidden.wp-custom-logo .hero-wrapper .hero-content {
   text-transform: uppercase;
 }
 
-.hero-wrapper .hero-content .entry-content .more-link:hover {
+.entry-featured-background-wrapper .entry-featured-background-content .entry-content .more-link:hover {
   color: #68f3c8;
 }
 
-.hero-wrapper .hero-content .entry-meta {
+.entry-featured-background-wrapper .entry-featured-background-content .entry-meta {
   color: #f7f7f7;
   width: 100%;
 }
 
-.hero-wrapper .hero-content .entry-meta a,
-.hero-wrapper .hero-content .entry-meta span {
+.entry-featured-background-wrapper .entry-featured-background-content .entry-meta a,
+.entry-featured-background-wrapper .entry-featured-background-content .entry-meta span {
   border-bottom: 2px solid transparent;
   color: #f7f7f7;
 }
 
-.hero-wrapper .hero-content .entry-meta a:hover {
+.entry-featured-background-wrapper .entry-featured-background-content .entry-meta a:hover {
   border-bottom: 2px solid #f7f7f7;
 }
 
-body:not(.has-hero-thumbnail) .header-content .hero-wrapper .hero-content .entry-meta {
+body:not(.has-entry-featured-background-thumbnail) .header-content .entry-featured-background-wrapper .entry-featured-background-content .entry-meta {
   display: none;
 }
 
-.hero-wrapper .hero-content .entry-meta .cat-links, .hero-wrapper .hero-content .entry-meta a {
+.entry-featured-background-wrapper .entry-featured-background-content .entry-meta .cat-links, .entry-featured-background-wrapper .entry-featured-background-content .entry-meta a {
   display: inline;
 }
 
-.hero-wrapper .hero-content .entry-meta .cat-links svg {
+.entry-featured-background-wrapper .entry-featured-background-content .entry-meta .cat-links svg {
   display: none;
 }
 
-.hero-wrapper .hero-content .entry-meta .sticky-label:not(.no-dash):before {
+.entry-featured-background-wrapper .entry-featured-background-content .entry-meta .sticky-label:not(.no-dash):before {
   color: #f7f7f7;
   content: ' - ';
   padding-left: 3px;
 }
 
-.hero-wrapper .hero-content .entry-meta .posted-on svg {
+.entry-featured-background-wrapper .entry-featured-background-content .entry-meta .posted-on svg {
   display: none;
 }
 
-.hero-wrapper .hero-content .entry-meta .byline:before {
+.entry-featured-background-wrapper .entry-featured-background-content .entry-meta .byline:before {
   content: ' ';
 }
 
-.hero-wrapper .hero-content .entry-meta .byline svg {
+.entry-featured-background-wrapper .entry-featured-background-content .entry-meta .byline svg {
   display: none;
 }
 
-body.wp-custom-logo .hero-wrapper .hero-content {
+body.wp-custom-logo .entry-featured-background-wrapper .entry-featured-background-content {
   max-height: 45vh;
   top: 45%;
 }
@@ -2878,7 +2878,7 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
   margin-top: -3px;
 }
 
-.hero-wrapper .cats-links svg {
+.entry-featured-background-wrapper .cats-links svg {
   display: none;
 }
 
@@ -2972,7 +2972,7 @@ textarea,
 .site-logo-link,
 .sticky-post,
 .more-link,
-.hero-title a {
+.entry-featured-background-title a {
   -webkit-transition: 350ms all ease-in-out;
   transition: 350ms all ease-in-out;
 }
@@ -2998,11 +2998,11 @@ a {
     max-height: 100px;
     max-width: 300px;
   }
-  .hero-wrapper .hero-content .entry-title {
+  .entry-featured-background-wrapper .entry-featured-background-content .entry-title {
     font-size: 53.76px;
     font-size: 3.36rem;
   }
-  .hero-wrapper .hero-content .entry-content p {
+  .entry-featured-background-wrapper .entry-featured-background-content .entry-content p {
     display: block;
   }
   .post-password-form input[type="password"] {
@@ -3018,7 +3018,7 @@ a {
  * >= 601px
  */
 @media screen and (min-width: 37.5625em) {
-  .hero-wrapper .hero-content .entry-content p {
+  .entry-featured-background-wrapper .entry-featured-background-content .entry-content p {
     font-size: 13.008px;
     font-size: 0.813rem;
   }
@@ -3073,14 +3073,14 @@ a {
     font-size: 38.72px;
     font-size: 2.42rem;
   }
-  body:not(.title-tagline-hidden).wp-custom-logo .hero-wrapper .hero-content {
+  body:not(.title-tagline-hidden).wp-custom-logo .entry-featured-background-wrapper .entry-featured-background-content {
     max-height: 35vh;
     top: 40%;
   }
-  body.title-tagline-hidden.wp-custom-logo .hero-wrapper .hero-content {
+  body.title-tagline-hidden.wp-custom-logo .entry-featured-background-wrapper .entry-featured-background-content {
     max-height: 40vh;
   }
-  .hero-wrapper .hero-content .entry-title {
+  .entry-featured-background-wrapper .entry-featured-background-content .entry-title {
     font-size: 66.176px;
     font-size: 4.136rem;
   }
@@ -3175,7 +3175,7 @@ a {
     font-size: 40.8px;
     font-size: 2.55rem;
   }
-  .hero-wrapper .hero-content .entry-title {
+  .entry-featured-background-wrapper .entry-featured-background-content .entry-title {
     font-size: 66.176px;
     font-size: 4.136rem;
   }
@@ -3318,7 +3318,7 @@ a {
   .error404 .content-area .site-main .page-content {
     margin-top: 3.846em;
   }
-  .hero-wrapper .hero-content .entry-title {
+  .entry-featured-background-wrapper .entry-featured-background-content .entry-title {
     font-size: 77.824px;
     font-size: 4.864rem;
   }
@@ -3369,11 +3369,11 @@ a {
   .error404 .content-area .site-main .page-content {
     margin-top: 5em;
   }
-  body:not(.title-tagline-hidden).wp-custom-logo .hero-wrapper .hero-content {
+  body:not(.title-tagline-hidden).wp-custom-logo .entry-featured-background-wrapper .entry-featured-background-content {
     max-height: 35vh;
     top: 35%;
   }
-  .hero-wrapper .hero-content .entry-title {
+  .entry-featured-background-wrapper .entry-featured-background-content .entry-title {
     font-size: 86.992px;
     font-size: 5.437rem;
   }
@@ -3386,13 +3386,13 @@ a {
   .site-branding .custom-logo-link img {
     max-width: 600px;
   }
-  .hero-wrapper .hero-content {
+  .entry-featured-background-wrapper .entry-featured-background-content {
     max-width: 800px;
   }
-  body:not(.title-tagline-hidden).wp-custom-logo .hero-wrapper .hero-content {
+  body:not(.title-tagline-hidden).wp-custom-logo .entry-featured-background-wrapper .entry-featured-background-content {
     max-height: 40vh;
   }
-  .hero-wrapper .hero-content .entry-title {
+  .entry-featured-background-wrapper .entry-featured-background-content .entry-title {
     font-size: 103.008px;
     font-size: 6.438rem;
   }

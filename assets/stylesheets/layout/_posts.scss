@@ -20,7 +20,7 @@
 		background-color: transparent;
 	}
 
-	&:not(.has-hero-thumbnail) {
+	&:not(.has-entry-featured-background-thumbnail) {
 		.hentry {
 			padding-top: 0;
 		}
@@ -252,7 +252,7 @@
 				}
 			}
 
-			.has-hero-thumbnail .header-content & {
+			.has-entry-featured-background-thumbnail .header-content & {
 				display: none;
 			}
 

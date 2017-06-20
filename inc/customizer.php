@@ -41,11 +41,11 @@ function adler_the_excerpt_customizer( $excerpt ) {
 		$content = ob_get_clean();
 	}
 
-	if ( adler_is_hero() ) {
+	if ( adler_is_entry_featured_background() ) {
 		$content = $excerpt;
 	}
 
-	if ( ! adler_is_hero() && has_excerpt() && strpos( $post->post_content, '<!--more-->' ) ) {
+	if ( ! adler_is_entry_featured_background() && has_excerpt() && strpos( $post->post_content, '<!--more-->' ) ) {
 		$read_more = sprintf(
 			/* translators: %s: Name of current post. */
 			wp_kses( __( 'Continue reading %s', 'adler' ), array(
