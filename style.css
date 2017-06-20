@@ -1479,9 +1479,9 @@ body:not(.has-entry-featured-background-thumbnail) .site-header {
 
 .site-branding .site-description {
   color: #fff;
+  font-weight: 400;
   font-size: 12px;
   font-size: 0.75rem;
-  font-weight: 400;
   letter-spacing: 1px;
   margin-top: 1em;
   margin: .556em 0 0;
@@ -1507,37 +1507,45 @@ body:not(.has-entry-featured-background-thumbnail) .site-header {
   opacity: 0.9;
 }
 
-.has-entry-featured-background-thumbnail .site-branding {
-  text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.2);
+.has-entry-featured-background-thumbnail .site-branding .site-title,
+.has-entry-featured-background-thumbnail .site-branding .site-description {
+  text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5);
 }
 
 body:not(.has-entry-featured-background-thumbnail) .site-branding,
-.search-results .site-branding, .archive .site-branding {
+.search-results .site-branding,
+.archive .site-branding {
   overflow: hidden;
   position: relative;
   text-shadow: none;
 }
 
 body:not(.has-entry-featured-background-thumbnail) .site-branding .site-title a,
-.search-results .site-branding .site-title a, .archive .site-branding .site-title a {
+.search-results .site-branding .site-title a,
+.archive .site-branding .site-title a {
   color: #0e364f;
 }
 
 body:not(.has-entry-featured-background-thumbnail) .site-branding .site-title a:active, body:not(.has-entry-featured-background-thumbnail) .site-branding .site-title a:focus, body:not(.has-entry-featured-background-thumbnail) .site-branding .site-title a:hover,
 .search-results .site-branding .site-title a:active,
 .search-results .site-branding .site-title a:focus,
-.search-results .site-branding .site-title a:hover, .archive .site-branding .site-title a:active, .archive .site-branding .site-title a:focus, .archive .site-branding .site-title a:hover {
+.search-results .site-branding .site-title a:hover,
+.archive .site-branding .site-title a:active,
+.archive .site-branding .site-title a:focus,
+.archive .site-branding .site-title a:hover {
   color: rgba(14, 54, 79, 0.8);
 }
 
 body:not(.has-entry-featured-background-thumbnail) .site-branding .site-description,
-.search-results .site-branding .site-description, .archive .site-branding .site-description {
+.search-results .site-branding .site-description,
+.archive .site-branding .site-description {
   clear: both;
   color: #0e364f;
 }
 
 body:not(.has-entry-featured-background-thumbnail) .custom-logo-link,
-.search-results .custom-logo-link, .archive .custom-logo-link {
+.search-results .custom-logo-link,
+.archive .custom-logo-link {
   position: relative;
 }
 
@@ -1550,7 +1558,7 @@ body:not(.has-entry-featured-background-thumbnail) .custom-logo-link,
 --------------------------------------------------------------*/
 .site-footer {
   line-height: 1.538;
-  margin: 30px 40px 0;
+  margin: 30px 30px 0;
 }
 
 .site-info {
@@ -1630,10 +1638,6 @@ body:not(.has-entry-featured-background-thumbnail) .custom-logo-link,
 /*--------------------------------------------------------------
 ## Search Results
 --------------------------------------------------------------*/
-.search-results .content-area .entry-featured-background-categories {
-  display: inline-block;
-}
-
 .search-results .content-area .entry-title a {
   border-bottom: 0;
 }

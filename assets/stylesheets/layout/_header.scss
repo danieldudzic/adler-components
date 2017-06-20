@@ -33,8 +33,8 @@
 
 	.site-description {
 		color: $color__light;
-		@include font-size(0.75);
 		font-weight: 400;
+		@include font-size(0.75);
 		letter-spacing: 1px;
 		margin-top: 1em;
 		margin: .556em 0 0;
@@ -63,12 +63,16 @@
 
 .has-entry-featured-background-thumbnail {
 	.site-branding {
-		text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.20) ;
+		.site-title,
+		.site-description {
+			text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5) ;
+		}
 	}
 }
 
 body:not(.has-entry-featured-background-thumbnail),
-.search-results, .archive {
+.search-results,
+.archive {
 	.site-branding {
 		overflow: hidden;
 		position: relative;
