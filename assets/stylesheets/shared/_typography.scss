@@ -100,11 +100,10 @@ big {
 }
 
 blockquote {
-	font-family: $font__code-secondary;
-	@include font-size(1.250);
-
 	border-left: 4px solid $color__accent;
+	font-family: $font__code-secondary;
 	font-style: italic;
+	@include font-size(1.250);
 	margin: 0 0 1.5em;
 	padding: 0 0 0 1.5em;
 

@@ -204,10 +204,10 @@ function adler_meta_edit_link() {
 
 	ob_start();
 	edit_post_link(
-		adler_get_svg( array(
+		$edit_link,
+		'<span class="edit-link">' . adler_get_svg( array(
 			'icon' => 'edit',
-		) ) . $edit_link,
-		'<span class="edit-link">',
+		) ),
 		'</span>'
 	);
 	$edit_link = ob_get_contents();

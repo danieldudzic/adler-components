@@ -88,13 +88,42 @@
 			}
 
 			.more-link {
-				color: $color__contrast;
+				background: transparent none repeat scroll 0 0;
+				border: none;
+				border-radius: 5em;
+				color: $color__light;
 				display: inline-block;
-				line-height: 1.308;
-				margin-top: 1em;
+				@include font-size(0.688);
+				letter-spacing: 1px;
+				line-height: 1.818;
+				margin: 2.727em auto 0;
+				padding: 1em 2em;
+				position: relative;
 				text-transform: uppercase;
+				text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5);
 
-				&:hover {
+				&:before {
+					border: 3px solid $color__light;
+					border-radius: 5em;
+					content: '';
+					display: block;
+					height: 100%;
+					left: 0;
+					position: absolute;
+					top: 0;
+					box-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5);
+					width: 100%;
+				}
+
+				&:hover:before,
+				&:active:before,
+				&:focus:before {
+					border: 3px solid $color__accent;
+				}
+
+				&:hover,
+				&:active,
+				&:focus {
 					color: $color__accent;
 				}
 			}

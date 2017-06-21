@@ -121,7 +121,7 @@
 				color: $color__title;
 
 				&:hover {
-					color: lighten( $color__title, 6% );
+					color: lighten( $color__title, 8% );
 				}
 			}
 		}
@@ -191,23 +191,24 @@
 			text-align: center;
 
 			.more-link {
-				background: url(assets/images/more-bg.png);
-				background-size: cover;
-				border-bottom: none;
-				color: $color__link;
+				background: $color__title none repeat scroll 0 0;
+				border: 4px solid lighten( $color__title, 8% );
+				border-radius: 5em;
+				color: $color__light;
 				display: inline-block;
 				@include font-size(0.688);
-				line-height: 5.636;
+				letter-spacing: 1px;
+				line-height: 1.818;
 				margin: 2.727em auto 0;
+				padding: 0.545em 1.545em;
+				position: relative;
 				text-transform: uppercase;
-				width: 13.455em;
 
-				&:hover {
-					opacity: 0.85;
-				}
-
-				&:active {
-					opacity: 0.95;
+				&:hover,
+				&:active,
+				&:focus {
+					color: $color__accent;
+					background: lighten( $color__title, 8% );
 				}
 			}
 		}

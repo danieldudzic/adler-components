@@ -184,10 +184,6 @@
 					a {
 						text-decoration: none;
 						color: $color__text-main;
-
-						&:hover {
-							color: lighten( $color__text-main, 10% );
-						}
 					}
 				}
 
@@ -206,8 +202,10 @@
 				a {
 					border-bottom: none;
 
-					&:hover {
-						color: lighten( $color__text-main, 10% );
+					&:hover,
+					&:active,
+					&:focus {
+						border-bottom: 3px solid currentColor;
 					}
 				}
 			}
@@ -216,8 +214,10 @@
 				a {
 					border-bottom: none;
 
-					&:hover {
-						color: lighten( $color__text-main, 10% );
+				&:hover,
+				&:active,
+				&:focus {
+						border-bottom: 3px solid currentColor;
 					}
 				}
 			}

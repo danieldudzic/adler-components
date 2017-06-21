@@ -114,8 +114,10 @@
 	background: $color__background-sliding-panel;
 	border-radius: 0;
 	border: 0;
+	box-shadow: none;
 	color: $color__contrast;
 	@include font-size(1);
+	font-weight: normal;
 	margin: 0;
 	outline: 1px solid transparent;
 	padding: 1em;
@@ -123,6 +125,15 @@
 	right: 0;
 	top: 0;
 	z-index: 10;
+    letter-spacing: 1px;
+    line-height: 1;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: uppercase;
+
+    &:before {
+	    border: 0;
+    }
 
 	&:focus {
 		outline: 1px solid $color__accent;
