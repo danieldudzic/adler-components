@@ -11,7 +11,7 @@
 	padding: 0 1.846em 0;
 
 	.widget-title,
-	.widgettitle  {
+	.widgettitle {
 		@include font-size(1.250);
 		margin-top: 0;
 	}
@@ -101,7 +101,7 @@
 
 		}
 
-		.wp-caption  {
+		.wp-caption {
 			.wp-caption-text,
 			.gallery-caption {
 				color: $color__contrast;

@@ -77,14 +77,14 @@
 }
 
 .showsub-toggle {
-	use  {
+	use {
 		transform-origin: 50% 50%;
 		transform: rotate(0deg);
 		transition: all 0 ease-in-out;
 		display: block;
 	}
 
-	&.sub-on use  {
+	&.sub-on use {
 		transform: rotate(180deg);
 	}
 }
