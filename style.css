@@ -1734,6 +1734,8 @@ body:not(.has-entry-featured-background-thumbnail) .custom-logo-link,
 
 .slide-panel .jetpack-social-navigation {
   border-top: 1px solid #124565;
+  border-bottom: 1px solid #124565;
+  margin: 0 0 2.308em;
 }
 
 .slide-panel .jetpack-social-navigation ul {
@@ -2393,7 +2395,7 @@ body.wp-custom-logo .entry-featured-background-wrapper .entry-featured-backgroun
 }
 
 .slide-panel .widget_search {
-  margin-bottom: 2em;
+  margin-bottom: 2.308em;
 }
 
 .slide-panel .widget_search .search-form {
