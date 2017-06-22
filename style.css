@@ -3026,6 +3026,7 @@ p a[href$=".jpg"], p a[href$=".jpeg"], p a[href$=".png"], p a[href$=".gif"] {
 .slide-panel,
 textarea,
 .jp-relatedposts-post-a img,
+.menu-toggle,
 .main-navigation ul ul a:before,
 .meta-nav,
 .post-navigation .post-title,
