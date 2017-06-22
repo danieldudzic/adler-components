@@ -1316,10 +1316,6 @@ body:not(.hfeed) .entry-wrapper {
   margin-bottom: 0;
 }
 
-.entry-wrapper .author-link {
-  white-space: nowrap;
-}
-
 .entry-wrapper blockquote p,
 .entry-wrapper blockquote p:last-of-type {
   margin-bottom: 1.5em;
