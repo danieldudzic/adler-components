@@ -19,7 +19,7 @@ Adler is a personal blogging theme for sharing your own thoughts and writing abo
 3. Click Activate to use your new theme right away.
 
 
-== Featured Images / Custom Header ==
+== Featured Images ==
 
 Adler supports prominent Featured Images on the blog, single posts, and pages:
 
