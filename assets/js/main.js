@@ -167,12 +167,12 @@
 			footerContainer.css( 'margin-right', '0' );
 			footerContainer.css( 'width', pageWidth );
 
-			if ( '0px' != site.css('left') ) {
+			if ( '0px' < site.css('left') ) {
 				slidingPanelOffset = site.css('left');
 				slidingPanelOffsetDirection = 'left';
 			}
 
-			if ( '0px' != site.css('right') ) {
+			if ( '0px' < site.css('right') ) {
 				slidingPanelOffset = site.css('right');
 				slidingPanelOffsetDirection = 'right';
 			}

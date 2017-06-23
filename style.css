@@ -2589,6 +2589,10 @@ body.wp-custom-logo .entry-featured-background-wrapper .entry-featured-backgroun
 	margin-bottom: 0;
 }
 
+.slide-panel .widget_google_translate_widget {
+	text-align: left;
+}
+
 .slide-panel .widget_google_translate_widget a {
 	border-bottom: none;
 }
