@@ -3067,6 +3067,10 @@ p a[href$=".gif"] {
 	transform: rotate(180deg);
 }
 
+.showsub-toggle.sub-on svg {
+	-ms-transform: rotate(180deg); /* IE compatibility */
+}
+
 /*--------------------------------------------------------------
 # Keyframes
 --------------------------------------------------------------*/

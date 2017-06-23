@@ -87,4 +87,8 @@
 	&.sub-on use {
 		transform: rotate(180deg);
 	}
+
+	&.sub-on svg {
+		-ms-transform: rotate(180deg); /* IE compatibility */
+	}
 }
