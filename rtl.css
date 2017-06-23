@@ -263,6 +263,10 @@ li > ol {
 	padding-right: 0;
 }
 
+.slide-panel .widget_google_translate_widget {
+	text-align: right;
+}
+
 .slide-panel .widget_wpcom_social_media_icons_widget ul li:before {
 	padding-left: 0;
 }

@@ -1789,11 +1789,12 @@ body:not(.has-entry-featured-background-thumbnail) .custom-logo-link,
 
 .slide-panel .jetpack-social-navigation ul {
 	margin-bottom: 0;
+	padding: 0 25px 7px;
 	text-align: center;
 }
 
 .slide-panel .jetpack-social-navigation li {
-	padding: 4px 3px 7px;
+	padding: 4px 3px 0;
 }
 
 .slide-panel .jetpack-social-navigation li:before {

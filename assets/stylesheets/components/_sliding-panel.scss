@@ -75,11 +75,12 @@
 
 		ul {
 			margin-bottom: 0;
+			padding: 0 25px 7px;
 			text-align: center;
 		}
 
 		li {
-			padding: 4px 3px 7px;
+			padding: 4px 3px 0;
 
 			&:before {
 				content: '';
