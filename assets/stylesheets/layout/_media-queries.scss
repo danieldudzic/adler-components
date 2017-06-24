@@ -287,11 +287,6 @@
 		}
 	}
 
-	.menu-toggle {
-		right: 30px;
-		top: 30px;
-	}
-
 	.slide-panel {
 		overflow: scroll;
 		padding: 30px 0 2em;
@@ -318,6 +313,8 @@
 		.menu-toggle {
 			margin-right: 0;
 			outline: none;
+			right: 30px;
+			top: 30px;
 		}
 
 		.site {

@@ -84,7 +84,7 @@ li > ol {
 /* Menu Toggle */
 
 .menu-toggle {
-	left: 0;
+	left: 30px;
 	right: auto;
 }
 
@@ -199,8 +199,10 @@ li > ol {
 }
 
 .slide-panel-open .menu-toggle {
+	left: 0px;
 	margin-left: -100%;
 	margin-right: 0;
+	right: auto;
 }
 
 /*--------------------------------------------------------------
@@ -370,11 +372,6 @@ li > ol {
 
 @media screen and ( min-width: 57.8125em ) {
 
-	.menu-toggle {
-		left: 30px;
-		right: auto;
-	}
-
 	.slide-panel {
 		left: -24.625em;
 		right: auto;
@@ -386,7 +383,9 @@ li > ol {
 	}
 
 	.slide-panel-open .menu-toggle {
+		left: 30px;
 		margin-left: 0;
+		right: auto;
 	}
 
 	.slide-panel-open .site {
